@@ -49,11 +49,12 @@
   function usernameFromInput(value){const input=value.trim();let username=input;if(/^https?:\/\//i.test(input)||input.toLowerCase().startsWith('backloggd.com/')){let url;try{url=new URL(/^https?:\/\//i.test(input)?input:'https://'+input)}catch{throw Error('Enter a valid Backloggd profile URL.')}if(!['backloggd.com','www.backloggd.com'].includes(url.hostname.toLowerCase()))throw Error('Use a backloggd.com profile URL.');username=url.pathname.match(/^\/u\/([^/]+)/i)?.[1]||''}if(!/^[A-Za-z0-9_-]{1,40}$/.test(username))throw Error('Enter a valid Backloggd nickname or profile URL.');return username}
   async function api(path){const response=await fetch(path);const data=await response.json().catch(()=>({error:'The site returned an unreadable response.'}));if(!response.ok)throw Error(data.error||'Could not load Backloggd data.');return data}
   async function loadCards(username){
-    const all=[],seen=new Set;let lastSignature='',libraryIncomplete=false;
-    for(let page=1;page<=100;page++){
+    const all=[],seen=new Set,cached=readLibrary(username);let lastSignature='',libraryIncomplete=false,fromCache=false;
+    if(cached&&Date.now()-cached.savedAt<1800000){all.push(...cached.games);fromCache=true}
+    if(!fromCache)for(let page=1;page<=100;page++){
       let result;
       try{result=await api(`/api/page?user=${encodeURIComponent(username)}&page=${page}`)}
-      catch(error){if(!all.length)throw error;libraryIncomplete=true;break}
+      catch(error){if(cached){all.length=0;all.push(...cached.games);fromCache=true;break}if(!all.length)throw error;libraryIncomplete=true;break}
       const batch=result.games||[],signature=batch.map(g=>g.id).join(',');
       if(!batch.length||signature===lastSignature)break;
       lastSignature=signature;
@@ -64,9 +65,13 @@
       if(batch.length<36)break;
       if(page===100)libraryIncomplete=true;
     }
+    if(!fromCache&&!libraryIncomplete)saveLibrary(username,all);
     all.forEach(g=>{const cached=readMetadata(g.path);if(cached)Object.assign(g,cached)});
-    return {all,libraryIncomplete};
+    return {all,libraryIncomplete,fromCache,savedAt:fromCache?cached.savedAt:Date.now()};
   }
+  const libraryKey=username=>'backloggd-atlas:library:v1:'+username.toLowerCase();
+  function readLibrary(username){try{const data=JSON.parse(localStorage.getItem(libraryKey(username)));if(Array.isArray(data?.games)&&data.games.length&&Date.now()-data.savedAt<7*86400000)return data}catch{}return null}
+  function saveLibrary(username,all){try{localStorage.setItem(libraryKey(username),JSON.stringify({games:all,savedAt:Date.now()}))}catch{}}
   const metadataKey=path=>'backloggd-atlas:metadata:v2:'+path;
   const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
   function readMetadata(path){try{const data=JSON.parse(localStorage.getItem(metadataKey(path)));const maxAge=data?.year||data?.companies?.length?30:1;if(data?.checked&&Date.now()-data.savedAt<maxAge*86400000)return {year:data.year??null,companies:data.companies||[],checked:true}}catch{}return null}
@@ -93,11 +98,11 @@
     }
     return {metadataIncomplete:all.some(g=>!g.checked)};
   }
-  let activeUsername='',activeLibraryIncomplete=false;
-  function profileNotice(){const total=games.length,checked=games.filter(g=>g.checked).length,years=games.filter(g=>g.year).length,companies=games.filter(g=>companiesFor(g).length).length;const prefix=activeLibraryIncomplete?`Showing ${total} games retrieved so far; Backloggd stopped responding before the library finished. `:'';const suffix=`Release years: ${years}/${total}; credited companies: ${companies}/${total}.`;$('notice').textContent=prefix+(checked<total?`Checked details for ${checked}/${total} games. Some game pages could not be retrieved; retry to continue. ${suffix}`:`Checked details for all ${total} games. ${suffix}`);$('notice').classList.add('show');$('retryDetails').style.display=checked<total?'inline-block':'none'}
+  let activeUsername='',activeLibraryIncomplete=false,activeProfileCache=false;
+  function profileNotice(){const total=games.length,checked=games.filter(g=>g.checked).length,years=games.filter(g=>g.year).length,companies=games.filter(g=>companiesFor(g).length).length;const prefix=(activeProfileCache?'Using a saved library snapshot while checking game details. ':'')+(activeLibraryIncomplete?`Showing ${total} games retrieved so far; Backloggd stopped responding before the library finished. `:'');const suffix=`Release years: ${years}/${total}; credited companies: ${companies}/${total}.`;$('notice').textContent=prefix+(checked<total?`Checked details for ${checked}/${total} games. Some game pages could not be retrieved; retry to continue. ${suffix}`:`Checked details for all ${total} games. ${suffix}`);$('notice').classList.add('show');$('retryDetails').style.display=checked<total?'inline-block':'none'}
   async function buildProfile(username){
     const button=$('lookupButton');button.disabled=true;button.textContent='Loading…';$('loading').classList.add('show');$('retryDetails').style.display='none';$('progress').textContent='Loading profile…';$('breakdown').hidden=true;activeBreakdown=null;
-    try{const {all,libraryIncomplete}=await loadCards(username);if(!all.length)throw Error('No public games found for this profile.');games=all;activeUsername=username;activeLibraryIncomplete=libraryIncomplete;$('sourceLabel').textContent='@'+username;$('title').textContent=`${username}'s games, at a glance.`;$('dataNote').textContent=`Showing ${all.length} public games from backloggd.com/u/${username}/. Game details are cached in this browser for 30 days.`;$('reset').style.display='inline-block';render();await loadDetails(all);render();profileNotice()}
+    try{const {all,libraryIncomplete,fromCache,savedAt}=await loadCards(username);if(!all.length)throw Error('No public games found for this profile.');games=all;activeUsername=username;activeLibraryIncomplete=libraryIncomplete;activeProfileCache=fromCache;$('sourceLabel').textContent='@'+username;$('title').textContent=`${username}'s games, at a glance.`;$('dataNote').textContent=`Showing ${all.length} public games from backloggd.com/u/${username}/${fromCache?' (saved '+new Date(savedAt).toLocaleString()+')':''}. Game details are cached in this browser for 30 days.`;$('reset').style.display='inline-block';render();await loadDetails(all);render();profileNotice()}
     catch(err){$('notice').textContent=err.message;$('notice').classList.add('show')}
     finally{button.disabled=false;button.textContent='Build dashboard';$('loading').classList.remove('show')}
   }

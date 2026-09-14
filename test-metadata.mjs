@@ -33,4 +33,14 @@ const library = ['bad', 'good-1', 'good-2', 'good-3', 'good-4', 'good-5', 'good-
 const scan = await loadDetails(library);
 assert.equal(scan.metadataIncomplete, true);
 assert.equal(library.filter(game => game.checked).length, 7, 'a permanently failed game must not block later games');
+const profileCode = html.slice(html.indexOf('async function loadCards(username)'), html.indexOf('const metadataKey'));
+const storage = new Map();
+const localStorage = { getItem: key => storage.get(key) || null, setItem: (key, value) => storage.set(key, value) };
+storage.set('backloggd-atlas:library:v1:tester', JSON.stringify({ games: [{ id: '1', path: '/games/cached/', title: 'Cached', rating: 4 }], savedAt: Date.now() - 3600000 }));
+const loadCards = new Function('api', '$', 'readMetadata', 'localStorage', `${profileCode};return loadCards`)(
+  async () => { throw new Error('Backloggd unavailable') }, () => ({ textContent: '' }), () => null, localStorage,
+);
+const cachedProfile = await loadCards('tester');
+assert.equal(cachedProfile.fromCache, true);
+assert.equal(cachedProfile.all[0].title, 'Cached');
 console.log('Metadata parsing and transient failure tests passed');
