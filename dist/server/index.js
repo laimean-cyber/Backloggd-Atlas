@@ -7,7 +7,7 @@ const decode = text => String(text || '').replace(/&#(?:x([0-9a-f]+)|(\d+));|&(#
 async function upstream(path) {
   const response = await fetch(origin + path, { headers: { 'accept': 'text/html,application/xhtml+xml', 'user-agent': 'BackloggdAtlas/1.0 (+personal profile dashboard)' }, redirect: 'follow', signal: AbortSignal.timeout(15000) });
   if (response.status === 404) throw new Error('Profile or game not found.');
-  if (response.status === 403 || response.status === 429) throw new Error('Backloggd is limiting automated requests. Please try again later.');
+  if (response.status === 403 || response.status === 429) { const error = new Error('Backloggd is limiting automated requests. Please try again later.'); error.status = response.status; throw error; }
   if (!response.ok) throw new Error('Backloggd is unavailable right now.');
   const html = await response.text();
   if (!html.includes('backloggd') && !html.includes('Backloggd')) throw new Error('Backloggd returned an unexpected page.');
@@ -24,7 +24,7 @@ function parseCards(html) {
     const image = head.match(/<img[^>]*\balt="([^"]+)"/);
     const title = head.match(/class="game-text-centered"[^>]*>([^<]+)</);
     const rating = head.match(/\bdata-rating="([\d.]+)"/);
-    if (id && path && (image || title)) cards.push({ id: id[1], path: path[1] || path[2], title: decode(image?.[1] || title?.[1]), rating: rating ? +rating[1] / 2 : null, year: null, developer: 'Unknown', played: true });
+    if (id && path && (image || title)) cards.push({ id: id[1], path: path[1] || path[2], title: decode(image?.[1] || title?.[1]), rating: rating ? +rating[1] / 2 : null, year: null, companies: [], played: true });
   }
   return cards;
 }
@@ -32,8 +32,17 @@ function parseCards(html) {
 function parseDetails(html) {
   const block = html.match(/class="[^"]*game-subtitle[^\"]*"[^>]*>([\s\S]{0,2200}?)<\/div>/i)?.[1] || '';
   const year = block.match(/class="game-year[^\"]*"[^>]*>\s*((?:19|20)\d{2})/i);
-  const companies = [...block.matchAll(/href="\/company\/[^"<>]+\/"[^>]*>([^<]+)<\/a>/g)].map(x => decode(x[1])).filter(Boolean);
-  return { year: year ? +year[1] : null, developer: companies[0] || 'Unknown' };
+  const companies = [...new Set([...block.matchAll(/href="\/company\/[^"<>]+\/"[^>]*>([^<]+)<\/a>/g)].map(x => decode(x[1])).filter(Boolean))];
+  return { year: year ? +year[1] : null, companies, checked: true };
+}
+
+async function gameDetails(path) {
+  const cache = globalThis.caches?.default;
+  const key = new Request(`https://backloggd-atlas.cache${path}`);
+  if (cache) { try { const hit = await cache.match(key); if (hit) return await hit.json(); } catch {} }
+  const details = parseDetails(await upstream(path));
+  if (cache && (details.year || details.companies.length)) { try { await cache.put(key, new Response(JSON.stringify(details), { headers: { 'cache-control': 'public, max-age=2592000' } })); } catch {} }
+  return details;
 }
 
 export default {
@@ -54,8 +63,8 @@ export default {
     }
     if (url.pathname === '/api/details') {
       const paths = url.searchParams.getAll('path');
-      if (!paths.length || paths.length > 8 || paths.some(p => !/^\/games\/[a-z0-9-]+\/$/.test(p))) return json({ error: 'Invalid game paths.' }, 400);
-      const details = await Promise.all(paths.map(async path => { try { return { path, ...parseDetails(await upstream(path)) }; } catch { return { path, year: null, developer: 'Unknown', failed: true }; } }));
+      if (!paths.length || paths.length > 4 || paths.some(p => !/^\/games\/[a-z0-9-]+\/$/.test(p))) return json({ error: 'Invalid game paths.' }, 400);
+      const details = await Promise.all(paths.map(async path => { try { return { path, ...await gameDetails(path) }; } catch (error) { return { path, year: null, companies: [], failed: true, status: error.status || null }; } }));
       return json({ details, failed: details.filter(d => d.failed).length });
     }
     return new Response('Not found', { status: 404 });
