@@ -24,4 +24,13 @@ const items = [
   { title: 'B', companies: ['Second Studio'], rating: 5 },
 ];
 assert.deepEqual(groups(items, 'companies').map(g => [g.name, g.count]), [['First Studio', 1], ['Second Studio', 2]]);
+const detailsCode = html.slice(html.indexOf('async function loadDetails(all)'), html.indexOf('let activeUsername'));
+const loadDetails = new Function('api', '$', 'sleep', 'saveMetadata', 'render', `${detailsCode};return loadDetails`)(
+  async url => ({ details: new URL(`https://atlas.test${url}`).searchParams.getAll('path').map(path => path.endsWith('/bad/') ? { path, failed: true } : { path, year: 2023, companies: ['Studio'], checked: true }) }),
+  () => ({ textContent: '' }), async () => {}, () => {}, () => {},
+);
+const library = ['bad', 'good-1', 'good-2', 'good-3', 'good-4', 'good-5', 'good-6', 'good-7'].map(path => ({ path: `/games/${path}/`, rating: 4 }));
+const scan = await loadDetails(library);
+assert.equal(scan.metadataIncomplete, true);
+assert.equal(library.filter(game => game.checked).length, 7, 'a permanently failed game must not block later games');
 console.log('Metadata parsing and transient failure tests passed');

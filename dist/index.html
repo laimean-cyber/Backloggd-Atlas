@@ -15,7 +15,7 @@
   <header class="top"><div class="brand"><div class="mark" aria-hidden="true">▥</div> Backloggd Atlas</div><div class="topright"><span class="source" id="sourceLabel">Sample library</span><label class="upload" for="file">Import your library</label><input id="file" type="file" accept=".csv,.json,text/csv,application/json" aria-label="Import a Backloggd CSV or JSON export"></div></header>
   <main><div class="heading"><div><p class="eyebrow">Your gaming history, mapped</p><h1 id="title">A closer look at your games.</h1></div><p class="intro">Enter a Backloggd nickname or profile URL to map your public games, ratings, release years, and credited companies.</p></div>
   <form class="lookup" id="lookup"><input id="username" type="text" autocomplete="off" spellcheck="false" placeholder="Nickname or backloggd.com/u/yourname" aria-label="Backloggd nickname or profile URL" required><button id="lookupButton" type="submit">Build dashboard</button></form>
-  <p class="lookup-help"><strong>No sign-in needed.</strong> Public profiles only. Loading a large library may take a minute.</p><div id="loading" class="loading" role="status"><span class="spinner" aria-hidden="true"></span><span id="progress">Loading profile…</span></div>
+  <p class="lookup-help"><strong>No sign-in needed.</strong> Public profiles only. Checking a large library may take several minutes.</p><div id="loading" class="loading" role="status"><span class="spinner" aria-hidden="true"></span><span id="progress">Loading profile…</span></div>
   <div id="notice" class="notice" role="status"></div><button class="ghost" id="retryDetails" type="button" style="display:none;margin:0 0 18px">Retry missing game details</button>
   <section class="stats" aria-label="Library overview"><div class="card"><div class="stat-label">Library games</div><div class="stat-value" id="played">—</div><div class="stat-sub" id="playedSub">In this library</div></div><div class="card"><div class="stat-label">Average rating</div><div class="stat-value" id="average">—</div><div class="stat-sub">Out of 5 stars</div></div><div class="card"><div class="stat-label">Top known release year</div><div class="stat-value" id="topYear">—</div><div class="stat-sub" id="topYearSub">Highest average rating</div></div><div class="card"><div class="stat-label">Top credited company</div><div class="stat-value" id="topDev" style="font-size:clamp(1.35rem,2vw,2rem);line-height:1.15">—</div><div class="stat-sub" id="topDevSub">Highest rated company</div></div></section>
   <div class="grid"><section class="panel"><div class="panel-head"><div><h2>Games by release year</h2><p class="panel-sub">Among games with release-year data</p></div><div class="seg" role="group" aria-label="Release year chart measure"><button class="active" id="countBtn" type="button">Games</button><button id="avgBtn" type="button">Avg. rating</button></div></div><div class="chart"><div id="yearBars" class="bars" role="img" aria-label="Games by release year"></div></div></section>
@@ -73,11 +73,11 @@
   function saveMetadata(g){try{localStorage.setItem(metadataKey(g.path),JSON.stringify({year:g.year,companies:g.companies,checked:true,savedAt:Date.now()}))}catch{}}
   async function loadDetails(all){
     const queue=all.filter(g=>!g.checked).sort((a,b)=>Number.isFinite(b.rating)-Number.isFinite(a.rating));
-    let checked=all.length-queue.length;
+    let checked=all.length-queue.length,emptyGroups=0;
     for(let i=0;i<queue.length;i+=4){
-      let pending=queue.slice(i,i+4);
-      for(let attempt=0;pending.length&&attempt<4;attempt++){
-        if(attempt) { $('progress').textContent=`Backloggd paused details · retrying ${pending.length} games after a short wait…`;await sleep([0,2500,8000,20000][attempt]) }
+      const group=queue.slice(i,i+4);let pending=group;
+      for(let attempt=0;pending.length&&attempt<3;attempt++){
+        if(attempt) { $('progress').textContent=`Backloggd paused details · retrying ${pending.length} games after a short wait…`;await sleep([0,2500,8000][attempt]) }
         try{
           const params=new URLSearchParams;pending.forEach(g=>params.append('path',g.path));
           const result=await api(`/api/details?${params}`);
@@ -87,7 +87,8 @@
       }
       $('progress').textContent=`Checked game details for ${checked}/${all.length} games…`;
       if(i%16===0||!pending.length&&i+4>=queue.length)render();
-      if(pending.length)break
+      emptyGroups=pending.length===group.length?emptyGroups+1:0;
+      if(emptyGroups>=3)break;
       await sleep(350);
     }
     return {metadataIncomplete:all.some(g=>!g.checked)};
