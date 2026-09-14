@@ -55,8 +55,8 @@ export default {
     if (url.pathname === '/api/details') {
       const paths = url.searchParams.getAll('path');
       if (!paths.length || paths.length > 8 || paths.some(p => !/^\/games\/[a-z0-9-]+\/$/.test(p))) return json({ error: 'Invalid game paths.' }, 400);
-      const details = await Promise.all(paths.map(async path => { try { return { path, ...parseDetails(await upstream(path)) }; } catch { return { path, year: null, developer: 'Unknown' }; } }));
-      return json({ details });
+      const details = await Promise.all(paths.map(async path => { try { return { path, ...parseDetails(await upstream(path)) }; } catch { return { path, year: null, developer: 'Unknown', failed: true }; } }));
+      return json({ details, failed: details.filter(d => d.failed).length });
     }
     return new Response('Not found', { status: 404 });
   }
