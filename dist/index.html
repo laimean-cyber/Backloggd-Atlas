@@ -39,7 +39,7 @@
   function render(){const played=games.filter(isPlayed),rs=rated(),yrs=groups(rs,'year').filter(x=>Number.isFinite(+x.name)),devs=groups(rs,'developer');const bestYears=yrs.filter(x=>x.count>=2).sort((a,b)=>b.rating-a.rating||b.count-a.count);const bestDevs=devs.filter(x=>x.count>=2).sort((a,b)=>b.rating-a.rating||b.count-a.count);$('played').textContent=played.length;$('playedSub').textContent=`${rs.length} rated games`;$('average').textContent=rs.length?fmt(avg(rs.map(g=>g.rating))):'—';$('topYear').textContent=bestYears[0]?.name??'—';$('topYearSub').textContent=bestYears[0]?`${fmt(bestYears[0].rating)} / 5 across ${bestYears[0].count} games`:'Needs 2 rated games';$('topDev').textContent=bestDevs[0]?.name??'—';$('topDevSub').textContent=bestDevs[0]?`${fmt(bestDevs[0].rating)} / 5 across ${bestDevs[0].count} games`:'Needs 2 rated games';
     const chartYears=groups((mode==='count'?played:rs).filter(g=>Number.isFinite(+g.year)),'year').sort((a,b)=>+a.name-+b.name).slice(-22);const max=Math.max(1,...chartYears.map(x=>mode==='count'?x.count:x.rating));$('yearBars').innerHTML=chartYears.length?chartYears.map(x=>{const v=mode==='count'?x.count:x.rating;const h=Math.max(2,v/max*94);return `<div class="barcol" style="--h:${h}%" data-tip="${esc(x.name)}: ${mode==='count'?x.count+' games':fmt(v)+' / 5'}"><div class="bar" style="height:${h}%"></div><span>${String(x.name).slice(-2)}</span></div>`}).join(''):'<div class="empty">No release years in this file</div>';$('yearBars').setAttribute('aria-label',mode==='count'?'Number of played games by release year':'Average rating by release year');
     $('developers').innerHTML=bestDevs.length?bestDevs.slice(0,5).map(x=>`<div class="dev-row"><div><div class="dev-name" title="${esc(x.name)}">${esc(x.name)}</div><div class="dev-detail">${x.count} rated games</div><div class="track"><div class="fill" style="width:${x.rating/5*100}%"></div></div></div><div class="score">${fmt(x.rating)}</div></div>`).join(''):'<div class="empty">Developer data needs at least 2 rated games per studio.</div>';
-    const buckets=[{label:'4.5–5',min:4.5,color:'#d7ff62'},{label:'3.5–4',min:3.5,color:'#9bc875'},{label:'2.5–3',min:2.5,color:'#648f8e'},{label:'1.5–2',min:1.5,color:'#6970a1'},{label:'0.5–1',min:0,color:'#4a5362'}].map(b=>({...b,count:rs.filter(g=>g.rating>=b.min&&(b.min===4.5||g.rating<b.min+1)).length}));let pos=0;const slices=buckets.map(b=>{const start=pos;pos+=rs.length?b.count/rs.length*100:0;return `${b.color} ${start}% ${pos}%`}).join(',');$('donut').style.background=rs.length?`conic-gradient(${slices})`:'#353d3b';$('donutCenter').innerHTML=`${rs.length}<small>rated games</small>`;$('legend').innerHTML=buckets.map(b=>`<div class="legend-line"><span class="legend-label"><i class="swatch" style="background:${b.color}"></i>${b.label} stars</span><span class="legend-count">${b.count}</span></div>`).join('');$('yearTiles').innerHTML=bestYears.length?bestYears.slice(0,5).map((x,i)=>`<div class="year-tile ${i===0?'best':''}"><div class="year-num">${esc(x.name)}</div><div class="year-score">★ ${fmt(x.rating)}</div><div class="year-games">${x.count} games</div></div>`).join(''):'<div class="empty">Release-year insights need at least 2 rated games per year.</div>'}
+    const buckets=[{label:'4.5–5',min:4.5,max:5,color:'#d7ff62'},{label:'3.5–4',min:3.5,max:4.49,color:'#9bc875'},{label:'2.5–3',min:2.5,max:3.49,color:'#648f8e'},{label:'1.5–2',min:1.5,max:2.49,color:'#6970a1'},{label:'0.5–1',min:0,max:1.49,color:'#4a5362'}].map(b=>({...b,count:rs.filter(g=>g.rating>=b.min&&g.rating<=b.max).length}));let pos=0;const slices=buckets.map(b=>{const start=pos;pos+=rs.length?b.count/rs.length*100:0;return `${b.color} ${start}% ${pos}%`}).join(',');$('donut').style.background=rs.length?`conic-gradient(${slices})`:'#353d3b';$('donutCenter').innerHTML=`${rs.length}<small>rated games</small>`;$('legend').innerHTML=buckets.map(b=>`<div class="legend-line"><span class="legend-label"><i class="swatch" style="background:${b.color}"></i>${b.label} stars</span><span class="legend-count">${b.count}</span></div>`).join('');$('yearTiles').innerHTML=bestYears.length?bestYears.slice(0,5).map((x,i)=>`<div class="year-tile ${i===0?'best':''}"><div class="year-num">${esc(x.name)}</div><div class="year-score">★ ${fmt(x.rating)}</div><div class="year-games">${x.count} games</div></div>`).join(''):'<div class="empty">Release-year insights need at least 2 rated games per year.</div>'}
   function parseCSV(s){const rows=[];let row=[],field='',quoted=false;for(let i=0;i<s.length;i++){const c=s[i];if(quoted){if(c==='"'&&s[i+1]==='"'){field+='"';i++}else if(c==='"')quoted=false;else field+=c}else if(c==='"')quoted=true;else if(c===','){row.push(field);field=''}else if(c==='\n'){row.push(field);rows.push(row);row=[];field=''}else if(c!=='\r')field+=c}row.push(field);if(row.some(x=>x))rows.push(row);const header=(rows.shift()||[]).map(x=>x.trim());return rows.map(r=>Object.fromEntries(header.map((h,i)=>[h,r[i]??''])))}
   function key(o,names){const entries=Object.entries(o);for(const n of names){const found=entries.find(([k])=>k.toLowerCase().replace(/[^a-z0-9]/g,'')===n);if(found)return found[1]}return ''}
   function normalize(o){const title=key(o,['title','gametitle','gamename','name','game']);const rawRating=key(o,['rating','userrating','yourrating','score','userscore']);let rating=parseFloat(String(rawRating).replace(/[^0-9.]/g,''));if(rating>5&&rating<=10)rating/=2;if(!(rating>=0&&rating<=5))rating=NaN;const yearRaw=key(o,['releaseyear','year','released','releasedate','firstreleasedate']);const yearMatch=String(yearRaw).match(/(?:19|20)\d{2}/);const year=yearMatch?+yearMatch[0]:null;let developer=key(o,['developer','developers','studio','studios','company']);if(Array.isArray(developer))developer=developer.map(x=>typeof x==='string'?x:x.name).filter(Boolean).join(', ');if(typeof developer==='object'&&developer)developer=developer.name||'';const status=String(key(o,['status','completionstatus','shelf','tab','state'])).toLowerCase();const played=!(status&&/backlog|wishlist|want to play|playing/.test(status));return {title:String(title||'').trim(),rating,year,developer:String(developer||'').trim()||'Unknown',played}}
@@ -58,19 +58,21 @@
       if(!fresh.length)break;
       fresh.forEach(g=>{seen.add(g.id);all.push(g)});
       $('progress').textContent=`Found ${all.length} games · loading page ${page}…`;
-      for(let i=0;i<fresh.length;i+=8){
-        const group=fresh.slice(i,i+8);
-        try{
-          const params=new URLSearchParams;group.forEach(g=>params.append('path',g.path));
-          const result=await api(`/api/details?${params}`);
-          const byPath=new Map(result.details.map(x=>[x.path,x]));
-          group.forEach(g=>Object.assign(g,byPath.get(g.path)||{}));
-          if(result.failed)incomplete=true;
-        }catch{incomplete=true}
-        $('progress').textContent=`Found ${all.length} games · checking release years and studios…`;
-      }
       if(batch.length<36)break;
       if(page===100)incomplete=true;
+    }
+    let failedBatches=0;
+    for(let i=0;i<all.length;i+=8){
+      const group=all.slice(i,i+8);
+      try{
+        const params=new URLSearchParams;group.forEach(g=>params.append('path',g.path));
+        const result=await api(`/api/details?${params}`);
+        const byPath=new Map(result.details.map(x=>[x.path,x]));
+        group.forEach(g=>Object.assign(g,byPath.get(g.path)||{}));
+        if(result.failed){incomplete=true;failedBatches++}else failedBatches=0;
+      }catch{incomplete=true;failedBatches++}
+      $('progress').textContent=`Found ${all.length} games · checked ${Math.min(i+8,all.length)} for release years and studios…`;
+      if(failedBatches>=3){incomplete=true;break}
     }
     return {all,incomplete};
   }
