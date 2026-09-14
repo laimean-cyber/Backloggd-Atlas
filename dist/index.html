@@ -74,8 +74,8 @@
   function saveLibrary(username,all){try{localStorage.setItem(libraryKey(username),JSON.stringify({games:all,savedAt:Date.now()}))}catch{}}
   const metadataKey=path=>'backloggd-atlas:metadata:v2:'+path;
   const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
-  function readMetadata(path){try{const data=JSON.parse(localStorage.getItem(metadataKey(path)));const maxAge=data?.year||data?.companies?.length?30:1;if(data?.checked&&Date.now()-data.savedAt<maxAge*86400000)return {year:data.year??null,companies:data.companies||[],checked:true}}catch{}return null}
-  function saveMetadata(g){try{localStorage.setItem(metadataKey(g.path),JSON.stringify({year:g.year,companies:g.companies,checked:true,savedAt:Date.now()}))}catch{}}
+  function readMetadata(path){try{const data=JSON.parse(localStorage.getItem(metadataKey(path)));if(data?.checked&&(data.year||data.companies?.length)&&Date.now()-data.savedAt<30*86400000)return {year:data.year??null,companies:data.companies||[],checked:true}}catch{}return null}
+  function saveMetadata(g){if(!g.year&&!g.companies?.length)return;try{localStorage.setItem(metadataKey(g.path),JSON.stringify({year:g.year,companies:g.companies,checked:true,savedAt:Date.now()}))}catch{}}
   async function loadDetails(all){
     const queue=all.filter(g=>!g.checked).sort((a,b)=>Number.isFinite(b.rating)-Number.isFinite(a.rating));
     let checked=all.length-queue.length,emptyGroups=0;

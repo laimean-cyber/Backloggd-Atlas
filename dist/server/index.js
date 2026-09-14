@@ -30,7 +30,8 @@ function parseCards(html) {
 }
 
 function parseDetails(html) {
-  const block = html.match(/class="[^"]*game-subtitle[^\"]*"[^>]*>([\s\S]{0,2200}?)<\/div>/i)?.[1] || '';
+  const block = html.match(/class="[^"]*game-subtitle[^\"]*"[^>]*>([\s\S]{0,2200}?)<\/div>/i)?.[1];
+  if (!block) throw new Error('Backloggd returned a game page without details.');
   const year = block.match(/class="game-year[^\"]*"[^>]*>\s*((?:19|20)\d{2})/i);
   const companies = [...new Set([...block.matchAll(/href="\/company\/[^"<>]+\/"[^>]*>([^<]+)<\/a>/g)].map(x => decode(x[1])).filter(Boolean))];
   return { year: year ? +year[1] : null, companies, checked: true };

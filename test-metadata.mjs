@@ -15,6 +15,9 @@ globalThis.fetch = async () => new Response('Backloggd request limited', { statu
 const failed = await (await worker.fetch(new Request(url))).json();
 assert.equal(failed.failed, 1);
 assert.equal(failed.details[0].status, 429);
+globalThis.fetch = async () => new Response('<title>Backloggd</title><p>Temporary response without game details</p>');
+const incompletePage = await (await worker.fetch(new Request(url))).json();
+assert.equal(incompletePage.failed, 1, 'an incomplete HTML page must be retried later');
 
 const html = readFileSync('dist/index.html', 'utf8');
 const helpers = html.slice(html.indexOf('function companiesFor(g)'), html.indexOf('function render()'));
