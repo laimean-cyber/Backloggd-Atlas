@@ -40,7 +40,7 @@ export default {
   async fetch(request) {
     const url = new URL(request.url);
     if (request.method !== 'GET') return json({ error: 'Method not allowed.' }, 405);
-    if (url.pathname === '/' || url.pathname === '/index.html') return new Response(page, { headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'public, max-age=300' } });
+    if (url.pathname === '/' || url.pathname === '/index.html') return new Response(page, { headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' } });
     if (url.pathname === '/api/page') {
       const username = url.searchParams.get('user') || '';
       const pageNo = +(url.searchParams.get('page') || '1');
