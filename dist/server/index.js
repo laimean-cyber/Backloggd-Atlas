@@ -1,3 +1,4 @@
+import { companyLogo } from './company-logo.js';
 import { page } from './page.js';
 
 const origin = 'https://backloggd.com';
@@ -56,6 +57,10 @@ export default {
     const url = new URL(request.url);
     if (request.method !== 'GET') return json({ error: 'Method not allowed.' }, 405);
     if (url.pathname === '/' || url.pathname === '/index.html') return new Response(page, { headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' } });
+    if(url.pathname==='/api/company-logo'){
+      const name=url.searchParams.get('name')||'';if(!name.trim()||name.length>150)return json({error:'Invalid company name'},400);
+      try{return json(await companyLogo(name))}catch{return json({error:'Company logo unavailable'},502)}
+    }
     if (url.pathname === '/api/page') {
       const username = url.searchParams.get('user') || '';
       const pageNo = +(url.searchParams.get('page') || '1');

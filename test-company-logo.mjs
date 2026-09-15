@@ -1,0 +1,5 @@
+import assert from 'node:assert/strict';
+import {companyLogo} from './dist/server/company-logo.js';
+const saved=new Map();globalThis.caches={default:{match:async key=>saved.get(key.url)?.clone(),put:async(key,value)=>saved.set(key.url,value)}};
+let calls=0;globalThis.fetch=async url=>{calls++;if(url.includes('wbsearchentities'))return Response.json({search:[{id:'Q1',label:'Test Studio',description:'video game developer'}]});if(url.includes('EntityData'))return Response.json({entities:{Q1:{claims:{P154:[{mainsnak:{datavalue:{value:'Test.png'}}}]}}}});if(url.includes('imageinfo'))return Response.json({query:{pages:{1:{imageinfo:[{thumburl:'https://thumb.wikimedia.org/test.png'}]}}}});return new Response(new Uint8Array([1,2,3]),{headers:{'content-type':'image/png'}})};
+const first=await companyLogo('Test Studio');assert.equal(first.data,'data:image/png;base64,AQID');const prior=calls;assert.deepEqual(await companyLogo('Test Studio'),first);assert.equal(calls,prior);console.log('Logo download and cache reuse passed');

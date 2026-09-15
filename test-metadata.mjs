@@ -23,7 +23,7 @@ const incompletePage = await (await worker.fetch(new Request(url))).json();
 assert.equal(incompletePage.failed, 1, 'an incomplete HTML page must be retried later');
 
 const html = readFileSync('dist/index.html', 'utf8');
-const helpers = html.slice(html.indexOf('function companiesFor(g)'), html.indexOf('function render()'));
+const helpers = html.slice(html.indexOf('function companiesFor(g)'), html.indexOf('function ratingStars(value)'));
 const { groups } = new Function('avg', `${helpers};return { groups }`)(scores => scores.reduce((a, b) => a + b, 0) / scores.length);
 const items = [
   { title: 'A', companies: ['First Studio', 'Second Studio', 'First Studio'], rating: 4 },
@@ -52,3 +52,4 @@ const cachedProfile = await loadCards('tester');
 assert.equal(cachedProfile.fromCache, true);
 assert.equal(cachedProfile.all[0].title, 'Cached');
 console.log('Metadata parsing and transient failure tests passed');
+
