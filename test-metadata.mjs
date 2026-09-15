@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import worker from './dist/server/index.js';
 
-globalThis.fetch = async () => new Response(`<!doctype html><title>Backloggd</title><div class="game-subtitle"><a class="game-year" href="/games/foo/">2023</a><a href="/company/first/">First Studio</a>, <a href="/company/second/">Second Studio</a>, <a href="/company/first/">First Studio</a></div>`);
+globalThis.fetch = async () => new Response(`<!doctype html><title>Backloggd</title><div class="game-subtitle"><a class="game-year" href="/games/foo/">2023</a><a href="/company/first/">First Studio</a>, <a href="/company/second/">Second Studio</a>, <a href="/company/first/">First Studio</a></div><p>Genres</p><a class="game-details-value" href="/games/lib/popular/genre:strategy/">Strategy</a><a class="game-details-value" href="/games/lib/popular/genre:rpg/">RPG</a><a class="game-details-value" href="/games/lib/popular/genre:strategy/">Strategy</a><a href="/logs/foo/plays/"><p class="log-counter-stat">1.2K</p></a>`);
 const url = 'https://atlas.test/api/details?path=%2Fgames%2Ffoo%2F';
 const response = await worker.fetch(new Request(url));
 const body = await response.json();
@@ -10,6 +10,9 @@ assert.equal(body.failed, 0);
 assert.deepEqual(body.details[0].companies, ['First Studio', 'Second Studio']);
 assert.equal(body.details[0].year, 2023);
 assert.equal(body.details[0].checked, true);
+assert.deepEqual(body.details[0].genres, ['Strategy', 'RPG']);
+assert.equal(body.details[0].plays, 1200);
+assert.equal(body.details[0].playText, '1.2K');
 
 globalThis.fetch = async () => new Response('Backloggd request limited', { status: 429 });
 const failed = await (await worker.fetch(new Request(url))).json();
@@ -27,6 +30,8 @@ const items = [
   { title: 'B', companies: ['Second Studio'], rating: 5 },
 ];
 assert.deepEqual(groups(items, 'companies').map(g => [g.name, g.count]), [['First Studio', 1], ['Second Studio', 2]]);
+const genreItems = [{ genres: ['RPG', 'Strategy', 'RPG'], rating: 5 }, { genres: ['RPG'], rating: null }];
+assert.deepEqual(groups(genreItems, 'genres').map(g => [g.name, g.count, g.ratedCount]), [['RPG', 2, 1], ['Strategy', 1, 1]]);
 const detailsCode = html.slice(html.indexOf('async function loadDetails(all)'), html.indexOf('let activeUsername'));
 const loadDetails = new Function('api', '$', 'sleep', 'saveMetadata', 'render', `${detailsCode};return loadDetails`)(
   async url => ({ details: new URL(`https://atlas.test${url}`).searchParams.getAll('path').map(path => path.endsWith('/bad/') ? { path, failed: true } : { path, year: 2023, companies: ['Studio'], checked: true }) }),

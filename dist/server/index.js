@@ -34,15 +34,20 @@ function parseDetails(html) {
   if (!block) throw new Error('Backloggd returned a game page without details.');
   const year = block.match(/class="game-year[^\"]*"[^>]*>\s*((?:19|20)\d{2})/i);
   const companies = [...new Set([...block.matchAll(/href="\/company\/[^"<>]+\/"[^>]*>([^<]+)<\/a>/g)].map(x => decode(x[1])).filter(Boolean))];
-  return { year: year ? +year[1] : null, companies, checked: true };
+  const genres = [...new Set([...html.matchAll(/<a\b[^>]*class="[^"]*game-details-value[^"]*"[^>]*href="\/games\/lib\/popular\/genre:[^"<>]+\/"[^>]*>([^<]+)<\/a>/gi)].map(x => decode(x[1])).filter(Boolean))];
+  const playText = html.match(/href="\/logs\/[^"<>]+\/plays\/"[\s\S]{0,500}?class="[^"]*log-counter-stat[^"]*"[^>]*>\s*([\d,.]+\s*[KMB]?)\s*</i)?.[1]?.replace(/\s+/g, '') || null;
+  const amount = playText ? Number(playText.replace(/,/g, '').replace(/[KMB]$/i, '')) : NaN;
+  const unit = playText?.match(/[KMB]$/i)?.[0]?.toUpperCase();
+  const plays = Number.isFinite(amount) ? amount * ({ K: 1e3, M: 1e6, B: 1e9 }[unit] || 1) : null;
+  return { year: year ? +year[1] : null, companies, genres, plays, playText, checked: true };
 }
 
 async function gameDetails(path) {
   const cache = globalThis.caches?.default;
-  const key = new Request(`https://backloggd-atlas.cache${path}`);
+  const key = new Request(`https://backloggd-atlas.cache/v3${path}`);
   if (cache) { try { const hit = await cache.match(key); if (hit) return await hit.json(); } catch {} }
   const details = parseDetails(await upstream(path));
-  if (cache && (details.year || details.companies.length)) { try { await cache.put(key, new Response(JSON.stringify(details), { headers: { 'cache-control': 'public, max-age=2592000' } })); } catch {} }
+  if (cache) { try { await cache.put(key, new Response(JSON.stringify(details), { headers: { 'cache-control': 'public, max-age=604800' } })); } catch {} }
   return details;
 }
 
