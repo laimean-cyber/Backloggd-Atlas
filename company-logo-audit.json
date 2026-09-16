@@ -1,0 +1,888 @@
+{
+  "profile": "Laime",
+  "gameEntries": 656,
+  "companies": [
+    {
+      "name": "11 bit studios",
+      "games": 8,
+      "source": "https://www.igdb.com/companies/11-bit-studios",
+      "available": true
+    },
+    {
+      "name": "2K Games",
+      "games": 24,
+      "source": "https://www.igdb.com/companies/2k-games",
+      "available": true
+    },
+    {
+      "name": "2K Marin",
+      "games": 3,
+      "source": "https://www.igdb.com/companies/2k-marin",
+      "available": true
+    },
+    {
+      "name": "4A Games",
+      "games": 4,
+      "source": "https://www.igdb.com/companies/4a-games",
+      "available": true
+    },
+    {
+      "name": "505 Games",
+      "games": 8,
+      "source": "https://www.igdb.com/companies/505-games",
+      "available": true
+    },
+    {
+      "name": "Activision",
+      "games": 18,
+      "source": "https://www.igdb.com/companies/activision",
+      "available": true
+    },
+    {
+      "name": "Alkimia Interactive",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/alkimia-interactive",
+      "available": true
+    },
+    {
+      "name": "Amplitude Studios",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/amplitude-studios",
+      "available": true
+    },
+    {
+      "name": "Annapurna Interactive",
+      "games": 7,
+      "source": "https://www.igdb.com/companies/annapurna-interactive",
+      "available": true
+    },
+    {
+      "name": "Argonaut Games",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/argonaut-games",
+      "available": true
+    },
+    {
+      "name": "Arkane Studios",
+      "games": 6,
+      "source": "https://www.wikidata.org/wiki/Q672642",
+      "available": true
+    },
+    {
+      "name": "Arrowhead Game Studios",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/arrowhead-game-studios",
+      "available": true
+    },
+    {
+      "name": "Asobo Studio",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/asobo-studio",
+      "available": true
+    },
+    {
+      "name": "Aspyr Media",
+      "games": 3,
+      "source": "https://www.igdb.com/companies/aspyr-media",
+      "available": true
+    },
+    {
+      "name": "Atari, Inc.",
+      "games": 5,
+      "source": "https://www.igdb.com/companies/atari-inc",
+      "available": true
+    },
+    {
+      "name": "Bandai Namco Entertainment",
+      "games": 12,
+      "source": "https://www.igdb.com/companies/bandai-namco-entertainment",
+      "available": true
+    },
+    {
+      "name": "Bandai Namco Games",
+      "games": 3,
+      "source": "https://www.igdb.com/companies/bandai-namco-games",
+      "available": true
+    },
+    {
+      "name": "Bethesda Game Studios",
+      "games": 17,
+      "source": "https://www.igdb.com/companies/bethesda-game-studios",
+      "available": true
+    },
+    {
+      "name": "Bethesda Softworks",
+      "games": 36,
+      "source": "https://www.wikidata.org/wiki/Q684425",
+      "available": true
+    },
+    {
+      "name": "BioWare",
+      "games": 23,
+      "source": "https://www.igdb.com/companies/bioware",
+      "available": true
+    },
+    {
+      "name": "BioWare Edmonton",
+      "games": 4,
+      "source": "https://www.igdb.com/companies/bioware-edmonton",
+      "available": true
+    },
+    {
+      "name": "BioWare Montréal",
+      "games": 6,
+      "source": "https://www.igdb.com/companies/bioware-montreal",
+      "available": true
+    },
+    {
+      "name": "Blizzard Entertainment",
+      "games": 4,
+      "source": "https://www.igdb.com/companies/blizzard-entertainment",
+      "available": true
+    },
+    {
+      "name": "Bloober Team",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/bloober-team",
+      "available": true
+    },
+    {
+      "name": "Bluepoint Games",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/bluepoint-games",
+      "available": true
+    },
+    {
+      "name": "Capcom",
+      "games": 28,
+      "source": "https://www.igdb.com/companies/capcom",
+      "available": true
+    },
+    {
+      "name": "Capcom Development Division 1",
+      "games": 11,
+      "source": "https://www.igdb.com/companies/capcom-development-division-1",
+      "available": true
+    },
+    {
+      "name": "CD Projekt",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/cd-projekt",
+      "available": true
+    },
+    {
+      "name": "CD Projekt RED",
+      "games": 8,
+      "source": "https://www.igdb.com/companies/cd-projekt-red",
+      "available": true
+    },
+    {
+      "name": "Codemasters",
+      "games": 5,
+      "source": "https://www.igdb.com/companies/codemasters",
+      "available": true
+    },
+    {
+      "name": "Codemasters Southam",
+      "games": 3,
+      "source": "https://www.ea.com/ea-studios/codemasters",
+      "available": true
+    },
+    {
+      "name": "ColdWood Interactive",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/coldwood-interactive",
+      "available": true
+    },
+    {
+      "name": "Colossal Order",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/colossal-order",
+      "available": true
+    },
+    {
+      "name": "Croteam",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/croteam",
+      "available": true
+    },
+    {
+      "name": "Crystal Dynamics",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/crystal-dynamics",
+      "available": true
+    },
+    {
+      "name": "Crytek Frankfurt",
+      "games": 5,
+      "source": "https://www.igdb.com/companies/crytek-frankfurt",
+      "available": true
+    },
+    {
+      "name": "CyberFront",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/cyberfront",
+      "available": true
+    },
+    {
+      "name": "Deep Silver",
+      "games": 19,
+      "source": "https://www.igdb.com/companies/deep-silver",
+      "available": true
+    },
+    {
+      "name": "Devolver Digital",
+      "games": 9,
+      "source": "https://www.igdb.com/companies/devolver-digital",
+      "available": true
+    },
+    {
+      "name": "Digital Extremes",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/digital-extremes",
+      "available": true
+    },
+    {
+      "name": "Dinosaur Polo Club",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/dinosaur-polo-club",
+      "available": true
+    },
+    {
+      "name": "DON'T NOD",
+      "games": 3,
+      "source": "https://www.igdb.com/companies/dont-nod",
+      "available": true
+    },
+    {
+      "name": "Dylan Fitterer",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/dylan-fitterer",
+      "available": true
+    },
+    {
+      "name": "EA Black Box",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/ea-black-box",
+      "available": true
+    },
+    {
+      "name": "EA Canada",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/ea-canada",
+      "available": true
+    },
+    {
+      "name": "EA Digital Illusions CE",
+      "games": 13,
+      "source": "https://www.igdb.com/companies/ea-digital-illusions-ce",
+      "available": true
+    },
+    {
+      "name": "EA Games",
+      "games": 2,
+      "source": "https://logos-world.net/ea-games-logo/",
+      "available": true
+    },
+    {
+      "name": "EA Redwood Shores",
+      "games": 3,
+      "source": "https://www.igdb.com/companies/ea-redwood-shores",
+      "available": true
+    },
+    {
+      "name": "Eidos Interactive",
+      "games": 3,
+      "source": "https://www.igdb.com/companies/eidos-interactive",
+      "available": true
+    },
+    {
+      "name": "Eidos Montréal",
+      "games": 4,
+      "source": "https://www.igdb.com/companies/eidos-montreal",
+      "available": true
+    },
+    {
+      "name": "Electronic Arts",
+      "games": 89,
+      "source": "https://www.wikidata.org/wiki/Q173941",
+      "available": true
+    },
+    {
+      "name": "Feral Interactive",
+      "games": 16,
+      "source": "https://www.igdb.com/companies/feral-interactive",
+      "available": true
+    },
+    {
+      "name": "Firaxis Games",
+      "games": 7,
+      "source": "https://www.igdb.com/companies/firaxis-games",
+      "available": true
+    },
+    {
+      "name": "Firefly Studios",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/firefly-studios",
+      "available": true
+    },
+    {
+      "name": "Focus Entertainment",
+      "games": 4,
+      "source": "https://www.igdb.com/companies/focus-entertainment",
+      "available": true
+    },
+    {
+      "name": "Frictional Games",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/frictional-games",
+      "available": true
+    },
+    {
+      "name": "FromSoftware",
+      "games": 17,
+      "source": "https://www.wikidata.org/wiki/Q2414469",
+      "available": true
+    },
+    {
+      "name": "Ghost Town Games",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/ghost-town-games",
+      "available": true
+    },
+    {
+      "name": "GSC Game World",
+      "games": 5,
+      "source": "https://www.igdb.com/companies/gsc-game-world",
+      "available": true
+    },
+    {
+      "name": "GSC World Publishing",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/gsc-world-publishing",
+      "available": true
+    },
+    {
+      "name": "Guerrilla Games",
+      "games": 4,
+      "source": "https://www.igdb.com/companies/guerrilla-games",
+      "available": true
+    },
+    {
+      "name": "H2 Interactive Co., Ltd.",
+      "games": 2,
+      "source": "https://h2interactive.co.jp/",
+      "available": true
+    },
+    {
+      "name": "Hazelight Studios",
+      "games": 3,
+      "source": "https://www.igdb.com/companies/hazelight-studios",
+      "available": true
+    },
+    {
+      "name": "id Software",
+      "games": 7,
+      "source": "https://www.igdb.com/companies/id-software",
+      "available": true
+    },
+    {
+      "name": "Infinity Ward",
+      "games": 8,
+      "source": "https://www.igdb.com/companies/infinity-ward",
+      "available": true
+    },
+    {
+      "name": "Insomniac Games",
+      "games": 8,
+      "source": "https://www.igdb.com/companies/insomniac-games",
+      "available": true
+    },
+    {
+      "name": "IO Interactive",
+      "games": 4,
+      "source": "https://www.igdb.com/companies/io-interactive",
+      "available": true
+    },
+    {
+      "name": "Irrational Games",
+      "games": 4,
+      "source": "https://www.igdb.com/companies/irrational-games",
+      "available": true
+    },
+    {
+      "name": "JoWooD Entertainment AG",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/jowood-entertainment-ag",
+      "available": true
+    },
+    {
+      "name": "Kepler Interactive",
+      "games": 4,
+      "source": "https://www.igdb.com/companies/kepler-interactive",
+      "available": true
+    },
+    {
+      "name": "Klei Entertainment",
+      "games": 3,
+      "source": "https://www.igdb.com/companies/klei-entertainment",
+      "available": true
+    },
+    {
+      "name": "KnowWonder",
+      "games": 2,
+      "source": "https://logos.fandom.com/wiki/KnowWonder",
+      "available": true
+    },
+    {
+      "name": "Koei Tecmo Games",
+      "games": 4,
+      "source": "https://www.igdb.com/companies/koei-tecmo-games",
+      "available": true
+    },
+    {
+      "name": "Kojima Productions",
+      "games": 4,
+      "source": "https://www.igdb.com/companies/kojima-productions",
+      "available": true
+    },
+    {
+      "name": "Konami",
+      "games": 5,
+      "source": "https://www.igdb.com/companies/konami",
+      "available": true
+    },
+    {
+      "name": "Lionhead Studios",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/lionhead-studios",
+      "available": true
+    },
+    {
+      "name": "MachineGames",
+      "games": 4,
+      "source": "https://www.igdb.com/companies/machinegames",
+      "available": true
+    },
+    {
+      "name": "Maxis",
+      "games": 9,
+      "source": "https://www.igdb.com/companies/maxis",
+      "available": true
+    },
+    {
+      "name": "Microsoft Game Studios",
+      "games": 4,
+      "source": "https://www.igdb.com/companies/microsoft-game-studios",
+      "available": true
+    },
+    {
+      "name": "Microsoft Studios",
+      "games": 3,
+      "source": "https://www.igdb.com/companies/microsoft-studios",
+      "available": true
+    },
+    {
+      "name": "Mobius Digital",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/mobius-digital",
+      "available": true
+    },
+    {
+      "name": "Monolith Productions",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/monolith-productions",
+      "available": true
+    },
+    {
+      "name": "Moon Studios",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/moon-studios",
+      "available": true
+    },
+    {
+      "name": "Namco Bandai Games",
+      "games": 3,
+      "source": "https://www.igdb.com/companies/namco-bandai-games",
+      "available": true
+    },
+    {
+      "name": "Naughty Dog",
+      "games": 14,
+      "source": "https://www.igdb.com/companies/naughty-dog",
+      "available": true
+    },
+    {
+      "name": "NCSOFT",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/ncsoft",
+      "available": true
+    },
+    {
+      "name": "Neowiz",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/neowiz",
+      "available": true
+    },
+    {
+      "name": "Netflix",
+      "games": 3,
+      "source": "https://www.igdb.com/companies/netflix",
+      "available": true
+    },
+    {
+      "name": "Ninja Theory",
+      "games": 4,
+      "source": "https://www.igdb.com/companies/ninja-theory",
+      "available": true
+    },
+    {
+      "name": "Obsidian Entertainment",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/obsidian-entertainment",
+      "available": true
+    },
+    {
+      "name": "Okomotive",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/okomotive",
+      "available": true
+    },
+    {
+      "name": "Paradox Development Studio",
+      "games": 4,
+      "source": "https://www.igdb.com/companies/paradox-development-studio",
+      "available": true
+    },
+    {
+      "name": "Paradox Interactive",
+      "games": 12,
+      "source": "https://www.igdb.com/companies/paradox-interactive",
+      "available": true
+    },
+    {
+      "name": "People Can Fly",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/people-can-fly",
+      "available": true
+    },
+    {
+      "name": "Piranha Bytes",
+      "games": 6,
+      "source": "https://www.igdb.com/companies/piranha-bytes",
+      "available": true
+    },
+    {
+      "name": "Playdead",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/playdead",
+      "available": true
+    },
+    {
+      "name": "Playdigious",
+      "games": 3,
+      "source": "https://www.igdb.com/companies/playdigious",
+      "available": true
+    },
+    {
+      "name": "Playstack",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/playstack",
+      "available": true
+    },
+    {
+      "name": "Quantic Dream",
+      "games": 4,
+      "source": "https://www.igdb.com/companies/quantic-dream",
+      "available": true
+    },
+    {
+      "name": "Raw Fury",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/raw-fury",
+      "available": true
+    },
+    {
+      "name": "Remedy Entertainment",
+      "games": 6,
+      "source": "https://www.igdb.com/companies/remedy-entertainment",
+      "available": true
+    },
+    {
+      "name": "Respawn Entertainment",
+      "games": 5,
+      "source": "https://www.igdb.com/companies/respawn-entertainment",
+      "available": true
+    },
+    {
+      "name": "Rockstar Games",
+      "games": 14,
+      "source": "https://www.igdb.com/companies/rockstar-games",
+      "available": true
+    },
+    {
+      "name": "Rockstar North",
+      "games": 6,
+      "source": "https://www.igdb.com/companies/rockstar-north",
+      "available": true
+    },
+    {
+      "name": "Rockstar Toronto",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/rockstar-toronto",
+      "available": true
+    },
+    {
+      "name": "Rocksteady Studios",
+      "games": 4,
+      "source": "https://www.igdb.com/companies/rocksteady-studios",
+      "available": true
+    },
+    {
+      "name": "Round8 Studio",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/round8-studio",
+      "available": true
+    },
+    {
+      "name": "Sandfall Interactive",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/sandfall-interactive",
+      "available": true
+    },
+    {
+      "name": "Sega",
+      "games": 9,
+      "source": "https://www.igdb.com/companies/sega",
+      "available": true
+    },
+    {
+      "name": "SIE Santa Monica Studio",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/sie-santa-monica-studio",
+      "available": true
+    },
+    {
+      "name": "Sierra Entertainment",
+      "games": 3,
+      "source": "https://www.igdb.com/companies/sierra-entertainment",
+      "available": true
+    },
+    {
+      "name": "Skybound Games",
+      "games": 3,
+      "source": "https://www.igdb.com/companies/skybound-games",
+      "available": true
+    },
+    {
+      "name": "Sledgehammer Games",
+      "games": 3,
+      "source": "https://www.igdb.com/companies/sledgehammer-games",
+      "available": true
+    },
+    {
+      "name": "Sony Computer Entertainment",
+      "games": 16,
+      "source": "https://www.igdb.com/companies/sony-computer-entertainment",
+      "available": true
+    },
+    {
+      "name": "Sony Interactive Entertainment",
+      "games": 32,
+      "source": "https://www.wikidata.org/wiki/Q18594",
+      "available": true
+    },
+    {
+      "name": "Square Enix",
+      "games": 18,
+      "source": "https://www.igdb.com/companies/square-enix",
+      "available": true
+    },
+    {
+      "name": "Square Enix Business Division 2",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/square-enix-business-division-2",
+      "available": true
+    },
+    {
+      "name": "Square Enix Creative Business Unit III",
+      "games": 3,
+      "source": "https://www.igdb.com/companies/square-enix-creative-business-unit-iii",
+      "available": true
+    },
+    {
+      "name": "Sucker Punch Productions",
+      "games": 3,
+      "source": "https://www.igdb.com/companies/sucker-punch-productions",
+      "available": true
+    },
+    {
+      "name": "Supergiant Games",
+      "games": 2,
+      "source": "https://www.wikidata.org/wiki/Q7643396",
+      "available": true
+    },
+    {
+      "name": "Take-Two Interactive",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/take-two-interactive",
+      "available": true
+    },
+    {
+      "name": "Tango Gameworks",
+      "games": 4,
+      "source": "https://www.igdb.com/companies/tango-gameworks",
+      "available": true
+    },
+    {
+      "name": "Tarsier Studios",
+      "games": 3,
+      "source": "https://www.igdb.com/companies/tarsier-studios",
+      "available": true
+    },
+    {
+      "name": "Team NINJA",
+      "games": 3,
+      "source": "https://www.igdb.com/companies/team-ninja",
+      "available": true
+    },
+    {
+      "name": "Team17",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/team17",
+      "available": true
+    },
+    {
+      "name": "Techland",
+      "games": 5,
+      "source": "https://www.igdb.com/companies/techland",
+      "available": true
+    },
+    {
+      "name": "Telltale Games",
+      "games": 4,
+      "source": "https://www.igdb.com/companies/telltale-games",
+      "available": true
+    },
+    {
+      "name": "The Chinese Room",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/the-chinese-room",
+      "available": true
+    },
+    {
+      "name": "The Coalition",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/the-coalition",
+      "available": true
+    },
+    {
+      "name": "The Creative Assembly",
+      "games": 8,
+      "source": "https://www.igdb.com/companies/the-creative-assembly",
+      "available": true
+    },
+    {
+      "name": "The Sims Studio",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/the-sims-studio",
+      "available": true
+    },
+    {
+      "name": "THQ",
+      "games": 6,
+      "source": "https://www.igdb.com/companies/thq",
+      "available": true
+    },
+    {
+      "name": "THQ Nordic",
+      "games": 8,
+      "source": "https://www.igdb.com/companies/thq-nordic",
+      "available": true
+    },
+    {
+      "name": "Treyarch",
+      "games": 3,
+      "source": "https://www.igdb.com/companies/treyarch",
+      "available": true
+    },
+    {
+      "name": "Turtle Rock Studios",
+      "games": 3,
+      "source": "https://www.igdb.com/companies/turtle-rock-studios",
+      "available": true
+    },
+    {
+      "name": "Ubisoft Blue Byte",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/ubisoft-blue-byte",
+      "available": true
+    },
+    {
+      "name": "Ubisoft Entertainment",
+      "games": 38,
+      "source": "https://www.wikidata.org/wiki/Q188273",
+      "available": true
+    },
+    {
+      "name": "Ubisoft Montpellier",
+      "games": 4,
+      "source": "https://www.igdb.com/companies/ubisoft-montpellier",
+      "available": true
+    },
+    {
+      "name": "Ubisoft Montreal",
+      "games": 25,
+      "source": "https://www.igdb.com/companies/ubisoft-montreal",
+      "available": true
+    },
+    {
+      "name": "Ubisoft Québec",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/ubisoft-quebec--1",
+      "available": true
+    },
+    {
+      "name": "Valve",
+      "games": 11,
+      "source": "https://www.wikidata.org/wiki/Q193559",
+      "available": true
+    },
+    {
+      "name": "Warhorse Studios",
+      "games": 11,
+      "source": "https://www.igdb.com/companies/warhorse-studios",
+      "available": true
+    },
+    {
+      "name": "Warner Bros. Interactive Entertainment",
+      "games": 2,
+      "source": "https://logos.fandom.com/wiki/Warner_Bros._Interactive_Entertainment",
+      "available": true
+    },
+    {
+      "name": "WB Games",
+      "games": 7,
+      "source": "https://www.igdb.com/companies/wb-games",
+      "available": true
+    },
+    {
+      "name": "Weappy Studio",
+      "games": 4,
+      "source": "https://www.igdb.com/companies/weappy-studio",
+      "available": true
+    },
+    {
+      "name": "Xbox Game Studios",
+      "games": 6,
+      "source": "https://www.igdb.com/companies/xbox-game-studios",
+      "available": true
+    },
+    {
+      "name": "ZA/UM",
+      "games": 2,
+      "source": "https://www.igdb.com/companies/za-slash-um",
+      "available": true
+    }
+  ]
+}

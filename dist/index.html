@@ -116,11 +116,14 @@
     cloud.classList.add('cloud-flow');
   }
   async function loadCompanyLogos(){
-    for(const img of document.querySelectorAll('img[data-company]')){
-      const name=img.dataset.company,key='atlas-company-logo-v2:'+name;let cached;try{cached=JSON.parse(localStorage.getItem(key))}catch{}
-      if(cached?.data){img.src=cached.data;continue}if(cached&&Date.now()-cached.savedAt<604800000)continue;
-      if(!logoPending.has(name))logoPending.set(name,api('/api/company-logo?name='+encodeURIComponent(name)).then(result=>{if(result.data||result.missing){try{localStorage.setItem(key,JSON.stringify({...result,savedAt:Date.now()}))}catch{}}return result}).catch(()=>({})));const result=await logoPending.get(name);if(result.data&&img.isConnected)img.src=result.data;
-    }
+    const show=(img,logo)=>{img.style.backgroundColor=logo.dark?'#17212b':'#edf3f8';img.src=logo.data};
+    await Promise.all(Array.from(document.querySelectorAll('img[data-company]'),async img=>{
+      const name=img.dataset.company,key='atlas-company-logo-v3:'+name;let cached;try{cached=JSON.parse(localStorage.getItem(key))}catch{}
+      if(cached?.data&&Date.now()-cached.savedAt<2592000000){show(img,cached);return}
+      if(cached?.missing&&Date.now()-cached.savedAt<3600000)return;
+      if(!logoPending.has(name))logoPending.set(name,api('/api/company-logo?name='+encodeURIComponent(name)).then(result=>{if(result.data||result.missing){try{localStorage.setItem(key,JSON.stringify({...result,savedAt:Date.now()}))}catch{}}return result}).catch(()=>({})).finally(()=>logoPending.delete(name)));
+      const result=await logoPending.get(name);if(result.data&&img.isConnected)show(img,result);
+    }));
   }
   new ResizeObserver(fitGenreCloud).observe($('genreRows'));
   function fitYearLabels(){

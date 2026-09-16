@@ -4,7 +4,7 @@ async function getJSON(url){const r=await fetch(url,{headers:{'User-Agent':'Back
 export async function companyLogo(name){
   const bundled=companyLogos[name]||Object.entries(companyLogos).find(([key])=>normalize(key)===normalize(name))?.[1];if(bundled)return bundled;
   let cache;try{cache=globalThis.caches?.default}catch{}
-  const key=new Request('https://backloggd-atlas.cache/company-logo/v1/'+encodeURIComponent(name));
+  const key=new Request('https://backloggd-atlas.cache/company-logo/v2/'+encodeURIComponent(name));
   if(cache){try{const hit=await cache.match(key);if(hit)return await hit.json()}catch{}}
   const search=await getJSON('https://www.wikidata.org/w/api.php?action=wbsearchentities&language=en&format=json&search='+encodeURIComponent(name));
   const match=search.search?.find(x=>[x.label,x.match?.text].some(s=>s&&normalize(s)===normalize(name))&&/game|software|entertainment|company|studio|developer|publisher/i.test(x.description||''));
@@ -21,5 +21,5 @@ export async function companyLogo(name){
       }
     }
   }
-  if(cache){try{await cache.put(key,new Response(JSON.stringify(result),{headers:{'cache-control':'public, max-age='+ (result.data?2592000:604800)}}))}catch{}}return result;
+  if(cache){try{await cache.put(key,new Response(JSON.stringify(result),{headers:{'cache-control':'public, max-age='+ (result.data?2592000:3600)}}))}catch{}}return result;
 }
