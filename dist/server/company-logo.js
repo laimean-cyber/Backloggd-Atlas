@@ -1,8 +1,11 @@
-const normalize=s=>s.toLowerCase().replace(/[^a-z0-9]/g,'');
-async function getJSON(url){const r=await fetch(url,{headers:{'User-Agent':'BackloggdAtlas/1.0 (company logo lookup)'},signal:AbortSignal.timeout(12000)});if(!r.ok)throw Error('Logo source unavailable');return r.json()}
+import {companyLogos} from './company-logos.js';
+const normalize=s=>s.toLowerCase().replace(/\b(corporation|entertainment)\b/g,'').replace(/[^a-z0-9]/g,'');
+async function getJSON(url){const r=await fetch(url,{headers:{'User-Agent':'BackloggdAtlas/1.0 (company logo lookup)'},signal:AbortSignal.timeout(12000)});if(!r.ok)throw Error('Logo source unavailable '+r.status+' '+new URL(url).hostname);return r.json()}
 export async function companyLogo(name){
-  const cache=globalThis.caches?.default,key=new Request('https://backloggd-atlas.cache/company-logo/v1/'+encodeURIComponent(name));
-  if(cache){const hit=await cache.match(key);if(hit)return hit.json()}
+  const bundled=companyLogos[name]||Object.entries(companyLogos).find(([key])=>normalize(key)===normalize(name))?.[1];if(bundled)return bundled;
+  let cache;try{cache=globalThis.caches?.default}catch{}
+  const key=new Request('https://backloggd-atlas.cache/company-logo/v1/'+encodeURIComponent(name));
+  if(cache){try{const hit=await cache.match(key);if(hit)return await hit.json()}catch{}}
   const search=await getJSON('https://www.wikidata.org/w/api.php?action=wbsearchentities&language=en&format=json&search='+encodeURIComponent(name));
   const match=search.search?.find(x=>[x.label,x.match?.text].some(s=>s&&normalize(s)===normalize(name))&&/game|software|entertainment|company|studio|developer|publisher/i.test(x.description||''));
   let result={missing:true};
@@ -18,5 +21,5 @@ export async function companyLogo(name){
       }
     }
   }
-  if(cache)await cache.put(key,new Response(JSON.stringify(result),{headers:{'cache-control':'public, max-age='+ (result.data?2592000:604800)}}));return result;
+  if(cache){try{await cache.put(key,new Response(JSON.stringify(result),{headers:{'cache-control':'public, max-age='+ (result.data?2592000:604800)}}))}catch{}}return result;
 }
