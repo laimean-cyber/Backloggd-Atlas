@@ -43,7 +43,7 @@ function parseDetails(html) {
 
 async function gameDetails(path, env) {
   const cache = globalThis.caches?.default;
-  const key = new Request(`https://backloggd-atlas.cache/igdb-v1${path}`);
+  const key = new Request(`https://backloggd-atlas.cache/igdb-v2${path}`);
   if (cache) { try { const hit = await cache.match(key); if (hit) return await hit.json(); } catch {} }
   const html = await upstream(path);
   const details = { ...parseDetails(html), ...await igdbDetails(path, html, env) };

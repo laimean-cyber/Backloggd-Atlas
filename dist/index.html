@@ -73,7 +73,24 @@
   .legend-star{fill:var(--backloggd-pink)}
   .game-rating{color:#f276a4}
   .genre-word:nth-child(3n){color:#f276a4}
-  </style>
+  /* Standard dashboard boxes are square; full-width sections opt out. */
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid>.span2{grid-column:1/-1}
+  .panel:not(.span2){aspect-ratio:1;min-height:0;display:flex;flex-direction:column}
+  .explore-pair>.panel{height:auto}
+  .panel:not(.span2)>.panel-head{flex:none;flex-wrap:wrap}
+  .developer-list{flex:1;min-height:0;overflow:auto}
+  .rating-layout{flex:1;min-height:0;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(12px,2vw,24px)}
+  .donut{width:100%;max-width:310px;height:auto;aspect-ratio:1}
+  .donut:after{inset:15%}
+  .donut-center{font-size:clamp(1.4rem,3vw,2.5rem)}
+  .legend-label{white-space:nowrap;gap:6px}
+  .legend{min-height:0;max-height:100%;overflow:auto}
+  @media(max-width:760px){.grid{grid-template-columns:1fr}.span2{grid-column:auto}}
+  @media(max-width:400px){.rating-layout{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:12px}.legend-line{font-size:.75rem;gap:6px}.legend-label{gap:4px}.donut-center small{font-size:.65rem}}
+  @media(max-width:350px){.legend{gap:3px}.legend-line{font-size:.7rem}}
+  .modes-panel .legend-label{white-space:normal;overflow-wrap:anywhere}.modes-panel .swatch{flex-shrink:0}.modes-panel .legend-line{align-items:center}
+</style>
 </head>
 <body><div class="shell">
   <header class="top"><div class="brand"><div class="mark" aria-hidden="true">▥</div> Backloggd Atlas</div><div class="topright"><span class="source" id="sourceLabel">Sample library</span><label class="upload" for="file">Import your library</label><input id="file" type="file" accept=".csv,.json,text/csv,application/json" aria-label="Import a Backloggd CSV or JSON export"></div></header>
@@ -85,12 +102,14 @@
   <div class="grid"><section class="panel span2"><div class="panel-head"><div><h2>Games by release year</h2><p class="panel-sub">Hover over a bar to preview every game counted</p></div><div class="seg" role="group" aria-label="Release year chart measure"><button class="active" id="countBtn" type="button">Games</button><button id="avgBtn" type="button">Avg. rating</button></div></div><div class="year-chart" id="yearChart"><div class="axis-title" id="yearYAxis">Games</div><div class="chart-scroll"><div class="chart-grid" id="yearGrid"><div class="y-ticks" id="yearTicks"></div><div id="yearBars" class="bars" aria-label="Games by release year"></div></div><div class="x-axis">Release year</div></div></div></section>
   <section class="panel"><div class="panel-head"><div><h2 id="companyTitle">Developers you rate highest</h2><p class="panel-sub" id="devSubtitle">Developers credited on IGDB · at least 3 rated games</p></div><div class="seg" role="group" aria-label="Sort developers"><button id="companyRatingBtn" class="active" aria-pressed="true">Rating</button><button id="companyCountBtn" aria-pressed="false">Game count</button></div></div><div id="developers" class="developer-list"></div></section>
   <section class="panel"><div class="panel-head"><div><h2>Your rating spread</h2><p class="panel-sub">How often each score shows up</p></div></div><div class="rating-layout"><div id="donut" class="donut"><div class="donut-center" id="donutCenter">—<small>rated games</small></div></div><div id="legend" class="legend"></div></div></section>
+  <section class="panel"><div class="panel-head"><div><h2 id="publisherTitle">Publishers you rate highest</h2><p class="panel-sub" id="publisherSubtitle">Publishers credited on IGDB · at least 3 rated games</p></div><div class="seg" role="group" aria-label="Sort publishers"><button id="publisherRatingBtn" class="active" aria-pressed="true">Rating</button><button id="publisherCountBtn" aria-pressed="false">Game count</button></div></div><div id="publishers" class="developer-list"></div></section>
+  <section class="panel modes-panel"><div class="panel-head"><div><h2>Your game mode spread</h2><p class="panel-sub" id="modeSubtitle">IGDB game modes · each mode per game counts</p></div></div><div class="rating-layout"><div id="modeDonut" class="donut"><div class="donut-center" id="modeCenter"></div></div><div id="modeLegend" class="legend"></div></div></section>
   <div class="explore-pair span2"><section class="panel explorer-panel"><div class="panel-head"><div><h2>Release-year explorer</h2><p class="panel-sub" id="yearSubtitle">Played games by year · average uses rated games</p></div></div><div class="explorer-controls"><label>Sort years <select id="yearSort" aria-label="Sort release years"><option value="year">Year</option><option value="count">Number of games</option><option value="rating">Average rating</option></select></label></div><div class="explorer-head"><span>Year</span><span>Games</span><span>Avg / 5</span></div><div id="yearRows" class="explorer-rows"></div></section>
   <section class="panel genres-panel"><div class="panel-head"><div><h2>Genres across your games</h2><p class="panel-sub" id="genreSubtitle">Every genre credited on each Backloggd game page counts</p></div><div class="seg" role="group" aria-label="Genre cloud size"><button type="button" id="genreCountBtn" class="active" aria-pressed="true">Game count</button><button type="button" id="genreRatingBtn" aria-pressed="false">Avg. rating</button></div></div><div id="genreRows" class="genre-rows"></div></section></div>
   <section class="panel span2"><div class="panel-head"><div><h2>Beyond the averages</h2><p class="panel-sub">A few more ways to explore your library</p></div></div><div class="insight-grid"><div class="insight" id="nicheInsight"></div><div class="insight" id="gemInsight"></div><div class="insight" id="popularInsight"></div><div class="insight" id="decadeInsight"></div></div></section>
   <section class="panel span2" id="breakdown" aria-labelledby="breakdownTitle" hidden><div class="breakdown-head"><div><h2 id="breakdownTitle">Games counted</h2><p class="panel-sub" id="breakdownSubtitle"></p></div><button class="close" id="closeBreakdown" type="button" aria-label="Close game list">Close</button></div><div id="breakdownList" class="breakdown-list"></div></section></div>
   <aside id="hoverCard" class="hover-card" role="region" aria-label="Games preview" hidden><div class="hover-card-head"><strong id="hoverTitle"></strong><span id="hoverSummary"></span></div><div id="hoverList" class="hover-list"></div></aside>
-  <div class="foot"><span id="dataNote">Showing a sample library. Profile lookups read public Backloggd pages; file imports stay in this browser.</span> <button class="ghost" id="reset" type="button" style="display:none;margin-left:12px">Show sample data</button><div class="filehint">Developer credits, logos, and genres come from IGDB; a game counts once for each credited developer. Game metadata is saved in this browser for faster repeat lookups. CSV and JSON import remains available.</div></div>
+  <div class="foot"><span id="dataNote">Showing a sample library. Profile lookups read public Backloggd pages; file imports stay in this browser.</span> <button class="ghost" id="reset" type="button" style="display:none;margin-left:12px">Show sample data</button><div class="filehint">Developer and publisher credits, logos, genres, and game modes come from IGDB; a game counts once for each credited developer. Game metadata is saved in this browser for faster repeat lookups. CSV and JSON import remains available.</div></div>
   </main></div>
   <script>
   const sample=[
@@ -106,13 +125,13 @@
   function isPlayed(g){return g.played!==false}function rated(){return games.filter(g=>isPlayed(g)&&Number.isFinite(g.rating)&&g.rating>0)}
   function developersFor(g){return Array.isArray(g.developers)?[...new Set(g.developers.filter(Boolean))]:(g.developer&&g.developer!=='Unknown'?[g.developer]:[])}
   function genresFor(g){return Array.isArray(g.genres)?[...new Set(g.genres.filter(Boolean))]:[]}
-  function groups(items,key){const m=new Map;items.forEach(g=>{const names=key==='developers'?developersFor(g):key==='genres'?genresFor(g):[g[key]];for(const k of new Set(names)){if(k!==null&&k!==undefined&&k!==''&&k!=='Unknown'){if(!m.has(k))m.set(k,[]);m.get(k).push(g)}}});return [...m].map(([name,list])=>{const scores=list.map(g=>g.rating).filter(n=>Number.isFinite(n)&&n>0);return {name,list,count:list.length,ratedCount:scores.length,rating:avg(scores)}})}
+  function groups(items,key){const m=new Map;items.forEach(g=>{const names=key==='developers'?developersFor(g):key==='genres'?genresFor(g):['publishers','gameModes'].includes(key)?(g[key]||[]):[g[key]];for(const k of new Set(names)){if(k!==null&&k!==undefined&&k!==''&&k!=='Unknown'){if(!m.has(k))m.set(k,[]);m.get(k).push(g)}}});return [...m].map(([name,list])=>{const scores=list.map(g=>g.rating).filter(n=>Number.isFinite(n)&&n>0);return {name,list,count:list.length,ratedCount:scores.length,rating:avg(scores)}})}
   const inlineStar = "<svg class=\"rating-star\" viewBox=\"0 0 576 512\" aria-hidden=\"true\"><path d=\"M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z\"/></svg>";
   function ratingStars(value){const path='<path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/>';return [0,1,2,3,4].map(i=>{const fill=Math.max(0,Math.min(1,value-i))*100;return `<span class="star-icon" aria-hidden="true"><svg viewBox="0 0 576 512">${path}</svg><span style="--fill:${fill}%"><svg viewBox="0 0 576 512">${path}</svg></span></span>`}).join('')}
   function gameLink(g){return typeof g.path==='string'&&/^\/games\/[a-z0-9-]+\/$/.test(g.path)?`<a href="https://backloggd.com${esc(g.path)}" target="_blank" rel="noopener noreferrer">${esc(g.title)} ↗</a>`:esc(g.title)}
   function playsLabel(g){if(!g)return '—';return g.playText?`${/[KMB]$/i.test(g.playText)?'≈':''}${esc(g.playText)}`:Number.isFinite(g.plays)?g.plays.toLocaleString():'—'}
   function insight(id,label,g,description){$(id).classList.toggle('empty-insight',!g);$(id).innerHTML=`<h3>${label}</h3>${g?`<strong>${gameLink(g)}</strong><p>${description}</p>`:`<p>${activeUsername?'Checking Backloggd game pages…':'Enter a profile to see this insight.'}</p>`}`}
-  let yearSort='year',genreSort='count',companySort='rating';
+  let yearSort='year',genreSort='count',companySort='rating',publisherSort='rating';
   const cloudRandom=new Map(),logoPending=new Map();
   function fitGenreCloud(){
     const cloud=$('genreRows'),words=[...cloud.querySelectorAll('.genre-word')];if(!words.length||!cloud.clientWidth||!cloud.clientHeight)return;
@@ -145,7 +164,7 @@
     return logoPending.get(url);
   }
   function loadDeveloperLogos(){
-    const logos=Object.assign({},...games.map(g=>g.developerLogos||{}));
+    const logos=Object.assign({},...games.map(g=>({...g.developerLogos,...g.publisherLogos})));
     for(const img of document.querySelectorAll('img[data-developer]')){
       const url=logos[img.dataset.developer];
       if(typeof url==='string'&&/^https:\/\/images\.igdb\.com\/igdb\/image\/upload\//.test(url))cachedDeveloperLogo(url).then(src=>{if(img.isConnected)img.src=src});
@@ -190,10 +209,21 @@
     $('companyTitle').textContent=companySort==='rating'?'Developers you rate highest':'Developers you play most';
     $('devSubtitle').textContent=companySort==='rating'?'At least 3 rated games · hover to see games':'Sorted by played games · hover to see games';
     $('developers').innerHTML=shownDevelopers.length?shownDevelopers.map(x=>`<button type="button" class="dev-row drill" style="--developer-fill:${(companySort==='rating'?x.rating/5:x.count/companyMax)*100}%" data-kind="studio" data-key="${esc(x.name)}" aria-describedby="hoverCard"><img class="developer-logo" data-developer="${esc(x.name)}" alt="" hidden><div class="developer-copy"><div class="dev-name">${esc(x.name)}</div><div class="dev-detail">${x.count} games · ${x.ratedCount} rated · ${fmt(x.rating)} / 5</div></div><div class="score">${companySort==='rating'?fmt(x.rating):x.count}</div></button>`).join(''):'<div class="empty">Developer insights need at least 3 rated games per developer.</div>';
+    const publisherGroups=groups(played,'publishers'),shownPublishers=(publisherSort==='rating'?publisherGroups.filter(x=>x.ratedCount>=3).sort((a,b)=>b.rating-a.rating||b.count-a.count):publisherGroups.sort((a,b)=>b.count-a.count||(b.rating||0)-(a.rating||0))).slice(0,5),publisherMax=Math.max(1,...publisherGroups.map(x=>x.count));
+    $('publisherTitle').textContent=publisherSort==='rating'?'Publishers you rate highest':'Publishers you play most';
+    $('publisherSubtitle').textContent=publisherSort==='rating'?'At least 3 rated games · hover to see games':'Sorted by played games · hover to see games';
+    $('publishers').innerHTML=shownPublishers.length?shownPublishers.map(x=>`<button type="button" class="dev-row drill" style="--developer-fill:${(publisherSort==='rating'?x.rating/5:x.count/publisherMax)*100}%" data-kind="publisher" data-key="${esc(x.name)}" aria-describedby="hoverCard"><img class="developer-logo" data-developer="${esc(x.name)}" alt="" hidden><div class="developer-copy"><div class="dev-name">${esc(x.name)}</div><div class="dev-detail">${x.count} games · ${x.ratedCount} rated · ${fmt(x.rating)} / 5</div></div><div class="score">${publisherSort==='rating'?fmt(x.rating):x.count}</div></button>`).join(''):'<div class="empty">Publisher insights need at least 3 rated games per publisher.</div>';
     for(const img of document.querySelectorAll('.developer-logo')){img.onload=()=>{img.hidden=false};img.onerror=()=>{img.hidden=true}}loadDeveloperLogos();
     const colors=['#f9d0df','#f7b1cc','#f593b8','#f276a4','#ee5790','#ea377a','#d6296a','#b8235d','#963052','#70304c'];
     const buckets=[...new Set(rs.map(g=>g.rating))].sort((a,b)=>b-a).map((rating,i)=>({label:fmt(rating),count:rs.filter(g=>g.rating===rating).length,color:colors[Math.max(0,Math.min(9,Math.round((5-rating)*2)))]}));
     let pos=0;const slices=buckets.map(b=>{const start=pos;pos+=rs.length?b.count/rs.length*100:0;return `${b.color} ${start}% ${pos}%`}).join(',');$('donut').style.background=rs.length?`conic-gradient(${slices})`:'#353d4e';$('donutCenter').innerHTML=`${rs.length}<small>rated games</small>`;$('legend').innerHTML=buckets.map(b=>`<div class="legend-line"><span class="legend-label"><i class="swatch" style="background:${b.color}"></i><svg class="legend-star" viewBox="0 0 576 512" aria-hidden="true"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg>${b.label} stars</span><span class="legend-count">${b.count}</span></div>`).join('');
+
+    const modeGroups=groups(played,'gameModes').sort((a,b)=>b.count-a.count||a.name.localeCompare(b.name)),modeTotal=modeGroups.reduce((n,x)=>n+x.count,0),modeCoverage=played.filter(g=>g.gameModes?.length).length;
+    let modePos=0;const modeSlices=modeGroups.map((x,i)=>{const start=modePos;modePos+=x.count/modeTotal*100;return colors[i%colors.length]+' '+start+'% '+modePos+'%'});
+    $('modeDonut').style.background=modeTotal?'conic-gradient('+modeSlices.join(',')+')':'#353d4e';
+    $('modeCenter').innerHTML=modeCoverage+'<small>games with modes</small>';
+    $('modeSubtitle').textContent='IGDB · '+modeCoverage+'/'+played.length+' games · each mode per game counts';
+    $('modeLegend').innerHTML=modeGroups.length?modeGroups.map((x,i)=>'<div class="legend-line"><span class="legend-label"><i class="swatch" style="background:'+colors[i%colors.length]+'"></i>'+esc(x.name)+'</span><span class="legend-count">'+x.count+'</span></div>').join(''):'<div class="empty">No game mode data yet.</div>';
     const sortedYears=[...yearAll].sort((a,b)=>yearSort==='count'?b.count-a.count||+b.name-+a.name:yearSort==='rating'?(b.rating||-1)-(a.rating||-1)||b.ratedCount-a.ratedCount:+b.name-+a.name);
     const yearFillMax=yearSort==='rating'?5:Math.max(10,Math.ceil(Math.max(0,...yearAll.map(x=>x.count))/10)*10);
     $('yearSubtitle').textContent=`Hover over a year to see its games · full row = ${yearFillMax}${yearSort==='rating'?' / 5 rating':' games'}`;
@@ -239,16 +269,16 @@
       if(page===100)libraryIncomplete=true;
     }
     if(!fromCache&&!libraryIncomplete)saveLibrary(username,all);
-    all.forEach(g=>{const cached=readMetadata(g.path);if(cached)Object.assign(g,cached);else Object.assign(g,{developers:[],developerLogos:{},genres:[],checked:false})});
+    all.forEach(g=>{const cached=readMetadata(g.path);if(cached)Object.assign(g,cached);else Object.assign(g,{developers:[],developerLogos:{},genres:[],publishers:[],publisherLogos:{},gameModes:[],checked:false})});
     return {all,libraryIncomplete,fromCache,savedAt:fromCache?cached.savedAt:Date.now()};
   }
   const libraryKey=username=>'backloggd-atlas:library:v1:'+username.toLowerCase();
   function readLibrary(username){try{const data=JSON.parse(localStorage.getItem(libraryKey(username)));if(Array.isArray(data?.games)&&data.games.length&&Date.now()-data.savedAt<7*86400000)return data}catch{}return null}
   function saveLibrary(username,all){try{localStorage.setItem(libraryKey(username),JSON.stringify({games:all,savedAt:Date.now()}))}catch{}}
-  const metadataKey=path=>'backloggd-atlas:metadata:igdb-v1:'+path;
+  const metadataKey=path=>'backloggd-atlas:metadata:igdb-v2:'+path;
   const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
-  function readMetadata(path){try{const data=JSON.parse(localStorage.getItem(metadataKey(path)));if(data?.checked&&Array.isArray(data.genres)&&'plays' in data)return {year:data.year??null,developers:data.developers||[],developerLogos:data.developerLogos||{},genres:data.genres,plays:data.plays,playText:data.playText??null,checked:true}}catch{}return null}
-  function saveMetadata(g){try{localStorage.setItem(metadataKey(g.path),JSON.stringify({year:g.year??null,developers:g.developers||[],developerLogos:g.developerLogos||{},genres:g.genres||[],plays:g.plays??null,playText:g.playText??null,checked:true,savedAt:Date.now()}))}catch{}}
+  function readMetadata(path){try{const data=JSON.parse(localStorage.getItem(metadataKey(path)));if(data?.checked&&Array.isArray(data.genres)&&Array.isArray(data.publishers)&&Array.isArray(data.gameModes)&&'plays' in data)return {year:data.year??null,developers:data.developers||[],developerLogos:data.developerLogos||{},genres:data.genres,publishers:data.publishers,publisherLogos:data.publisherLogos||{},gameModes:data.gameModes,plays:data.plays,playText:data.playText??null,checked:true}}catch{}return null}
+  function saveMetadata(g){try{localStorage.setItem(metadataKey(g.path),JSON.stringify({year:g.year??null,developers:g.developers||[],developerLogos:g.developerLogos||{},genres:g.genres||[],publishers:g.publishers||[],publisherLogos:g.publisherLogos||{},gameModes:g.gameModes||[],plays:g.plays??null,playText:g.playText??null,checked:true,savedAt:Date.now()}))}catch{}}
   async function loadDetails(all){
     const queue=all.filter(g=>!g.checked).sort((a,b)=>Number.isFinite(b.rating)-Number.isFinite(a.rating));
     let checked=all.length-queue.length,emptyGroups=0;
@@ -286,12 +316,12 @@
   $('countBtn').onclick=()=>{mode='count';$('countBtn').classList.add('active');$('avgBtn').classList.remove('active');render()};$('avgBtn').onclick=()=>{mode='average';$('avgBtn').classList.add('active');$('countBtn').classList.remove('active');render()};$('reset').onclick=()=>{games=sample;activeUsername='';activeBreakdown=null;$('breakdown').hidden=true;$('missingDetails').style.display='none';$('retryDetails').style.display='none';$('sourceLabel').textContent='Sample library';$('title').textContent='A closer look at your games.';$('dataNote').textContent='Showing a sample library. Profile lookups read public Backloggd pages; file imports stay in this browser.';$('reset').style.display='none';$('notice').classList.remove('show');render()};
   if(document.modelContext?.registerTool){Promise.resolve(document.modelContext.registerTool({name:'load_backloggd_profile',title:'Load Backloggd profile',description:'Build the visible dashboard from a public Backloggd nickname or profile URL.',inputSchema:{type:'object',properties:{profile:{type:'string'}},required:['profile'],additionalProperties:false},annotations:{readOnlyHint:false,untrustedContentHint:true},async execute(input){const username=usernameFromInput(input?.profile||'');$('username').value=username;await buildProfile(username);return{username,games:games.length,detailsChecked:games.filter(g=>g.checked).length}}})).catch(()=>{})}render();
   function showBreakdown(kind,key,trigger,quiet=false){
-    const list=games.filter(g=>isPlayed(g)&&(kind==='studio'?developersFor(g).includes(key):kind==='genre'?genresFor(g).includes(key):String(g.year)===key)).sort((a,b)=>(Number.isFinite(b.rating)?b.rating:-1)-(Number.isFinite(a.rating)?a.rating:-1)||a.title.localeCompare(b.title));
+    const list=games.filter(g=>isPlayed(g)&&(kind==='studio'?developersFor(g).includes(key):kind==='publisher'?(g.publishers||[]).includes(key):kind==='genre'?genresFor(g).includes(key):String(g.year)===key)).sort((a,b)=>(Number.isFinite(b.rating)?b.rating:-1)-(Number.isFinite(a.rating)?a.rating:-1)||a.title.localeCompare(b.title));
     if(!list.length)return;
     breakdownTrigger=trigger;activeBreakdown={kind,key};
     document.querySelectorAll('.drill[aria-expanded]').forEach(button=>button.setAttribute('aria-expanded',button===trigger?'true':'false'));
     $('breakdownTitle').textContent=`Games counted for ${key}`;
-    const known=games.filter(g=>isPlayed(g)&&(kind==='studio'?developersFor(g).length:kind==='genre'?genresFor(g).length:g.year!=null)).length;
+    const known=games.filter(g=>isPlayed(g)&&(kind==='studio'?developersFor(g).length:kind==='publisher'?(g.publishers||[]).length:kind==='genre'?genresFor(g).length:g.year!=null)).length;
     const scores=list.map(g=>g.rating).filter(n=>Number.isFinite(n)&&n>0);
     $('breakdownSubtitle').textContent=`${list.length} ${kind==='studio'?'rated ':''}games counted · ${scores.length} rated · ${fmt(avg(scores))} / 5 average · data for ${known}/${games.filter(isPlayed).length} library games`;
     $('breakdownList').innerHTML=list.map(g=>{
@@ -312,16 +342,17 @@
     $('breakdown').hidden=false;$('breakdownTitle').setAttribute('tabindex','-1');$('breakdownTitle').focus({preventScroll:true});$('breakdown').scrollIntoView({behavior:'smooth',block:'nearest'});
   }
   let hoverTimer=null,hoverTrigger=null;
-  function hoverGames(kind,key){return games.filter(g=>isPlayed(g)&&(kind==='studio'?developersFor(g).includes(key)&&Number.isFinite(g.rating)&&g.rating>0:kind==='genre'?genresFor(g).includes(key):String(g.year)===key)).sort((a,b)=>(Number.isFinite(b.rating)?b.rating:-1)-(Number.isFinite(a.rating)?a.rating:-1)||a.title.localeCompare(b.title))}
+  function hoverGames(kind,key){return games.filter(g=>isPlayed(g)&&(kind==='studio'?developersFor(g).includes(key)&&Number.isFinite(g.rating)&&g.rating>0:kind==='publisher'?(g.publishers||[]).includes(key):kind==='genre'?genresFor(g).includes(key):String(g.year)===key)).sort((a,b)=>(Number.isFinite(b.rating)?b.rating:-1)-(Number.isFinite(a.rating)?a.rating:-1)||a.title.localeCompare(b.title))}
   function positionHover(trigger){const card=$('hoverCard'),r=trigger.getBoundingClientRect(),w=card.offsetWidth,h=card.offsetHeight;let left=Math.min(Math.max(12,r.left),innerWidth-w-12),top=r.bottom-1;if(top+h>innerHeight-12)top=Math.max(12,r.top-h+1);card.style.left=`${left}px`;card.style.top=`${top}px`}
   function showHover(trigger){clearTimeout(hoverTimer);const kind=trigger.dataset.kind,key=trigger.dataset.key,list=hoverGames(kind,key);if(!list.length)return;hoverTrigger=trigger;const scores=list.map(g=>g.rating).filter(n=>Number.isFinite(n)&&n>0);$('hoverTitle').textContent=key;$('hoverSummary').textContent=`${list.length} games · ${fmt(avg(scores))} avg`;$('hoverList').innerHTML=list.map(g=>`<div class="hover-game"><span title="${esc(g.title)}">${gameLink(g)}</span><span>${Number.isFinite(g.rating)&&g.rating>0?inlineStar+' '+fmt(g.rating):'Unrated'}</span></div>`).join('');$('hoverCard').hidden=false;positionHover(trigger)}
   function hideHover(delay=0){clearTimeout(hoverTimer);hoverTimer=setTimeout(()=>{if(!$('hoverCard').matches(':hover')&&!$('hoverCard').contains(document.activeElement)&&hoverTrigger!==document.activeElement){$('hoverCard').hidden=true;hoverTrigger=null}},delay)}
   $('missingDetails').addEventListener('click',showMissing);
-  for(const id of ['developers','yearBars','yearRows','genreRows']){const root=$(id);root.addEventListener('pointerover',event=>{const button=event.target.closest('button[data-kind]');if(button&&button!==hoverTrigger)showHover(button)});root.addEventListener('pointerout',event=>{const button=event.target.closest('button[data-kind]');if(button&&!button.contains(event.relatedTarget))hideHover(500)});root.addEventListener('focusin',event=>{const button=event.target.closest('button[data-kind]');if(button)showHover(button)});root.addEventListener('focusout',event=>{if(event.target.closest('button[data-kind]'))hideHover(100)});root.addEventListener('click',event=>{const button=event.target.closest('button[data-kind]');if(button){event.preventDefault();$('hoverCard').hidden&&showHover(button)}})}
+  for(const id of ['developers','publishers','yearBars','yearRows','genreRows']){const root=$(id);root.addEventListener('pointerover',event=>{const button=event.target.closest('button[data-kind]');if(button&&button!==hoverTrigger)showHover(button)});root.addEventListener('pointerout',event=>{const button=event.target.closest('button[data-kind]');if(button&&!button.contains(event.relatedTarget))hideHover(500)});root.addEventListener('focusin',event=>{const button=event.target.closest('button[data-kind]');if(button)showHover(button)});root.addEventListener('focusout',event=>{if(event.target.closest('button[data-kind]'))hideHover(100)});root.addEventListener('click',event=>{const button=event.target.closest('button[data-kind]');if(button){event.preventDefault();$('hoverCard').hidden&&showHover(button)}})}
   $('hoverCard').addEventListener('focusin',()=>clearTimeout(hoverTimer));$('hoverCard').addEventListener('focusout',()=>hideHover(100));
   document.addEventListener('keydown',event=>{if(event.key==='ArrowDown'&&event.target.matches('button[data-kind]')){showHover(event.target);const link=$('hoverList').querySelector('a');if(link){event.preventDefault();link.focus()}}if(event.key==='Escape'&&!$('hoverCard').hidden){const trigger=hoverTrigger;if(trigger)trigger.focus();$('hoverCard').hidden=true;hoverTrigger=null}});
   $('hoverCard').addEventListener('pointerenter',()=>clearTimeout(hoverTimer));$('hoverCard').addEventListener('pointerleave',()=>hideHover(400));
   for(const [id,value] of [['companyRatingBtn','rating'],['companyCountBtn','count']])$(id).addEventListener('click',()=>{companySort=value;for(const [button,measure] of [['companyRatingBtn','rating'],['companyCountBtn','count']]){$(button).classList.toggle('active',measure===value);$(button).setAttribute('aria-pressed',String(measure===value))}render()});
+  for(const [id,value] of [['publisherRatingBtn','rating'],['publisherCountBtn','count']])$(id).addEventListener('click',()=>{publisherSort=value;for(const [button,measure] of [['publisherRatingBtn','rating'],['publisherCountBtn','count']]){$(button).classList.toggle('active',measure===value);$(button).setAttribute('aria-pressed',String(measure===value))}render()});
   $('yearSort').addEventListener('change',event=>{yearSort=event.target.value;render()});
   for(const [id,value] of [['genreCountBtn','count'],['genreRatingBtn','rating']])$(id).addEventListener('click',()=>{genreSort=value;for(const [button,measure] of [['genreCountBtn','count'],['genreRatingBtn','rating']]){$(button).classList.toggle('active',genreSort===measure);$(button).setAttribute('aria-pressed',String(genreSort===measure))}render()});
   $('closeBreakdown').addEventListener('click',()=>{activeBreakdown=null;$('breakdown').hidden=true;document.querySelectorAll('.drill[aria-expanded]').forEach(button=>button.setAttribute('aria-expanded','false'));if(breakdownTrigger?.isConnected)breakdownTrigger.focus()});
