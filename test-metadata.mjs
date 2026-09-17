@@ -8,7 +8,9 @@ globalThis.fetch = async (url, options) => {
   if (url.includes('oauth2/token')) { tokens++; return Response.json({ access_token: 'test-token', expires_in: 3600 }); }
   if (url.includes('api.igdb.com')) {
     assert.equal(options.headers.Authorization, 'Bearer test-token');
-    return Response.json([{ id: 123, genres: [{ name: 'Strategy' }, { name: 'RPG' }], game_modes: [{ name: 'Single player' }], player_perspectives: [{ name: 'Third person' }], themes: [{ name: 'Action' }], franchises: [{ name: 'Alan Wake' }], game_engines: [{ name: 'Northlight' }], involved_companies: [
+    assert.match(options.body, /game_type\.type/);
+    assert.doesNotMatch(options.body, /(?:^|[, ])category(?:[,;]|$)/);
+    return Response.json([{ id: 123, game_type: { id: 2, type: 'Expansion' }, genres: [{ name: 'Strategy' }, { name: 'RPG' }], game_modes: [{ name: 'Single player' }], player_perspectives: [{ name: 'Third person' }], themes: [{ name: 'Action' }], franchises: [{ name: 'Alan Wake' }], game_engines: [{ name: 'Northlight' }], involved_companies: [
       { developer: true, company: { name: 'First Studio', logo: { image_id: 'cl123' } } },
       { developer: true, publisher: true, company: { name: 'Second Studio' } },
       { developer: true, company: { name: 'First Studio' } },
@@ -27,6 +29,7 @@ await worker.fetch(new Request(url), env);
 assert.equal(tokens, 1, 'reuse OAuth tokens');
 assert.equal(body.details[0].year, 2023);
 assert.equal(body.details[0].checked, true);
+assert.equal(body.details[0].gameType, 'Expansion');
 assert.deepEqual(body.details[0].genres, ['Strategy', 'RPG']);
 assert.deepEqual(body.details[0].gameModes, ['Single player']);
 assert.deepEqual(body.details[0].playerPerspectives, ['Third person']);

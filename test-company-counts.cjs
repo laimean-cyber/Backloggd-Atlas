@@ -6,9 +6,9 @@ const {chromium}=require('C:/Users/Laimean/.cache/codex-runtimes/codex-primary-r
  const page=await browser.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.route('http://localhost:4174/**',r=>r.fulfill({contentType:'text/html',body:fs.readFileSync('dist/index.html','utf8')}));
  await page.goto('http://localhost:4174/');
- const fixture=[4,3,5,null,0].map((rating,i)=>({title:'Game '+i,rating,played:true,category:0,developers:['Studio','Studio'],publishers:['Publisher','Publisher'],themes:['Theme'],franchises:['Franchise'],gameEngines:['Engine']}));
- fixture.push({title:'DLC',rating:5,played:true,category:1,developers:['Studio'],publishers:['Publisher'],themes:['Theme'],franchises:['Franchise'],gameEngines:['Engine']});
- fixture.push({title:'Expansion',rating:5,played:true,category:2,developers:['Studio'],publishers:['Publisher'],themes:['Theme'],franchises:['Franchise'],gameEngines:['Engine']});
+ const fixture=[4,3,5,null,0].map((rating,i)=>({title:'Game '+i,rating,played:true,gameType:'Main Game',developers:['Studio','Studio'],publishers:['Publisher','Publisher'],themes:['Theme'],franchises:['Franchise'],gameEngines:['Engine']}));
+ fixture.push({title:'DLC',rating:5,played:true,gameType:'DLC',developers:['Studio'],publishers:['Publisher'],themes:['Theme'],franchises:['Franchise'],gameEngines:['Engine']});
+ fixture.push({title:'Expansion',rating:5,played:true,gameType:'Expansion',developers:['Studio'],publishers:['Publisher'],themes:['Theme'],franchises:['Franchise'],gameEngines:['Engine']});
  fixture.push({title:'Excluded',rating:5,played:false,developers:['Studio'],publishers:['Publisher']});
  await page.evaluate(data=>{games=data;render()},fixture);
  for(const [root,kind,key,buttons] of [['developers','studio','Studio',['companyRatingBtn','companyCountBtn']],['publishers','publisher','Publisher',['publisherRatingBtn','publisherCountBtn']]]){
@@ -36,9 +36,9 @@ const {chromium}=require('C:/Users/Laimean/.cache/codex-runtimes/codex-primary-r
  await page.evaluate(()=>{$('hoverCard').hidden=true;hoverTrigger=null});
  const audit=JSON.parse(fs.readFileSync('laime-audit.json','utf8'));
  await page.evaluate(data=>{games=data;render()},audit);
- for(const root of ['developers','publishers'])for(const row of await page.locator('#'+root+' button').all()){
-  const count=Number((await row.locator('.dev-detail').textContent()).match(/^\d+/)[0]);
-  await row.focus();assert.equal(await page.locator('#hoverList .hover-game').count(),count,`${root}: ${await row.locator('.dev-name').textContent()}`);await page.keyboard.press('Escape');
+ for(const root of ['developers','publishers']){
+  const counts=await page.evaluate(root=>[...document.querySelectorAll('#'+root+' button')].map(row=>({name:row.dataset.key,displayed:Number(row.querySelector('.dev-detail').textContent.match(/^\d+/)[0]),matched:hoverGames(row.dataset.kind,row.dataset.key).length})),root);
+  for(const count of counts)assert.equal(count.matched,count.displayed,`${root}: ${count.name}`);
  }
  assert.deepEqual(errors,[]);
  const {page:served}=await import('./dist/server/page.js');assert.equal(served,fs.readFileSync('dist/index.html','utf8'));

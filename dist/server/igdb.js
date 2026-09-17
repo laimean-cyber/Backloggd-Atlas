@@ -34,13 +34,13 @@ export async function igdbDetails(path, html, env) {
   const slug = path.split('/')[2];
   // Prefer the explicit IGDB link; Backloggd's internal game IDs are not IGDB IDs.
   const linkedSlug = html.match(/https?:\/\/(?:www\.)?igdb\.com\/games\/([a-z0-9-]+)/i)?.[1];
-  const fields = 'fields name,slug,category,genres.name,game_modes.name,player_perspectives.name,themes.name,franchises.name,game_engines.name,involved_companies.developer,involved_companies.publisher,involved_companies.company.name,involved_companies.company.logo.image_id;';
+  const fields = 'fields name,slug,game_type.type,genres.name,game_modes.name,player_perspectives.name,themes.name,franchises.name,game_engines.name,involved_companies.developer,involved_companies.publisher,involved_companies.company.name,involved_companies.company.logo.image_id;';
   const matches = await query(`${fields} where slug = ${JSON.stringify(linkedSlug || slug)}; limit 1;`, env);
   const game = matches[0];
   if (!game) throw new Error('No matching IGDB game was found.');
   const credits = (game.involved_companies || []).filter(credit => credit.developer === true && credit.company?.name).map(credit => credit.company);
   return {
-    category: Number.isInteger(game.category) ? game.category : null,
+    gameType: typeof game.game_type?.type === 'string' ? game.game_type.type : null,
     publishers: [...new Set((game.involved_companies || []).filter(c => c.publisher === true && c.company?.name).map(c => c.company.name))],
     publisherLogos: Object.fromEntries((game.involved_companies || []).filter(c => c.publisher === true && c.company?.name && /^[a-zA-Z0-9_-]+$/.test(c.company.logo?.image_id || '')).map(c => [c.company.name, `https://images.igdb.com/igdb/image/upload/t_logo_med/${c.company.logo.image_id}.png`])),
     gameModes: [...new Set((game.game_modes || []).map(mode => mode.name).filter(Boolean))],
