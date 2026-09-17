@@ -13,13 +13,14 @@ const {chromium}=require('C:/Users/Laimean/.cache/codex-runtimes/codex-primary-r
   for(const button of buttons){
    await page.locator('#'+button).click();
    const row=page.locator('#'+root+' button').first();
-   assert.equal(await row.locator('.dev-detail').textContent(),'3 rated games · 4.0 / 5');
-   await row.focus();assert.equal(await page.locator('#hoverList .hover-game').count(),3);
-   assert.equal(await page.locator('#hoverSummary').textContent(),'3 rated games · 4.0 avg');
+   assert.equal(await row.locator('.dev-detail').textContent(),'5 games · 3 rated · 4.0 / 5');
+   await row.focus();assert.equal(await page.locator('#hoverList .hover-game').count(),5);
+   assert.equal(await page.locator('#hoverSummary').textContent(),'5 games · 3 rated · 4.0 avg');
+   assert.equal(await page.locator('#hoverList .hover-game').filter({hasText:'Unrated'}).count(),2);
    await page.keyboard.press('Escape');
   }
   await page.evaluate(({kind,key})=>showBreakdown(kind,key,document.querySelector('[data-kind="'+kind+'"]'),true),{kind,key});
-  assert.equal(await page.locator('#breakdownList .game-item').count(),3);
+  assert.equal(await page.locator('#breakdownList .game-item').count(),5);
  }
  const audit=JSON.parse(fs.readFileSync('laime-audit.json','utf8'));
  await page.evaluate(data=>{games=data;render()},audit);
@@ -29,6 +30,6 @@ const {chromium}=require('C:/Users/Laimean/.cache/codex-runtimes/codex-primary-r
  }
  assert.deepEqual(errors,[]);
  const {page:served}=await import('./dist/server/page.js');assert.equal(served,fs.readFileSync('dist/index.html','utf8'));
- console.log('Passed: both sort modes, unrated/unplayed exclusion, duplicate credits, hover and breakdown counts, saved profile, served-page parity.');
+ console.log('Passed: both sort modes, unrated inclusion and unplayed exclusion, duplicate credits, hover and breakdown counts, saved profile, served-page parity.');
  }finally{await browser.close()}
 })().catch(e=>{console.error(e);process.exit(1)});
