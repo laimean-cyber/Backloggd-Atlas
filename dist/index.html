@@ -133,11 +133,22 @@
     }
     cloud.classList.add('cloud-flow');
   }
+  async function cachedDeveloperLogo(url){
+    if(!logoPending.has(url))logoPending.set(url,(async()=>{
+      try{
+        const cache=await caches.open('atlas-igdb-logos-v1');
+        let response=await cache.match(url);
+        if(!response){response=await fetch(url);if(!response.ok)throw Error('Logo unavailable');await cache.put(url,response.clone())}
+        return URL.createObjectURL(await response.blob());
+      }catch{logoPending.delete(url);return url}
+    })());
+    return logoPending.get(url);
+  }
   function loadDeveloperLogos(){
     const logos=Object.assign({},...games.map(g=>g.developerLogos||{}));
     for(const img of document.querySelectorAll('img[data-developer]')){
       const url=logos[img.dataset.developer];
-      if(typeof url==='string'&&/^https:\/\/images\.igdb\.com\/igdb\/image\/upload\//.test(url))img.src=url;
+      if(typeof url==='string'&&/^https:\/\/images\.igdb\.com\/igdb\/image\/upload\//.test(url))cachedDeveloperLogo(url).then(src=>{if(img.isConnected)img.src=src});
     }
   }
   new ResizeObserver(fitGenreCloud).observe($('genreRows'));
@@ -236,7 +247,7 @@
   function saveLibrary(username,all){try{localStorage.setItem(libraryKey(username),JSON.stringify({games:all,savedAt:Date.now()}))}catch{}}
   const metadataKey=path=>'backloggd-atlas:metadata:igdb-v1:'+path;
   const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
-  function readMetadata(path){try{const data=JSON.parse(localStorage.getItem(metadataKey(path)));if(data?.checked&&Array.isArray(data.genres)&&'plays' in data&&Date.now()-data.savedAt<7*86400000)return {year:data.year??null,developers:data.developers||[],developerLogos:data.developerLogos||{},genres:data.genres,plays:data.plays,playText:data.playText??null,checked:true}}catch{}return null}
+  function readMetadata(path){try{const data=JSON.parse(localStorage.getItem(metadataKey(path)));if(data?.checked&&Array.isArray(data.genres)&&'plays' in data)return {year:data.year??null,developers:data.developers||[],developerLogos:data.developerLogos||{},genres:data.genres,plays:data.plays,playText:data.playText??null,checked:true}}catch{}return null}
   function saveMetadata(g){try{localStorage.setItem(metadataKey(g.path),JSON.stringify({year:g.year??null,developers:g.developers||[],developerLogos:g.developerLogos||{},genres:g.genres||[],plays:g.plays??null,playText:g.playText??null,checked:true,savedAt:Date.now()}))}catch{}}
   async function loadDetails(all){
     const queue=all.filter(g=>!g.checked).sort((a,b)=>Number.isFinite(b.rating)-Number.isFinite(a.rating));
@@ -265,7 +276,7 @@
   function updateMissingButton(){const missing=games.filter(g=>g.checked&&(!g.year||!developersFor(g).length));$('missingDetails').style.display=missing.length?'inline-block':'none';$('missingDetails').textContent=`Review ${missing.length} game${missing.length===1?'':'s'} missing metadata`}
   async function buildProfile(username){
     const button=$('lookupButton');button.disabled=true;button.textContent='Loading…';$('loading').classList.add('show');$('retryDetails').style.display='none';$('missingDetails').style.display='none';$('progress').textContent='Loading profile…';$('breakdown').hidden=true;activeBreakdown=null;
-    try{const {all,libraryIncomplete,fromCache,savedAt}=await loadCards(username);if(!all.length)throw Error('No public games found for this profile.');games=all;activeUsername=username;activeLibraryIncomplete=libraryIncomplete;activeProfileCache=fromCache;const viewUrl=new URL(location.href);viewUrl.searchParams.set('profile',username);history.replaceState(null,'',viewUrl);$('sourceLabel').textContent='@'+username;$('title').textContent=`${username}'s games, at a glance.`;$('dataNote').textContent=`Showing ${all.length} public games from backloggd.com/u/${username}/${fromCache?' (saved '+new Date(savedAt).toLocaleString()+')':''}. Game details are cached in this browser for 7 days.`;$('reset').style.display='inline-block';render();await loadDetails(all);render();profileNotice()}
+    try{const {all,libraryIncomplete,fromCache,savedAt}=await loadCards(username);if(!all.length)throw Error('No public games found for this profile.');games=all;activeUsername=username;activeLibraryIncomplete=libraryIncomplete;activeProfileCache=fromCache;const viewUrl=new URL(location.href);viewUrl.searchParams.set('profile',username);history.replaceState(null,'',viewUrl);$('sourceLabel').textContent='@'+username;$('title').textContent=`${username}'s games, at a glance.`;$('dataNote').textContent=`Showing ${all.length} public games from backloggd.com/u/${username}/${fromCache?' (saved '+new Date(savedAt).toLocaleString()+')':''}. Game details and developer logos are saved in this browser; only uncached game details are fetched.`;$('reset').style.display='inline-block';render();await loadDetails(all);render();profileNotice()}
     catch(err){$('notice').textContent=err.message;$('notice').classList.add('show')}
     finally{button.disabled=false;button.textContent='Build dashboard';$('loading').classList.remove('show')}
   }
