@@ -1,4 +1,4 @@
-import { companyLogo } from './company-logo.js';
+import { igdbDetails } from './igdb.js';
 import { page } from './page.js';
 
 const origin = 'https://backloggd.com';
@@ -25,7 +25,7 @@ function parseCards(html) {
     const image = head.match(/<img[^>]*\balt="([^"]+)"/);
     const title = head.match(/class="game-text-centered"[^>]*>([^<]+)</);
     const rating = head.match(/\bdata-rating="([\d.]+)"/);
-    if (id && path && (image || title)) cards.push({ id: id[1], path: path[1] || path[2], title: decode(image?.[1] || title?.[1]), rating: rating ? +rating[1] / 2 : null, year: null, companies: [], played: true });
+    if (id && path && (image || title)) cards.push({ id: id[1], path: path[1] || path[2], title: decode(image?.[1] || title?.[1]), rating: rating ? +rating[1] / 2 : null, year: null, developers: [], developerLogos: {}, played: true });
   }
   return cards;
 }
@@ -34,33 +34,28 @@ function parseDetails(html) {
   const block = html.match(/class="[^"]*game-subtitle[^\"]*"[^>]*>([\s\S]{0,2200}?)<\/div>/i)?.[1];
   if (!block) throw new Error('Backloggd returned a game page without details.');
   const year = block.match(/class="game-year[^\"]*"[^>]*>\s*((?:19|20)\d{2})/i);
-  const companies = [...new Set([...block.matchAll(/href="\/company\/[^"<>]+\/"[^>]*>([^<]+)<\/a>/g)].map(x => decode(x[1])).filter(Boolean))];
-  const genres = [...new Set([...html.matchAll(/<a\b[^>]*class="[^"]*game-details-value[^"]*"[^>]*href="\/games\/lib\/popular\/genre:[^"<>]+\/"[^>]*>([^<]+)<\/a>/gi)].map(x => decode(x[1])).filter(Boolean))];
   const playText = html.match(/href="\/logs\/[^"<>]+\/plays\/"[\s\S]{0,500}?class="[^"]*log-counter-stat[^"]*"[^>]*>\s*([\d,.]+\s*[KMB]?)\s*</i)?.[1]?.replace(/\s+/g, '') || null;
   const amount = playText ? Number(playText.replace(/,/g, '').replace(/[KMB]$/i, '')) : NaN;
   const unit = playText?.match(/[KMB]$/i)?.[0]?.toUpperCase();
   const plays = Number.isFinite(amount) ? amount * ({ K: 1e3, M: 1e6, B: 1e9 }[unit] || 1) : null;
-  return { year: year ? +year[1] : null, companies, genres, plays, playText, checked: true };
+  return { year: year ? +year[1] : null, plays, playText, checked: true };
 }
 
-async function gameDetails(path) {
+async function gameDetails(path, env) {
   const cache = globalThis.caches?.default;
-  const key = new Request(`https://backloggd-atlas.cache/v3${path}`);
+  const key = new Request(`https://backloggd-atlas.cache/igdb-v1${path}`);
   if (cache) { try { const hit = await cache.match(key); if (hit) return await hit.json(); } catch {} }
-  const details = parseDetails(await upstream(path));
+  const html = await upstream(path);
+  const details = { ...parseDetails(html), ...await igdbDetails(path, html, env) };
   if (cache) { try { await cache.put(key, new Response(JSON.stringify(details), { headers: { 'cache-control': 'public, max-age=604800' } })); } catch {} }
   return details;
 }
 
 export default {
-  async fetch(request) {
+  async fetch(request, env = globalThis.process?.env || {}) {
     const url = new URL(request.url);
     if (request.method !== 'GET') return json({ error: 'Method not allowed.' }, 405);
     if (url.pathname === '/' || url.pathname === '/index.html') return new Response(page, { headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' } });
-    if(url.pathname==='/api/company-logo'){
-      const name=url.searchParams.get('name')||'';if(!name.trim()||name.length>150)return json({error:'Invalid company name'},400);
-      try{return json(await companyLogo(name))}catch{return json({error:'Company logo unavailable'},502)}
-    }
     if (url.pathname === '/api/page') {
       const username = url.searchParams.get('user') || '';
       const pageNo = +(url.searchParams.get('page') || '1');
@@ -75,7 +70,7 @@ export default {
     if (url.pathname === '/api/details') {
       const paths = url.searchParams.getAll('path');
       if (!paths.length || paths.length > 4 || paths.some(p => !/^\/games\/[a-z0-9-]+\/$/.test(p))) return json({ error: 'Invalid game paths.' }, 400);
-      const details = await Promise.all(paths.map(async path => { try { return { path, ...await gameDetails(path) }; } catch (error) { return { path, year: null, companies: [], failed: true, status: error.status || null }; } }));
+      const details = await Promise.all(paths.map(async path => { try { return { path, ...await gameDetails(path, env) }; } catch (error) { return { path, year: null, developers: [], developerLogos: {}, genres: [], failed: true, status: error.status || null }; } }));
       return json({ details, failed: details.filter(d => d.failed).length });
     }
     return new Response('Not found', { status: 404 });
