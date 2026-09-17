@@ -20,7 +20,7 @@ const assert=require('node:assert/strict');
   }
   assert.equal(logoRequests,1,'one download across rerenders');
   assert.ok(await page.locator('.developer-logo').evaluate(img=>img.src.startsWith('blob:')),'display persistent cached image');
-  await page.evaluate(()=>localStorage.setItem(metadataKey('/games/cached/'),JSON.stringify({year:2020,developers:['Remedy Entertainment'],developerLogos:{'Remedy Entertainment':'https://images.igdb.com/igdb/image/upload/t_logo_med/cl7m5.png'},genres:['Adventure'],publishers:[],publisherLogos:{},gameModes:[],playerPerspectives:['Third person'],themes:['Action'],franchises:['Alan Wake'],gameEngines:['Northlight'],plays:100,checked:true,savedAt:1})));
+  await page.evaluate(()=>localStorage.setItem(metadataKey('/games/cached/'),JSON.stringify({year:2020,category:0,developers:['Remedy Entertainment'],developerLogos:{'Remedy Entertainment':'https://images.igdb.com/igdb/image/upload/t_logo_med/cl7m5.png'},genres:['Adventure'],publishers:[],publisherLogos:{},gameModes:[],playerPerspectives:['Third person'],themes:['Action'],franchises:['Alan Wake'],gameEngines:['Northlight'],plays:100,checked:true,savedAt:1})));
   await page.reload();
   let requested=[];
   await page.route('**/api/details?*',route=>{
