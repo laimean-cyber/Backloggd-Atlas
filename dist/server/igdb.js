@@ -34,7 +34,7 @@ export async function igdbDetails(path, html, env) {
   const slug = path.split('/')[2];
   // Prefer the explicit IGDB link; Backloggd's internal game IDs are not IGDB IDs.
   const linkedSlug = html.match(/https?:\/\/(?:www\.)?igdb\.com\/games\/([a-z0-9-]+)/i)?.[1];
-  const fields = 'fields name,slug,genres.name,game_modes.name,involved_companies.developer,involved_companies.publisher,involved_companies.company.name,involved_companies.company.logo.image_id;';
+  const fields = 'fields name,slug,genres.name,game_modes.name,player_perspectives.name,themes.name,franchises.name,game_engines.name,involved_companies.developer,involved_companies.publisher,involved_companies.company.name,involved_companies.company.logo.image_id;';
   const matches = await query(`${fields} where slug = ${JSON.stringify(linkedSlug || slug)}; limit 1;`, env);
   const game = matches[0];
   if (!game) throw new Error('No matching IGDB game was found.');
@@ -43,6 +43,10 @@ export async function igdbDetails(path, html, env) {
     publishers: [...new Set((game.involved_companies || []).filter(c => c.publisher === true && c.company?.name).map(c => c.company.name))],
     publisherLogos: Object.fromEntries((game.involved_companies || []).filter(c => c.publisher === true && c.company?.name && /^[a-zA-Z0-9_-]+$/.test(c.company.logo?.image_id || '')).map(c => [c.company.name, `https://images.igdb.com/igdb/image/upload/t_logo_med/${c.company.logo.image_id}.png`])),
     gameModes: [...new Set((game.game_modes || []).map(mode => mode.name).filter(Boolean))],
+    playerPerspectives: [...new Set((game.player_perspectives || []).map(item => item.name).filter(Boolean))],
+    themes: [...new Set((game.themes || []).map(item => item.name).filter(Boolean))],
+    franchises: [...new Set((game.franchises || []).map(item => item.name).filter(Boolean))],
+    gameEngines: [...new Set((game.game_engines || []).map(item => item.name).filter(Boolean))],
     igdbId: game.id,
     developers: [...new Set(credits.map(company => company.name))],
     developerLogos: Object.fromEntries(credits.filter(company => /^[a-zA-Z0-9_-]+$/.test(company.logo?.image_id || '')).map(company => [company.name, `https://images.igdb.com/igdb/image/upload/t_logo_med/${company.logo.image_id}.png`])),
