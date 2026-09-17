@@ -6,7 +6,12 @@ const json = (data, status = 200) => new Response(JSON.stringify(data), { status
 const decode = text => String(text || '').replace(/&#(?:x([0-9a-f]+)|(\d+));|&(#39|amp|quot|lt|gt|nbsp);/gi, (_, hex, dec, named) => hex ? String.fromCodePoint(parseInt(hex, 16)) : dec ? String.fromCodePoint(+dec) : ({ '#39': "'", amp: '&', quot: '"', lt: '<', gt: '>', nbsp: ' ' }[named.toLowerCase()] || '')).trim();
 
 async function upstream(path) {
-  const response = await fetch(origin + path, { headers: { 'accept': 'text/html,application/xhtml+xml', 'user-agent': 'BackloggdAtlas/1.0 (+personal profile dashboard)' }, redirect: 'follow', signal: AbortSignal.timeout(15000) });
+  let response;
+  for (let attempt = 0; attempt < 3; attempt++) {
+    if (attempt) await new Promise(resolve => setTimeout(resolve, attempt * 1000));
+    response = await fetch(origin + path, { headers: { 'accept': 'text/html,application/xhtml+xml', 'accept-language': 'en-US,en;q=0.9', 'user-agent': 'Mozilla/5.0 (compatible; BackloggdAtlas/1.0)' }, redirect: 'follow', signal: AbortSignal.timeout(15000) });
+    if (response.status !== 429) break;
+  }
   if (response.status === 404) throw new Error('Profile or game not found.');
   if (response.status === 403 || response.status === 429) { const error = new Error('Backloggd is limiting automated requests. Please try again later.'); error.status = response.status; throw error; }
   if (!response.ok) throw new Error('Backloggd is unavailable right now.');
@@ -17,7 +22,9 @@ async function upstream(path) {
 
 function parseCards(html) {
   const cards = [];
-  const chunks = html.split(/(?=<div class="[^"]*\brating-hover\b)/).slice(1);
+  // Backloggd removed the old `rating-hover` wrapper in September 2026.
+  // The stable library-card marker is now `game-cover` plus `game_id`.
+  const chunks = html.split(/(?=<div class="[^"]*\bgame-cover\b[^"]*"[^>]*\bgame_id="\d+")/).slice(1);
   for (const chunk of chunks) {
     const head = chunk.slice(0, 1700);
     const id = head.match(/\bgame_id="(\d+)"/);
