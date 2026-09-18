@@ -97,7 +97,7 @@
   @media(max-width:400px){.panel.perspective-panel{aspect-ratio:auto;min-height:380px}.perspective-panel .treemap{min-height:240px}}
 
   .awards-panel{grid-column:1 / -1}.awards-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:28px 20px;margin:0;padding:20px 0 0;list-style:none}.award-link{display:block;min-width:0;text-decoration:none;border-radius:6px}.award-poster{display:block;width:100%;height:auto;aspect-ratio:3 / 4;object-fit:cover;border:0;outline:0;border-radius:6px;opacity:.5}.award-link.is-played .award-poster{opacity:1;transform:translateY(-20px);outline:3px solid #ea377a;outline-offset:0}.award-name{display:block;margin-top:12px;font-size:.875rem;font-weight:650;line-height:1.4}.award-year{display:block;margin-top:4px;color:#c4cbd1;font-size:.8125rem;font-variant-numeric:tabular-nums}.award-link:hover .award-name{text-decoration:underline;text-underline-offset:3px}.award-link:focus-visible{outline:2px solid #eef0f2;outline-offset:6px}.awards-panel .panel-head{margin-bottom:24px}@media(max-width:900px){.awards-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}@media(max-width:650px){.awards-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 18px}}
-.favourites-grid{padding-top:3px}.favourites-grid .award-poster{opacity:1;transform:none;outline:3px solid #ea377a}.favourites-panel .empty{margin:0;padding:12px 0;text-align:left}
+.favourites-grid{padding-top:3px;grid-template-columns:repeat(auto-fit,minmax(min(140px,100%),1fr))}.favourites-grid .award-poster{opacity:1;transform:none;outline:3px solid #ea377a}.favourites-panel .empty{margin:0;padding:12px 0;text-align:left}
 </style>
 </head>
 <body><div class="shell">
