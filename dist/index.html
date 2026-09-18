@@ -237,7 +237,7 @@
     $('modeDonut').style.background=modeTotal?'conic-gradient('+modeSlices.join(',')+')':'#353d4e';
     $('modeCenter').innerHTML=modeCoverage+'<small>games with modes</small>';$('modeDonut').setAttribute('aria-label',modeCoverage+' games with mode data, shown by game mode');
     $('modeSubtitle').textContent='IGDB · '+modeCoverage+'/'+played.length+' games · each mode per game counts';
-    $('modeLegend').innerHTML=modeGroups.length?modeGroups.map((x,i)=>'<div class="legend-line"><span class="legend-label"><i class="swatch" style="background:'+colors[i%colors.length]+'"></i>'+esc(x.name)+'</span><span class="legend-count">'+x.count+'</span></div>').join(''):'<div class="empty">No game mode data yet.</div>';
+    $('modeLegend').innerHTML=modeGroups.length?modeGroups.map((x,i)=>'<div class="legend-line"><span class="legend-label"><i class="swatch" style="background:'+colors[i%colors.length]+'"></i>'+esc(x.name)+'</span><span class="legend-count">'+Math.round(x.count/modeTotal*100)+'% | '+x.count+'</span></div>').join(''):'<div class="empty">No game mode data yet.</div>';
     const perspectiveGroups=groups(played,'playerPerspectives').sort((a,b)=>b.count-a.count||a.name.localeCompare(b.name)),perspectiveCoverage=played.filter(g=>g.playerPerspectives?.length).length;
     const perspectiveColors=['#4c2637','#5d2940','#70304c','#84304f','#963052','#a83258','#b8235d'];
     $('perspectiveSubtitle').textContent='IGDB · '+perspectiveCoverage+'/'+played.length+' games · area shows game count';
