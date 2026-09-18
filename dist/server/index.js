@@ -5,7 +5,7 @@ const origin = 'https://backloggd.com';
 const json = (data, status = 200) => new Response(JSON.stringify(data), { status, headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store' } });
 const decode = text => String(text || '').replace(/&#(?:x([0-9a-f]+)|(\d+));|&(#39|amp|quot|lt|gt|nbsp);/gi, (_, hex, dec, named) => hex ? String.fromCodePoint(parseInt(hex, 16)) : dec ? String.fromCodePoint(+dec) : ({ '#39': "'", amp: '&', quot: '"', lt: '<', gt: '>', nbsp: ' ' }[named.toLowerCase()] || '')).trim();
 
-async function upstream(path) {
+async function upstream(path, requireBrand = true) {
   let response;
   for (let attempt = 0; attempt < 3; attempt++) {
     if (attempt) await new Promise(resolve => setTimeout(resolve, attempt * 1000));
@@ -16,7 +16,7 @@ async function upstream(path) {
   if (response.status === 403 || response.status === 429) { const error = new Error('Backloggd is limiting automated requests. Please try again later.'); error.status = response.status; throw error; }
   if (!response.ok) throw new Error('Backloggd is unavailable right now.');
   const html = await response.text();
-  if (!html.includes('backloggd') && !html.includes('Backloggd')) throw new Error('Backloggd returned an unexpected page.');
+  if (requireBrand && !html.includes('backloggd') && !html.includes('Backloggd')) throw new Error('Backloggd returned an unexpected page.');
   return html;
 }
 
@@ -37,7 +37,14 @@ function parseCards(html) {
   return cards;
 }
 
-function parseDetails(html) {
+function parseAverageTime(html) {
+  const match = html.match(/class="[^"]*stat-value[^" ]*\s+element-revealed[^"]*"[^>]*>\s*([\d.]+)\s*(?:<small[^>]*>\s*(h|m)\s*<\/small>)?[\s\S]{0,240}?class="[^"]*label[^"]*"[^>]*>\s*average\s*</i);
+  if (!match) return null;
+  const value = Number.parseFloat(match[1]);
+  return Number.isFinite(value) ? value * (match[2]?.toLowerCase() === 'm' ? 1 / 60 : 1) : null;
+}
+
+function parseDetails(html, averageTimeHours = parseAverageTime(html)) {
   const block = html.match(/class="[^"]*game-subtitle[^\"]*"[^>]*>([\s\S]{0,2200}?)<\/div>/i)?.[1];
   if (!block) throw new Error('Backloggd returned a game page without details.');
   const year = block.match(/class="game-year[^\"]*"[^>]*>\s*((?:19|20)\d{2})/i);
@@ -45,19 +52,20 @@ function parseDetails(html) {
   const amount = playText ? Number(playText.replace(/,/g, '').replace(/[KMB]$/i, '')) : NaN;
   const unit = playText?.match(/[KMB]$/i)?.[0]?.toUpperCase();
   const plays = Number.isFinite(amount) ? amount * ({ K: 1e3, M: 1e6, B: 1e9 }[unit] || 1) : null;
-  const pageText = html.replace(/<script\b[\s\S]*?<\/script>/gi, ' ').replace(/<style\b[\s\S]*?<\/style>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/&nbsp;|&#160;/gi, ' ').replace(/\s+/g, ' ');
-  const averageTimeText = pageText.match(/\b(\d+(?:\.\d+)?\s*(?:h(?:ours?)?|m(?:in(?:utes?)?)?))\s+average\b/i)?.[1]?.replace(/\s+/g, '') || null;
-  const averageTimeValue = averageTimeText ? Number.parseFloat(averageTimeText) : NaN;
-  const averageTimeHours = Number.isFinite(averageTimeValue) ? averageTimeValue * (/m(?:in(?:utes?)?)?$/i.test(averageTimeText) ? 1 / 60 : 1) : null;
   return { year: year ? +year[1] : null, plays, playText, averageTimeHours, checked: true };
 }
 
 async function gameDetails(path, env) {
   const cache = globalThis.caches?.default;
-  const key = new Request(`https://backloggd-atlas.cache/igdb-v5${path}`);
+  const key = new Request(`https://backloggd-atlas.cache/igdb-v6${path}`);
   if (cache) { try { const hit = await cache.match(key); if (hit) return await hit.json(); } catch {} }
   const html = await upstream(path);
-  const details = { ...parseDetails(html), ...await igdbDetails(path, html, env) };
+  const statsPath = html.match(/\/fetch_game_stats\/\d+\/\d+\/?/)?.[0];
+  let averageTimeHours = parseAverageTime(html);
+  if (averageTimeHours == null && statsPath) {
+    try { averageTimeHours = parseAverageTime(await upstream(statsPath, false)); } catch {}
+  }
+  const details = { ...parseDetails(html, averageTimeHours), ...await igdbDetails(path, html, env) };
   if (cache) { try { await cache.put(key, new Response(JSON.stringify(details), { headers: { 'cache-control': 'public, max-age=604800' } })); } catch {} }
   return details;
 }
