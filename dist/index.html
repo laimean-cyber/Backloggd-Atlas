@@ -98,7 +98,7 @@
 
   .awards-panel{grid-column:1 / -1}.awards-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:28px 20px;margin:0;padding:20px 0 0;list-style:none}.award-link{display:block;min-width:0;text-decoration:none;border-radius:6px}.award-poster{display:block;width:100%;height:auto;aspect-ratio:3 / 4;object-fit:cover;border:0;outline:0;border-radius:6px;opacity:.5}.award-link.is-played .award-poster{opacity:1;transform:translateY(-20px);outline:3px solid #ea377a;outline-offset:0}.award-name{display:block;margin-top:12px;font-size:.875rem;font-weight:650;line-height:1.4}.award-year{display:block;margin-top:4px;color:#c4cbd1;font-size:.8125rem;font-variant-numeric:tabular-nums}.award-link:hover .award-name{text-decoration:underline;text-underline-offset:3px}.award-link:focus-visible{outline:2px solid #eef0f2;outline-offset:6px}.awards-panel .panel-head{margin-bottom:24px}@media(max-width:900px){.awards-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}@media(max-width:650px){.awards-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 18px}}
 .favourites-grid{padding-top:3px;grid-template-columns:repeat(auto-fit,minmax(min(140px,100%),1fr))}.favourites-grid .award-poster{opacity:1;transform:none;outline:3px solid #ea377a}.favourites-panel .empty{margin:0;padding:12px 0;text-align:left}
-</style>
+.playtime-scroll{overflow:auto;max-height:680px;scrollbar-color:#a3acb5 #16181c}.playtime-scroll svg{display:block;width:100%;min-width:var(--plot-width);height:auto}.playtime-dot{fill:#ea377a;fill-opacity:.75;stroke:#242832;stroke-width:1}.playtime-dot:hover,.playtime-dot:focus{fill-opacity:1;stroke:#fff;stroke-width:2;outline:none}.playtime-axis{fill:#c4cbd1;font-size:12px;font-variant-numeric:tabular-nums}.playtime-grid{stroke:#353d4e;stroke-width:1}</style>
 </head>
 <body><div class="shell">
   <header class="top"><div class="brand"><div class="mark" aria-hidden="true">▥</div> Backloggd Atlas</div><div class="topright"><span class="source" id="sourceLabel">Laime&#39;s library</span><label class="upload" for="file">Import your library</label><input id="file" type="file" accept=".csv,.json,text/csv,application/json" aria-label="Import a Backloggd CSV or JSON export"></div></header>
@@ -118,6 +118,7 @@
   <section class="panel"><div class="panel-head"><div><h2>Themes</h2><p class="panel-sub" id="themeSubtitle">IGDB themes across your games</p></div></div><div class="explorer-head metadata-head"><span>Theme</span><span>Games</span><span>Avg / 5</span></div><div id="themes" class="explorer-rows metadata-list"></div></section>
   <section class="panel"><div class="panel-head"><div><h2>Franchises</h2><p class="panel-sub" id="franchiseSubtitle">IGDB franchises across your games</p></div></div><div class="explorer-head metadata-head"><span>Franchise</span><span>Games</span><span>Avg / 5</span></div><div id="franchises" class="explorer-rows metadata-list"></div></section>
   <section class="panel"><div class="panel-head"><div><h2>Game engines</h2><p class="panel-sub" id="engineSubtitle">IGDB engines across your games</p></div></div><div class="explorer-head metadata-head"><span>Engine</span><span>Games</span><span>Avg / 5</span></div><div id="gameEngines" class="explorer-rows metadata-list"></div></section>
+  <section class="panel span2 playtime-panel" aria-labelledby="playtimeTitle"><div class="panel-head"><div><h2 id="playtimeTitle">Average playtime by release year</h2><p class="panel-sub" id="playtimeSummary">Each pink dot is a game</p></div></div><div id="playtimePlot" class="playtime-scroll" tabindex="0" role="region" aria-label="Game playtime scatter plot; scroll to explore all years and hours"></div></section>
   <div class="explore-pair span2"><section class="panel explorer-panel"><div class="panel-head"><div><h2>Release-year explorer</h2><p class="panel-sub" id="yearSubtitle">Played games by year · average uses rated games</p></div></div><div class="explorer-controls"><label>Sort years <select id="yearSort" aria-label="Sort release years"><option value="year">Year</option><option value="count">Number of games</option><option value="rating">Average rating</option></select></label></div><div class="explorer-head"><span>Year</span><span>Games</span><span>Avg / 5</span></div><div id="yearRows" class="explorer-rows"></div></section>
   <section class="panel genres-panel"><div class="panel-head"><div><h2>Genres across your games</h2><p class="panel-sub" id="genreSubtitle">Every genre credited on each Backloggd game page counts</p></div><div class="seg" role="group" aria-label="Genre cloud size"><button type="button" id="genreCountBtn" class="active" aria-pressed="true">Game count</button><button type="button" id="genreRatingBtn" aria-pressed="false">Avg. rating</button></div></div><div id="genreRows" class="genre-rows"></div></section></div>
   <section class="panel span2"><div class="panel-head"><div><h2>Beyond the averages</h2><p class="panel-sub">A few more ways to explore your library</p></div></div><div class="insight-grid"><div class="insight" id="nicheInsight"></div><div class="insight" id="gemInsight"></div><div class="insight" id="popularInsight"></div><div class="insight" id="decadeInsight"></div></div></section>
@@ -224,6 +225,21 @@
     catch{if(request!==favouritesRequest||activeUsername!==username)return;favouritesStatus='error'}
     renderFavourites();
   }
+
+  function renderPlaytime(played){
+    const data=played.filter(g=>Number.isInteger(g.year)&&g.year>0&&Number.isFinite(g.averageTimeHours)&&g.averageTimeHours>0);
+    $('playtimeSummary').textContent=data.length+' games with average playtime data · each pink dot is a game · hover or focus for details';
+    if(!data.length){$('playtimePlot').innerHTML='<div class="empty">No games with release year and average playtime data yet.</div>';return}
+    const first=Math.min(...data.map(g=>g.year)),last=Math.max(...data.map(g=>g.year)),max=Math.max(5,Math.ceil(Math.max(...data.map(g=>g.averageTimeHours))/5)*5);
+    const width=Math.max(900,(last-first+1)*42+100),height=Math.max(380,max/5*24+90),left=72,right=width-28,top=28,bottom=height-64;
+    const x=year=>left+(year-first+.5)/(last-first+1)*(right-left),y=hours=>bottom-hours/max*(bottom-top);
+    let svg='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 '+width+' '+height+'" style="--plot-width:'+width+'px" aria-labelledby="playtimeTitle"><g class="playtime-axis">';
+    for(let h=0;h<=max;h+=5)svg+='<line class="playtime-grid" x1="'+left+'" x2="'+right+'" y1="'+y(h)+'" y2="'+y(h)+'"/><text text-anchor="end" x="'+(left-12)+'" y="'+(y(h)+4)+'">'+h+' h</text>';
+    for(let year=first;year<=last;year++)svg+='<text text-anchor="middle" x="'+x(year)+'" y="'+(bottom+25)+'">'+year+'</text>';
+    svg+='<text x="'+left+'" y="15">Average playtime (hours)</text><text text-anchor="middle" x="'+((left+right)/2)+'" y="'+(height-12)+'">Release year</text></g>';
+    svg+=data.map(g=>{const label=esc(g.title+' · '+g.year+' · '+Number(g.averageTimeHours.toFixed(1))+' hours');return '<circle class="playtime-dot" tabindex="0" role="img" aria-label="'+label+'" cx="'+x(g.year)+'" cy="'+y(g.averageTimeHours)+'" r="5"><title>'+label+'</title></circle>'}).join('');
+    $('playtimePlot').innerHTML=svg+'</svg>';
+  }
   function render(){
     renderFavourites();
     const played=games.filter(isPlayed),corePlayed=played.filter(g=>!isExpansionOrDlc(g)),rs=rated(),yearAll=groups(played.filter(g=>g.year!=null&&Number.isFinite(+g.year)),'year').sort((a,b)=>+a.name-+b.name),devs=groups(corePlayed.filter(g=>Number.isFinite(g.rating)&&g.rating>0),'developers'),genreAll=groups(played,'genres');
@@ -275,6 +291,7 @@
     renderMetadataList('franchises','franchises','franchise','franchiseSubtitle','franchise',corePlayed);
     renderAwards(played);
     renderMetadataList('gameEngines','gameEngines','engine','engineSubtitle','game engine',corePlayed);
+    renderPlaytime(played);
     const sortedYears=[...yearAll].sort((a,b)=>yearSort==='count'?b.count-a.count||+b.name-+a.name:yearSort==='rating'?(b.rating||-1)-(a.rating||-1)||b.ratedCount-a.ratedCount:+b.name-+a.name);
     const yearFillMax=yearSort==='rating'?5:Math.max(10,Math.ceil(Math.max(0,...yearAll.map(x=>x.count))/10)*10);
     $('yearSubtitle').textContent=`Hover over a year to see its games · full row = ${yearFillMax}${yearSort==='rating'?' / 5 rating':' games'}`;
