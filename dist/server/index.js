@@ -45,12 +45,16 @@ function parseDetails(html) {
   const amount = playText ? Number(playText.replace(/,/g, '').replace(/[KMB]$/i, '')) : NaN;
   const unit = playText?.match(/[KMB]$/i)?.[0]?.toUpperCase();
   const plays = Number.isFinite(amount) ? amount * ({ K: 1e3, M: 1e6, B: 1e9 }[unit] || 1) : null;
-  return { year: year ? +year[1] : null, plays, playText, checked: true };
+  const pageText = html.replace(/<script\b[\s\S]*?<\/script>/gi, ' ').replace(/<style\b[\s\S]*?<\/style>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/&nbsp;|&#160;/gi, ' ').replace(/\s+/g, ' ');
+  const averageTimeText = pageText.match(/\b(\d+(?:\.\d+)?\s*(?:h(?:ours?)?|m(?:in(?:utes?)?)?))\s+average\b/i)?.[1]?.replace(/\s+/g, '') || null;
+  const averageTimeValue = averageTimeText ? Number.parseFloat(averageTimeText) : NaN;
+  const averageTimeHours = Number.isFinite(averageTimeValue) ? averageTimeValue * (/m(?:in(?:utes?)?)?$/i.test(averageTimeText) ? 1 / 60 : 1) : null;
+  return { year: year ? +year[1] : null, plays, playText, averageTimeHours, checked: true };
 }
 
 async function gameDetails(path, env) {
   const cache = globalThis.caches?.default;
-  const key = new Request(`https://backloggd-atlas.cache/igdb-v4${path}`);
+  const key = new Request(`https://backloggd-atlas.cache/igdb-v5${path}`);
   if (cache) { try { const hit = await cache.match(key); if (hit) return await hit.json(); } catch {} }
   const html = await upstream(path);
   const details = { ...parseDetails(html), ...await igdbDetails(path, html, env) };
