@@ -37,6 +37,27 @@ function parseCards(html) {
   return cards;
 }
 
+export function parseFavourites(html) {
+  const start = html.search(/<div\b[^>]*\bid=["']profile-favorites["'][^>]*>/i);
+  if (start < 0) return [];
+  const remaining = html.slice(start);
+  let depth = 0, end = 0;
+  for (const tag of remaining.matchAll(/<\/?div\b[^>]*>/gi)) {
+    depth += /^<\//.test(tag[0]) ? -1 : 1;
+    if (depth === 0) { end = tag.index + tag[0].length; break; }
+  }
+  if (!end) throw new Error('Could not read the profile favourites.');
+  const block = remaining.slice(0, end);
+  return parseCards(block).map(game => {
+    const card = block.split(/(?=<div class="[^"]*\bgame-cover\b)/).find(chunk => chunk.includes(`game_id="${game.id}"`)) || '';
+    const img = card.match(/<img\b[^>]*>/i)?.[0] || '';
+    const source = decode(img.match(/\bdata-src="([^"]+)"/i)?.[1] || img.match(/\bsrc="([^"]+)"/i)?.[1]);
+    const image = source.startsWith('//') ? 'https:' + source : source;
+    if (!/^https:\/\/images\.igdb\.com\//.test(image)) throw new Error('Could not read a favourite game poster.');
+    return { path: game.path, title: game.title, image };
+  });
+}
+
 function parseAverageTime(html) {
   const match = html.match(/class="[^"]*stat-value[^" ]*\s+element-revealed[^"]*"[^>]*>\s*([\d.]+)\s*(?:<small[^>]*>\s*(h|m)\s*<\/small>)?[\s\S]{0,240}?class="[^"]*label[^"]*"[^>]*>\s*average\s*</i);
   if (!match) return null;
@@ -75,6 +96,12 @@ export default {
     const url = new URL(request.url);
     if (request.method !== 'GET') return json({ error: 'Method not allowed.' }, 405);
     if (url.pathname === '/' || url.pathname === '/index.html') return new Response(page, { headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' } });
+    if (url.pathname === '/api/favourites') {
+      const username = url.searchParams.get('user') || '';
+      if (!/^[A-Za-z0-9_-]{1,40}$/.test(username)) return json({ error: 'Enter a valid Backloggd nickname.' }, 400);
+      try { return json({ favourites: parseFavourites(await upstream(`/u/${encodeURIComponent(username)}/`)) }); }
+      catch (error) { return json({ error: error.message }, 502); }
+    }
     if (url.pathname === '/api/page') {
       const username = url.searchParams.get('user') || '';
       const pageNo = +(url.searchParams.get('page') || '1');
