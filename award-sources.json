@@ -1,0 +1,86 @@
+[
+  {
+    "year": 2014,
+    "path": "/games/dragon-age-inquisition/",
+    "title": "Dragon Age: Inquisition",
+    "image": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2mvy.jpg",
+    "status": 200
+  },
+  {
+    "year": 2015,
+    "path": "/games/the-witcher-3-wild-hunt/",
+    "title": "The Witcher 3: Wild Hunt",
+    "image": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coaarl.jpg",
+    "status": 200
+  },
+  {
+    "year": 2016,
+    "path": "/games/overwatch/",
+    "title": "Overwatch",
+    "image": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co1rcb.jpg",
+    "status": 200
+  },
+  {
+    "year": 2017,
+    "path": "/games/the-legend-of-zelda-breath-of-the-wild/",
+    "title": "The Legend of Zelda: Breath of the Wild",
+    "image": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co3p2d.jpg",
+    "status": 200
+  },
+  {
+    "year": 2018,
+    "path": "/games/god-of-war--1/",
+    "title": "God of War",
+    "image": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cobkt6.jpg",
+    "status": 200
+  },
+  {
+    "year": 2019,
+    "path": "/games/sekiro-shadows-die-twice/",
+    "title": "Sekiro: Shadows Die Twice",
+    "image": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2a23.jpg",
+    "status": 200
+  },
+  {
+    "year": 2020,
+    "path": "/games/the-last-of-us-part-ii/",
+    "title": "The Last of Us Part II",
+    "image": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5ziw.jpg",
+    "status": 200
+  },
+  {
+    "year": 2021,
+    "path": "/games/it-takes-two/",
+    "title": "It Takes Two",
+    "image": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cob22v.jpg",
+    "status": 200
+  },
+  {
+    "year": 2022,
+    "path": "/games/elden-ring/",
+    "title": "Elden Ring",
+    "image": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co4jni.jpg",
+    "status": 200
+  },
+  {
+    "year": 2023,
+    "path": "/games/baldurs-gate-iii/",
+    "title": "Baldur's Gate 3",
+    "status": 200,
+    "image": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co670h.jpg"
+  },
+  {
+    "year": 2024,
+    "path": "/games/astro-bot/",
+    "title": "Astro Bot",
+    "image": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coba3k.jpg",
+    "status": 200
+  },
+  {
+    "year": 2025,
+    "path": "/games/clair-obscur-expedition-33/",
+    "title": "Clair Obscur: Expedition 33",
+    "image": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co9gam.jpg",
+    "status": 200
+  }
+]
