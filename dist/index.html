@@ -204,7 +204,7 @@
       if(didPlay)count++;
       return '<li><a class="award-link'+(didPlay?' is-played':'')+'" href="https://backloggd.com'+winner.path+'" target="_blank" rel="noopener noreferrer" aria-label="'+esc(winner.title)+', '+winner.year+', '+(didPlay?'played':'not played')+'; view on Backloggd"><img class="award-poster" src="'+winner.image+'" alt="" width="264" height="352" loading="lazy" decoding="async"><span class="award-name">'+esc(winner.title)+'</span><span class="award-year">'+winner.year+'</span></a></li>';
     }).join('');
-    $('awardsSummary').textContent=count+' of '+awardWinners.length+' played · Game of the Year, 2014–2025'+(activeLibraryIncomplete?' · Library incomplete':'');
+    $('awardsSummary').textContent=count+' of '+awardWinners.length+' played · Game of the Year, 2014–2025 · Pink borders indicate played games'+(activeLibraryIncomplete?' · Library incomplete':'');
   }
 
   let favouriteGames=[],favouritesStatus='idle',favouritesRequest=0;
