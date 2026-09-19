@@ -46,7 +46,8 @@
     },
     "franchises": [
       "Call of Duty"
-    ]
+    ],
+    "averageTimeHours": null
   },
   {
     "id": "305160",
@@ -95,7 +96,8 @@
     },
     "franchises": [
       "Gears of War"
-    ]
+    ],
+    "averageTimeHours": null
   },
   {
     "id": "3241",
@@ -148,7 +150,8 @@
     "developerLogos": {
       "Orteil": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl8be.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 273
   },
   {
     "id": "260736",
@@ -193,7 +196,8 @@
     "developerLogos": {
       "Rockstar Games": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl8g0.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 6
   },
   {
     "id": "260737",
@@ -240,7 +244,8 @@
     "developerLogos": {
       "Rockstar Games": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl8g0.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 28
   },
   {
     "id": "434",
@@ -293,7 +298,8 @@
       "Rockstar North": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl8g6.png",
       "Rockstar San Diego": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl8fw.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 27
   },
   {
     "id": "260735",
@@ -340,7 +346,8 @@
     "developerLogos": {
       "Rockstar Games": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl8g0.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 25
   },
   {
     "id": "404914",
@@ -379,7 +386,8 @@
     "developerLogos": {
       "11 bit studios": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl4f3.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 16
   },
   {
     "id": "405075",
@@ -425,7 +433,8 @@
     },
     "franchises": [
       "Doom"
-    ]
+    ],
+    "averageTimeHours": 10
   },
   {
     "id": "168669",
@@ -474,7 +483,8 @@
     },
     "franchises": [
       "Uncharted"
-    ]
+    ],
+    "averageTimeHours": 7
   },
   {
     "id": "168668",
@@ -522,7 +532,8 @@
     },
     "franchises": [
       "Uncharted"
-    ]
+    ],
+    "averageTimeHours": 16
   },
   {
     "id": "148227",
@@ -569,7 +580,8 @@
     "developerLogos": {
       "Alkimia Interactive": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl4yi.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 42
   },
   {
     "id": "77334",
@@ -587,7 +599,8 @@
     ],
     "plays": 2,
     "playText": "2",
-    "checked": true
+    "checked": true,
+    "averageTimeHours": null
   },
   {
     "id": "347633",
@@ -635,7 +648,8 @@
     "developerLogos": {
       "Cold Symmetry": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl2mz.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 26
   },
   {
     "id": "404693",
@@ -678,7 +692,8 @@
     "developerLogos": {
       "Panache Digital Games": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl22d.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": null
   },
   {
     "id": "159720",
@@ -719,7 +734,8 @@
       "Nikita Kryukov"
     ],
     "developerLogos": {},
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 2
   },
   {
     "id": "325602",
@@ -767,7 +783,8 @@
     },
     "franchises": [
       "Onimusha"
-    ]
+    ],
+    "averageTimeHours": 25
   },
   {
     "id": "141114",
@@ -814,7 +831,8 @@
     },
     "franchises": [
       "James Bond"
-    ]
+    ],
+    "averageTimeHours": 17
   },
   {
     "id": "148372",
@@ -860,7 +878,8 @@
     "developerLogos": {
       "Paradox Development Studio": "https://images.igdb.com/igdb/image/upload/t_logo_med/tmgoxhnyjjmlvxvqyadt.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 104
   },
   {
     "id": "116029",
@@ -911,7 +930,8 @@
     },
     "franchises": [
       "Resident Evil"
-    ]
+    ],
+    "averageTimeHours": null
   },
   {
     "id": "116028",
@@ -962,7 +982,8 @@
     },
     "franchises": [
       "Resident Evil"
-    ]
+    ],
+    "averageTimeHours": null
   },
   {
     "id": "7725",
@@ -1016,7 +1037,8 @@
     },
     "franchises": [
       "Resident Evil"
-    ]
+    ],
+    "averageTimeHours": 14
   },
   {
     "id": "347869",
@@ -1064,7 +1086,8 @@
     },
     "franchises": [
       "The Expanse"
-    ]
+    ],
+    "averageTimeHours": null
   },
   {
     "id": "1082",
@@ -1115,7 +1138,8 @@
     },
     "franchises": [
       "Resident Evil"
-    ]
+    ],
+    "averageTimeHours": 20
   },
   {
     "id": "150045",
@@ -1168,7 +1192,8 @@
     },
     "franchises": [
       "Resident Evil"
-    ]
+    ],
+    "averageTimeHours": 9
   },
   {
     "id": "24347",
@@ -1219,7 +1244,8 @@
     },
     "franchises": [
       "Resident Evil"
-    ]
+    ],
+    "averageTimeHours": 17
   },
   {
     "id": "21654",
@@ -1269,7 +1295,8 @@
     },
     "franchises": [
       "Resident Evil"
-    ]
+    ],
+    "averageTimeHours": 1
   },
   {
     "id": "21666",
@@ -1319,7 +1346,8 @@
     },
     "franchises": [
       "Resident Evil"
-    ]
+    ],
+    "averageTimeHours": 1
   },
   {
     "id": "847",
@@ -1370,7 +1398,8 @@
     },
     "franchises": [
       "Resident Evil"
-    ]
+    ],
+    "averageTimeHours": 15
   },
   {
     "id": "11797",
@@ -1414,7 +1443,8 @@
     "developerLogos": {
       "Boss Key Productions": "https://images.igdb.com/igdb/image/upload/t_logo_med/z8f5lpd9nhje44unslaj.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 25
   },
   {
     "id": "277143",
@@ -1464,7 +1494,8 @@
     },
     "franchises": [
       "The Last of Us"
-    ]
+    ],
+    "averageTimeHours": 30
   },
   {
     "id": "219027",
@@ -1509,7 +1540,8 @@
     },
     "franchises": [
       "The Last of Us"
-    ]
+    ],
+    "averageTimeHours": 2
   },
   {
     "id": "204350",
@@ -1559,7 +1591,8 @@
     },
     "franchises": [
       "The Last of Us"
-    ]
+    ],
+    "averageTimeHours": 19
   },
   {
     "id": "24869",
@@ -1607,7 +1640,8 @@
     },
     "franchises": [
       "Resident Evil"
-    ]
+    ],
+    "averageTimeHours": 15
   },
   {
     "id": "366890",
@@ -1653,7 +1687,8 @@
     "developerLogos": {
       "Koei Tecmo Games": "https://images.igdb.com/igdb/image/upload/t_logo_med/xuzi6vyb4x2rg67eezs5.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 17
   },
   {
     "id": "347668",
@@ -1704,7 +1739,8 @@
     },
     "franchises": [
       "Resident Evil"
-    ]
+    ],
+    "averageTimeHours": 17
   },
   {
     "id": "113112",
@@ -1755,7 +1791,8 @@
     "developerLogos": {
       "Supergiant Games": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl8d0.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 48
   },
   {
     "id": "250630",
@@ -1800,7 +1837,8 @@
     "developerLogos": {
       "Bungie": "https://images.igdb.com/igdb/image/upload/t_logo_med/clin6.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 43
   },
   {
     "id": "361880",
@@ -1849,7 +1887,8 @@
     "developerLogos": {
       "ZA/UM": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl8yk.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 25
   },
   {
     "id": "312274",
@@ -1894,7 +1933,8 @@
     "developerLogos": {
       "Weappy Studio": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl44t.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": null
   },
   {
     "id": "152244",
@@ -1944,7 +1984,8 @@
     "developerLogos": {
       "Sad Cat Studios": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl4wo.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 10
   },
   {
     "id": "347123",
@@ -1994,7 +2035,8 @@
     },
     "franchises": [
       "Nioh"
-    ]
+    ],
+    "averageTimeHours": 49
   },
   {
     "id": "381250",
@@ -2038,7 +2080,8 @@
     "developerLogos": {
       "Wildlight Entertainment": "https://images.igdb.com/igdb/image/upload/t_logo_med/clfzk.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 4
   },
   {
     "id": "36813",
@@ -2088,7 +2131,8 @@
     "developerLogos": {
       "Tango Gameworks": "https://images.igdb.com/igdb/image/upload/t_logo_med/cle3k.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 18
   },
   {
     "id": "22963",
@@ -2121,7 +2165,8 @@
     "developerLogos": {
       "BioWare": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl4vp.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 1
   },
   {
     "id": "76420",
@@ -2168,7 +2213,8 @@
     "developerLogos": {
       "Firaxis Games": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl5op.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 86
   },
   {
     "id": "113374",
@@ -2215,7 +2261,8 @@
     "developerLogos": {
       "Firaxis Games": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl5op.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 105
   },
   {
     "id": "8217",
@@ -2263,7 +2310,8 @@
     },
     "franchises": [
       "Assassin's Creed"
-    ]
+    ],
+    "averageTimeHours": 2
   },
   {
     "id": "7645",
@@ -2318,7 +2366,8 @@
     },
     "franchises": [
       "The Sims"
-    ]
+    ],
+    "averageTimeHours": null
   },
   {
     "id": "13114",
@@ -2370,7 +2419,8 @@
     },
     "franchises": [
       "The Sims"
-    ]
+    ],
+    "averageTimeHours": null
   },
   {
     "id": "9562",
@@ -2420,7 +2470,8 @@
     },
     "franchises": [
       "Assassin's Creed"
-    ]
+    ],
+    "averageTimeHours": 1
   },
   {
     "id": "22974",
@@ -2471,7 +2522,8 @@
     },
     "franchises": [
       "Assassin's Creed"
-    ]
+    ],
+    "averageTimeHours": 1
   },
   {
     "id": "8216",
@@ -2520,7 +2572,8 @@
     },
     "franchises": [
       "Assassin's Creed"
-    ]
+    ],
+    "averageTimeHours": 2
   },
   {
     "id": "17466",
@@ -2566,7 +2619,8 @@
     "developerLogos": {
       "BioWare": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl4vp.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 1
   },
   {
     "id": "22975",
@@ -2599,7 +2653,8 @@
     "developerLogos": {
       "BioWare": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl4vp.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 1
   },
   {
     "id": "17465",
@@ -2645,7 +2700,8 @@
     "developerLogos": {
       "BioWare": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl4vp.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 1
   },
   {
     "id": "8219",
@@ -2694,7 +2750,8 @@
     ],
     "developerLogos": {
       "Ubisoft Montpellier": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl4m6.png"
-    }
+    },
+    "averageTimeHours": 4
   },
   {
     "id": "127036",
@@ -2740,7 +2797,8 @@
     ],
     "developerLogos": {
       "Irrational Games": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl51m.png"
-    }
+    },
+    "averageTimeHours": 5
   },
   {
     "id": "109421",
@@ -2791,7 +2849,8 @@
     "franchises": [
       "Spider-Man",
       "Marvel"
-    ]
+    ],
+    "averageTimeHours": 3
   },
   {
     "id": "109422",
@@ -2842,7 +2901,8 @@
     "franchises": [
       "Spider-Man",
       "Marvel"
-    ]
+    ],
+    "averageTimeHours": 3
   },
   {
     "id": "109419",
@@ -2893,7 +2953,8 @@
     "franchises": [
       "Spider-Man",
       "Marvel"
-    ]
+    ],
+    "averageTimeHours": 3
   },
   {
     "id": "122313",
@@ -2940,7 +3001,8 @@
     "developerLogos": {
       "Remedy Entertainment": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl7m5.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 3
   },
   {
     "id": "122312",
@@ -2986,7 +3048,8 @@
     "developerLogos": {
       "Remedy Entertainment": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl7m5.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 4
   },
   {
     "id": "131800",
@@ -3034,7 +3097,8 @@
     },
     "franchises": [
       "Call of Duty"
-    ]
+    ],
+    "averageTimeHours": 157
   },
   {
     "id": "11790",
@@ -3084,7 +3148,8 @@
     },
     "franchises": [
       "The Last of Us"
-    ]
+    ],
+    "averageTimeHours": 2
   },
   {
     "id": "8862",
@@ -3135,7 +3200,8 @@
     "developerLogos": {
       "Drinkbox Studios": "https://images.igdb.com/igdb/image/upload/t_logo_med/w7c9ee9nh1yujfn6frqh.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 9
   },
   {
     "id": "152259",
@@ -3181,7 +3247,8 @@
     "developerLogos": {
       "Okomotive": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl5m1.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 5
   },
   {
     "id": "8263",
@@ -3232,7 +3299,8 @@
     },
     "franchises": [
       "Assassin's Creed"
-    ]
+    ],
+    "averageTimeHours": 34
   },
   {
     "id": "5614",
@@ -3279,7 +3347,8 @@
       "Cardboard Computer"
     ],
     "developerLogos": {},
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 9
   },
   {
     "id": "27316",
@@ -3327,7 +3396,8 @@
     "developerLogos": {
       "Asobo Studio": "https://images.igdb.com/igdb/image/upload/t_logo_med/duos8mlkzdusoeh8s2ey.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 12
   },
   {
     "id": "1009",
@@ -3377,7 +3447,8 @@
     },
     "franchises": [
       "The Last of Us"
-    ]
+    ],
+    "averageTimeHours": 24
   },
   {
     "id": "4754",
@@ -3429,7 +3500,8 @@
     },
     "franchises": [
       "Alien"
-    ]
+    ],
+    "averageTimeHours": 18
   },
   {
     "id": "134612",
@@ -3474,7 +3546,8 @@
     "developerLogos": {
       "Capcom": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl317.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 15
   },
   {
     "id": "337179",
@@ -3520,7 +3593,8 @@
     "developerLogos": {
       "Warhorse Studios": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl4z6.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": null
   },
   {
     "id": "156157",
@@ -3570,7 +3644,8 @@
     "developerLogos": {
       "Warhorse Studios": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl4z6.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 21
   },
   {
     "id": "362029",
@@ -3617,7 +3692,8 @@
     "developerLogos": {
       "Warhorse Studios": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl4z6.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 6
   },
   {
     "id": "361887",
@@ -3663,7 +3739,8 @@
     "developerLogos": {
       "Warhorse Studios": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl4z6.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 12
   },
   {
     "id": "115030",
@@ -3713,7 +3790,8 @@
     "developerLogos": {
       "Warhorse Studios": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl4z6.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 3
   },
   {
     "id": "116991",
@@ -3763,7 +3841,8 @@
     "developerLogos": {
       "Warhorse Studios": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl4z6.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 3
   },
   {
     "id": "343669",
@@ -3811,7 +3890,8 @@
     "developerLogos": {
       "Warhorse Studios": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl4z6.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 7
   },
   {
     "id": "104985",
@@ -3861,7 +3941,8 @@
     "developerLogos": {
       "Warhorse Studios": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl4z6.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 4
   },
   {
     "id": "119899",
@@ -3911,7 +3992,8 @@
     "developerLogos": {
       "Warhorse Studios": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl4z6.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 5
   },
   {
     "id": "314265",
@@ -3959,7 +4041,8 @@
     "developerLogos": {
       "Tarsier Studios": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl7l6.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 4
   },
   {
     "id": "292878",
@@ -4007,7 +4090,8 @@
     "developerLogos": {
       "Bleakmill": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl9j3.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 4
   },
   {
     "id": "305017",
@@ -4054,7 +4138,8 @@
     "developerLogos": {
       "The Game Bakers": "https://images.igdb.com/igdb/image/upload/t_logo_med/wh9nfe0rkoanduxmzjwk.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 12
   },
   {
     "id": "13784",
@@ -4103,7 +4188,8 @@
     },
     "franchises": [
       "Mass Effect"
-    ]
+    ],
+    "averageTimeHours": 1
   },
   {
     "id": "13798",
@@ -4150,7 +4236,8 @@
     },
     "franchises": [
       "Mass Effect"
-    ]
+    ],
+    "averageTimeHours": 1
   },
   {
     "id": "13885",
@@ -4197,7 +4284,8 @@
     },
     "franchises": [
       "Mass Effect"
-    ]
+    ],
+    "averageTimeHours": 1
   },
   {
     "id": "13794",
@@ -4245,7 +4333,8 @@
     },
     "franchises": [
       "Mass Effect"
-    ]
+    ],
+    "averageTimeHours": 1
   },
   {
     "id": "783",
@@ -4290,7 +4379,8 @@
     },
     "franchises": [
       "Mass Effect"
-    ]
+    ],
+    "averageTimeHours": 2
   },
   {
     "id": "367341",
@@ -4332,7 +4422,8 @@
     },
     "franchises": [
       "Mass Effect"
-    ]
+    ],
+    "averageTimeHours": null
   },
   {
     "id": "25299",
@@ -4371,7 +4462,8 @@
     },
     "franchises": [
       "Mass Effect"
-    ]
+    ],
+    "averageTimeHours": null
   },
   {
     "id": "367333",
@@ -11497,7 +11589,8 @@
     },
     "franchises": [
       "Doom"
-    ]
+    ],
+    "averageTimeHours": 4
   },
   {
     "id": "136539",
@@ -11546,7 +11639,8 @@
     },
     "franchises": [
       "Doom"
-    ]
+    ],
+    "averageTimeHours": 5
   },
   {
     "id": "103298",
@@ -11597,7 +11691,8 @@
     },
     "franchises": [
       "Doom"
-    ]
+    ],
+    "averageTimeHours": 25
   },
   {
     "id": "37001",
@@ -11645,7 +11740,8 @@
     "developerLogos": {
       "Moon Studios": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl8ds.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 16
   },
   {
     "id": "6739",
@@ -11696,7 +11792,8 @@
     },
     "franchises": [
       "Half-Life"
-    ]
+    ],
+    "averageTimeHours": 17
   },
   {
     "id": "115789",
@@ -11744,7 +11841,8 @@
     "developerLogos": {
       "Stress Level Zero": "https://images.igdb.com/igdb/image/upload/t_logo_med/clgsg.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 17
   },
   {
     "id": "74701",
@@ -11792,7 +11890,8 @@
     },
     "franchises": [
       "Star Wars"
-    ]
+    ],
+    "averageTimeHours": 23
   },
   {
     "id": "19564",
@@ -11847,7 +11946,8 @@
     },
     "franchises": [
       "Death Stranding"
-    ]
+    ],
+    "averageTimeHours": 49
   },
   {
     "id": "119177",
@@ -11897,7 +11997,8 @@
     },
     "franchises": [
       "Call of Duty"
-    ]
+    ],
+    "averageTimeHours": 92
   },
   {
     "id": "26472",
@@ -11945,7 +12046,8 @@
     "developerLogos": {
       "ZA/UM": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl8yk.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 30
   },
   {
     "id": "118218",
@@ -11996,7 +12098,8 @@
     },
     "franchises": [
       "Tom Clancy’s"
-    ]
+    ],
+    "averageTimeHours": 38
   },
   {
     "id": "103292",
@@ -12046,7 +12149,8 @@
     },
     "franchises": [
       "Gears of War"
-    ]
+    ],
+    "averageTimeHours": 20
   },
   {
     "id": "103329",
@@ -12095,7 +12199,8 @@
     ],
     "developerLogos": {
       "Remedy Entertainment": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl7m5.png"
-    }
+    },
+    "averageTimeHours": 19
   },
   {
     "id": "25901",
@@ -12143,7 +12248,8 @@
     "developerLogos": {
       "DeadToast Entertainment": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl2f9.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 4
   },
   {
     "id": "1352",
@@ -12193,7 +12299,8 @@
     ],
     "developerLogos": {
       "ThatGameCompany": "https://images.igdb.com/igdb/image/upload/t_logo_med/tmshlatb3sfce7ozu2dh.png"
-    }
+    },
+    "averageTimeHours": 2
   },
   {
     "id": "83731",
@@ -12249,7 +12356,8 @@
       "Beat Games": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl9uj.png",
       "Hyperbolic Magnetism": "https://images.igdb.com/igdb/image/upload/t_logo_med/cle2j.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 36
   },
   {
     "id": "19561",
@@ -12297,7 +12405,8 @@
     ],
     "developerLogos": {
       "Bend Studio": "https://images.igdb.com/igdb/image/upload/t_logo_med/cle6i.png"
-    }
+    },
+    "averageTimeHours": 44
   },
   {
     "id": "55036",
@@ -12345,7 +12454,8 @@
     ],
     "developerLogos": {
       "Ubisoft Blue Byte": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl4a7.png"
-    }
+    },
+    "averageTimeHours": 37
   },
   {
     "id": "76882",
@@ -12389,7 +12499,8 @@
     ],
     "developerLogos": {
       "FromSoftware": "https://images.igdb.com/igdb/image/upload/t_logo_med/irwmnrvf0hny5wr0ap0d.png"
-    }
+    },
+    "averageTimeHours": 52
   },
   {
     "id": "76253",
@@ -12436,7 +12547,8 @@
     ],
     "developerLogos": {
       "Capcom Development Division 1": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl8bh.png"
-    }
+    },
+    "averageTimeHours": 22
   },
   {
     "id": "121753",
@@ -12475,7 +12587,8 @@
     "igdbId": 121753,
     "developers": [],
     "developerLogos": {},
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 2
   },
   {
     "id": "121756",
@@ -12519,7 +12632,8 @@
     "developerLogos": {
       "4A Games": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl9ez.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 5
   },
   {
     "id": "37016",
@@ -12570,7 +12684,8 @@
     },
     "franchises": [
       "Metro"
-    ]
+    ],
+    "averageTimeHours": 23
   },
   {
     "id": "114795",
@@ -12618,7 +12733,8 @@
     "developerLogos": {
       "Respawn Entertainment": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl8hw.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 223
   },
   {
     "id": "19686",
@@ -12667,7 +12783,8 @@
     ],
     "developerLogos": {
       "Capcom Development Division 1": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl8bh.png"
-    }
+    },
+    "averageTimeHours": 18
   },
   {
     "id": "22917",
@@ -12716,7 +12833,8 @@
     ],
     "developerLogos": {
       "Nomada Studio": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl8c8.png"
-    }
+    },
+    "averageTimeHours": 4
   },
   {
     "id": "25076",
@@ -12769,7 +12887,8 @@
     "developerLogos": {
       "Rockstar Games": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl8g0.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 122
   },
   {
     "id": "83727",
@@ -12819,7 +12938,8 @@
     },
     "franchises": [
       "Call of Duty"
-    ]
+    ],
+    "averageTimeHours": 108
   },
   {
     "id": "103054",
@@ -12869,7 +12989,8 @@
     ],
     "developerLogos": {
       "Ubisoft Québec": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl4mf.png"
-    }
+    },
+    "averageTimeHours": 94
   },
   {
     "id": "82090",
@@ -12922,7 +13043,8 @@
     ],
     "developerLogos": {
       "Playground Games": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl7mf.png"
-    }
+    },
+    "averageTimeHours": 66
   },
   {
     "id": "37777",
@@ -12977,7 +13099,8 @@
     "developerLogos": {
       "Eidos Montréal": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl5qz.png",
       "Crystal Dynamics": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl5qy.png"
-    }
+    },
+    "averageTimeHours": 20
   },
   {
     "id": "138949",
@@ -13028,7 +13151,8 @@
     ],
     "developerLogos": {
       "Insomniac Games": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl3w6.png"
-    }
+    },
+    "averageTimeHours": 34
   },
   {
     "id": "19565",
@@ -13079,7 +13203,8 @@
     ],
     "developerLogos": {
       "Insomniac Games": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl3w6.png"
-    }
+    },
+    "averageTimeHours": 43
   },
   {
     "id": "83728",
@@ -13129,7 +13254,8 @@
     ],
     "developerLogos": {
       "EA Digital Illusions CE": "https://images.igdb.com/igdb/image/upload/t_logo_med/srtuszl5jkb0ykhzyt6l.png"
-    }
+    },
+    "averageTimeHours": 33
   },
   {
     "id": "103341",
@@ -13183,7 +13309,8 @@
     ],
     "developerLogos": {
       "Ghost Town Games": "https://images.igdb.com/igdb/image/upload/t_logo_med/nu48a9fyhosq8ecrq1ti.png"
-    }
+    },
+    "averageTimeHours": 10
   },
   {
     "id": "26855",
@@ -13234,7 +13361,8 @@
     "developerLogos": {
       "Motion Twin": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl8hj.png",
       "Evil Empire": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl9p5.png"
-    }
+    },
+    "averageTimeHours": 32
   },
   {
     "id": "84486",
@@ -13287,7 +13415,8 @@
     ],
     "developerLogos": {
       "Weappy Studio": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl44t.png"
-    }
+    },
+    "averageTimeHours": 14
   },
   {
     "id": "19241",
@@ -13338,7 +13467,8 @@
     ],
     "developerLogos": {
       "ColdWood Interactive": "https://images.igdb.com/igdb/image/upload/t_logo_med/poinakysjcxcfs8cv00h.png"
-    }
+    },
+    "averageTimeHours": 5
   },
   {
     "id": "14362",
@@ -13386,7 +13516,8 @@
     ],
     "developerLogos": {
       "Quantic Dream": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl4xg.png"
-    }
+    },
+    "averageTimeHours": 18
   },
   {
     "id": "81085",
@@ -13441,7 +13572,8 @@
       "QLOC": "https://images.igdb.com/igdb/image/upload/t_logo_med/kxbpxsybdxivz09j9cku.png",
       "Virtuos": "https://images.igdb.com/igdb/image/upload/t_logo_med/clg9y.png",
       "FromSoftware": "https://images.igdb.com/igdb/image/upload/t_logo_med/irwmnrvf0hny5wr0ap0d.png"
-    }
+    },
+    "averageTimeHours": 56
   },
   {
     "id": "27744",
@@ -13497,7 +13629,8 @@
       "Empyrean": "https://images.igdb.com/igdb/image/upload/t_logo_med/clbk3.png",
       "Ultimate Games": "https://images.igdb.com/igdb/image/upload/t_logo_med/clbi9.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 20
   },
   {
     "id": "19520",
@@ -13552,7 +13685,8 @@
     "developerLogos": {
       "Okomotive": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl5m1.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 3
   },
   {
     "id": "7504",
@@ -13604,7 +13738,8 @@
     "developerLogos": {
       "Endnight Games Ltd": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl1lw.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 25
   },
   {
     "id": "23248",
@@ -13650,7 +13785,8 @@
     "developerLogos": {
       "11 bit studios": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl4f3.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 16
   },
   {
     "id": "19560",
@@ -13698,7 +13834,8 @@
     },
     "franchises": [
       "God of War"
-    ]
+    ],
+    "averageTimeHours": 38
   },
   {
     "id": "28552",
@@ -13749,7 +13886,8 @@
     },
     "franchises": [
       "Far Cry"
-    ]
+    ],
+    "averageTimeHours": 34
   },
   {
     "id": "36897",
@@ -13795,7 +13933,8 @@
     "developerLogos": {
       "Hazelight Studios": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl8dq.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 6
   },
   {
     "id": "28574",
@@ -13841,7 +13980,8 @@
     "developerLogos": {
       "Haemimont Games": "https://images.igdb.com/igdb/image/upload/t_logo_med/r0sc8aaqfvzdpvgsyzfj.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 15
   },
   {
     "id": "18918",
@@ -13895,7 +14035,8 @@
     "developerLogos": {
       "Shiro Games": "https://images.igdb.com/igdb/image/upload/t_logo_med/fdu69dwqsn03hrcwter4.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 20
   },
   {
     "id": "359",
@@ -13951,7 +14092,8 @@
     },
     "franchises": [
       "Final Fantasy"
-    ]
+    ],
+    "averageTimeHours": 52
   },
   {
     "id": "55034",
@@ -14006,7 +14148,8 @@
     },
     "franchises": [
       "Final Fantasy"
-    ]
+    ],
+    "averageTimeHours": 48
   },
   {
     "id": "4843",
@@ -14056,7 +14199,8 @@
     "developerLogos": {
       "Warhorse Studios": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl4z6.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 57
   },
   {
     "id": "37094",
@@ -14107,7 +14251,8 @@
     },
     "franchises": [
       "Ico"
-    ]
+    ],
+    "averageTimeHours": 11
   },
   {
     "id": "26401",
@@ -14160,7 +14305,8 @@
     },
     "franchises": [
       "Star Wars"
-    ]
+    ],
+    "averageTimeHours": 56
   },
   {
     "id": "12571",
@@ -14212,7 +14358,8 @@
     },
     "franchises": [
       "Nioh"
-    ]
+    ],
+    "averageTimeHours": 42
   },
   {
     "id": "36952",
@@ -14262,7 +14409,8 @@
     },
     "franchises": [
       "Wolfenstein"
-    ]
+    ],
+    "averageTimeHours": 13
   },
   {
     "id": "28540",
@@ -14312,7 +14460,8 @@
     },
     "franchises": [
       "Assassin's Creed"
-    ]
+    ],
+    "averageTimeHours": 55
   },
   {
     "id": "27421",
@@ -14361,7 +14510,8 @@
     },
     "franchises": [
       "The Lord of the Rings"
-    ]
+    ],
+    "averageTimeHours": 40
   },
   {
     "id": "72373",
@@ -14414,7 +14564,8 @@
     "developerLogos": {
       "Bennett Foddy": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl23w.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 10
   },
   {
     "id": "37030",
@@ -14462,7 +14613,8 @@
     "developerLogos": {
       "Arkane Studios": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl631.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 11
   },
   {
     "id": "29004",
@@ -23872,7 +24024,8 @@
       "Cold Beam Games"
     ],
     "developerLogos": {},
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 7
   },
   {
     "id": "3235",
@@ -23924,7 +24077,8 @@
     "developerLogos": {
       "Bizarre Creations": "https://images.igdb.com/igdb/image/upload/t_logo_med/ep6ocia8dlwvblcqlzwi.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 15
   },
   {
     "id": "77",
@@ -23973,7 +24127,8 @@
     "developerLogos": {
       "BioWare Edmonton": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl5mt.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 16
   },
   {
     "id": "495",
@@ -24026,7 +24181,8 @@
     },
     "franchises": [
       "Metro"
-    ]
+    ],
+    "averageTimeHours": 10
   },
   {
     "id": "352",
@@ -24076,7 +24232,8 @@
     },
     "franchises": [
       "Battlefield"
-    ]
+    ],
+    "averageTimeHours": 20
   },
   {
     "id": "127",
@@ -24129,7 +24286,8 @@
     },
     "franchises": [
       "Assassin's Creed"
-    ]
+    ],
+    "averageTimeHours": 27
   },
   {
     "id": "34294",
@@ -24186,7 +24344,8 @@
     },
     "franchises": [
       "Bioshock"
-    ]
+    ],
+    "averageTimeHours": 13
   },
   {
     "id": "21",
@@ -24244,7 +24403,8 @@
     },
     "franchises": [
       "Bioshock"
-    ]
+    ],
+    "averageTimeHours": 13
   },
   {
     "id": "74",
@@ -24295,7 +24455,8 @@
     },
     "franchises": [
       "Mass Effect"
-    ]
+    ],
+    "averageTimeHours": 44
   },
   {
     "id": "4211",
@@ -24347,7 +24508,8 @@
     },
     "franchises": [
       "James Cameron's Avatar"
-    ]
+    ],
+    "averageTimeHours": 11
   },
   {
     "id": "124",
@@ -24399,7 +24561,8 @@
       "Turtle Rock Studios": "https://images.igdb.com/igdb/image/upload/t_logo_med/bgjyl9vzlpgmd1awcdzn.png",
       "Valve": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl2he.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 39
   },
   {
     "id": "559",
@@ -24450,7 +24613,8 @@
     },
     "franchises": [
       "Call of Duty"
-    ]
+    ],
+    "averageTimeHours": 49
   },
   {
     "id": "76",
@@ -24499,7 +24663,8 @@
     },
     "franchises": [
       "Dragon Age"
-    ]
+    ],
+    "averageTimeHours": 65
   },
   {
     "id": "2444",
@@ -24547,7 +24712,8 @@
     "developerLogos": {
       "Piranha Bytes": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl4yr.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 27
   },
   {
     "id": "498",
@@ -24607,7 +24773,8 @@
     },
     "franchises": [
       "Borderlands"
-    ]
+    ],
+    "averageTimeHours": 32
   },
   {
     "id": "565",
@@ -24659,7 +24826,8 @@
     },
     "franchises": [
       "Uncharted"
-    ]
+    ],
+    "averageTimeHours": 14
   },
   {
     "id": "7605",
@@ -24721,7 +24889,8 @@
     },
     "franchises": [
       "S.T.A.L.K.E.R."
-    ]
+    ],
+    "averageTimeHours": 22
   },
   {
     "id": "846",
@@ -24770,7 +24939,8 @@
     "developerLogos": {
       "Volition": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl4zb.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 15
   },
   {
     "id": "561",
@@ -24823,7 +24993,8 @@
     },
     "franchises": [
       "Colin McRae"
-    ]
+    ],
+    "averageTimeHours": 16
   },
   {
     "id": "500",
@@ -24877,7 +25048,8 @@
     "franchises": [
       "Batman",
       "DC Comics"
-    ]
+    ],
+    "averageTimeHours": 15
   },
   {
     "id": "14951",
@@ -24920,7 +25092,8 @@
     "developerLogos": {
       "Hemisphere Games": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl21m.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 2
   },
   {
     "id": "1051",
@@ -24967,7 +25140,8 @@
     "developerLogos": {
       "EA Digital Illusions CE": "https://images.igdb.com/igdb/image/upload/t_logo_med/srtuszl5jkb0ykhzyt6l.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 6
   },
   {
     "id": "15",
@@ -25020,7 +25194,8 @@
     },
     "franchises": [
       "Fallout"
-    ]
+    ],
+    "averageTimeHours": 42
   },
   {
     "id": "361",
@@ -25071,7 +25246,8 @@
     },
     "franchises": [
       "Far Cry"
-    ]
+    ],
+    "averageTimeHours": 15
   },
   {
     "id": "37",
@@ -25121,7 +25297,8 @@
     ],
     "developerLogos": {
       "EA Redwood Shores": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl8ct.png"
-    }
+    },
+    "averageTimeHours": 11
   },
   {
     "id": "942",
@@ -25173,7 +25350,8 @@
     "developerLogos": {
       "2D Boy": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl8hl.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 5
   },
   {
     "id": "4840",
@@ -25227,7 +25405,8 @@
     },
     "franchises": [
       "S.T.A.L.K.E.R."
-    ]
+    ],
+    "averageTimeHours": 16
   },
   {
     "id": "2159",
@@ -25277,7 +25456,8 @@
       "Codemasters Southam"
     ],
     "developerLogos": {},
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 17
   },
   {
     "id": "73",
@@ -25330,7 +25510,8 @@
     "developerLogos": {
       "BioWare": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl4vp.png",
       "BioWare Edmonton": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl5mt.png"
-    }
+    },
+    "averageTimeHours": 29
   },
   {
     "id": "257213",
@@ -25374,7 +25555,8 @@
     "developers": [
       "Artificial Mind & Movement"
     ],
-    "developerLogos": {}
+    "developerLogos": {},
+    "averageTimeHours": 6
   },
   {
     "id": "128",
@@ -25427,7 +25609,8 @@
     },
     "franchises": [
       "Assassin's Creed"
-    ]
+    ],
+    "averageTimeHours": 16
   },
   {
     "id": "2956",
@@ -25470,7 +25653,8 @@
     ],
     "developerLogos": {
       "Dylan Fitterer": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl8ay.png"
-    }
+    },
+    "averageTimeHours": 13
   },
   {
     "id": "431",
@@ -25521,7 +25705,8 @@
     },
     "franchises": [
       "Uncharted"
-    ]
+    ],
+    "averageTimeHours": 10
   },
   {
     "id": "296",
@@ -25573,7 +25758,8 @@
     },
     "franchises": [
       "Crysis"
-    ]
+    ],
+    "averageTimeHours": 9
   },
   {
     "id": "623",
@@ -25625,7 +25811,8 @@
     },
     "franchises": [
       "Call of Duty"
-    ]
+    ],
+    "averageTimeHours": 20
   },
   {
     "id": "325",
@@ -25676,7 +25863,8 @@
       "Flagship Studios"
     ],
     "developerLogos": {},
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 19
   },
   {
     "id": "2030",
@@ -25727,7 +25915,8 @@
     ],
     "developerLogos": {
       "Saber Interactive": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl9ey.png"
-    }
+    },
+    "averageTimeHours": 6
   },
   {
     "id": "20275",
@@ -25776,7 +25965,8 @@
     ],
     "developerLogos": {
       "CD Projekt RED": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl2dk.png"
-    }
+    },
+    "averageTimeHours": 36
   },
   {
     "id": "80",
@@ -25824,7 +26014,8 @@
     ],
     "developerLogos": {
       "CD Projekt RED": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl2dk.png"
-    }
+    },
+    "averageTimeHours": 33
   },
   {
     "id": "891",
@@ -25871,7 +26062,8 @@
     ],
     "developerLogos": {
       "Valve": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl2he.png"
-    }
+    },
+    "averageTimeHours": 433
   },
   {
     "id": "218277",
@@ -25903,7 +26095,8 @@
     ],
     "igdbId": 218277,
     "developers": [],
-    "developerLogos": {}
+    "developerLogos": {},
+    "averageTimeHours": 2
   },
   {
     "id": "71",
@@ -25952,7 +26145,8 @@
     ],
     "developerLogos": {
       "Valve": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl2he.png"
-    }
+    },
+    "averageTimeHours": 5
   },
   {
     "id": "78451",
@@ -26000,7 +26194,8 @@
     "developerLogos": {
       "2K Marin": "https://images.igdb.com/igdb/image/upload/t_logo_med/qv8wl6vpze6toc0mu6sq.png",
       "2K China": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl1i5.png"
-    }
+    },
+    "averageTimeHours": 3
   },
   {
     "id": "14543",
@@ -26050,7 +26245,8 @@
     "developerLogos": {
       "2K Marin": "https://images.igdb.com/igdb/image/upload/t_logo_med/qv8wl6vpze6toc0mu6sq.png",
       "2K China": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl1i5.png"
-    }
+    },
+    "averageTimeHours": 3
   },
   {
     "id": "117315",
@@ -26099,7 +26295,8 @@
     },
     "franchises": [
       "Bioshock"
-    ]
+    ],
+    "averageTimeHours": 3
   },
   {
     "id": "10047",
@@ -26148,7 +26345,8 @@
     },
     "franchises": [
       "Bioshock"
-    ]
+    ],
+    "averageTimeHours": 2
   },
   {
     "id": "34293",
@@ -26204,7 +26402,8 @@
     },
     "franchises": [
       "Bioshock"
-    ]
+    ],
+    "averageTimeHours": 13
   },
   {
     "id": "538",
@@ -26256,7 +26455,8 @@
     },
     "franchises": [
       "Bioshock"
-    ]
+    ],
+    "averageTimeHours": 16
   },
   {
     "id": "20",
@@ -26312,7 +26512,8 @@
     },
     "franchises": [
       "Bioshock"
-    ]
+    ],
+    "averageTimeHours": 14
   },
   {
     "id": "7215",
@@ -26360,7 +26561,8 @@
     "developerLogos": {
       "Eden Games": "https://images.igdb.com/igdb/image/upload/t_logo_med/v7hmhtlczukg2rjofzsy.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 31
   },
   {
     "id": "320",
@@ -26422,7 +26624,8 @@
     },
     "franchises": [
       "S.T.A.L.K.E.R."
-    ]
+    ],
+    "averageTimeHours": 20
   },
   {
     "id": "2369",
@@ -26472,7 +26675,8 @@
     },
     "franchises": [
       "Might and Magic"
-    ]
+    ],
+    "averageTimeHours": 10
   },
   {
     "id": "1048",
@@ -26520,7 +26724,8 @@
     },
     "franchises": [
       "Hitman"
-    ]
+    ],
+    "averageTimeHours": 15
   },
   {
     "id": "370",
@@ -26567,7 +26772,8 @@
     },
     "franchises": [
       "Might and Magic"
-    ]
+    ],
+    "averageTimeHours": 34
   },
   {
     "id": "14788",
@@ -26609,7 +26815,8 @@
     "developerLogos": {
       "Ritual Entertainment": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl9yk.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 2
   },
   {
     "id": "1016",
@@ -26658,7 +26865,8 @@
     "developerLogos": {
       "Terminal Reality": "https://images.igdb.com/igdb/image/upload/t_logo_med/tfhnzucaots6qo9se1pj.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 7
   },
   {
     "id": "1004",
@@ -26707,7 +26915,8 @@
     },
     "franchises": [
       "The Matrix"
-    ]
+    ],
+    "averageTimeHours": 9
   },
   {
     "id": "2995",
@@ -26762,7 +26971,8 @@
     "developerLogos": {
       "Lionhead Studios": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl4xt.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 30
   },
   {
     "id": "1928",
@@ -26806,7 +27016,8 @@
     "developerLogos": {
       "Quantic Dream": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl4xg.png"
     },
-    "franchises": []
+    "franchises": [],
+    "averageTimeHours": 9
   },
   {
     "id": "3007",
@@ -26856,7 +27067,8 @@
     "franchises": [
       "Romance Of The Three Kingdoms (Koei)",
       "Dynasty Warriors"
-    ]
+    ],
+    "averageTimeHours": 50
   },
   {
     "id": "9359",
