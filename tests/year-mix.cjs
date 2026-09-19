@@ -4,6 +4,12 @@ const {chromium}=require('C:/Users/Laimean/.cache/codex-runtimes/codex-primary-r
 await page.route('http://localhost:4174/**',r=>r.fulfill({contentType:'text/html',body:fs.readFileSync('public/index.html','utf8')}));
 for(const width of [1440,390]){await page.setViewportSize({width,height:1000});await page.goto('http://localhost:4174');assert(await page.locator('.year-mix-row').count()>0);assert.equal(await page.locator('#yearMixBtn').getAttribute('aria-pressed'),'true');assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);await page.locator('.explorer-panel').scrollIntoViewIfNeeded();await page.mouse.move(0,0);await page.locator('.explorer-panel').screenshot({path:`year-mix-${width}.png`});
 assert.equal(await page.locator('#yearSort').inputValue(),'mix');
+assert.equal(await page.locator('#yearIncludeUnrated').isChecked(),false);
+const heights=await page.evaluate(()=>['.explorer-panel','.genres-panel'].map(s=>document.querySelector(s).getBoundingClientRect().height));assert(Math.abs(heights[0]-heights[1])<1);
+assert.equal(await page.locator('#yearMixLegend span').count(),10);
+await page.evaluate(()=>{games=[{title:'A',year:2020,rating:5},{title:'B',year:2020,rating:null},{title:'C',year:2021,rating:4.5},{title:'D',year:2022,rating:null}];render()});
+assert.equal(await page.locator('.year-mix-row').count(),2);assert.equal(await page.locator('.year-mix-row[data-key="2020"] .year-mix-segment').textContent(),'100%');
+await page.check('#yearIncludeUnrated');assert.equal(await page.locator('.year-mix-row').count(),3);assert.deepEqual(await page.locator('.year-mix-row[data-key="2020"] .year-mix-segment').allTextContents(),['50%','50%']);
 assert.deepEqual(await page.locator('#yearMixLegend span').allTextContents(),['5.0','4.5','4.0','3.5','3.0','2.5','2.0','1.5','1.0','0.5','Unrated']);
 await page.evaluate(()=>{games=[{title:'A',year:2020,rating:5},{title:'B',year:2020,rating:4.5},{title:'C',year:2021,rating:5},{title:'D',year:2021,rating:4},{title:'E',year:2019,rating:5},{title:'F',year:2022,rating:null}];render()});
 assert.deepEqual(await page.locator('.year-mix-row').evaluateAll(rows=>rows.map(r=>r.dataset.key)),['2019','2020','2021','2022']);
