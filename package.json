@@ -1,0 +1,10 @@
+{
+  "name": "backloggd-atlas",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-vercel.mjs",
+    "test:vercel": "node --test tests/vercel.test.mjs"
+  },
+  "engines": { "node": "22.x" }
+}

@@ -2,3 +2,8 @@
 # Local API credentials
 .env.local
 .dev.vars
+
+# Vercel build output and local settings
+/public/
+/.vercel/
+/node_modules/
