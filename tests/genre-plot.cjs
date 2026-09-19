@@ -7,6 +7,8 @@ const {chromium}=require('C:/Users/Laimean/.cache/codex-runtimes/codex-primary-r
  for(const width of [1440,390]){
   await page.setViewportSize({width,height:1000});await page.goto('http://localhost:4174');
   await page.click('#genrePlotBtn');
+  assert.equal(await page.locator('#genreRatingBtn').count(),0);
+  assert.equal(await page.evaluate(()=>getComputedStyle(document.querySelector('#genreRows')).scrollbarColor),await page.evaluate(()=>getComputedStyle(document.querySelector('#yearRows')).scrollbarColor));
   assert(await page.locator('.genre-dot-row').count()>0);
   const actual=await page.evaluate(()=>({names:groups(games.filter(isPlayed),'genres').map(x=>x.name),avg:fmt(avg(rated().map(g=>g.rating))),reference:document.querySelector('.genre-reference').textContent}));
   assert(!actual.names.includes('RPG'));assert(!actual.names.includes('Real Time Strategy'));assert(actual.reference.includes(actual.avg));
@@ -20,7 +22,6 @@ const {chromium}=require('C:/Users/Laimean/.cache/codex-runtimes/codex-primary-r
   assert((await page.locator('.genre-reference').textContent()).includes('3.0'));
   await page.locator('.genre-dot-row').first().focus();assert.equal(await page.locator('#hoverList .hover-game').count(),2);
   await page.click('#genreCountBtn');assert.equal(await page.locator('.genre-word').count(),3);
-  await page.click('#genreRatingBtn');assert.equal(await page.locator('.genre-word').count(),2);
   await page.click('#genrePlotBtn');
   await page.evaluate(()=>{games=[{title:'Unrated',rating:null,genres:['RPG']}];render()});assert.equal(await page.locator('.genre-dot').count(),0);assert.equal(await page.locator('.genre-dot-reference').count(),0);
   await page.evaluate(()=>{games=[];render()});assert.equal(await page.locator('#genreRows .empty').count(),1);
