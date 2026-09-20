@@ -13,13 +13,13 @@ const {chromium}=require('C:/Users/Laimean/.cache/codex-runtimes/codex-primary-r
   await page.locator('.era-panel').scrollIntoViewIfNeeded();await page.locator('.era-panel').screenshot({path:'.impeccable/review/'+(width===1440?'desktop':'mobile')+'.png'});
   await page.click('#eraRatingBtn');assert.equal(await page.locator('#eraRatingBtn').getAttribute('aria-pressed'),'true');
   await page.locator('.era-cell').first().focus();assert.match(await page.locator('#eraDetails').textContent(),/rated/);
-  await page.evaluate(()=>{games=[{title:'A',year:2000,rating:5,genres:['RPG','RPG'],themes:['Horror']},{title:'B',year:2009,rating:3,genres:['RPG']},{title:'C',year:2005,rating:null,genres:['RPG']},{title:'D',year:2010,rating:null,genres:['RPG']},{title:'Missing year',year:null,rating:4,genres:['RPG']},{title:'Unplayed',year:2000,rating:1,genres:['RPG'],played:false}];render()});
+  await page.evaluate(()=>{games=[{title:'A',year:2000,rating:5,genres:['RPG','RPG'],themes:['Horror']},{title:'B',year:2000,rating:3,genres:['RPG']},{title:'C',year:2000,rating:null,genres:['RPG']},{title:'D',year:2010,rating:null,genres:['RPG']},{title:'Missing year',year:null,rating:4,genres:['RPG']},{title:'Unplayed',year:2000,rating:1,genres:['RPG'],played:false}];render()});
   const rpg=page.locator('.era-table tbody tr').filter({has:page.locator('th',{hasText:'Role-playing'})});
-  assert.equal(await rpg.locator('button').first().textContent(),'4.0');assert.match(await rpg.locator('button').first().getAttribute('class'),/is-sparse/);
-  assert.equal(await rpg.locator('button').nth(1).textContent(),'—');
+  assert.equal(await rpg.locator('button').count(),11);assert.deepEqual(await page.locator('.era-table thead th').allTextContents(),['Genre',...Array.from({length:11},(_,i)=>String(2000+i))]);assert.equal(await rpg.locator('button').first().textContent(),'4.0');assert.match(await rpg.locator('button').first().getAttribute('class'),/is-sparse/);
+  assert.equal(await rpg.locator('button').nth(10).textContent(),'—');
   await page.click('#eraCountBtn');assert.equal(await rpg.locator('button').first().textContent(),'3');assert.doesNotMatch(await rpg.locator('button').first().getAttribute('class'),/is-sparse/);
   assert.equal(await page.locator('.era-table tbody tr').count(),2);assert.match(await page.locator('#eraCoverage').textContent(),/^4\/5/);
   await page.evaluate(()=>{games=[];render()});assert.match(await page.locator('#eraTable caption').textContent(),/No played games/);
  }
- assert.deepEqual(errors,[]);await browser.close();console.log('PASS: desktop/mobile, ordering, toggle, keyboard details, sparse thresholds, averages excluding unrated, genre deduplication, Horror, decade boundaries, missing metadata, empty library.');
+ assert.deepEqual(errors,[]);await browser.close();console.log('PASS: desktop/mobile, ordering, toggle, keyboard details, sparse thresholds, averages excluding unrated, genre deduplication, Horror, individual years and empty intervening years, missing metadata, empty library.');
 })().catch(e=>{console.error(e);process.exit(1)});
