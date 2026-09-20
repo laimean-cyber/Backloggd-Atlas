@@ -1,5 +1,6 @@
 import { igdbDetails } from './igdb.js';
 import { page } from './page.js';
+import { metadataFresh } from './metadata.js';
 
 const origin = 'https://backloggd.com';
 const json = (data, status = 200) => new Response(JSON.stringify(data), { status, headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store' } });
@@ -78,8 +79,8 @@ function parseDetails(html, averageTimeHours = parseAverageTime(html)) {
 
 async function gameDetails(path, env) {
   const cache = globalThis.caches?.default;
-  const key = new Request(`https://backloggd-atlas.cache/igdb-v6${path}`);
-  if (cache) { try { const hit = await cache.match(key); if (hit) return await hit.json(); } catch {} }
+  const key = new Request(`https://backloggd-atlas.cache/igdb-v7${path}`);
+  if (cache) { try { const hit = await cache.match(key); if (hit) { const data = await hit.json(); if (metadataFresh(data)) return data; } } catch {} }
   const html = await upstream(path);
   const statsPath = html.match(/\/fetch_game_stats\/\d+\/\d+\/?/)?.[0];
   let averageTimeHours = parseAverageTime(html);

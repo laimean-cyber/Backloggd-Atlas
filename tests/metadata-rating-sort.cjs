@@ -8,6 +8,10 @@ const {chromium}=require('C:/Users/Laimean/.cache/codex-runtimes/codex-primary-r
  await page.route('**/*',r=>r.request().isNavigationRequest()?r.fulfill({contentType:'text/html',body:fs.readFileSync('public/index.html','utf8')}):r.abort());
  for(const width of [1440,390]){
   await page.setViewportSize({width,height:1000});await page.goto('http://localhost:4174');
+  assert.match(await page.locator('#franchises [data-key="The Witcher"]').getAttribute('aria-label'),/The Witcher, 4 games, 4\.5/);
+  await page.locator('#franchiseRatingBtn').click();
+  assert.equal(await page.locator('#franchises [data-key="The Witcher"]').count(),1,'Witcher qualifies with three rated games');
+  await page.locator('#franchiseCountBtn').click();
   await page.evaluate(()=>{games=[];for(const [name,scores] of [['Popular',[3,3,3,3]],['Best',[5,4,4]],['Sparse',[5,5,null]],['Single',[5]]])scores.forEach((rating,i)=>games.push({title:name+i,path:'/games/'+name+i+'/',played:true,rating,franchises:[name],gameEngines:[name]}));render()});
   for(const [kind,id] of [['franchise','franchises'],['engine','gameEngines']]){
    const names=()=>page.locator('#'+id+' .explorer-row > span:first-child').allTextContents();

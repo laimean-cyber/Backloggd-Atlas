@@ -1,6 +1,8 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import worker from './dist/server/index.js';
+import { normalizeMetadata } from './dist/server/igdb.js';
+import { metadataFresh } from './dist/server/metadata.js';
 
 const env = { IGDB_CLIENT_ID: 'test-client', IGDB_CLIENT_SECRET: 'test-secret' };
 let tokens = 0;
@@ -56,11 +58,11 @@ const items = [
 ];
 assert.deepEqual(groups(items, 'developers').map(g => [g.name, g.count]), [['First Studio', 1], ['Second Studio', 2]]);
 const genreItems = [{ genres: ['RPG', 'Strategy', 'RPG'], rating: 5 }, { genres: ['RPG'], rating: null }];
-assert.deepEqual(groups(genreItems, 'genres').map(g => [g.name, g.count, g.ratedCount]), [['RPG', 2, 1], ['Strategy', 1, 1]]);
+assert.deepEqual(groups(genreItems, 'genres').map(g => [g.name, g.count, g.ratedCount]), [['Role-playing (RPG)', 2, 1], ['Strategy', 1, 1]]);
 const detailsCode = html.slice(html.indexOf('async function loadDetails(all)'), html.indexOf('let activeUsername'));
-const loadDetails = new Function('api', '$', 'sleep', 'saveMetadata', 'render', `${detailsCode};return loadDetails`)(
-  async url => ({ details: new URL(`https://atlas.test${url}`).searchParams.getAll('path').map(path => path.endsWith('/bad/') ? { path, failed: true } : { path, year: 2023, developers: ['Studio'], checked: true }) }),
-  () => ({ textContent: '' }), async () => {}, () => {}, () => {},
+const loadDetails = new Function('api', '$', 'sleep', 'saveMetadata', 'render', 'metadataFresh', `${detailsCode};return loadDetails`)(
+  async url => ({ details: new URL(`https://atlas.test${url}`).searchParams.getAll('path').map(path => path.endsWith('/bad/') ? { path, failed: true } : { ...normalizeMetadata({}), path, year: 2023, developers: ['Studio'], checked: true }) }),
+  () => ({ textContent: '' }), async () => {}, () => {}, () => {}, metadataFresh,
 );
 const library = ['bad', 'good-1', 'good-2', 'good-3', 'good-4', 'good-5', 'good-6', 'good-7'].map(path => ({ path: `/games/${path}/`, rating: 4 }));
 const scan = await loadDetails(library);

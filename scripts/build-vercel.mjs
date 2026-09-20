@@ -1,5 +1,8 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 import { page } from '../dist/server/page.js';
+import { validateLibrary } from './validate-library.mjs';
+
+validateLibrary(page);
 
 const output = new URL('../public/', import.meta.url);
 await mkdir(output, { recursive: true });
