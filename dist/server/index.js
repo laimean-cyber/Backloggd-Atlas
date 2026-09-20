@@ -1,6 +1,7 @@
 import { igdbDetails } from './igdb.js';
 import { page } from './page.js';
 import { metadataFresh } from './metadata.js';
+import { parseCommunityRating } from './community.js';
 
 const origin = 'https://backloggd.com';
 const json = (data, status = 200) => new Response(JSON.stringify(data), { status, headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store' } });
@@ -113,6 +114,26 @@ export default {
         if (!games.length && pageNo === 1) throw new Error('No public games were found for this profile. Check the nickname or profile visibility.');
         return json({ games, page: pageNo });
       } catch (error) { return json({ error: error.message }, 502); }
+    }
+    if (url.pathname === '/api/community') {
+      const paths = url.searchParams.getAll('path');
+      if (!paths.length || paths.length > 4 || paths.some(p => !/^\/games\/[a-z0-9-]+\/$/.test(p))) return json({ error: 'Invalid game paths.' }, 400);
+      const ratings = [];
+      for (const path of paths) {
+        try {
+          const cache = globalThis.caches?.default;
+          const key = new Request('https://backloggd-atlas.cache/community-v1' + path);
+          const hit = cache ? await cache.match(key) : null;
+          if (hit) { ratings.push(await hit.json()); continue; }
+          const result = { path, communityRating: parseCommunityRating(await upstream(path)), communityFetchedAt: Date.now() };
+          if (cache) await cache.put(key, new Response(JSON.stringify(result), { headers: { 'cache-control': 'public, max-age=86400' } }));
+          ratings.push(result);
+        } catch (error) {
+          ratings.push({ path, failed: true, status: error.status || null });
+          if (error.status === 429 || error.status === 403) break;
+        }
+      }
+      return json({ ratings });
     }
     if (url.pathname === '/api/details') {
       const paths = url.searchParams.getAll('path');
