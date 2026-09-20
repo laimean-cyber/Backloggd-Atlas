@@ -1,0 +1,15 @@
+const fs=require('fs');
+let html=fs.readFileSync('dist/index.html','utf8');
+const lines=html.split('\n');
+const index=lines.findIndex(line=>line.includes('<section')&&line.includes('awardsTitle'));
+if(index<0)throw Error('Awards panel missing');
+const [awards]=lines.splice(index,1);
+const target=lines.findIndex(line=>line.includes('<section')&&line.includes('Your game mode spread'));
+if(target<0)throw Error('Game mode panel missing');
+lines.splice(target+1,0,awards);
+html=lines.join('\n');
+fs.writeFileSync('dist/index.html',html);
+fs.writeFileSync('dist/server/page.js','export const page = '+JSON.stringify(html)+';\n');
+let test=fs.readFileSync('verify-awards.cjs','utf8').replace("document.getElementById('gameEngines')","document.getElementById('modeDonut')").replaceAll('afterEngine','afterGameModes');
+fs.writeFileSync('verify-awards.cjs',test);
+console.log('Moved awards directly after game mode spread.');

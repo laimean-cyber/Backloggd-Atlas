@@ -1,0 +1,16 @@
+const fs = require('node:fs');
+let html = fs.readFileSync('dist/index.html', 'utf8');
+const library = JSON.parse(fs.readFileSync('laime-audit.json', 'utf8'));
+const note = "Showing Laime's saved Backloggd library snapshot. Build the dashboard for Laime to refresh it; file imports stay in this browser.";
+html = html.replace(/  const sample=\[[\s\S]*?\]\.map\(\(\[title,year,developer,rating\]\)=>\(\{title,year,developer,rating,played:true\}\)\);/, '  const defaultUsername="Laime";\n  const defaultLibrary=' + JSON.stringify(library).replace(/</g, '\\u003c') + ';');
+html = html.replace('let games=sample,', 'let games=structuredClone(defaultLibrary),');
+html = html.replaceAll('Sample library', 'Laime&#39;s library');
+html = html.replace('Showing a sample library. Profile lookups read public Backloggd pages; file imports stay in this browser.', note.replaceAll("'", '&#39;'));
+html = html.replace('Show sample data', 'Show Laime&#39;s library');
+html = html.replace('A closer look at your games.', 'Laime&#39;s games, at a glance.');
+html = html.replace("let activeUsername='',activeLibraryIncomplete=false,activeProfileCache=false;", "let activeUsername=defaultUsername,activeLibraryIncomplete=false,activeProfileCache=false;");
+html = html.replace(/\$\('reset'\)\.onclick=\(\)=>\{games=sample;[^\n]+/, `$('reset').onclick=()=>{games=structuredClone(defaultLibrary);activeUsername=defaultUsername;activeLibraryIncomplete=false;activeProfileCache=false;activeBreakdown=null;$('breakdown').hidden=true;$('missingDetails').style.display='none';$('retryDetails').style.display='none';$('sourceLabel').textContent="Laime's library";$('title').textContent="Laime's games, at a glance.";$('dataNote').textContent=${JSON.stringify(note)};$('username').value=defaultUsername;$('reset').style.display='none';$('notice').classList.remove('show');render();loadFavourites(defaultUsername)};`);
+html = html.replace("if(requestedProfile){try{const username=usernameFromInput(requestedProfile);$('username').value=username;buildProfile(username)}catch{}}", "if(requestedProfile){try{const username=usernameFromInput(requestedProfile);$('username').value=username;buildProfile(username)}catch{loadFavourites(defaultUsername)}}else{$('username').value=defaultUsername;loadFavourites(defaultUsername)}");
+if (/const sample=|games=sample|Sample library|Showing a sample library/.test(html)) throw Error('Sample references remain');
+fs.writeFileSync('dist/index.html', html);
+fs.writeFileSync('dist/server/page.js', 'export const page = ' + JSON.stringify(html) + ';\n');

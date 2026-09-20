@@ -1,0 +1,596 @@
+{
+  "libraryCount": 656,
+  "matched": 653,
+  "unmatched": [
+    "Stronghold 4",
+    "Ghost of Tsushima: Iki Island",
+    "Gothic"
+  ],
+  "missingFranchiseField": 95,
+  "missingGameType": 656,
+  "changedGames": 37,
+  "changed": [
+    {
+      "title": "Doom: The Dark Ages",
+      "path": "/games/doom-the-dark-ages/",
+      "before": [],
+      "after": [
+        "Doom"
+      ],
+      "missingField": true,
+      "sourceType": "Main Game"
+    },
+    {
+      "title": "The Elder Scrolls IV: Oblivion Remastered",
+      "path": "/games/the-elder-scrolls-iv-oblivion-remastered/",
+      "before": [],
+      "after": [
+        "The Elder Scrolls"
+      ],
+      "missingField": true,
+      "sourceType": "Remaster"
+    },
+    {
+      "title": "Hogwarts Legacy",
+      "path": "/games/hogwarts-legacy/",
+      "before": [],
+      "after": [
+        "Harry Potter"
+      ],
+      "missingField": true,
+      "sourceType": "Main Game"
+    },
+    {
+      "title": "Dead Space",
+      "path": "/games/dead-space--1/",
+      "before": [],
+      "after": [
+        "Dead Space"
+      ],
+      "missingField": true,
+      "sourceType": "Remake"
+    },
+    {
+      "title": "God of War Ragnarök",
+      "path": "/games/god-of-war-ragnarok/",
+      "before": [],
+      "after": [
+        "God of War"
+      ],
+      "missingField": true,
+      "sourceType": "Main Game"
+    },
+    {
+      "title": "Call of Duty: Modern Warfare II",
+      "path": "/games/call-of-duty-modern-warfare-ii/",
+      "before": [],
+      "after": [
+        "Call of Duty"
+      ],
+      "missingField": true,
+      "sourceType": "Main Game"
+    },
+    {
+      "title": "Devil May Cry 5",
+      "path": "/games/devil-may-cry-5/",
+      "before": [],
+      "after": [
+        "Devil May Cry"
+      ],
+      "missingField": true,
+      "sourceType": "Main Game"
+    },
+    {
+      "title": "Call of Duty: Infinite Warfare",
+      "path": "/games/call-of-duty-infinite-warfare/",
+      "before": [],
+      "after": [
+        "Call of Duty"
+      ],
+      "missingField": true,
+      "sourceType": "Main Game"
+    },
+    {
+      "title": "Overwatch",
+      "path": "/games/overwatch/",
+      "before": [],
+      "after": [
+        "Overwatch"
+      ],
+      "missingField": true,
+      "sourceType": "Main Game"
+    },
+    {
+      "title": "Doom",
+      "path": "/games/doom--2/",
+      "before": [],
+      "after": [
+        "Doom"
+      ],
+      "missingField": true,
+      "sourceType": "Main Game"
+    },
+    {
+      "title": "Uncharted 4: A Thief's End",
+      "path": "/games/uncharted-4-a-thief-s-end/",
+      "before": [],
+      "after": [
+        "Uncharted"
+      ],
+      "missingField": true,
+      "sourceType": "Main Game"
+    },
+    {
+      "title": "Ratchet & Clank",
+      "path": "/games/ratchet-and-clank/",
+      "before": [],
+      "after": [
+        "Ratchet & Clank"
+      ],
+      "missingField": true,
+      "sourceType": "Remake"
+    },
+    {
+      "title": "Middle-earth: Shadow of Mordor",
+      "path": "/games/middle-earth-shadow-of-mordor/",
+      "before": [],
+      "after": [
+        "The Lord of the Rings"
+      ],
+      "missingField": true,
+      "sourceType": "Main Game"
+    },
+    {
+      "title": "The Last of Us Remastered",
+      "path": "/games/the-last-of-us-remastered/",
+      "before": [],
+      "after": [
+        "The Last of Us"
+      ],
+      "missingField": true,
+      "sourceType": "Remaster"
+    },
+    {
+      "title": "Watch Dogs",
+      "path": "/games/watch-dogs/",
+      "before": [],
+      "after": [
+        "Watch_Dogs"
+      ],
+      "missingField": true,
+      "sourceType": "Main Game"
+    },
+    {
+      "title": "Wolfenstein: The New Order",
+      "path": "/games/wolfenstein-the-new-order/",
+      "before": [],
+      "after": [
+        "Wolfenstein"
+      ],
+      "missingField": true,
+      "sourceType": "Main Game"
+    },
+    {
+      "title": "Titanfall",
+      "path": "/games/titanfall/",
+      "before": [],
+      "after": [
+        "Titanfall"
+      ],
+      "missingField": true,
+      "sourceType": "Main Game"
+    },
+    {
+      "title": "Hearthstone",
+      "path": "/games/hearthstone/",
+      "before": [],
+      "after": [
+        "Warcraft"
+      ],
+      "missingField": true,
+      "sourceType": "Main Game"
+    },
+    {
+      "title": "Dark Souls II: Crown of the Old Iron King",
+      "path": "/games/dark-souls-ii-crown-of-the-old-iron-king/",
+      "before": [],
+      "after": [
+        "Dark Souls"
+      ],
+      "missingField": true,
+      "sourceType": "DLC"
+    },
+    {
+      "title": "Dark Souls II: Crown of the Sunken King",
+      "path": "/games/dark-souls-ii-crown-of-the-sunken-king/",
+      "before": [],
+      "after": [
+        "Dark Souls"
+      ],
+      "missingField": true,
+      "sourceType": "DLC"
+    },
+    {
+      "title": "Dark Souls II: Crown of the Ivory King",
+      "path": "/games/dark-souls-ii-crown-of-the-ivory-king/",
+      "before": [],
+      "after": [
+        "Dark Souls"
+      ],
+      "missingField": true,
+      "sourceType": "DLC"
+    },
+    {
+      "title": "Warhammer 40,000: Space Marine",
+      "path": "/games/warhammer-40-000-space-marine/",
+      "before": [],
+      "after": [
+        "Warhammer 40,000"
+      ],
+      "missingField": true,
+      "sourceType": "Main Game"
+    },
+    {
+      "title": "The Witcher: Enhanced Edition",
+      "path": "/games/the-witcher-enhanced-edition/",
+      "before": [],
+      "after": [
+        "The Witcher"
+      ],
+      "missingField": true,
+      "sourceType": "Expanded Game"
+    },
+    {
+      "title": "The Witcher",
+      "path": "/games/the-witcher/",
+      "before": [],
+      "after": [
+        "The Witcher"
+      ],
+      "missingField": true,
+      "sourceType": "Main Game"
+    },
+    {
+      "title": "Team Fortress 2",
+      "path": "/games/team-fortress-2/",
+      "before": [],
+      "after": [
+        "Team Fortress"
+      ],
+      "missingField": true,
+      "sourceType": "Main Game"
+    },
+    {
+      "title": "Portal",
+      "path": "/games/portal/",
+      "before": [],
+      "after": [
+        "Portal"
+      ],
+      "missingField": true,
+      "sourceType": "Main Game"
+    },
+    {
+      "title": "BioShock 2: Minerva's Den Remastered",
+      "path": "/games/bioshock-2-minervas-den-remastered/",
+      "before": [],
+      "after": [
+        "Bioshock"
+      ],
+      "missingField": true,
+      "sourceType": "DLC"
+    },
+    {
+      "title": "BioShock 2: Minerva's Den",
+      "path": "/games/bioshock-2-minervas-den/",
+      "before": [],
+      "after": [
+        "Bioshock"
+      ],
+      "missingField": true,
+      "sourceType": "DLC"
+    },
+    {
+      "title": "Far Cry",
+      "path": "/games/far-cry/",
+      "before": [],
+      "after": [
+        "Far Cry"
+      ],
+      "missingField": false,
+      "sourceType": "Main Game"
+    },
+    {
+      "title": "Empire: Total War",
+      "path": "/games/empire-total-war/",
+      "before": [],
+      "after": [
+        "Total War"
+      ],
+      "missingField": true,
+      "sourceType": "Main Game"
+    },
+    {
+      "title": "Medieval II: Total War",
+      "path": "/games/medieval-ii-total-war/",
+      "before": [],
+      "after": [
+        "Total War"
+      ],
+      "missingField": true,
+      "sourceType": "Main Game"
+    },
+    {
+      "title": "Total War: Rome II",
+      "path": "/games/total-war-rome-ii/",
+      "before": [],
+      "after": [
+        "Total War"
+      ],
+      "missingField": true,
+      "sourceType": "Main Game"
+    },
+    {
+      "title": "Rome: Total War",
+      "path": "/games/rome-total-war/",
+      "before": [],
+      "after": [
+        "Total War"
+      ],
+      "missingField": true,
+      "sourceType": "Main Game"
+    },
+    {
+      "title": "Total War: Shogun 2",
+      "path": "/games/total-war-shogun-2/",
+      "before": [],
+      "after": [
+        "Total War"
+      ],
+      "missingField": true,
+      "sourceType": "Main Game"
+    },
+    {
+      "title": "The Elder Scrolls IV: Shivering Isles",
+      "path": "/games/the-elder-scrolls-iv-shivering-isles/",
+      "before": [],
+      "after": [
+        "The Elder Scrolls"
+      ],
+      "missingField": true,
+      "sourceType": "Expansion"
+    },
+    {
+      "title": "The Elder Scrolls III: Morrowind",
+      "path": "/games/the-elder-scrolls-iii-morrowind/",
+      "before": [],
+      "after": [
+        "The Elder Scrolls"
+      ],
+      "missingField": true,
+      "sourceType": "Main Game"
+    },
+    {
+      "title": "The Elder Scrolls IV: Oblivion",
+      "path": "/games/the-elder-scrolls-iv-oblivion/",
+      "before": [],
+      "after": [
+        "The Elder Scrolls"
+      ],
+      "missingField": true,
+      "sourceType": "Main Game"
+    }
+  ],
+  "counts": [
+    {
+      "name": "Assassin's Creed",
+      "saved": 16,
+      "franchisesRefreshed": 16,
+      "franchisesAndTypesRefreshed": 11
+    },
+    {
+      "name": "Bioshock",
+      "saved": 8,
+      "franchisesRefreshed": 10,
+      "franchisesAndTypesRefreshed": 7
+    },
+    {
+      "name": "Call of Duty",
+      "saved": 13,
+      "franchisesRefreshed": 15,
+      "franchisesAndTypesRefreshed": 15
+    },
+    {
+      "name": "Cyberpunk",
+      "saved": 2,
+      "franchisesRefreshed": 2,
+      "franchisesAndTypesRefreshed": 1
+    },
+    {
+      "name": "Dark Souls",
+      "saved": 9,
+      "franchisesRefreshed": 12,
+      "franchisesAndTypesRefreshed": 6
+    },
+    {
+      "name": "Dead Space",
+      "saved": 2,
+      "franchisesRefreshed": 3,
+      "franchisesAndTypesRefreshed": 3
+    },
+    {
+      "name": "Devil May Cry",
+      "saved": 1,
+      "franchisesRefreshed": 2,
+      "franchisesAndTypesRefreshed": 2
+    },
+    {
+      "name": "Doom",
+      "saved": 4,
+      "franchisesRefreshed": 6,
+      "franchisesAndTypesRefreshed": 3
+    },
+    {
+      "name": "Fallout",
+      "saved": 9,
+      "franchisesRefreshed": 9,
+      "franchisesAndTypesRefreshed": 4
+    },
+    {
+      "name": "Far Cry",
+      "saved": 5,
+      "franchisesRefreshed": 6,
+      "franchisesAndTypesRefreshed": 6
+    },
+    {
+      "name": "Final Fantasy",
+      "saved": 6,
+      "franchisesRefreshed": 6,
+      "franchisesAndTypesRefreshed": 4
+    },
+    {
+      "name": "God of War",
+      "saved": 1,
+      "franchisesRefreshed": 2,
+      "franchisesAndTypesRefreshed": 2
+    },
+    {
+      "name": "Grand Theft Auto",
+      "saved": 7,
+      "franchisesRefreshed": 7,
+      "franchisesAndTypesRefreshed": 5
+    },
+    {
+      "name": "Harry Potter",
+      "saved": 5,
+      "franchisesRefreshed": 6,
+      "franchisesAndTypesRefreshed": 6
+    },
+    {
+      "name": "Horizon",
+      "saved": 4,
+      "franchisesRefreshed": 4,
+      "franchisesAndTypesRefreshed": 2
+    },
+    {
+      "name": "Marvel",
+      "saved": 10,
+      "franchisesRefreshed": 10,
+      "franchisesAndTypesRefreshed": 7
+    },
+    {
+      "name": "Mass Effect",
+      "saved": 20,
+      "franchisesRefreshed": 20,
+      "franchisesAndTypesRefreshed": 6
+    },
+    {
+      "name": "Overwatch",
+      "saved": 0,
+      "franchisesRefreshed": 1,
+      "franchisesAndTypesRefreshed": 1
+    },
+    {
+      "name": "Portal",
+      "saved": 2,
+      "franchisesRefreshed": 3,
+      "franchisesAndTypesRefreshed": 3
+    },
+    {
+      "name": "Ratchet & Clank",
+      "saved": 0,
+      "franchisesRefreshed": 1,
+      "franchisesAndTypesRefreshed": 1
+    },
+    {
+      "name": "Resident Evil",
+      "saved": 20,
+      "franchisesRefreshed": 20,
+      "franchisesAndTypesRefreshed": 14
+    },
+    {
+      "name": "Spider-Man",
+      "saved": 8,
+      "franchisesRefreshed": 8,
+      "franchisesAndTypesRefreshed": 5
+    },
+    {
+      "name": "Team Fortress",
+      "saved": 0,
+      "franchisesRefreshed": 1,
+      "franchisesAndTypesRefreshed": 1
+    },
+    {
+      "name": "The Elder Scrolls",
+      "saved": 1,
+      "franchisesRefreshed": 5,
+      "franchisesAndTypesRefreshed": 4
+    },
+    {
+      "name": "The Last of Us",
+      "saved": 6,
+      "franchisesRefreshed": 7,
+      "franchisesAndTypesRefreshed": 7
+    },
+    {
+      "name": "The Lord of the Rings",
+      "saved": 2,
+      "franchisesRefreshed": 3,
+      "franchisesAndTypesRefreshed": 3
+    },
+    {
+      "name": "The Sims",
+      "saved": 11,
+      "franchisesRefreshed": 11,
+      "franchisesAndTypesRefreshed": 2
+    },
+    {
+      "name": "The Witcher",
+      "saved": 4,
+      "franchisesRefreshed": 6,
+      "franchisesAndTypesRefreshed": 4
+    },
+    {
+      "name": "Titanfall",
+      "saved": 1,
+      "franchisesRefreshed": 2,
+      "franchisesAndTypesRefreshed": 2
+    },
+    {
+      "name": "Total War",
+      "saved": 3,
+      "franchisesRefreshed": 8,
+      "franchisesAndTypesRefreshed": 8
+    },
+    {
+      "name": "Uncharted",
+      "saved": 6,
+      "franchisesRefreshed": 7,
+      "franchisesAndTypesRefreshed": 7
+    },
+    {
+      "name": "Warcraft",
+      "saved": 0,
+      "franchisesRefreshed": 1,
+      "franchisesAndTypesRefreshed": 1
+    },
+    {
+      "name": "Warhammer 40,000",
+      "saved": 0,
+      "franchisesRefreshed": 1,
+      "franchisesAndTypesRefreshed": 1
+    },
+    {
+      "name": "Watch_Dogs",
+      "saved": 1,
+      "franchisesRefreshed": 2,
+      "franchisesAndTypesRefreshed": 2
+    },
+    {
+      "name": "Wolfenstein",
+      "saved": 2,
+      "franchisesRefreshed": 3,
+      "franchisesAndTypesRefreshed": 3
+    }
+  ]
+}

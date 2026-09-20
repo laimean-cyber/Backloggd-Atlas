@@ -1,0 +1,12 @@
+import {writeFileSync} from 'node:fs';
+import {page} from '../dist/server/page.js';
+let h=page.replace('.explore-pair>.explorer-panel{height:620px;aspect-ratio:auto;width:100%}', '.explore-pair>.panel{height:clamp(400px,calc(37.5vw - 33px),507px);aspect-ratio:auto;width:100%}.year-unrated-control{display:flex;align-items:center;gap:7px;margin:0 0 14px;font-size:.8rem;color:#c4cbd1}.year-unrated-control input{accent-color:#ea377a}.year-unrated-control[hidden]{display:none}');
+h=h.replace('<div id="yearMixLegend"', '<label id="yearUnratedControl" class="year-unrated-control"><input id="yearIncludeUnrated" type="checkbox">Include unrated games</label><div id="yearMixLegend"');
+h=h.replace("let yearView='mix'", "let yearIncludeUnrated=false,yearView='mix'");
+h=h.replace("const sortedYears=[...yearAll]", "const explorerYears=yearView==='mix'&&!yearIncludeUnrated?yearAll.map(year=>{const list=year.list.filter(g=>Number.isFinite(g.rating)&&g.rating>0&&g.rating<=5);return {...year,list,count:list.length}}).filter(year=>year.count):yearAll;\n    $('yearUnratedControl').hidden=yearView!=='mix';\n    const sortedYears=[...explorerYears]");
+h=h.replace("'Share of played games at each rating · each year totals 100%'", "(yearIncludeUnrated?'Share of played games':'Share of rated games')+' at each rating · each year totals 100%'");
+h=h.replace('const order=[9,8,7,6,5,4,3,2,1,0,10];', 'const order=yearIncludeUnrated?[9,8,7,6,5,4,3,2,1,0,10]:[9,8,7,6,5,4,3,2,1,0];');
+h=h.replace("+' games</small></span><span class=\"year-mix-bar\">'", "+(yearIncludeUnrated?' games':' rated games')+'</small></span><span class=\"year-mix-bar\">'");
+h=h.replace("  $('yearSort').addEventListener", "  $('yearIncludeUnrated').addEventListener('change',event=>{yearIncludeUnrated=event.target.checked;render()});\n  $('yearSort').addEventListener");
+h=h.replace("}).join(''):'<div class=\"empty\">No release years in this library.</div>';\n  }", "}).join(''):'<div class=\"empty\">'+(yearIncludeUnrated?'No release years in this library.':'No rated games with release years. Include unrated games to see more years.')+'</div>';\n  }");
+writeFileSync('dist/server/page.js','export const page = '+JSON.stringify(h)+';\n');writeFileSync('dist/index.html',h);writeFileSync('public/index.html',h);
