@@ -21,5 +21,8 @@ await page.waitForFunction(()=>communityPaused&&!communityBusy);assert.equal(cal
 assert.equal(await page.evaluate(()=>communityAttempted.size),1);
 limited=false;await page.locator('#communityRetry').click();await page.waitForFunction(()=>!communityBusy&&communityResults.size===7);
 assert.equal(calls.length,3);assert(await page.locator('#communityRetry').isVisible());
+await page.evaluate(()=>{communityPaused=true;games=[{title:'Saved average',rating:4,communityRating:3.5,communityFetchedAt:Date.now()-2*86400000}];render()});
+assert((await page.locator('#communityStatus').textContent()).includes('1 of 1'));
+assert.equal(await page.locator('#communityMore .community-gap').textContent(),'+0.5');
 console.log('Passed: individual failures do not block later batches; rate limits pause without marking unfetched games; retry makes progress.');
 }finally{await browser.close()}})().catch(e=>{console.error(e);process.exit(1)});
