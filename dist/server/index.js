@@ -2,6 +2,7 @@ import { igdbDetails } from './igdb.js';
 import { page } from './page.js';
 import { metadataFresh } from './metadata.js';
 import { parseCommunityRating } from './community.js';
+import { cached } from './cache.js';
 
 const origin = 'https://backloggd.com';
 const json = (data, status = 200) => new Response(JSON.stringify(data), { status, headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store' } });
@@ -14,9 +15,9 @@ async function upstream(path, requireBrand = true) {
     response = await fetch(origin + path, { headers: { 'accept': 'text/html,application/xhtml+xml', 'accept-language': 'en-US,en;q=0.9', 'user-agent': 'Mozilla/5.0 (compatible; BackloggdAtlas/1.0)' }, redirect: 'follow', signal: AbortSignal.timeout(15000) });
     if (response.status !== 429) break;
   }
-  if (response.status === 404) throw new Error('Profile or game not found.');
+  if (response.status === 404) throw Object.assign(new Error('Profile or game not found.'), { status: 404 });
   if (response.status === 403 || response.status === 429) { const error = new Error('Backloggd is limiting automated requests. Please try again later.'); error.status = response.status; throw error; }
-  if (!response.ok) throw new Error('Backloggd is unavailable right now.');
+  if (!response.ok) throw Object.assign(new Error(`Backloggd is unavailable right now (HTTP ${response.status}).`), { status: response.status });
   const html = await response.text();
   if (requireBrand && !html.includes('backloggd') && !html.includes('Backloggd')) throw new Error('Backloggd returned an unexpected page.');
   return html;
@@ -79,17 +80,29 @@ function parseDetails(html, averageTimeHours = parseAverageTime(html)) {
 }
 
 async function gameDetails(path, env) {
+  return cached(`details-v8:${env.IGDB_CLIENT_ID || ''}:${path}`, () => fetchGameDetails(path, env));
+}
+
+async function fetchGameDetails(path, env) {
   const cache = globalThis.caches?.default;
-  const key = new Request(`https://backloggd-atlas.cache/igdb-v7${path}`);
+  const key = new Request(`https://backloggd-atlas.cache/igdb-v8${path}`);
   if (cache) { try { const hit = await cache.match(key); if (hit) { const data = await hit.json(); if (metadataFresh(data)) return data; } } catch {} }
-  const html = await upstream(path);
+  let html = '', backlog = {}, warning;
+  try {
+    html = await upstream(path);
+    backlog = parseDetails(html);
+  } catch (error) {
+    warning = { source: 'Backloggd', status: error.status || null, error: error.message };
+  }
   const statsPath = html.match(/\/fetch_game_stats\/\d+\/\d+\/?/)?.[0];
   let averageTimeHours = parseAverageTime(html);
   if (averageTimeHours == null && statsPath) {
     try { averageTimeHours = parseAverageTime(await upstream(statsPath, false)); } catch {}
   }
-  const details = { ...parseDetails(html, averageTimeHours), ...await igdbDetails(path, html, env) };
-  if (cache) { try { await cache.put(key, new Response(JSON.stringify(details), { headers: { 'cache-control': 'public, max-age=604800' } })); } catch {} }
+  const metadata = await igdbDetails(path, html, env);
+  const details = { ...metadata, plays: null, playText: null, ...backlog, year: backlog.year ?? metadata.year, averageTimeHours, checked: true };
+  if (warning) Object.assign(details, { warning, metadataRetryAt: Date.now() + 60000 });
+  if (cache && !warning) { try { await cache.put(key, new Response(JSON.stringify(details), { headers: { 'cache-control': 'public, max-age=604800' } })); } catch {} }
   return details;
 }
 
@@ -139,8 +152,13 @@ export default {
     if (url.pathname === '/api/details') {
       const paths = url.searchParams.getAll('path');
       if (!paths.length || paths.length > 4 || paths.some(p => !/^\/games\/[a-z0-9-]+\/$/.test(p))) return json({ error: 'Invalid game paths.' }, 400);
-      const details = await Promise.all(paths.map(async path => { try { return { path, ...await gameDetails(path, env) }; } catch (error) { return { path, year: null, gameType: null, developers: [], developerLogos: {}, genres: [], publishers: [], publisherLogos: {}, gameModes: [], playerPerspectives: [], themes: [], franchises: [], gameEngines: [], failed: true, status: error.status || null }; } }));
-      return json({ details, failed: details.filter(d => d.failed).length });
+      const details = await Promise.all(paths.map(async path => { try { return { path, ...await gameDetails(path, env) }; } catch (error) { return { path, year: null, gameType: null, developers: [], developerLogos: {}, genres: [], publishers: [], publisherLogos: {}, gameModes: [], playerPerspectives: [], themes: [], franchises: [], gameEngines: [], failed: true, status: error.status || null, error: error.message }; } }));
+      const response = json({ details, failed: details.filter(d => d.failed).length });
+      if (details.every(d => !d.failed && !d.warning)) {
+        response.headers.set('Cache-Control', 'public, max-age=0, must-revalidate');
+        response.headers.set('Vercel-CDN-Cache-Control', 'public, s-maxage=3600');
+      }
+      return response;
     }
     return new Response('Not found', { status: 404 });
   }

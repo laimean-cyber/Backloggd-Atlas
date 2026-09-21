@@ -8,5 +8,5 @@ export function metadataComplete(data) {
 }
 
 export function metadataFresh(data, now = Date.now()) {
-  return metadataComplete(data) && data.metadataFetchedAt <= now && now - data.metadataFetchedAt < 7 * 24 * 60 * 60 * 1000;
+  return metadataComplete(data) && (!data.metadataRetryAt || data.metadataRetryAt > now) && data.metadataFetchedAt <= now && now - data.metadataFetchedAt < 7 * 24 * 60 * 60 * 1000;
 }

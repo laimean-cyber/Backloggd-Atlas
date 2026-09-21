@@ -32,3 +32,15 @@ refreshed after seven days. The default library also checks for stale or incompl
 metadata on load. Build validation rejects incomplete records marked as checked.
 When changing the metadata schema, update its version and regenerate the browser
 copies of the validation functions; regression tests check that they match.
+
+If Backloggd is unavailable, metadata falls back to IGDB using the game slug.
+Backloggd-only statistics remain unavailable, and the response includes a warning.
+Fallback results expire after one minute so later requests can recover those statistics.
+If IGDB also fails or cannot match the slug, the API returns the error message and
+upstream HTTP status instead of marking the game complete.
+
+Successful metadata uses a bounded, seven-day warm-instance cache with concurrent
+request deduplication, plus a one-hour Vercel CDN cache for each requested batch.
+The instance cache resets on cold starts; the CDN supplies caching across instances
+for matching URLs. Failed or degraded responses are not CDN-cached. Workers still
+use their native edge cache. Browser warnings retain the upstream failure reason.

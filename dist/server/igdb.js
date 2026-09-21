@@ -10,7 +10,7 @@ async function accessToken(env) {
     const response = await fetch('https://id.twitch.tv/oauth2/token', {
       method: 'POST', body: new URLSearchParams({ client_id: env.IGDB_CLIENT_ID, client_secret: env.IGDB_CLIENT_SECRET, grant_type: 'client_credentials' }), signal: AbortSignal.timeout(15000),
     });
-    if (!response.ok) throw new Error('IGDB authentication failed.');
+    if (!response.ok) throw Object.assign(new Error('IGDB authentication failed.'), { status: response.status });
     const data = await response.json();
     tokenState = { client: env.IGDB_CLIENT_ID, token: data.access_token, expires: Date.now() + (data.expires_in - 60) * 1000 };
     return tokenState.token;
@@ -30,7 +30,7 @@ export async function query(body, env, retry = true) {
   return response.json();
 }
 
-export const metadataFields = 'fields name,slug,game_type.type,genres.name,game_modes.name,player_perspectives.name,themes.name,franchise.name,franchises.name,game_engines.name,involved_companies.developer,involved_companies.publisher,involved_companies.company.name,involved_companies.company.logo.image_id;';
+export const metadataFields = 'fields name,slug,first_release_date,game_type.type,genres.name,game_modes.name,player_perspectives.name,themes.name,franchise.name,franchises.name,game_engines.name,involved_companies.developer,involved_companies.publisher,involved_companies.company.name,involved_companies.company.logo.image_id;';
 
 export async function igdbDetails(path, html, env) {
   const slug = path.split('/')[2];
@@ -45,6 +45,7 @@ export async function igdbDetails(path, html, env) {
 export function normalizeMetadata(game) {
   const credits = (game.involved_companies || []).filter(credit => credit.developer === true && credit.company?.name).map(credit => credit.company);
   return {
+    year: Number.isFinite(game.first_release_date) ? new Date(game.first_release_date * 1000).getUTCFullYear() : null,
     metadataVersion: 1,
     metadataFetchedAt: Date.now(),
     gameType: typeof game.game_type?.type === 'string' ? game.game_type.type : null,
