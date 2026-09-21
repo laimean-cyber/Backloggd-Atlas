@@ -44,3 +44,12 @@ request deduplication, plus a one-hour Vercel CDN cache for each requested batch
 The instance cache resets on cold starts; the CDN supplies caching across instances
 for matching URLs. Failed or degraded responses are not CDN-cached. Workers still
 use their native edge cache. Browser warnings retain the upstream failure reason.
+
+Profile pages and favourites are cached for five minutes on Vercel's CDN and in
+warm instances; community results use a one-hour CDN and one-day instance cache.
+All Backloggd consumers share a bounded five-minute HTML cache and in-flight
+requests. Each instance spaces upstream requests by 750 ms and pauses on 403/429
+for at least a minute, honoring longer Retry-After values. This is instance-local
+throttling, not a global distributed quota. Requests for never-cached profiles
+still require Backloggd to permit access. Failure responses retain the upstream
+status and are not CDN-cached.

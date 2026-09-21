@@ -4,23 +4,15 @@ import { metadataFresh } from './metadata.js';
 import { parseCommunityRating } from './community.js';
 import { cached } from './cache.js';
 
-const origin = 'https://backloggd.com';
+import { upstream } from './backloggd.js';
 const json = (data, status = 200) => new Response(JSON.stringify(data), { status, headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store' } });
 const decode = text => String(text || '').replace(/&#(?:x([0-9a-f]+)|(\d+));|&(#39|amp|quot|lt|gt|nbsp);/gi, (_, hex, dec, named) => hex ? String.fromCodePoint(parseInt(hex, 16)) : dec ? String.fromCodePoint(+dec) : ({ '#39': "'", amp: '&', quot: '"', lt: '<', gt: '>', nbsp: ' ' }[named.toLowerCase()] || '')).trim();
 
-async function upstream(path, requireBrand = true) {
-  let response;
-  for (let attempt = 0; attempt < 3; attempt++) {
-    if (attempt) await new Promise(resolve => setTimeout(resolve, attempt * 1000));
-    response = await fetch(origin + path, { headers: { 'accept': 'text/html,application/xhtml+xml', 'accept-language': 'en-US,en;q=0.9', 'user-agent': 'Mozilla/5.0 (compatible; BackloggdAtlas/1.0)' }, redirect: 'follow', signal: AbortSignal.timeout(15000) });
-    if (response.status !== 429) break;
-  }
-  if (response.status === 404) throw Object.assign(new Error('Profile or game not found.'), { status: 404 });
-  if (response.status === 403 || response.status === 429) { const error = new Error('Backloggd is limiting automated requests. Please try again later.'); error.status = response.status; throw error; }
-  if (!response.ok) throw Object.assign(new Error(`Backloggd is unavailable right now (HTTP ${response.status}).`), { status: response.status });
-  const html = await response.text();
-  if (requireBrand && !html.includes('backloggd') && !html.includes('Backloggd')) throw new Error('Backloggd returned an unexpected page.');
-  return html;
+function publicJson(data, seconds) {
+  const response = json(data);
+  response.headers.set('Cache-Control', 'public, max-age=0, must-revalidate');
+  response.headers.set('Vercel-CDN-Cache-Control', 'public, s-maxage='+seconds);
+  return response;
 }
 
 function parseCards(html) {
@@ -114,19 +106,22 @@ export default {
     if (url.pathname === '/api/favourites') {
       const username = url.searchParams.get('user') || '';
       if (!/^[A-Za-z0-9_-]{1,40}$/.test(username)) return json({ error: 'Enter a valid Backloggd nickname.' }, 400);
-      try { return json({ favourites: parseFavourites(await upstream(`/u/${encodeURIComponent(username)}/`)) }); }
-      catch (error) { return json({ error: error.message }, 502); }
+      try { return publicJson(await cached('favourites:'+username.toLowerCase(), async () => ({ favourites: parseFavourites(await upstream(`/u/${encodeURIComponent(username)}/`)) }), 300000), 300); }
+      catch (error) { return json({ error: error.message, status: error.status || null, retryAfter: error.retryAfter || null }, 502); }
     }
     if (url.pathname === '/api/page') {
       const username = url.searchParams.get('user') || '';
       const pageNo = +(url.searchParams.get('page') || '1');
       if (!/^[A-Za-z0-9_-]{1,40}$/.test(username) || !Number.isInteger(pageNo) || pageNo < 1 || pageNo > 100) return json({ error: 'Enter a valid Backloggd nickname.' }, 400);
       try {
+        const result = await cached('profile:'+username.toLowerCase()+':'+pageNo, async () => {
         const html = await upstream(`/u/${encodeURIComponent(username)}/games?page=${pageNo}`);
         const games = parseCards(html);
         if (!games.length && pageNo === 1) throw new Error('No public games were found for this profile. Check the nickname or profile visibility.');
-        return json({ games, page: pageNo });
-      } catch (error) { return json({ error: error.message }, 502); }
+        return { games, page: pageNo };
+        }, 300000);
+        return publicJson(result, 300);
+      } catch (error) { return json({ error: error.message, status: error.status || null, retryAfter: error.retryAfter || null }, 502); }
     }
     if (url.pathname === '/api/community') {
       const paths = url.searchParams.getAll('path');
@@ -139,7 +134,7 @@ export default {
           let hit = null;
           try { hit = cache ? await cache.match(key) : null; } catch {}
           if (hit) { ratings.push(await hit.json()); continue; }
-          const result = { path, communityRating: parseCommunityRating(await upstream(path)), communityFetchedAt: Date.now() };
+          const result = await cached('community:'+path, async () => ({ path, communityRating: parseCommunityRating(await upstream(path)), communityFetchedAt: Date.now() }), 86400000);
           if (cache) { try { await cache.put(key, new Response(JSON.stringify(result), { headers: { 'cache-control': 'public, max-age=86400' } })); } catch {} }
           ratings.push(result);
         } catch (error) {
@@ -147,7 +142,7 @@ export default {
           if (error.status === 429 || error.status === 403) break;
         }
       }
-      return json({ ratings });
+      return ratings.length === paths.length && ratings.every(r => !r.failed) ? publicJson({ ratings }, 3600) : json({ ratings });
     }
     if (url.pathname === '/api/details') {
       const paths = url.searchParams.getAll('path');
