@@ -123,13 +123,14 @@ export default {
         try {
           const cache = globalThis.caches?.default;
           const key = new Request('https://backloggd-atlas.cache/community-v1' + path);
-          const hit = cache ? await cache.match(key) : null;
+          let hit = null;
+          try { hit = cache ? await cache.match(key) : null; } catch {}
           if (hit) { ratings.push(await hit.json()); continue; }
           const result = { path, communityRating: parseCommunityRating(await upstream(path)), communityFetchedAt: Date.now() };
-          if (cache) await cache.put(key, new Response(JSON.stringify(result), { headers: { 'cache-control': 'public, max-age=86400' } }));
+          if (cache) { try { await cache.put(key, new Response(JSON.stringify(result), { headers: { 'cache-control': 'public, max-age=86400' } })); } catch {} }
           ratings.push(result);
         } catch (error) {
-          ratings.push({ path, failed: true, status: error.status || null });
+          ratings.push({ path, failed: true, status: error.status || null, error: error.message });
           if (error.status === 429 || error.status === 403) break;
         }
       }
