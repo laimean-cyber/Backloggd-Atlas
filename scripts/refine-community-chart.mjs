@@ -1,0 +1,18 @@
+import {writeFileSync} from 'node:fs';
+import {page as original} from '../dist/server/page.js';
+let page=original;
+const starPath=page.match(/const inlineStar = ("[^\n]+?");/)?.[1];
+if(!starPath)throw Error('Rating star missing');
+const star=JSON.parse(starPath);
+const legend=page.match(/<div class="community-legend"[\s\S]*?<\/div>/)?.[0];
+if(!legend)throw Error('Legend missing');
+page=page.replace(legend,'').replace('<p class="panel-sub">Games you loved more—or less—than other players</p>','<div class="community-explanation"><p class="panel-sub">Games you loved more—or less—than other players</p>'+legend.replace('<i class="community-dot" aria-hidden="true"></i>',star)+'</div>');
+page=page.replace("+x.g.rating/5*100+'%\"></span></div></td>","+x.g.rating/5*100+'%\">'+inlineStar+'</span></div></td>");
+page=page.replace('.community-track{position:relative;height:32px;margin:0 6px;', '.community-track{position:absolute;inset:0 6px;height:auto;margin:0;');
+page=page.replace('.community-table td:nth-child(2){background:#292d37}', '.community-table td:nth-child(2){position:relative;background:#292d37}');
+page=page.replace('scrollbar-color:#596477 #242832;scrollbar-width:thin;padding-right:5px','scrollbar-color:#ea377a #242832;scrollbar-width:thin;padding-right:5px');
+page=page.replace('.community-legend{display:flex;gap:20px;margin:0 0 24px;', '.community-legend{display:flex;gap:16px;margin:0;');
+page=page.replace('</style>',`.community-explanation{display:flex;flex-wrap:wrap;align-items:center;gap:8px 24px;margin-top:6px}.community-explanation .panel-sub{margin:0}.community-legend .rating-star{width:13px;height:13px}.community-point:not(.backloggd){width:13px;height:13px;background:transparent;border-radius:0;display:flex;align-items:center;justify-content:center}.community-point .rating-star{display:block;width:13px;height:13px}.community-list::-webkit-scrollbar{width:7px;height:7px}.community-list::-webkit-scrollbar-track{background:#242832}.community-list::-webkit-scrollbar-thumb{background:#ea377a;border-radius:8px}.community-list::-webkit-scrollbar-thumb:hover{background:#f276a4}</style>`);
+if(!page.includes("+inlineStar+'</span></div></td>"))throw Error('Chart star not inserted');
+writeFileSync('dist/server/page.js','export const page = '+JSON.stringify(page)+';\n');
+writeFileSync('dist/index.html',page);

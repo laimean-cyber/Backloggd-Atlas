@@ -6,6 +6,9 @@ const page=await browser.newPage({viewport:{width,height:1000}}),errors=[];page.
 await page.route('**/*',r=>r.request().isNavigationRequest()?r.fulfill({contentType:'text/html',body:fs.readFileSync('public/index.html','utf8')}):r.request().url().includes('/api/community')?r.fulfill({json:{ratings:[]}}):r.abort());
 await page.goto('http://localhost:4174');
 await page.locator('#communityTitle').scrollIntoViewIfNeeded();
+assert(await page.locator('.community-track').evaluateAll(nodes=>nodes.every(n=>Math.abs(n.getBoundingClientRect().height-n.parentElement.getBoundingClientRect().height)<1)));
+assert.equal(await page.locator('.community-point:not(.backloggd) .rating-star').count(),await page.locator('.community-track').count());
+assert(await page.locator('.community-list').first().evaluate(n=>getComputedStyle(n).scrollbarColor.includes('234, 55, 122')));
 await page.locator('.community-panel').screenshot({path:`community-real-${width}.png`});
 assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
 await page.evaluate(()=>{communityAttempted=new Set();games=[['Higher',5,3],['Highest',5,2],['Lower',2,3],['Lowest',1,4],['Equal',3,3],['Unrated',null,4],['Unavailable',4,null],['Not played',1,5]].map(([title,rating,communityRating])=>({title,rating,communityRating,communityFetchedAt:Date.now(),played:title!=='Not played'}));render()});
