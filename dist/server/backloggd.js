@@ -1,18 +1,24 @@
 // All Backloggd consumers share HTML, in-flight requests, and an instance-wide queue.
 export function createBackloggdClient({fetcher = (...args) => fetch(...args), now = Date.now,
-  sleep = ms => new Promise(resolve => setTimeout(resolve, ms)), spacing = 750} = {}) {
+  sleep = ms => new Promise(resolve => setTimeout(resolve, ms)), spacing = 750, maxOpen = 4} = {}) {
   const pages = new Map(), pending = new Map();
   let queue = Promise.resolve(), next = 0, blockedUntil = 0, lastError;
+  const active = new Set();
   return async function upstream(path, requireBrand = true) {
     const hit = pages.get(path);
     if (hit && hit.expires > now()) return hit.html;
     if (pending.has(path)) return pending.get(path);
     const queuedAt = now();
-    const job = queue.catch(() => {}).then(async () => {
+    let work;
+    const admitted = queue = queue.catch(() => {}).then(async () => {
       if (now() - queuedAt > 20000) throw Object.assign(new Error('Game requests are busy. Please retry shortly.'), {status: 503});
       if (blockedUntil > now()) throw lastError;
-      await sleep(Math.max(0, next - now()));
+      while (active.size >= maxOpen) await Promise.race(active);
+      if (blockedUntil > now()) throw lastError;
+      await sleep(Math.max(0, next - now(), blockedUntil - now()));
+      if (blockedUntil > now()) throw lastError;
       next = now() + spacing;
+      work = (async () => {
       let response;
       try { response = await fetcher('https://backloggd.com' + path, {
         headers: {accept: 'text/html,application/xhtml+xml', 'accept-language': 'en-US,en;q=0.9', 'user-agent': 'Mozilla/5.0 (compatible; BackloggdAtlas/1.0)'},
@@ -44,8 +50,11 @@ export function createBackloggdClient({fetcher = (...args) => fetch(...args), no
         pages.set(path, {html, expires: now() + 300000});
       }
       return html;
+      })();
+      const settled = work.then(() => {}, () => {}).finally(() => active.delete(settled));
+      active.add(settled);
     });
-    queue = job;
+    const job = admitted.then(() => work);
     pending.set(path, job);
     try { return await job; } finally { pending.delete(path); }
   };

@@ -383,7 +383,7 @@ button.legend-line{width:100%;border:0;background:transparent;color:inherit;padd
   for(const event of ['pointerover','focusin','click'])$('eraTable').addEventListener(event,e=>{const cell=e.target.closest('.era-cell');if(cell)$('eraDetails').textContent=cell.dataset.summary});
 
 
-  var communityPaused=false,communityError="",communityBusy=false,communityResults=new Map(),communityAttempted=new Set();
+  var communityPaused=false,communityError="",communityBusy=false,communityResults=new Map(),communityAttempted=new Set(),metadataLoading=false;
   function communityEligible(){return games.filter(g=>isPlayed(g)&&Number.isFinite(g.rating)&&g.rating>0&&g.rating<=5)}
   function communityData(g){
     const candidates=[g,communityResults.get(g.path)];
@@ -400,10 +400,10 @@ button.legend-line{width:100%;border:0;background:transparent;color:inherit;padd
     const missing=eligible.filter(communityNeedsRefresh);
     $('communityStatus').textContent=(communityBusy?'Loading Backloggd averages… ':communityError?communityError+' ':'')+compared.length+' of '+eligible.length+' rated games compared · scores out of 5 · largest gaps first · equal ratings omitted.';
     $('communityRetry').hidden=communityBusy||!missing.length;
-    if(!communityBusy&&!communityPaused&&missing.some(g=>g.path&&!communityAttempted.has(g.path)))queueMicrotask(loadCommunity);
+    if(!communityBusy&&!communityPaused&&!metadataLoading&&missing.some(g=>g.path&&!communityAttempted.has(g.path)))queueMicrotask(loadCommunity);
   }
   async function loadCommunity(){
-    if(communityBusy)return;
+    if(communityBusy||metadataLoading)return;
     const queue=communityEligible().filter(g=>/^\/games\/[a-z0-9-]+\/$/.test(g.path)&&communityNeedsRefresh(g)&&!communityAttempted.has(g.path));
     if(!queue.length)return;
     communityBusy=true;communityError='';renderCommunity();
@@ -555,9 +555,10 @@ button.legend-line{width:100%;border:0;background:transparent;color:inherit;padd
   const metadataKey=path=>'backloggd-atlas:metadata:igdb-v10:'+path;
   const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
   function readMetadata(path){try{const data=JSON.parse(localStorage.getItem(metadataKey(path)));if(metadataFresh(data))return data}catch{}return null}
-  function saveMetadata(g){if(!metadataComplete(g))return;try{localStorage.setItem(metadataKey(g.path),JSON.stringify({metadataVersion:g.metadataVersion,metadataFetchedAt:g.metadataFetchedAt,metadataRetryAt:g.metadataRetryAt,warning:g.warning,year:g.year??null,gameType:g.gameType??null,developers:g.developers||[],developerLogos:g.developerLogos||{},genres:g.genres||[],publishers:g.publishers||[],publisherLogos:g.publisherLogos||{},gameModes:g.gameModes||[],playerPerspectives:g.playerPerspectives||[],themes:g.themes||[],franchises:g.franchises||[],gameEngines:g.gameEngines||[],plays:g.plays??null,playText:g.playText??null,averageTimeHours:g.averageTimeHours??null,checked:true,savedAt:Date.now()}))}catch{}}
+  function saveMetadata(g){if(!metadataComplete(g))return;try{localStorage.setItem(metadataKey(g.path),JSON.stringify({metadataVersion:g.metadataVersion,metadataFetchedAt:g.metadataFetchedAt,metadataRetryAt:g.metadataRetryAt,warning:g.warning,year:g.year??null,gameType:g.gameType??null,developers:g.developers||[],developerLogos:g.developerLogos||{},genres:g.genres||[],publishers:g.publishers||[],publisherLogos:g.publisherLogos||{},gameModes:g.gameModes||[],playerPerspectives:g.playerPerspectives||[],themes:g.themes||[],franchises:g.franchises||[],gameEngines:g.gameEngines||[],plays:g.plays??null,playText:g.playText??null,averageTimeHours:g.averageTimeHours??null,communityRating:g.communityRating??null,communityFetchedAt:g.communityFetchedAt??null,checked:true,savedAt:Date.now()}))}catch{}}
   async function loadDetails(all){
     const queue=all.filter(g=>!metadataFresh(g)).sort((a,b)=>Number.isFinite(b.rating)-Number.isFinite(a.rating));
+    metadataLoading=queue.length>0;
     let checked=all.length-queue.length,emptyGroups=0;
     for(let i=0;i<queue.length;i+=4){
       const group=queue.slice(i,i+4);let pending=group;
@@ -576,6 +577,7 @@ button.legend-line{width:100%;border:0;background:transparent;color:inherit;padd
       if(emptyGroups>=3)break;
       await sleep(350);
     }
+    metadataLoading=false;renderCommunity();
     return {metadataIncomplete:all.some(g=>!metadataFresh(g))};
   }
   async function refreshDefaultMetadata(){

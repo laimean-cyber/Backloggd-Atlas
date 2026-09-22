@@ -1,10 +1,10 @@
 // Warm-instance cache complements CDN caching on Vercel and edge caching on Workers.
 const entries = new Map();
 const pending = new Map();
-export async function cached(key, load, ttl = 604800000) {
+export async function cached(key, load, ttl = 604800000, onReuse = () => {}) {
   const hit = entries.get(key);
-  if (hit && hit.expires > Date.now()) return structuredClone(hit.value);
-  if (pending.has(key)) return structuredClone(await pending.get(key));
+  if (hit && hit.expires > Date.now()) { onReuse(); return structuredClone(hit.value); }
+  if (pending.has(key)) { onReuse(); return structuredClone(await pending.get(key)); }
   const promise = (async () => {
     const value = await load();
     entries.delete(key);

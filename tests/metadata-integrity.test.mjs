@@ -48,9 +48,9 @@ test('browser refresh retries checked-but-incomplete records and rejects partial
   let calls=0;
   const games=[{path:'/games/incomplete/',checked:true}, {path:'/games/partial-response/',checked:true}, {...record(),path:'/games/fresh/'}];
   const saved=[];
-  const load=new Function('api','$','sleep','saveMetadata','render','metadataFresh',code+';return loadDetails;')(
+  const load=new Function('api','$','sleep','saveMetadata','render','renderCommunity','metadataFresh','let metadataLoading=false;'+code+';return loadDetails;')(
     async url=>{calls++;const paths=new URL('https://test'+url).searchParams.getAll('path');assert.ok(!paths.includes('/games/fresh/'));return {details:paths.map(path=>path.includes('partial')?{path,checked:true}:{path,...record()})};},
-    ()=>({textContent:''}),async()=>{},g=>saved.push(g.path),()=>{},metadataFresh);
+    ()=>({textContent:''}),async()=>{},g=>saved.push(g.path),()=>{},()=>{},metadataFresh);
   assert.equal((await load(games)).metadataIncomplete,true);
   assert.equal(calls,3);
   assert.deepEqual(saved,['/games/incomplete/']);
@@ -74,7 +74,7 @@ test('API ignores incomplete edge-cache hits and returns versioned source metada
   globalThis.caches={default:{match:async()=>Response.json({checked:true,franchises:[]}),put:async(key,response)=>{assert.equal(metadataFresh(await response.json()),true);writes++;}}};
   globalThis.fetch=async url=>{
     if(String(url).includes('oauth2/token'))return Response.json({access_token:'test',expires_in:3600});
-    if(String(url).includes('api.igdb.com'))return Response.json([{id:80,game_type:{type:'Main Game'},franchises:[{name:'The Witcher'}]}]);
+    if(String(url).includes('api.igdb.com'))return Response.json([{id:80,slug:'the-witcher',game_type:{type:'Main Game'},franchises:[{name:'The Witcher'}]}]);
     return new Response('<title>Backloggd</title><div class="game-subtitle"><a class="game-year">2007</a></div>');
   };
   try{

@@ -11,10 +11,10 @@ const game={id:80,first_release_date:1193702400,involved_companies:[{developer:t
 async function fixture(backlogStatus, igdbStatus, run) {
   const original=globalThis.fetch;
   const calls=[];
-  globalThis.fetch=async url=>{
+  globalThis.fetch=async (url,options)=>{
     calls.push(String(url));
     if(String(url).includes('oauth2/token'))return Response.json({access_token:'test',expires_in:3600});
-    if(String(url).includes('api.igdb.com'))return Response.json([game],{status:igdbStatus});
+    if(String(url).includes('api.igdb.com'))return Response.json([...options.body.matchAll(/"([a-z0-9-]+)"/g)].map(([,slug])=>({...game,slug})),{status:igdbStatus});
     return new Response('<title>Backloggd</title><div class="game-subtitle"><a class="game-year">2007</a></div>',{status:backlogStatus});
   };
   try {await run(calls);}finally{globalThis.fetch=original;}
@@ -75,8 +75,8 @@ test('runtime cache expires, deduplicates concurrent work, and isolates caller m
 test('browser shows server failure reasons and clears fallback warnings after recovery',async()=>{
   const code=page.slice(page.indexOf('async function loadDetails(all)'),page.indexOf('async function refreshDefaultMetadata()'));
   let answer;
-  const load=new Function('api','$','sleep','saveMetadata','render','metadataFresh',code+';return loadDetails;')(
-    async()=>answer,()=>({textContent:''}),async()=>{},()=>{},()=>{},metadataFresh);
+  const load=new Function('api','$','sleep','saveMetadata','render','renderCommunity','metadataFresh','let metadataLoading=false;'+code+';return loadDetails;')(
+    async()=>answer,()=>({textContent:''}),async()=>{},()=>{},()=>{},()=>{},metadataFresh);
   const games=[{path:'/games/browser/'}];
   answer={details:[{path:games[0].path,failed:true,error:'IGDB authentication failed.'}]};
   await load(games);

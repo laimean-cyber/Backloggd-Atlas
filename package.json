@@ -5,7 +5,7 @@
   "scripts": {
     "build": "node scripts/build-vercel.mjs",
     "test:vercel": "node --test tests/vercel.test.mjs",
-    "test:metadata": "node --test tests/metadata-integrity.test.mjs tests/metadata-resilience.test.mjs tests/profile-resilience.test.mjs",
+    "test:metadata": "node --test tests/metadata-integrity.test.mjs tests/metadata-resilience.test.mjs tests/profile-resilience.test.mjs tests/igdb-performance.test.mjs",
     "refresh:metadata": "node scripts/refresh-library-metadata.mjs"
   },
   "engines": { "node": "22.x" }

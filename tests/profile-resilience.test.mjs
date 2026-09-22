@@ -13,6 +13,18 @@ test('Backloggd shares concurrent HTML fetches and spaces different pages',async
   time+=300001;await client('/a');assert.equal(starts.length,3);
 });
 
+test('slow Backloggd responses overlap without exceeding the open-request cap',async()=>{
+  const starts=[];let open=0,maxOpen=0;
+  const client=createBackloggdClient({spacing:60,maxOpen:2,fetcher:async()=>{
+    starts.push(Date.now());maxOpen=Math.max(maxOpen,++open);
+    await new Promise(resolve=>setTimeout(resolve,230));open--;
+    return new Response('Backloggd');
+  }});
+  await Promise.all(['/one','/two','/three','/four'].map(path=>client(path)));
+  assert.equal(maxOpen,2);
+  for(let i=1;i<starts.length;i++)assert.ok(starts[i]-starts[i-1]>=50);
+});
+
 test('403 and 429 have distinct diagnostics; cooldown protects other endpoints and honors Retry-After',async()=>{
   for(const status of [403,429]){
     let time=1000,calls=0;

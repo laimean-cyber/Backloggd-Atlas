@@ -1,4 +1,4 @@
-import { igdbDetails } from './igdb.js';
+import { igdbDetails, metadataBatch } from './igdb.js';
 import { page } from './page.js';
 import { metadataFresh } from './metadata.js';
 import { parseCommunityRating } from './community.js';
@@ -71,28 +71,53 @@ function parseDetails(html, averageTimeHours = parseAverageTime(html)) {
   return { year: year ? +year[1] : null, plays, playText, averageTimeHours, checked: true };
 }
 
-async function gameDetails(path, env) {
-  return cached(`details-v8:${env.IGDB_CLIENT_ID || ''}:${path}`, () => fetchGameDetails(path, env));
+// Both metadata and community averages come from the same public game page.
+// Keep only the small parsed result after the short-lived HTML cache expires.
+async function gamePage(path) {
+  return cached('backloggd-game-v1:'+path, async () => {
+    const html = await upstream(path);
+    let backlog = {}, parseError;
+    try { backlog = parseDetails(html); } catch (error) { parseError = error.message; }
+    return {
+      backlog, parseError, metadataRetryAt: parseError ? Date.now() + 60000 : undefined,
+      igdbLink: html.match(/https?:\/\/(?:www\.)?igdb\.com\/games\/[a-z0-9-]+/i)?.[0] || '',
+      communityRating: parseCommunityRating(html),
+      communityFetchedAt: Date.now(),
+      averageTimeHours: parseAverageTime(html),
+      statsPath: html.match(/\/fetch_game_stats\/\d+\/\d+\/?/)?.[0] || null,
+    };
+  }, 86400000);
 }
 
-async function fetchGameDetails(path, env) {
+async function gameDetails(path, env, batch) {
+  let signaled = false;
+  const ready = () => { if (!signaled) { signaled = true; batch.ready(); } };
+  try {
+    return await cached(`details-v8:${env.IGDB_CLIENT_ID || ''}:${path}`, () => fetchGameDetails(path, env, batch, ready), undefined, ready);
+  } finally { ready(); }
+}
+
+async function fetchGameDetails(path, env, batch, ready) {
   const cache = globalThis.caches?.default;
   const key = new Request(`https://backloggd-atlas.cache/igdb-v8${path}`);
   if (cache) { try { const hit = await cache.match(key); if (hit) { const data = await hit.json(); if (metadataFresh(data)) return data; } } catch {} }
-  let html = '', backlog = {}, warning;
+  let source, backlog = {}, warning;
   try {
-    html = await upstream(path);
-    backlog = parseDetails(html);
+    source = await gamePage(path);
+    backlog = source.backlog;
+    if (source.parseError) warning = { source: 'Backloggd', status: null, error: source.parseError };
   } catch (error) {
     warning = { source: 'Backloggd', status: error.status || null, error: error.message };
   }
-  const statsPath = html.match(/\/fetch_game_stats\/\d+\/\d+\/?/)?.[0];
-  let averageTimeHours = parseAverageTime(html);
-  if (averageTimeHours == null && statsPath) {
-    try { averageTimeHours = parseAverageTime(await upstream(statsPath, false)); } catch {}
+  let averageTimeHours = source?.averageTimeHours ?? null;
+  if (averageTimeHours == null && source?.statsPath) {
+    try { averageTimeHours = await cached('backloggd-stats-v1:'+source.statsPath, async () => parseAverageTime(await upstream(source.statsPath, false)), 86400000); } catch {}
   }
-  const metadata = await igdbDetails(path, html, env);
+  const metadataPending = igdbDetails(path, source?.igdbLink || '', env, batch);
+  ready();
+  const metadata = await metadataPending;
   const details = { ...metadata, plays: null, playText: null, ...backlog, year: backlog.year ?? metadata.year, averageTimeHours, checked: true };
+  if (source) Object.assign(details, { communityRating: source.communityRating, communityFetchedAt: source.communityFetchedAt });
   if (warning) Object.assign(details, { warning, metadataRetryAt: Date.now() + 60000 });
   if (cache && !warning) { try { await cache.put(key, new Response(JSON.stringify(details), { headers: { 'cache-control': 'public, max-age=604800' } })); } catch {} }
   return details;
@@ -126,28 +151,30 @@ export default {
     if (url.pathname === '/api/community') {
       const paths = url.searchParams.getAll('path');
       if (!paths.length || paths.length > 4 || paths.some(p => !/^\/games\/[a-z0-9-]+\/$/.test(p))) return json({ error: 'Invalid game paths.' }, 400);
-      const ratings = [];
-      for (const path of paths) {
+      const ratings = await Promise.all(paths.map(async path => {
         try {
           const cache = globalThis.caches?.default;
           const key = new Request('https://backloggd-atlas.cache/community-v1' + path);
           let hit = null;
           try { hit = cache ? await cache.match(key) : null; } catch {}
-          if (hit) { ratings.push(await hit.json()); continue; }
-          const result = await cached('community:'+path, async () => ({ path, communityRating: parseCommunityRating(await upstream(path)), communityFetchedAt: Date.now() }), 86400000);
+          if (hit) return await hit.json();
+          const result = await cached('community:'+path, async () => {
+            const source = await gamePage(path);
+            return { path, communityRating: source.communityRating, communityFetchedAt: source.communityFetchedAt };
+          }, 86400000);
           if (cache) { try { await cache.put(key, new Response(JSON.stringify(result), { headers: { 'cache-control': 'public, max-age=86400' } })); } catch {} }
-          ratings.push(result);
+          return result;
         } catch (error) {
-          ratings.push({ path, failed: true, status: error.status || null, error: error.message });
-          if (error.status === 429 || error.status === 403) break;
+          return { path, failed: true, status: error.status || null, error: error.message };
         }
-      }
+      }));
       return ratings.length === paths.length && ratings.every(r => !r.failed) ? publicJson({ ratings }, 3600) : json({ ratings });
     }
     if (url.pathname === '/api/details') {
       const paths = url.searchParams.getAll('path');
       if (!paths.length || paths.length > 4 || paths.some(p => !/^\/games\/[a-z0-9-]+\/$/.test(p))) return json({ error: 'Invalid game paths.' }, 400);
-      const details = await Promise.all(paths.map(async path => { try { return { path, ...await gameDetails(path, env) }; } catch (error) { return { path, year: null, gameType: null, developers: [], developerLogos: {}, genres: [], publishers: [], publisherLogos: {}, gameModes: [], playerPerspectives: [], themes: [], franchises: [], gameEngines: [], failed: true, status: error.status || null, error: error.message }; } }));
+      const batch = metadataBatch(env, paths.length);
+      const details = await Promise.all(paths.map(async path => { try { return { path, ...await gameDetails(path, env, batch) }; } catch (error) { return { path, year: null, gameType: null, developers: [], developerLogos: {}, genres: [], publishers: [], publisherLogos: {}, gameModes: [], playerPerspectives: [], themes: [], franchises: [], gameEngines: [], failed: true, status: error.status || null, error: error.message }; } }));
       const response = json({ details, failed: details.filter(d => d.failed).length });
       if (details.every(d => !d.failed && !d.warning)) {
         response.headers.set('Cache-Control', 'public, max-age=0, must-revalidate');
