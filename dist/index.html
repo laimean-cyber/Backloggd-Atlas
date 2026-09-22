@@ -268,15 +268,8 @@ button.legend-line{width:100%;border:0;background:transparent;color:inherit;padd
   document.fonts.ready.then(layoutGenrePreference);
   function fitYearLabels(){
     const bars=$('yearBars'),columns=[...bars.querySelectorAll('.barcol')];
-    if(!columns.length)return;
-    const slot=bars.clientWidth/columns.length;
-    bars.style.gap=`${Math.min(3,slot/5)}px`;
-    const step=Math.max(1,Math.ceil(38/slot));
-    columns.forEach((column,index)=>{
-      const visible=index%step===0;
-      column.querySelector('.bar-year').style.visibility=visible?'visible':'hidden';
-      column.querySelector('.bar-value').style.visibility=visible?'visible':'hidden';
-    });
+    $('yearGrid').style.minWidth=`${columns.length*38+80}px`;
+    bars.style.gap='3px';
   }
   new ResizeObserver(fitYearLabels).observe($('yearBars'));
 
