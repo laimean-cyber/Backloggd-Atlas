@@ -6,7 +6,12 @@ import { page } from '../dist/server/page.js';
 
 test('Vercel build publishes the current application page', async () => {
   await import('../scripts/build-vercel.mjs');
-  assert.equal(await readFile(new URL('../public/index.html', import.meta.url), 'utf8'), page);
+  const publishedPage = await readFile(new URL('../public/index.html', import.meta.url), 'utf8');
+  const analytics = publishedPage.match(/<script>\s*window\.va =[\s\S]*?<\/script>\s*<script defer src="\/_vercel\/insights\/script\.js"><\/script>\n/);
+  assert.ok(analytics, 'Published HTML must initialize and load Web Analytics');
+  assert.equal(publishedPage.split('/_vercel/insights/script.js').length - 1, 1);
+  assert.ok(publishedPage.indexOf(analytics[0]) < publishedPage.indexOf('</head>'));
+  assert.equal(publishedPage.replace(analytics[0], ''), page);
   assert.match(page, /Backloggd Atlas/);
 });
 

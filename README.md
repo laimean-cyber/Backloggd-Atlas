@@ -19,6 +19,14 @@ are required for game metadata; they must stay server-side and out of Git.
 
 Run `npm run test:vercel` to check page output and API routing locally.
 
+Web Analytics uses Vercel's plain HTML integration, injected by the build into
+`public/index.html`. This project is not Next.js; installing `@vercel/analytics`
+alone does not load tracking in the browser. Enable Web Analytics in the Vercel
+project, then deploy the updated build and visit the deployed site. In browser
+Network tools, check that `/_vercel/insights/script.js` loads and a page-view
+request is sent. Vercel serves these endpoints; they are not available locally.
+If the script returns 404, confirm Analytics is enabled and redeploy.
+
 ## Library metadata
 
 Run `npm run refresh:metadata` with server-side IGDB credentials to refresh the
