@@ -424,11 +424,8 @@ button.legend-line{width:100%;border:0;background:transparent;color:inherit;padd
   }
   $('criticsRetry').addEventListener('click',()=>{criticsAttempted.clear();criticsPaused=false;criticsError='';loadCritics()});
 
-<<<<<<< HEAD
-  var communityPaused=false,communityError="",communityBusy=false,communityResults=new Map(),communityAttempted=new Set(),metadataLoading=false;
-=======
   var communityPaused=false,communityError="",communityBusy=false,communityResults=new Map(),communityAttempted=new Set(),metadataLoading=false,backlogLoading=false,backlogJob=0;
->>>>>>> 3f8928eb58f6d52d19f4ae0826cdbd2bfb52844c
+
   function communityEligible(){return games.filter(g=>isPlayed(g)&&Number.isFinite(g.rating)&&g.rating>0&&g.rating<=5)}
   function communityData(g){
     const candidates=[g,communityResults.get(g.path)];

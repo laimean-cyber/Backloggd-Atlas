@@ -171,8 +171,6 @@ export default {
       }));
       return ratings.length === paths.length && ratings.every(r => !r.failed) ? publicJson({ ratings }, 3600) : json({ ratings });
     }
-<<<<<<< HEAD
-=======
     if (url.pathname === '/api/metadata') {
       const paths = url.searchParams.getAll('path');
       if (!paths.length || paths.length > 40 || paths.some(p => !/^\/games\/[a-z0-9-]+\/$/.test(p))) return json({ error: 'Invalid game paths.' }, 400);
@@ -195,7 +193,7 @@ export default {
       }));
       return details.every(d => !d.failed) ? publicJson({ details, failed: 0 }, 3600) : json({ details, failed: details.filter(d => d.failed).length });
     }
->>>>>>> 3f8928eb58f6d52d19f4ae0826cdbd2bfb52844c
+
     if (url.pathname === '/api/critics') {
       const paths = url.searchParams.getAll('path'), titles = url.searchParams.getAll('title');
       if (!paths.length || paths.length > 4 || paths.length !== titles.length || paths.some(p => !/^\/games\/[a-z0-9-]+\/$/.test(p)) || titles.some(t => !t.trim() || t.length > 180)) return json({ error: 'Invalid game titles or paths.' }, 400);
