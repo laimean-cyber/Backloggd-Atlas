@@ -17,6 +17,10 @@ const {chromium}=require('C:/Users/Laimean/.cache/codex-runtimes/codex-primary-r
   const rpg=page.locator('.era-table tbody tr').filter({has:page.locator('th',{hasText:'Role-playing'})});
   assert.equal(await rpg.locator('button').count(),11);assert.deepEqual(await page.locator('.era-table thead th').allTextContents(),['Genre',...Array.from({length:11},(_,i)=>String(2000+i))]);assert.equal(await rpg.locator('button').first().textContent(),'4.0');assert.match(await rpg.locator('button').first().getAttribute('class'),/is-sparse/);
   assert.equal(await rpg.locator('button').nth(10).textContent(),'—');
+  await rpg.locator('button').first().hover();assert.equal(await page.locator('#hoverCard').isVisible(),false);
+  await rpg.locator('button').first().click();assert.equal(await page.locator('#hoverList .hover-game').count(),3);assert.match(await page.locator('#hoverTitle').textContent(),/2000/);
+  await page.keyboard.press('Escape');assert.equal(await page.locator('#hoverCard').isVisible(),false);
+  assert.equal(await rpg.locator('button').nth(1).isDisabled(),true);
   await page.click('#eraCountBtn');assert.equal(await rpg.locator('button').first().textContent(),'3');assert.doesNotMatch(await rpg.locator('button').first().getAttribute('class'),/is-sparse/);
   assert.equal(await page.locator('.era-table tbody tr').count(),2);assert.match(await page.locator('#eraCoverage').textContent(),/^4\/5/);
   await page.evaluate(()=>{games=[];render()});assert.match(await page.locator('#eraTable caption').textContent(),/No played games/);

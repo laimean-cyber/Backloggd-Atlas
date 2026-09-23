@@ -2,6 +2,7 @@ import { igdbDetails, metadataBatch } from './igdb.js';
 import { page } from './page.js';
 import { metadataFresh } from './metadata.js';
 import { parseCommunityRating } from './community.js';
+import { metacriticScore } from './metacritic.js';
 import { cached } from './cache.js';
 
 import { upstream } from './backloggd.js';
@@ -169,6 +170,15 @@ export default {
         }
       }));
       return ratings.length === paths.length && ratings.every(r => !r.failed) ? publicJson({ ratings }, 3600) : json({ ratings });
+    }
+    if (url.pathname === '/api/critics') {
+      const paths = url.searchParams.getAll('path'), titles = url.searchParams.getAll('title');
+      if (!paths.length || paths.length > 4 || paths.length !== titles.length || paths.some(p => !/^\/games\/[a-z0-9-]+\/$/.test(p)) || titles.some(t => !t.trim() || t.length > 180)) return json({ error: 'Invalid game titles or paths.' }, 400);
+      const ratings = await Promise.all(paths.map(async (path, i) => {
+        try { return await metacriticScore({ path, title: titles[i] }); }
+        catch (error) { return { path, failed: true, status: error.status || null, error: error.message }; }
+      }));
+      return ratings.every(r => !r.failed) ? publicJson({ ratings }, 3600) : json({ ratings });
     }
     if (url.pathname === '/api/details') {
       const paths = url.searchParams.getAll('path');
