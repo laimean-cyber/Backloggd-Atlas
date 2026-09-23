@@ -41,6 +41,13 @@ upstream HTTP status instead of marking the game complete.
 
 Successful metadata uses a bounded, seven-day warm-instance cache with concurrent
 request deduplication, plus a one-hour Vercel CDN cache for each requested batch.
+The browser first loads IGDB metadata through `/api/metadata` in groups of up to 40
+games. This route makes one IGDB query for matching slugs and consults Backloggd
+only for slugs IGDB cannot match. Backloggd play counts, average times, and community
+ratings arrive afterward through the existing game details route and are saved
+progressively in the browser. A fresh dashboard no longer waits for every
+Backloggd game page before displaying years, developers, genres, and other IGDB
+fields.
 The instance cache resets on cold starts; the CDN supplies caching across instances
 for matching URLs. Failed or degraded responses are not CDN-cached. Workers still
 use their native edge cache. Browser warnings retain the upstream failure reason.

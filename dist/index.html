@@ -424,7 +424,11 @@ button.legend-line{width:100%;border:0;background:transparent;color:inherit;padd
   }
   $('criticsRetry').addEventListener('click',()=>{criticsAttempted.clear();criticsPaused=false;criticsError='';loadCritics()});
 
+<<<<<<< HEAD
   var communityPaused=false,communityError="",communityBusy=false,communityResults=new Map(),communityAttempted=new Set(),metadataLoading=false;
+=======
+  var communityPaused=false,communityError="",communityBusy=false,communityResults=new Map(),communityAttempted=new Set(),metadataLoading=false,backlogLoading=false,backlogJob=0;
+>>>>>>> 3f8928eb58f6d52d19f4ae0826cdbd2bfb52844c
   function communityEligible(){return games.filter(g=>isPlayed(g)&&Number.isFinite(g.rating)&&g.rating>0&&g.rating<=5)}
   function communityData(g){
     const candidates=[g,communityResults.get(g.path)];
@@ -441,10 +445,10 @@ button.legend-line{width:100%;border:0;background:transparent;color:inherit;padd
     const missing=eligible.filter(communityNeedsRefresh);
     $('communityStatus').textContent=(communityBusy?'Loading Backloggd averages… ':communityError?communityError+' ':'')+compared.length+' of '+eligible.length+' rated games compared · scores out of 5 · largest gaps first · equal ratings omitted.';
     $('communityRetry').hidden=communityBusy||!missing.length;
-    if(!communityBusy&&!communityPaused&&!metadataLoading&&missing.some(g=>g.path&&!communityAttempted.has(g.path)))queueMicrotask(loadCommunity);
+    if(!communityBusy&&!communityPaused&&!metadataLoading&&!backlogLoading&&missing.some(g=>g.path&&!communityAttempted.has(g.path)))queueMicrotask(loadCommunity);
   }
   async function loadCommunity(){
-    if(communityBusy||metadataLoading)return;
+    if(communityBusy||metadataLoading||backlogLoading)return;
     const queue=communityEligible().filter(g=>/^\/games\/[a-z0-9-]+\/$/.test(g.path)&&communityNeedsRefresh(g)&&!communityAttempted.has(g.path));
     if(!queue.length)return;
     communityBusy=true;communityError='';renderCommunity();
@@ -597,7 +601,7 @@ button.legend-line{width:100%;border:0;background:transparent;color:inherit;padd
   const metadataKey=path=>'backloggd-atlas:metadata:igdb-v10:'+path;
   const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
   function readMetadata(path){try{const data=JSON.parse(localStorage.getItem(metadataKey(path)));if(metadataFresh(data))return data}catch{}return null}
-  function saveMetadata(g){if(!metadataComplete(g))return;try{localStorage.setItem(metadataKey(g.path),JSON.stringify({metadataVersion:g.metadataVersion,metadataFetchedAt:g.metadataFetchedAt,metadataRetryAt:g.metadataRetryAt,warning:g.warning,year:g.year??null,gameType:g.gameType??null,developers:g.developers||[],developerLogos:g.developerLogos||{},genres:g.genres||[],publishers:g.publishers||[],publisherLogos:g.publisherLogos||{},gameModes:g.gameModes||[],playerPerspectives:g.playerPerspectives||[],themes:g.themes||[],franchises:g.franchises||[],gameEngines:g.gameEngines||[],plays:g.plays??null,playText:g.playText??null,averageTimeHours:g.averageTimeHours??null,communityRating:g.communityRating??null,communityFetchedAt:g.communityFetchedAt??null,checked:true,savedAt:Date.now()}))}catch{}}
+  function saveMetadata(g){if(!metadataComplete(g))return;try{localStorage.setItem(metadataKey(g.path),JSON.stringify({metadataVersion:g.metadataVersion,metadataFetchedAt:g.metadataFetchedAt,metadataRetryAt:g.metadataRetryAt,warning:g.warning,year:g.year??null,gameType:g.gameType??null,developers:g.developers||[],developerLogos:g.developerLogos||{},genres:g.genres||[],publishers:g.publishers||[],publisherLogos:g.publisherLogos||{},gameModes:g.gameModes||[],playerPerspectives:g.playerPerspectives||[],themes:g.themes||[],franchises:g.franchises||[],gameEngines:g.gameEngines||[],plays:g.plays??null,playText:g.playText??null,averageTimeHours:g.averageTimeHours??null,communityRating:g.communityRating??null,communityFetchedAt:g.communityFetchedAt??null,backlogFetchedAt:g.backlogFetchedAt??null,checked:true,savedAt:Date.now()}))}catch{}}
   async function loadDetails(all){
     const queue=all.filter(g=>!metadataFresh(g)).sort((a,b)=>Number.isFinite(b.rating)-Number.isFinite(a.rating));
     metadataLoading=queue.length>0;
@@ -622,13 +626,76 @@ button.legend-line{width:100%;border:0;background:transparent;color:inherit;padd
     metadataLoading=false;renderCommunity();
     return {metadataIncomplete:all.some(g=>!metadataFresh(g))};
   }
+  async function loadFastMetadata(all){
+    const queue=all.filter(g=>!metadataFresh(g)).sort((a,b)=>Number.isFinite(b.rating)-Number.isFinite(a.rating));
+    metadataLoading=queue.length>0;
+    let checked=all.length-queue.length;
+    try{
+      for(let i=0;i<queue.length;i+=40){
+        if(games!==all)break;
+        let pending=queue.slice(i,i+40);
+        for(let attempt=0;pending.length&&attempt<2;attempt++){
+          if(attempt)await sleep(1000);
+          try{
+            const params=new URLSearchParams;pending.forEach(g=>params.append('path',g.path));
+            const result=await api(`/api/metadata?${params}`);
+            const byPath=new Map(result.details.map(x=>[x.path,x]));
+            pending=pending.filter(g=>{
+              const detail=byPath.get(g.path);
+              if(!detail||detail.failed||!metadataFresh(detail)){g.metadataError=detail?.error||'Game metadata could not be loaded.';return true}
+              delete g.metadataError;delete g.warning;delete g.metadataRetryAt;
+              Object.assign(g,detail);saveMetadata(g);checked++;return false;
+            });
+          }catch(error){pending.forEach(g=>g.metadataError=error.message)}
+        }
+        $('progress').textContent=`Checked game details for ${checked}/${all.length} games…`;
+        render();
+      }
+    }finally{
+      metadataLoading=false;
+      if(games===all)loadBackloggdStats(all);
+      renderCommunity();
+    }
+    return {metadataIncomplete:all.some(g=>!metadataFresh(g))};
+  }
+  async function loadBackloggdStats(all){
+    const job=++backlogJob;
+    const queue=all.filter(g=>metadataFresh(g)&&(!Number.isFinite(g.backlogFetchedAt)||Date.now()-g.backlogFetchedAt>=604800000));
+    backlogLoading=queue.length>0;
+    try{
+      for(let i=0;i<queue.length;i+=4){
+        if(job!==backlogJob||games!==all)break;
+        const group=queue.slice(i,i+4),params=new URLSearchParams;
+        group.forEach(g=>params.append('path',g.path));
+        let result;
+        try{result=await api(`/api/details?${params}`)}catch{continue}
+        if(job!==backlogJob||games!==all)break;
+        const byPath=new Map(result.details.map(x=>[x.path,x]));
+        for(const g of group){
+          const detail=byPath.get(g.path);
+          if(!detail||detail.failed||detail.warning)continue;
+          g.plays=detail.plays??null;g.playText=detail.playText??null;
+          g.averageTimeHours=detail.averageTimeHours??null;
+          if(detail.year!=null)g.year=detail.year;
+          if(Number.isFinite(detail.communityFetchedAt)){
+            g.communityRating=detail.communityRating??null;
+            g.communityFetchedAt=detail.communityFetchedAt;
+          }
+          g.backlogFetchedAt=Date.now();saveMetadata(g);
+        }
+        if(i%16===0||i+4>=queue.length){render();profileNotice()}
+      }
+    }finally{
+      if(job===backlogJob){backlogLoading=false;renderCommunity()}
+    }
+  }
   async function refreshDefaultMetadata(){
     const current=games;
     current.forEach(g=>{const cached=readMetadata(g.path);if(cached&&(!metadataFresh(g)||cached.metadataFetchedAt>g.metadataFetchedAt))Object.assign(g,cached)});
     render();
     if(current.every(g=>metadataFresh(g)))return;
     profileNotice();
-    await loadDetails(current);
+    await loadFastMetadata(current);
     if(games===current){render();profileNotice()}
   }
   let activeUsername=defaultUsername,activeLibraryIncomplete=false,activeProfileCache=false;
@@ -636,12 +703,12 @@ button.legend-line{width:100%;border:0;background:transparent;color:inherit;padd
   function updateMissingButton(){const missing=games.filter(g=>g.checked&&(!g.year||!developersFor(g).length));$('missingDetails').style.display=missing.length?'inline-block':'none';$('missingDetails').textContent=`Review ${missing.length} game${missing.length===1?'':'s'} missing metadata`}
   async function buildProfile(username){
     const button=$('lookupButton');button.disabled=true;button.textContent='Loading…';$('loading').classList.add('show');$('retryDetails').style.display='none';$('missingDetails').style.display='none';$('progress').textContent='Loading profile…';$('breakdown').hidden=true;activeBreakdown=null;
-    try{const {all,libraryIncomplete,fromCache,savedAt}=await loadCards(username);if(!all.length)throw Error('No public games found for this profile.');games=all;activeUsername=username;activeLibraryIncomplete=libraryIncomplete;activeProfileCache=fromCache;const viewUrl=new URL(location.href);viewUrl.searchParams.set('profile',username);history.replaceState(null,'',viewUrl);$('sourceLabel').textContent='@'+username;$('title').textContent=`${username}'s games, at a glance.`;$('dataNote').textContent=`Showing ${all.length} public games from backloggd.com/u/${username}/${fromCache?' (saved '+new Date(savedAt).toLocaleString()+')':''}. Game details and developer logos are saved in this browser; only uncached game details are fetched.`;$('reset').style.display='inline-block';render();await Promise.all([loadFavourites(username),loadDetails(all)]);render();profileNotice()}
+    try{const {all,libraryIncomplete,fromCache,savedAt}=await loadCards(username);if(!all.length)throw Error('No public games found for this profile.');games=all;activeUsername=username;activeLibraryIncomplete=libraryIncomplete;activeProfileCache=fromCache;const viewUrl=new URL(location.href);viewUrl.searchParams.set('profile',username);history.replaceState(null,'',viewUrl);$('sourceLabel').textContent='@'+username;$('title').textContent=`${username}'s games, at a glance.`;$('dataNote').textContent=`Showing ${all.length} public games from backloggd.com/u/${username}/${fromCache?' (saved '+new Date(savedAt).toLocaleString()+')':''}. Game details and developer logos are saved in this browser; only uncached game details are fetched.`;$('reset').style.display='inline-block';render();await Promise.all([loadFavourites(username),loadFastMetadata(all)]);render();profileNotice()}
     catch(err){$('notice').textContent=err.message;$('notice').classList.add('show')}
     finally{button.disabled=false;button.textContent='Build dashboard';$('loading').classList.remove('show')}
   }
   $('lookup').addEventListener('submit',e=>{e.preventDefault();$('notice').classList.remove('show');let username;try{username=usernameFromInput($('username').value)}catch(err){$('notice').textContent=err.message;$('notice').classList.add('show');return}buildProfile(username)});
-  $('retryDetails').addEventListener('click',async()=>{if(!activeUsername)return;const button=$('retryDetails');button.disabled=true;$('loading').classList.add('show');$('progress').textContent='Retrying missing game details…';try{await loadDetails(games);render();profileNotice()}finally{button.disabled=false;$('loading').classList.remove('show')}});
+  $('retryDetails').addEventListener('click',async()=>{if(!activeUsername)return;const button=$('retryDetails');button.disabled=true;$('loading').classList.add('show');$('progress').textContent='Retrying missing game details…';try{await loadFastMetadata(games);render();profileNotice()}finally{button.disabled=false;$('loading').classList.remove('show')}});
   $('file').addEventListener('change',async e=>{const file=e.target.files[0];if(!file)return;try{const text=await file.text();const raw=file.name.toLowerCase().endsWith('.json')?JSON.parse(text):parseCSV(text);let records=Array.isArray(raw)?raw:(raw.games||raw.library||raw.entries||raw.data);if(!Array.isArray(records))throw Error('The file needs a list of games.');const next=records.map(normalize).filter(g=>g.title);if(!next.length)throw Error('No game titles were found. Check the column names in your export.');games=next;activeUsername='';activeBreakdown=null;$('breakdown').hidden=true;$('missingDetails').style.display='none';$('retryDetails').style.display='none';$('sourceLabel').textContent=file.name;$('title').textContent='Your library, at a glance.';$('dataNote').textContent=`Showing ${file.name}. Your imported file stays in this browser.`;$('reset').style.display='inline-block';const missing=[];if(!next.some(g=>Number.isFinite(g.rating)&&g.rating>0))missing.push('ratings');if(!next.some(g=>g.year))missing.push('release years');if(!next.some(g=>developersFor(g).length))missing.push('developers');const notice=$('notice');notice.textContent=missing.length?`Imported ${next.length} games. This file has no ${missing.join(', ')}, so some insights are unavailable.`:`Imported ${next.length} games from ${file.name}.`;notice.classList.add('show');render()}catch(err){$('notice').textContent=`Could not import this file: ${err.message}`;$('notice').classList.add('show')}e.target.value=''});
   $('countBtn').onclick=()=>{mode='count';$('countBtn').classList.add('active');$('avgBtn').classList.remove('active');render()};$('avgBtn').onclick=()=>{mode='average';$('avgBtn').classList.add('active');$('countBtn').classList.remove('active');render()};$('reset').onclick=()=>{games=structuredClone(defaultLibrary);activeUsername=defaultUsername;activeLibraryIncomplete=false;activeProfileCache=false;activeBreakdown=null;$('breakdown').hidden=true;$('missingDetails').style.display='none';$('retryDetails').style.display='none';$('sourceLabel').textContent="Laime's library";$('title').textContent="Laime's games, at a glance.";$('dataNote').textContent="Showing Laime's saved Backloggd library snapshot. Build the dashboard for Laime to refresh it; file imports stay in this browser.";$('username').value=defaultUsername;$('reset').style.display='none';$('notice').classList.remove('show');render();loadFavourites(defaultUsername);refreshDefaultMetadata()};
   if(document.modelContext?.registerTool){Promise.resolve(document.modelContext.registerTool({name:'load_backloggd_profile',title:'Load Backloggd profile',description:'Build the visible dashboard from a public Backloggd nickname or profile URL.',inputSchema:{type:'object',properties:{profile:{type:'string'}},required:['profile'],additionalProperties:false},annotations:{readOnlyHint:false,untrustedContentHint:true},async execute(input){const username=usernameFromInput(input?.profile||'');$('username').value=username;await buildProfile(username);return{username,games:games.length,detailsChecked:games.filter(g=>g.checked).length}}})).catch(()=>{})}render();
