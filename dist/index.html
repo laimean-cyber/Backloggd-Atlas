@@ -116,6 +116,7 @@ button.legend-line{width:100%;border:0;background:transparent;color:inherit;padd
 
 .community-halves{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}.community-half{min-width:0}.community-half+.community-half{border-left:1px solid #353d4e;padding-left:28px}.community-half h3{font-size:1rem;margin:0 0 16px;font-weight:650}.community-table{width:100%;table-layout:fixed;border-collapse:collapse;font-size:.875rem;font-variant-numeric:tabular-nums}.community-table th{color:#c4cbd1;font-size:.75rem;font-weight:500;text-align:right;padding:0 0 12px}.community-table th:first-child{width:35%;text-align:left}.community-table th:last-child{width:48px}.community-table td{padding:0;text-align:right;vertical-align:middle;height:32px}.community-table td:first-child{text-align:left;padding:5px 12px 5px 0;overflow-wrap:anywhere}.community-table a{text-decoration:none;line-height:1.4}.community-table a:hover{text-decoration:underline;text-underline-offset:3px}.community-gap{color:#f7b1cc;font-weight:750}.community-list{max-height:390px;overflow:auto;scrollbar-color:#ea377a #242832;scrollbar-width:thin;padding-right:5px}.community-status{margin-bottom:0;font-size:.8125rem;color:#c4cbd1;line-height:1.5}.community-half .empty{font-size:.875rem;text-align:left;padding:20px 0}.community-panel .panel-head{margin-bottom:16px}.community-legend{display:flex;gap:16px;margin:0;font-size:.875rem;color:#c4cbd1}.community-legend span{display:flex;align-items:center;gap:8px}.community-dot{width:9px;height:9px;border-radius:50%;background:#ea377a;flex:none}.community-dot.backloggd{background:#922c56}.community-axis{display:flex;justify-content:space-between;margin:0 6px;font-size:.75rem;font-variant-numeric:tabular-nums}.community-track{position:absolute;inset:0 6px;height:auto;margin:0;background:repeating-linear-gradient(to right,#41444e 0,#41444e 1px,transparent 1px,transparent 20%);border-right:1px solid #41444e}.community-track:after{content:'';position:absolute;top:50%;left:0;right:0;height:1px;background:#353944}.community-connector{position:absolute;top:50%;height:2px;background:#c4cbd1;transform:translateY(-50%);z-index:1}.community-point{position:absolute;top:50%;transform:translate(-50%,-50%);width:9px;height:9px;border-radius:50%;background:#ea377a;z-index:3}.community-point.backloggd{background:#922c56;z-index:2}.community-track:focus-visible{outline:2px solid #f276a4;outline-offset:3px}.community-axis-label{display:block;text-align:center;margin-bottom:7px}.community-table td:nth-child(2){position:relative;background:#292d37}.community-track:hover .community-point,.community-track:focus-visible .community-point{outline:1px solid #fff;outline-offset:1px}@media(max-width:760px){.community-halves{grid-template-columns:1fr;gap:28px}.community-half+.community-half{border-left:0;border-top:1px solid #353d4e;padding:24px 0 0}}@media(max-width:400px){.community-table th:first-child{width:36%}.community-table th:last-child{width:40px}.community-table td:first-child{padding-right:8px}.community-table{font-size:.8125rem}}
 .community-explanation{display:flex;flex-wrap:wrap;align-items:center;gap:8px 24px;margin-top:6px}.community-explanation .panel-sub{margin:0}.community-legend .rating-star{width:13px;height:13px}.community-point:not(.backloggd){width:13px;height:13px;background:transparent;border-radius:0;display:flex;align-items:center;justify-content:center}.community-point .rating-star{display:block;width:13px;height:13px}.community-list::-webkit-scrollbar{width:7px;height:7px}.community-list::-webkit-scrollbar-track{background:#242832}.community-list::-webkit-scrollbar-thumb{background:#ea377a;border-radius:8px}.community-list::-webkit-scrollbar-thumb:hover{background:#f276a4}.critics-panel .community-dot.critic,.critics-panel .community-point.backloggd.critic{background:#8ab7e8}.critics-panel .community-gap{color:#b5d4f3}.critics-panel .community-less .community-gap{color:#f7b1cc}.critics-panel .community-list{scrollbar-color:#8ab7e8 #242832}.critics-panel .community-list::-webkit-scrollbar-thumb{background:#8ab7e8}.critics-panel .community-list::-webkit-scrollbar-thumb:hover{background:#b5d4f3}.critics-panel .community-table a:focus-visible{outline:2px solid #eef0f2;outline-offset:3px}</style>
+<style>.drill,button[data-kind],.era-cell:not(:disabled){cursor:pointer}.era-cell:disabled,.era-cell.is-empty{cursor:default}.hover-close{flex:none;align-self:center;border:0;background:transparent;color:#eef0f2;font-size:22px;line-height:1;cursor:pointer;padding:3px 6px;border-radius:4px}.hover-close:hover{background:#596fa0}.hover-close:focus-visible{outline:2px solid #fff;outline-offset:2px}.hover-card-head span{flex:1}</style>
 </head>
 <body><div class="shell">
   <header class="top"><div class="brand"><div class="mark" aria-hidden="true">▥</div> Backloggd Atlas</div><div class="topright"><span class="source" id="sourceLabel">Laime&#39;s library</span><label class="upload" for="file">Import your library</label><input id="file" type="file" accept=".csv,.json,text/csv,application/json" aria-label="Import a Backloggd CSV or JSON export"></div></header>
@@ -143,10 +144,10 @@ button.legend-line{width:100%;border:0;background:transparent;color:inherit;padd
   <section class="panel span2 genre-preference-panel" aria-labelledby="genrePreferenceTitle"><div class="panel-head"><div><h2 id="genrePreferenceTitle">Genre preference map</h2><p class="panel-sub">Which genres you play frequently versus which you rate highly.</p></div></div><div id="genrePreferencePlot"></div><p class="foot">Each dot is a genre. The count axis uses a logarithmic scale; the rating axis zooms to the observed averages. Counts include unrated games; averages use rated games only. Hover or focus for exact values and rated sample size.</p></section>
   <section class="panel modes-panel perspective-panel"><div class="panel-head"><div><h2>Player perspectives</h2><p class="panel-sub" id="perspectiveSubtitle">IGDB perspectives · area shows game count</p></div></div><div id="perspectiveTreemap" class="treemap" role="group" aria-label="Player perspectives by game count"></div></section>
   <section class="panel"><div class="panel-head"><div><h2>Themes</h2><p class="panel-sub" id="themeSubtitle">IGDB themes across your games</p></div></div><div class="explorer-head metadata-head"><span>Theme</span><span>Games</span><span>Avg / 5</span></div><div id="themes" class="explorer-rows metadata-list"></div></section>
-  <section class="panel span2 era-panel" aria-labelledby="eraTitle"><div class="panel-head"><div><h2 id="eraTitle">Release year × genre heatmap</h2><p class="panel-sub">Find the combinations that define your library.</p></div><div class="seg" role="group" aria-label="Heatmap measure"><button type="button" id="eraCountBtn" class="active" aria-pressed="true">Game count</button><button type="button" id="eraRatingBtn" aria-pressed="false">Average rating</button></div></div><div class="era-scroll" tabindex="0" role="region" aria-label="Release era and genre table; scroll horizontally on small screens"><table class="era-table" id="eraTable"></table></div><div class="era-key"><span id="eraScaleLow">0</span><span class="era-ramp" aria-hidden="true"><i style="background:#382532"></i><i style="background:#642c46"></i><i style="background:#90335b"></i><i style="background:#bb3a70"></i><i style="background:#ea377a"></i></span><span id="eraScaleHigh"></span><span class="era-sparse-key" aria-hidden="true"></span><span id="eraSparseLabel">Fewer than 3 games</span></div><p class="era-details" id="eraDetails" aria-live="polite">Hover, focus or tap a cell for its exact count and average.</p><p class="foot" id="eraCoverage"></p></section>
+  <section class="panel span2 era-panel" aria-labelledby="eraTitle"><div class="panel-head"><div><h2 id="eraTitle">Release year × genre heatmap</h2><p class="panel-sub">Find the combinations that define your library.</p></div><div class="seg" role="group" aria-label="Heatmap measure"><button type="button" id="eraCountBtn" class="active" aria-pressed="true">Game count</button><button type="button" id="eraRatingBtn" aria-pressed="false">Average rating</button></div></div><div class="era-scroll" tabindex="0" role="region" aria-label="Release era and genre table; scroll horizontally on small screens"><table class="era-table" id="eraTable"></table></div><div class="era-key"><span id="eraScaleLow">0</span><span class="era-ramp" aria-hidden="true"><i style="background:#382532"></i><i style="background:#642c46"></i><i style="background:#90335b"></i><i style="background:#bb3a70"></i><i style="background:#ea377a"></i></span><span id="eraScaleHigh"></span><span class="era-sparse-key" aria-hidden="true"></span><span id="eraSparseLabel">Fewer than 3 games</span></div><p class="era-details" id="eraDetails" aria-live="polite">Select a filled cell to see its games, count and average.</p><p class="foot" id="eraCoverage"></p></section>
   <section class="panel span2"><div class="panel-head"><div><h2>Beyond the averages</h2><p class="panel-sub">A few more ways to explore your library</p></div></div><div class="insight-grid"><div class="insight" id="nicheInsight"></div><div class="insight" id="gemInsight"></div><div class="insight" id="popularInsight"></div><div class="insight" id="decadeInsight"></div></div></section>
   <section class="panel span2" id="breakdown" aria-labelledby="breakdownTitle" hidden><div class="breakdown-head"><div><h2 id="breakdownTitle">Games counted</h2><p class="panel-sub" id="breakdownSubtitle"></p></div><button class="close" id="closeBreakdown" type="button" aria-label="Close game list">Close</button></div><div id="breakdownList" class="breakdown-list"></div></section></div>
-  <aside id="hoverCard" class="hover-card" role="region" aria-label="Games preview" hidden><div class="hover-card-head"><strong id="hoverTitle"></strong><span id="hoverSummary"></span></div><div id="hoverList" class="hover-list"></div></aside>
+   <aside id="hoverCard" class="hover-card" role="region" aria-label="Games menu" hidden><div class="hover-card-head"><strong id="hoverTitle"></strong><span id="hoverSummary"></span><button type="button" id="closeHoverCard" class="hover-close" aria-label="Close games menu">×</button></div><div id="hoverList" class="hover-list"></div></aside>
   <div class="foot"><span id="dataNote">Showing Laime&#39;s saved Backloggd library snapshot. Build the dashboard for Laime to refresh it; file imports stay in this browser.</span> <button class="ghost" id="reset" type="button" style="display:none;margin-left:12px">Show Laime&#39;s library</button><div class="filehint">Developer and publisher credits, logos, genres, and game modes come from IGDB; a game counts once for each credited developer. Game metadata is saved in this browser for faster repeat lookups. CSV and JSON import remains available.</div></div>
   </main></div>
   <script>
@@ -364,17 +365,17 @@ button.legend-line{width:100%;border:0;background:transparent;color:inherit;padd
     const data=eraData(played),rating=eraMeasure==='rating',maximum=Math.max(1,...data.rows.flatMap(([,cells])=>[...cells.values()].map(list=>list.length)));
     $('eraScaleLow').textContent=rating?'0 / 5':'0';$('eraScaleHigh').textContent=rating?'5 / 5':maximum+' games';$('eraSparseLabel').textContent=rating?'Fewer than 3 ratings':'Fewer than 3 games';
     $('eraCoverage').textContent=data.eligible.length+'/'+played.length+' played games have a release year and genre or Horror theme. Each game counts once per matching row. Horror is an IGDB theme. Averages use rated games only; — means no '+(rating?'ratings.':'games.');
-    $('eraDetails').textContent='Hover, focus or tap a cell for its exact count and average.';
+     $('eraDetails').textContent='Select a filled cell to see its games, count and average.';
     if(!data.rows.length){$('eraTable').innerHTML='<caption>No played games with release years and genre data yet.</caption>';return}
     $('eraTable').style.minWidth=(150+data.eras.length*38)+'px';
     $('eraTable').innerHTML='<caption>'+(rating?'Average rating out of 5':'Played game count')+' by release year · rows ordered by total games</caption><thead><tr><th scope="col">Genre</th>'+data.eras.map(era=>'<th scope="col">'+era+'</th>').join('')+'</tr></thead><tbody>'+data.rows.map(([tag,cells])=>'<tr><th scope="row">'+esc(tag)+(tag==='Horror'?'<small>Theme</small>':'')+'</th>'+data.eras.map(era=>{
       const list=cells.get(era)||[],scores=list.map(g=>g.rating).filter(n=>Number.isFinite(n)&&n>0&&n<=5),average=avg(scores),sample=rating?scores.length:list.length,value=rating?average:list.length,sparse=sample>0&&sample<3,t=sample?(rating?value/5:value/maximum):0;
       const color='rgb('+[56,37,50].map((base,i)=>Math.round(base+([234,55,122][i]-base)*t)).join(',')+')',summary=tag+' · '+era+': '+list.length+' games · '+scores.length+' rated · '+(scores.length?average.toFixed(2)+' / 5 average':'no ratings')+(sparse?' · sparse sample':'');
-      return '<td><button type="button" class="era-cell'+(sparse?' is-sparse':'')+(!sample?' is-empty':'')+'" style="--era-color:'+color+';color:'+(t>.72?'#16181c':'#fff0f7')+'" aria-label="'+esc(summary)+'" data-summary="'+esc(summary)+'">'+(sample?(rating?average.toFixed(1):value):'—')+'</button></td>';
+       return '<td><button type="button" class="era-cell'+(sparse?' is-sparse':'')+(!list.length?' is-empty':'')+'" style="--era-color:'+color+';color:'+(t>.72?'#16181c':'#fff0f7')+'" aria-label="'+esc(summary)+(list.length?'; click to view games':'')+'" data-summary="'+esc(summary)+'"'+(list.length?' data-kind="era" data-key="'+esc(tag)+'" data-year="'+era+'" aria-controls="hoverCard" aria-expanded="false" aria-haspopup="true"':' disabled')+'>'+(sample?(rating?average.toFixed(1):value):'—')+'</button></td>';
     }).join('')+'</tr>').join('')+'</tbody>';
   }
   for(const [id,measure] of [['eraCountBtn','count'],['eraRatingBtn','rating']])$(id).addEventListener('click',()=>{eraMeasure=measure;for(const [button,value] of [['eraCountBtn','count'],['eraRatingBtn','rating']]){$(button).classList.toggle('active',measure===value);$(button).setAttribute('aria-pressed',String(measure===value))}renderEraHeatmap(games.filter(isPlayed))});
-  for(const event of ['pointerover','focusin','click'])$('eraTable').addEventListener(event,e=>{const cell=e.target.closest('.era-cell');if(cell)$('eraDetails').textContent=cell.dataset.summary});
+   for(const event of ['focusin','click'])$('eraTable').addEventListener(event,e=>{const cell=e.target.closest('.era-cell');if(cell)$('eraDetails').textContent=cell.dataset.summary});
 
 
   var criticsPaused=false,criticsError='',criticsBusy=false,criticsResults=new Map(),criticsAttempted=new Set();
@@ -423,7 +424,7 @@ button.legend-line{width:100%;border:0;background:transparent;color:inherit;padd
   }
   $('criticsRetry').addEventListener('click',()=>{criticsAttempted.clear();criticsPaused=false;criticsError='';loadCritics()});
 
-  var communityPaused=false,communityError="",communityBusy=false,communityResults=new Map(),communityAttempted=new Set(),metadataLoading=false;
+  var communityPaused=false,communityError="",communityBusy=false,communityResults=new Map(),communityAttempted=new Set(),metadataLoading=false,backlogLoading=false,backlogJob=0;
   function communityEligible(){return games.filter(g=>isPlayed(g)&&Number.isFinite(g.rating)&&g.rating>0&&g.rating<=5)}
   function communityData(g){
     const candidates=[g,communityResults.get(g.path)];
@@ -440,10 +441,10 @@ button.legend-line{width:100%;border:0;background:transparent;color:inherit;padd
     const missing=eligible.filter(communityNeedsRefresh);
     $('communityStatus').textContent=(communityBusy?'Loading Backloggd averages… ':communityError?communityError+' ':'')+compared.length+' of '+eligible.length+' rated games compared · scores out of 5 · largest gaps first · equal ratings omitted.';
     $('communityRetry').hidden=communityBusy||!missing.length;
-    if(!communityBusy&&!communityPaused&&!metadataLoading&&missing.some(g=>g.path&&!communityAttempted.has(g.path)))queueMicrotask(loadCommunity);
+    if(!communityBusy&&!communityPaused&&!metadataLoading&&!backlogLoading&&missing.some(g=>g.path&&!communityAttempted.has(g.path)))queueMicrotask(loadCommunity);
   }
   async function loadCommunity(){
-    if(communityBusy||metadataLoading)return;
+    if(communityBusy||metadataLoading||backlogLoading)return;
     const queue=communityEligible().filter(g=>/^\/games\/[a-z0-9-]+\/$/.test(g.path)&&communityNeedsRefresh(g)&&!communityAttempted.has(g.path));
     if(!queue.length)return;
     communityBusy=true;communityError='';renderCommunity();
@@ -493,17 +494,17 @@ button.legend-line{width:100%;border:0;background:transparent;color:inherit;padd
     const ticks=Array.from({length:axisMax/tickStep+1},(_,i)=>({value:i*tickStep,bottom:i*tickStep/axisMax*85}));
     $('yearYAxis').textContent=mode==='count'?'Number of games':'Average rating (out of 5)';
     $('yearTicks').innerHTML=ticks.map(t=>`<span style="bottom:${t.bottom}%">${mode==='count'?Math.round(t.value):fmt(t.value)}</span>`).join('');
-    $('yearBars').innerHTML=chartYears.length?chartYears.map(x=>{const v=mode==='count'?x.count:x.rating,h=v/axisMax*85;return `<button type="button" class="barcol drill" style="--h:${h}%" data-kind="year" data-key="${esc(x.name)}" aria-describedby="hoverCard" aria-label="${esc(x.name)}: ${mode==='count'?x.count+' games':fmt(v)+' out of 5 average'}; hover or focus to preview games"><span class="bar-value">${mode==='count'?x.count:fmt(v)}</span><span class="bar"></span><span class="bar-year">${esc(x.name)}</span></button>`}).join(''):'<div class="empty">No release years in this library</div>';
+    $('yearBars').innerHTML=chartYears.length?chartYears.map(x=>{const v=mode==='count'?x.count:x.rating,h=v/axisMax*85;return `<button type="button" class="barcol drill" style="--h:${h}%" data-kind="year" data-key="${esc(x.name)}" aria-describedby="hoverCard" aria-label="${esc(x.name)}: ${mode==='count'?x.count+' games':fmt(v)+' out of 5 average'}; click to preview games"><span class="bar-value">${mode==='count'?x.count:fmt(v)}</span><span class="bar"></span><span class="bar-year">${esc(x.name)}</span></button>`}).join(''):'<div class="empty">No release years in this library</div>';
     $('yearBars').insertAdjacentHTML('afterbegin',ticks.filter(t=>t.value>0).map(t=>`<i class="year-gridline" aria-hidden="true" style="bottom:${t.bottom}%"></i>`).join(''));
     fitYearLabels();
     $('yearBars').setAttribute('aria-label',mode==='count'?'Number of played games by release year':'Average rating by release year');
     const companyGroups=groups(corePlayed,'developers'),shownDevelopers=(companySort==='rating'?companyGroups.filter(x=>x.ratedCount>=3).sort((a,b)=>b.rating-a.rating||b.count-a.count):companyGroups.sort((a,b)=>b.count-a.count||(b.rating||0)-(a.rating||0))),companyMax=Math.max(1,...companyGroups.map(x=>x.count));
     $('companyTitle').textContent=companySort==='rating'?'Developers you rate highest':'Developers you play most';
-    $('devSubtitle').textContent=companySort==='rating'?'At least 3 rated games · hover to see games':'Sorted by played games · hover to see games';
+    $('devSubtitle').textContent=companySort==='rating'?'At least 3 rated games · click to see games':'Sorted by played games · click to see games';
     $('developers').innerHTML=shownDevelopers.length?shownDevelopers.map(x=>`<button type="button" class="dev-row drill" style="--developer-fill:${(companySort==='rating'?x.rating/5:x.count/companyMax)*100}%" data-kind="studio" data-key="${esc(x.name)}" aria-describedby="hoverCard"><img class="developer-logo" data-developer="${esc(x.name)}" alt="" hidden><div class="developer-copy"><div class="dev-name">${esc(x.name)}</div><div class="dev-detail">${x.count} games · ${x.ratedCount} rated · ${fmt(x.rating)} / 5</div></div><div class="score">${companySort==='rating'?fmt(x.rating):x.count}</div></button>`).join(''):'<div class="empty">Developer insights need at least 3 rated games per developer.</div>';
     const publisherGroups=groups(corePlayed,'publishers'),shownPublishers=(publisherSort==='rating'?publisherGroups.filter(x=>x.ratedCount>=3).sort((a,b)=>b.rating-a.rating||b.count-a.count):publisherGroups.sort((a,b)=>b.count-a.count||(b.rating||0)-(a.rating||0))),publisherMax=Math.max(1,...publisherGroups.map(x=>x.count));
     $('publisherTitle').textContent=publisherSort==='rating'?'Publishers you rate highest':'Publishers you play most';
-    $('publisherSubtitle').textContent=publisherSort==='rating'?'At least 3 rated games · hover to see games':'Sorted by played games · hover to see games';
+    $('publisherSubtitle').textContent=publisherSort==='rating'?'At least 3 rated games · click to see games':'Sorted by played games · click to see games';
     $('publishers').innerHTML=shownPublishers.length?shownPublishers.map(x=>`<button type="button" class="dev-row drill" style="--developer-fill:${(publisherSort==='rating'?x.rating/5:x.count/publisherMax)*100}%" data-kind="publisher" data-key="${esc(x.name)}" aria-describedby="hoverCard"><img class="developer-logo" data-developer="${esc(x.name)}" alt="" hidden><div class="developer-copy"><div class="dev-name">${esc(x.name)}</div><div class="dev-detail">${x.count} games · ${x.ratedCount} rated · ${fmt(x.rating)} / 5</div></div><div class="score">${publisherSort==='rating'?fmt(x.rating):x.count}</div></button>`).join(''):'<div class="empty">Publisher insights need at least 3 rated games per publisher.</div>';
     for(const img of document.querySelectorAll('.developer-logo')){img.onload=()=>{img.hidden=false};img.onerror=()=>{img.hidden=true}}loadDeveloperLogos();
     const colors=['#70304c','#963052','#b8235d','#d6296a','#ea377a','#ee5790','#f276a4','#f593b8','#f7b1cc','#f9d0df'];
@@ -537,7 +538,7 @@ button.legend-line{width:100%;border:0;background:transparent;color:inherit;padd
     renderGenrePreference(genreAll);
     if(genreSort==='plot'){renderGenrePlot(genreAll,avg(rs.map(g=>g.rating)))}else{
     const sortedGenres=[...genreAll].sort((a,b)=>b.count-a.count||a.name.localeCompare(b.name)),genreMax=Math.max(1,...genreAll.map(x=>x.count));
-    $('genreSubtitle').textContent='Word size reflects game count · hover to preview games';
+    $('genreSubtitle').textContent='Word size reflects game count · click to preview games';
     const cloudGenres=sortedGenres.map(x=>{if(!cloudRandom.has(x.name))cloudRandom.set(x.name,Math.random());return {...x,weight:x.count/genreMax}});
     const biggest=cloudGenres.shift();cloudGenres.sort((a,b)=>cloudRandom.get(a.name)-cloudRandom.get(b.name));if(biggest)cloudGenres.unshift(biggest);
     $('genreRows').className='genre-cloud';
@@ -596,7 +597,7 @@ button.legend-line{width:100%;border:0;background:transparent;color:inherit;padd
   const metadataKey=path=>'backloggd-atlas:metadata:igdb-v10:'+path;
   const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
   function readMetadata(path){try{const data=JSON.parse(localStorage.getItem(metadataKey(path)));if(metadataFresh(data))return data}catch{}return null}
-  function saveMetadata(g){if(!metadataComplete(g))return;try{localStorage.setItem(metadataKey(g.path),JSON.stringify({metadataVersion:g.metadataVersion,metadataFetchedAt:g.metadataFetchedAt,metadataRetryAt:g.metadataRetryAt,warning:g.warning,year:g.year??null,gameType:g.gameType??null,developers:g.developers||[],developerLogos:g.developerLogos||{},genres:g.genres||[],publishers:g.publishers||[],publisherLogos:g.publisherLogos||{},gameModes:g.gameModes||[],playerPerspectives:g.playerPerspectives||[],themes:g.themes||[],franchises:g.franchises||[],gameEngines:g.gameEngines||[],plays:g.plays??null,playText:g.playText??null,averageTimeHours:g.averageTimeHours??null,communityRating:g.communityRating??null,communityFetchedAt:g.communityFetchedAt??null,checked:true,savedAt:Date.now()}))}catch{}}
+  function saveMetadata(g){if(!metadataComplete(g))return;try{localStorage.setItem(metadataKey(g.path),JSON.stringify({metadataVersion:g.metadataVersion,metadataFetchedAt:g.metadataFetchedAt,metadataRetryAt:g.metadataRetryAt,warning:g.warning,year:g.year??null,gameType:g.gameType??null,developers:g.developers||[],developerLogos:g.developerLogos||{},genres:g.genres||[],publishers:g.publishers||[],publisherLogos:g.publisherLogos||{},gameModes:g.gameModes||[],playerPerspectives:g.playerPerspectives||[],themes:g.themes||[],franchises:g.franchises||[],gameEngines:g.gameEngines||[],plays:g.plays??null,playText:g.playText??null,averageTimeHours:g.averageTimeHours??null,communityRating:g.communityRating??null,communityFetchedAt:g.communityFetchedAt??null,backlogFetchedAt:g.backlogFetchedAt??null,checked:true,savedAt:Date.now()}))}catch{}}
   async function loadDetails(all){
     const queue=all.filter(g=>!metadataFresh(g)).sort((a,b)=>Number.isFinite(b.rating)-Number.isFinite(a.rating));
     metadataLoading=queue.length>0;
@@ -621,13 +622,76 @@ button.legend-line{width:100%;border:0;background:transparent;color:inherit;padd
     metadataLoading=false;renderCommunity();
     return {metadataIncomplete:all.some(g=>!metadataFresh(g))};
   }
+  async function loadFastMetadata(all){
+    const queue=all.filter(g=>!metadataFresh(g)).sort((a,b)=>Number.isFinite(b.rating)-Number.isFinite(a.rating));
+    metadataLoading=queue.length>0;
+    let checked=all.length-queue.length;
+    try{
+      for(let i=0;i<queue.length;i+=40){
+        if(games!==all)break;
+        let pending=queue.slice(i,i+40);
+        for(let attempt=0;pending.length&&attempt<2;attempt++){
+          if(attempt)await sleep(1000);
+          try{
+            const params=new URLSearchParams;pending.forEach(g=>params.append('path',g.path));
+            const result=await api(`/api/metadata?${params}`);
+            const byPath=new Map(result.details.map(x=>[x.path,x]));
+            pending=pending.filter(g=>{
+              const detail=byPath.get(g.path);
+              if(!detail||detail.failed||!metadataFresh(detail)){g.metadataError=detail?.error||'Game metadata could not be loaded.';return true}
+              delete g.metadataError;delete g.warning;delete g.metadataRetryAt;
+              Object.assign(g,detail);saveMetadata(g);checked++;return false;
+            });
+          }catch(error){pending.forEach(g=>g.metadataError=error.message)}
+        }
+        $('progress').textContent=`Checked game details for ${checked}/${all.length} games…`;
+        render();
+      }
+    }finally{
+      metadataLoading=false;
+      if(games===all)loadBackloggdStats(all);
+      renderCommunity();
+    }
+    return {metadataIncomplete:all.some(g=>!metadataFresh(g))};
+  }
+  async function loadBackloggdStats(all){
+    const job=++backlogJob;
+    const queue=all.filter(g=>metadataFresh(g)&&(!Number.isFinite(g.backlogFetchedAt)||Date.now()-g.backlogFetchedAt>=604800000));
+    backlogLoading=queue.length>0;
+    try{
+      for(let i=0;i<queue.length;i+=4){
+        if(job!==backlogJob||games!==all)break;
+        const group=queue.slice(i,i+4),params=new URLSearchParams;
+        group.forEach(g=>params.append('path',g.path));
+        let result;
+        try{result=await api(`/api/details?${params}`)}catch{continue}
+        if(job!==backlogJob||games!==all)break;
+        const byPath=new Map(result.details.map(x=>[x.path,x]));
+        for(const g of group){
+          const detail=byPath.get(g.path);
+          if(!detail||detail.failed||detail.warning)continue;
+          g.plays=detail.plays??null;g.playText=detail.playText??null;
+          g.averageTimeHours=detail.averageTimeHours??null;
+          if(detail.year!=null)g.year=detail.year;
+          if(Number.isFinite(detail.communityFetchedAt)){
+            g.communityRating=detail.communityRating??null;
+            g.communityFetchedAt=detail.communityFetchedAt;
+          }
+          g.backlogFetchedAt=Date.now();saveMetadata(g);
+        }
+        if(i%16===0||i+4>=queue.length){render();profileNotice()}
+      }
+    }finally{
+      if(job===backlogJob){backlogLoading=false;renderCommunity()}
+    }
+  }
   async function refreshDefaultMetadata(){
     const current=games;
     current.forEach(g=>{const cached=readMetadata(g.path);if(cached&&(!metadataFresh(g)||cached.metadataFetchedAt>g.metadataFetchedAt))Object.assign(g,cached)});
     render();
     if(current.every(g=>metadataFresh(g)))return;
     profileNotice();
-    await loadDetails(current);
+    await loadFastMetadata(current);
     if(games===current){render();profileNotice()}
   }
   let activeUsername=defaultUsername,activeLibraryIncomplete=false,activeProfileCache=false;
@@ -635,12 +699,12 @@ button.legend-line{width:100%;border:0;background:transparent;color:inherit;padd
   function updateMissingButton(){const missing=games.filter(g=>g.checked&&(!g.year||!developersFor(g).length));$('missingDetails').style.display=missing.length?'inline-block':'none';$('missingDetails').textContent=`Review ${missing.length} game${missing.length===1?'':'s'} missing metadata`}
   async function buildProfile(username){
     const button=$('lookupButton');button.disabled=true;button.textContent='Loading…';$('loading').classList.add('show');$('retryDetails').style.display='none';$('missingDetails').style.display='none';$('progress').textContent='Loading profile…';$('breakdown').hidden=true;activeBreakdown=null;
-    try{const {all,libraryIncomplete,fromCache,savedAt}=await loadCards(username);if(!all.length)throw Error('No public games found for this profile.');games=all;activeUsername=username;activeLibraryIncomplete=libraryIncomplete;activeProfileCache=fromCache;const viewUrl=new URL(location.href);viewUrl.searchParams.set('profile',username);history.replaceState(null,'',viewUrl);$('sourceLabel').textContent='@'+username;$('title').textContent=`${username}'s games, at a glance.`;$('dataNote').textContent=`Showing ${all.length} public games from backloggd.com/u/${username}/${fromCache?' (saved '+new Date(savedAt).toLocaleString()+')':''}. Game details and developer logos are saved in this browser; only uncached game details are fetched.`;$('reset').style.display='inline-block';render();await Promise.all([loadFavourites(username),loadDetails(all)]);render();profileNotice()}
+    try{const {all,libraryIncomplete,fromCache,savedAt}=await loadCards(username);if(!all.length)throw Error('No public games found for this profile.');games=all;activeUsername=username;activeLibraryIncomplete=libraryIncomplete;activeProfileCache=fromCache;const viewUrl=new URL(location.href);viewUrl.searchParams.set('profile',username);history.replaceState(null,'',viewUrl);$('sourceLabel').textContent='@'+username;$('title').textContent=`${username}'s games, at a glance.`;$('dataNote').textContent=`Showing ${all.length} public games from backloggd.com/u/${username}/${fromCache?' (saved '+new Date(savedAt).toLocaleString()+')':''}. Game details and developer logos are saved in this browser; only uncached game details are fetched.`;$('reset').style.display='inline-block';render();await Promise.all([loadFavourites(username),loadFastMetadata(all)]);render();profileNotice()}
     catch(err){$('notice').textContent=err.message;$('notice').classList.add('show')}
     finally{button.disabled=false;button.textContent='Build dashboard';$('loading').classList.remove('show')}
   }
   $('lookup').addEventListener('submit',e=>{e.preventDefault();$('notice').classList.remove('show');let username;try{username=usernameFromInput($('username').value)}catch(err){$('notice').textContent=err.message;$('notice').classList.add('show');return}buildProfile(username)});
-  $('retryDetails').addEventListener('click',async()=>{if(!activeUsername)return;const button=$('retryDetails');button.disabled=true;$('loading').classList.add('show');$('progress').textContent='Retrying missing game details…';try{await loadDetails(games);render();profileNotice()}finally{button.disabled=false;$('loading').classList.remove('show')}});
+  $('retryDetails').addEventListener('click',async()=>{if(!activeUsername)return;const button=$('retryDetails');button.disabled=true;$('loading').classList.add('show');$('progress').textContent='Retrying missing game details…';try{await loadFastMetadata(games);render();profileNotice()}finally{button.disabled=false;$('loading').classList.remove('show')}});
   $('file').addEventListener('change',async e=>{const file=e.target.files[0];if(!file)return;try{const text=await file.text();const raw=file.name.toLowerCase().endsWith('.json')?JSON.parse(text):parseCSV(text);let records=Array.isArray(raw)?raw:(raw.games||raw.library||raw.entries||raw.data);if(!Array.isArray(records))throw Error('The file needs a list of games.');const next=records.map(normalize).filter(g=>g.title);if(!next.length)throw Error('No game titles were found. Check the column names in your export.');games=next;activeUsername='';activeBreakdown=null;$('breakdown').hidden=true;$('missingDetails').style.display='none';$('retryDetails').style.display='none';$('sourceLabel').textContent=file.name;$('title').textContent='Your library, at a glance.';$('dataNote').textContent=`Showing ${file.name}. Your imported file stays in this browser.`;$('reset').style.display='inline-block';const missing=[];if(!next.some(g=>Number.isFinite(g.rating)&&g.rating>0))missing.push('ratings');if(!next.some(g=>g.year))missing.push('release years');if(!next.some(g=>developersFor(g).length))missing.push('developers');const notice=$('notice');notice.textContent=missing.length?`Imported ${next.length} games. This file has no ${missing.join(', ')}, so some insights are unavailable.`:`Imported ${next.length} games from ${file.name}.`;notice.classList.add('show');render()}catch(err){$('notice').textContent=`Could not import this file: ${err.message}`;$('notice').classList.add('show')}e.target.value=''});
   $('countBtn').onclick=()=>{mode='count';$('countBtn').classList.add('active');$('avgBtn').classList.remove('active');render()};$('avgBtn').onclick=()=>{mode='average';$('avgBtn').classList.add('active');$('countBtn').classList.remove('active');render()};$('reset').onclick=()=>{games=structuredClone(defaultLibrary);activeUsername=defaultUsername;activeLibraryIncomplete=false;activeProfileCache=false;activeBreakdown=null;$('breakdown').hidden=true;$('missingDetails').style.display='none';$('retryDetails').style.display='none';$('sourceLabel').textContent="Laime's library";$('title').textContent="Laime's games, at a glance.";$('dataNote').textContent="Showing Laime's saved Backloggd library snapshot. Build the dashboard for Laime to refresh it; file imports stay in this browser.";$('username').value=defaultUsername;$('reset').style.display='none';$('notice').classList.remove('show');render();loadFavourites(defaultUsername);refreshDefaultMetadata()};
   if(document.modelContext?.registerTool){Promise.resolve(document.modelContext.registerTool({name:'load_backloggd_profile',title:'Load Backloggd profile',description:'Build the visible dashboard from a public Backloggd nickname or profile URL.',inputSchema:{type:'object',properties:{profile:{type:'string'}},required:['profile'],additionalProperties:false},annotations:{readOnlyHint:false,untrustedContentHint:true},async execute(input){const username=usernameFromInput(input?.profile||'');$('username').value=username;await buildProfile(username);return{username,games:games.length,detailsChecked:games.filter(g=>g.checked).length}}})).catch(()=>{})}render();
@@ -673,16 +737,17 @@ button.legend-line{width:100%;border:0;background:transparent;color:inherit;padd
     $('breakdownList').innerHTML=list.sort((a,b)=>a.title.localeCompare(b.title)).map(g=>{const safePath=typeof g.path==='string'&&/^\/games\/[a-z0-9-]+\/$/.test(g.path);const title=safePath?`<a href="https://backloggd.com${esc(g.path)}" target="_blank" rel="noopener noreferrer">${esc(g.title)} ↗</a>`:esc(g.title);const detail=`${g.year||'Release year unavailable'} · ${developersFor(g).join(', ')||'Developer credits unavailable'}`;return `<div class="game-item"><div class="game-title">${title}<div class="game-meta">${esc(detail)}</div></div></div>`}).join('');
     $('breakdown').hidden=false;$('breakdownTitle').setAttribute('tabindex','-1');$('breakdownTitle').focus({preventScroll:true});$('breakdown').scrollIntoView({behavior:'smooth',block:'nearest'});
   }
-  let hoverTimer=null,hoverTrigger=null;
-  function hoverGames(kind,key){return games.filter(isPlayed).filter(g=>!isAddonExcludedKind(kind)||!isExpansionOrDlc(g)).filter(g=>matchesBreakdown(g,kind,key)).sort((a,b)=>(Number.isFinite(b.rating)?b.rating:-1)-(Number.isFinite(a.rating)?a.rating:-1)||a.title.localeCompare(b.title))}
+   let hoverTrigger=null;
+   function hoverGames(kind,key,year){return games.filter(isPlayed).filter(g=>kind==='era'?+g.year===+year&&eraTags(g).includes(key):(!isAddonExcludedKind(kind)||!isExpansionOrDlc(g))&&matchesBreakdown(g,kind,key)).sort((a,b)=>(Number.isFinite(b.rating)?b.rating:-1)-(Number.isFinite(a.rating)?a.rating:-1)||a.title.localeCompare(b.title))}
   function positionHover(trigger){const card=$('hoverCard'),r=trigger.getBoundingClientRect(),w=card.offsetWidth,h=card.offsetHeight;let left=Math.min(Math.max(12,r.left),innerWidth-w-12),top=r.bottom-1;if(top+h>innerHeight-12)top=Math.max(12,r.top-h+1);card.style.left=`${left}px`;card.style.top=`${top}px`}
-  function showHover(trigger){clearTimeout(hoverTimer);const kind=trigger.dataset.kind,key=trigger.dataset.key,list=hoverGames(kind,key);if(!list.length)return;hoverTrigger=trigger;const scores=list.map(g=>g.rating).filter(n=>Number.isFinite(n)&&n>0);$('hoverTitle').textContent=kind==='rating'?key+' stars':key;$('hoverSummary').textContent=`${list.length} games · ${scores.length} rated · ${fmt(avg(scores))} avg`;$('hoverList').innerHTML=list.map(g=>`<div class="hover-game"><span title="${esc(g.title)}">${gameLink(g)}</span><span>${Number.isFinite(g.rating)&&g.rating>0?inlineStar+' '+fmt(g.rating):'Unrated'}</span></div>`).join('');$('hoverCard').hidden=false;positionHover(trigger)}
-  function hideHover(delay=0){clearTimeout(hoverTimer);hoverTimer=setTimeout(()=>{if(!$('hoverCard').matches(':hover')&&!$('hoverCard').contains(document.activeElement)&&hoverTrigger!==document.activeElement){$('hoverCard').hidden=true;hoverTrigger=null}},delay)}
+   function closeHover(restoreFocus=false){if(hoverTrigger){hoverTrigger.setAttribute('aria-expanded','false');if(restoreFocus&&hoverTrigger.isConnected)hoverTrigger.focus()}$('hoverCard').hidden=true;hoverTrigger=null}
+   function showHover(trigger){const kind=trigger.dataset.kind,key=trigger.dataset.key,list=hoverGames(kind,key,trigger.dataset.year);if(!list.length)return;if(hoverTrigger&&hoverTrigger!==trigger)hoverTrigger.setAttribute('aria-expanded','false');hoverTrigger=trigger;trigger.setAttribute('aria-controls','hoverCard');trigger.setAttribute('aria-haspopup','true');trigger.setAttribute('aria-expanded','true');const scores=list.map(g=>g.rating).filter(n=>Number.isFinite(n)&&n>0);$('hoverTitle').textContent=kind==='rating'?key+' stars':kind==='era'?key+' · '+trigger.dataset.year:key;$('hoverSummary').textContent=`${list.length} games · ${scores.length} rated · ${fmt(avg(scores))} avg`;$('hoverList').innerHTML=list.map(g=>`<div class="hover-game"><span title="${esc(g.title)}">${gameLink(g)}</span><span>${Number.isFinite(g.rating)&&g.rating>0?inlineStar+' '+fmt(g.rating):'Unrated'}</span></div>`).join('');$('hoverCard').hidden=false;positionHover(trigger)}
+   function toggleHover(trigger){if(hoverTrigger===trigger&&!$('hoverCard').hidden)closeHover();else showHover(trigger)}
   $('missingDetails').addEventListener('click',showMissing);
-  for(const id of ['developers','publishers','themes','franchises','gameEngines','yearBars','yearRows','genreRows','genrePreferencePlot','perspectiveTreemap','legend','modeLegend']){const root=$(id);root.addEventListener('pointerover',event=>{const button=event.target.closest('button[data-kind]');if(button&&button!==hoverTrigger)showHover(button)});root.addEventListener('pointerout',event=>{const button=event.target.closest('button[data-kind]');if(button&&!button.contains(event.relatedTarget))hideHover(500)});root.addEventListener('focusin',event=>{const button=event.target.closest('button[data-kind]');if(button)showHover(button)});root.addEventListener('focusout',event=>{if(event.target.closest('button[data-kind]'))hideHover(100)});root.addEventListener('click',event=>{const button=event.target.closest('button[data-kind]');if(button){event.preventDefault();$('hoverCard').hidden&&showHover(button)}})}
-  $('hoverCard').addEventListener('focusin',()=>clearTimeout(hoverTimer));$('hoverCard').addEventListener('focusout',()=>hideHover(100));
-  document.addEventListener('keydown',event=>{if(event.key==='ArrowDown'&&event.target.matches('button[data-kind]')){showHover(event.target);const link=$('hoverList').querySelector('a');if(link){event.preventDefault();link.focus()}}if(event.key==='Escape'&&!$('hoverCard').hidden){const trigger=hoverTrigger;if(trigger)trigger.focus();$('hoverCard').hidden=true;hoverTrigger=null}});
-  $('hoverCard').addEventListener('pointerenter',()=>clearTimeout(hoverTimer));$('hoverCard').addEventListener('pointerleave',()=>hideHover(400));
+   for(const id of ['developers','publishers','themes','franchises','gameEngines','yearBars','yearRows','genreRows','genrePreferencePlot','perspectiveTreemap','legend','modeLegend','eraTable'])$(id).addEventListener('click',event=>{const button=event.target.closest('button[data-kind]');if(button){event.preventDefault();toggleHover(button)}});
+   $('closeHoverCard').addEventListener('click',()=>closeHover(true));
+   document.addEventListener('pointerdown',event=>{if(!$('hoverCard').hidden&&!$('hoverCard').contains(event.target)&&!event.target.closest('button[data-kind]'))closeHover()});
+   document.addEventListener('keydown',event=>{if(event.key==='ArrowDown'&&event.target.matches('button[data-kind]')){showHover(event.target);const link=$('hoverList').querySelector('a');if(link){event.preventDefault();link.focus()}}if(event.key==='Escape'&&!$('hoverCard').hidden){event.preventDefault();closeHover(true)}});
   for(const [id,value] of [['companyRatingBtn','rating'],['companyCountBtn','count']])$(id).addEventListener('click',()=>{companySort=value;for(const [button,measure] of [['companyRatingBtn','rating'],['companyCountBtn','count']]){$(button).classList.toggle('active',measure===value);$(button).setAttribute('aria-pressed',String(measure===value))}render()});
   for(const [id,value] of [['publisherRatingBtn','rating'],['publisherCountBtn','count']])$(id).addEventListener('click',()=>{publisherSort=value;for(const [button,measure] of [['publisherRatingBtn','rating'],['publisherCountBtn','count']]){$(button).classList.toggle('active',measure===value);$(button).setAttribute('aria-pressed',String(measure===value))}render()});
   function yearRatingCounts(year){

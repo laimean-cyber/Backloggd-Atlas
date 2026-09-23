@@ -118,7 +118,7 @@ async function fetchGameDetails(path, env, batch, ready) {
   ready();
   const metadata = await metadataPending;
   const details = { ...metadata, plays: null, playText: null, ...backlog, year: backlog.year ?? metadata.year, averageTimeHours, checked: true };
-  if (source) Object.assign(details, { communityRating: source.communityRating, communityFetchedAt: source.communityFetchedAt });
+  if (source) Object.assign(details, { communityRating: source.communityRating, communityFetchedAt: source.communityFetchedAt, backlogFetchedAt: source.communityFetchedAt });
   if (warning) Object.assign(details, { warning, metadataRetryAt: Date.now() + 60000 });
   if (cache && !warning) { try { await cache.put(key, new Response(JSON.stringify(details), { headers: { 'cache-control': 'public, max-age=604800' } })); } catch {} }
   return details;
@@ -170,6 +170,28 @@ export default {
         }
       }));
       return ratings.length === paths.length && ratings.every(r => !r.failed) ? publicJson({ ratings }, 3600) : json({ ratings });
+    }
+    if (url.pathname === '/api/metadata') {
+      const paths = url.searchParams.getAll('path');
+      if (!paths.length || paths.length > 40 || paths.some(p => !/^\/games\/[a-z0-9-]+\/$/.test(p))) return json({ error: 'Invalid game paths.' }, 400);
+      const batch = metadataBatch(env, paths.length);
+      const pending = paths.map(async path => {
+        try { return await igdbDetails(path, '', env, batch); }
+        catch (error) {
+          if (error.message !== 'No matching IGDB game was found.') throw error;
+          // Use Backloggd's explicit IGDB link only when its own slug does not match.
+          const source = await gamePage(path);
+          if (!source.igdbLink) throw error;
+          return igdbDetails(path, source.igdbLink, env);
+        }
+      });
+      paths.forEach(() => batch.ready());
+      const details = await Promise.all(pending.map(async (result, i) => {
+        const path = paths[i];
+        try { return { path, ...await result, plays: null, playText: null, averageTimeHours: null, checked: true }; }
+        catch (error) { return { path, failed: true, status: error.status || null, error: error.message }; }
+      }));
+      return details.every(d => !d.failed) ? publicJson({ details, failed: 0 }, 3600) : json({ details, failed: details.filter(d => d.failed).length });
     }
     if (url.pathname === '/api/critics') {
       const paths = url.searchParams.getAll('path'), titles = url.searchParams.getAll('title');
