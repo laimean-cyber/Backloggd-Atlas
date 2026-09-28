@@ -10,6 +10,9 @@ const {chromium}=require('C:/Users/Laimean/.cache/codex-runtimes/codex-primary-r
   const card=p.locator(`button[data-kind="${kind}"]`);
   await card.click();assert.equal(await p.locator('#hoverList .hover-game').count(),2);
   assert.equal(await p.locator('#'+kind).textContent(),'2');
+  const labels=kind==='addons'?['DLCs','Expansions']:['Remakes','Remasters'];
+  for(const label of labels){const group=p.locator(`.hover-group[aria-label="${label}"]`);assert.equal(await group.count(),1);assert.equal(await group.locator('.hover-game').count(),1);assert.equal(await group.locator('h3 span').textContent(),'1');}
+  const titles=await p.locator('.hover-group .hover-game a').allTextContents();assert.deepEqual(titles,kind==='addons'?['Game 1 ↗','Game 0 ↗']:['Game 2 ↗','Game 3 ↗']);
   await p.screenshot({path:`highlight-${kind}-${width}.png`});
   const box=await p.locator('#hoverCard').boundingBox();assert(box.x>=0&&box.x+box.width<=width);
   await card.click();assert.equal(await p.locator('#hoverCard').isVisible(),false);
@@ -18,6 +21,6 @@ const {chromium}=require('C:/Users/Laimean/.cache/codex-runtimes/codex-primary-r
   await card.press('ArrowDown');assert(await p.evaluate(()=>!!document.activeElement.closest('#hoverList')));
   await p.locator('#closeHoverCard').click();
  }
- await p.evaluate(()=>{games=[];render()});await p.locator('[data-kind="addons"]').click();assert.match(await p.locator('#hoverList').textContent(),/No matching games/);
+ await p.evaluate(()=>{games=[];render()});await p.locator('[data-kind="addons"]').click();assert.equal(await p.locator('.hover-group-empty').count(),2);assert.match(await p.locator('#hoverList').textContent(),/No dlcs in this library/);
  assert.deepEqual(errors,[]);await p.close();
 }}finally{await browser.close()}console.log('Highlight menus: filtering, counts, toggle, keyboard, empty state and responsive bounds passed.');})().catch(e=>{console.error(e);process.exit(1)});

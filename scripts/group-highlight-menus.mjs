@@ -1,0 +1,15 @@
+import { writeFileSync } from 'node:fs';
+import { page as original } from '../dist/server/page.js';
+let page = original;
+const start = page.indexOf("$('hoverList').innerHTML=list.map(g=>");
+const end = page.indexOf(";$('hoverCard').hidden=false;positionHover(trigger)", start);
+if(start<0||end<0)throw new Error('Menu renderer not found');
+const rowStart=start+"$('hoverList').innerHTML=list.map(g=>".length;
+const rowEnd=page.indexOf(").join('');",rowStart);
+const row=page.slice(rowStart,rowEnd);
+const replacement = `const renderGame=g=>${row};
+    const sections=kind==='remakes'?[['Remakes',isRemake],['Remasters',isRemaster]]:kind==='addons'?[['DLCs',isDlc],['Expansions',isExpansion]]:null;
+    $('hoverList').innerHTML=sections?sections.map(([title,match])=>{const entries=list.filter(match);return '<section class="hover-group" aria-label="'+title+'"><h3 class="hover-group-title">'+title+'<span>'+entries.length+'</span></h3>'+(entries.length?entries.map(renderGame).join(''):'<p class="hover-group-empty">No '+title.toLowerCase()+' in this library.</p>')+'</section>'}).join(''):list.map(renderGame).join('')`;
+page=page.slice(0,start)+replacement+page.slice(end);
+page=page.replace('</style>', '.hover-group+.hover-group{border-top:1px solid #353d4e;margin-top:8px;padding-top:8px}.hover-group-title{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:0;padding:8px 9px;color:#c4cbd1;font-size:.78rem;font-weight:700}.hover-group-title span{font-variant-numeric:tabular-nums;font-weight:500}.hover-group-empty{margin:0;padding:8px 9px 12px;color:#c4cbd1;font-size:.8rem}\n</style>');
+writeFileSync('dist/server/page.js',`export const page = ${JSON.stringify(page)};\n`);
