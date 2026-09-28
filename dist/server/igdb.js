@@ -74,7 +74,7 @@ export function metadataBatch(env, count) {
   };
 }
 
-export const metadataFields = 'fields name,slug,first_release_date,game_type.type,genres.name,game_modes.name,player_perspectives.name,themes.name,franchise.name,franchises.name,game_engines.name,involved_companies.developer,involved_companies.publisher,involved_companies.company.name,involved_companies.company.logo.image_id;';
+export const metadataFields = 'fields name,slug,first_release_date,cover.image_id,game_type.type,genres.name,game_modes.name,player_perspectives.name,themes.name,franchise.name,franchises.name,game_engines.name,involved_companies.developer,involved_companies.publisher,involved_companies.company.name,involved_companies.company.logo.image_id;';
 
 export async function igdbDetails(path, html, env, batch) {
   const slug = path.split('/')[2];
@@ -91,6 +91,8 @@ export function normalizeMetadata(game) {
   const credits = (game.involved_companies || []).filter(credit => credit.developer === true && credit.company?.name).map(credit => credit.company);
   return {
     year: Number.isFinite(game.first_release_date) ? new Date(game.first_release_date * 1000).getUTCFullYear() : null,
+    releaseDate: Number.isFinite(game.first_release_date) ? game.first_release_date : null,
+    cover: /^[a-zA-Z0-9_-]+$/.test(game.cover?.image_id || '') ? `https://images.igdb.com/igdb/image/upload/t_cover_big/${game.cover.image_id}.jpg` : null,
     metadataVersion: 1,
     metadataFetchedAt: Date.now(),
     gameType: typeof game.game_type?.type === 'string' ? game.game_type.type : null,

@@ -19,6 +19,24 @@ are required for game metadata; they must stay server-side and out of Git.
 
 Run `npm run test:vercel` to check page output and API routing locally.
 
+For a local preview, run `node --env-file=.env.local scripts/serve-local.mjs`
+and open `http://localhost:4174`. Build first after changing the application page.
+
+The Franchise rating journey panel includes every franchise with five or more
+played entries, excluding DLC. Entries use exact release dates when
+available, then release year and title; undated entries appear last. Unrated
+entries are available through each chart's Show unrated menu, and lines connect rated entries only.
+Franchises require at least three rated entries and sort by rated-entry count.
+The panel initially shows two charts; its expand button reveals all qualifying
+franchises. Cover posters appear directly on the chart
+points, with pink borders above the franchise average and gray borders at or
+below it (also used for unrated games), plus fixed, unscaled rating
+labels. Select a cover to open its details menu; Escape or the close button
+dismisses it. Hover or keyboard focus shows the exact rating alone. A dashed
+reference line marks the franchise average. Overflowing charts
+show a scroll hint and an edge fade; the fade disappears at the end. Each chart scrolls horizontally
+when needed. `node tests/franchise-journey.cjs` checks the panel in Edge.
+
 Web Analytics uses Vercel's plain HTML integration, injected by the build into
 `public/index.html`. This project is not Next.js; installing `@vercel/analytics`
 alone does not load tracking in the browser. Enable Web Analytics in the Vercel
