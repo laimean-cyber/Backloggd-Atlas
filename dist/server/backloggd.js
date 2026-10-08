@@ -45,7 +45,7 @@ export function createBackloggdClient({fetcher = (...args) => fetch(...args), no
       // Bot challenges can return HTTP 200 and contain the Backloggd brand.
       // Never parse or cache them as empty profiles or completed pagination.
       if (/anubis_challenge|id=["']anubis-challenge["']|<title>\s*(?:Making sure you|Just a moment|Access denied)/i.test(html)) {
-        const error = Object.assign(new Error('Backloggd is showing our server a bot-verification page. Live profile loading is temporarily unavailable; retry later or import a Backloggd CSV export.'), {status: 403, retryAfter: 60});
+        const error = Object.assign(new Error('Backloggd is showing our server a bot-verification page. Checking user profiles is temporarily unavailable. Please try again later.'), {status: 403, retryAfter: 60});
         blockedUntil = now() + 60000;
         lastError = error;
         throw error;
