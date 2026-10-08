@@ -1,5 +1,641 @@
 [
   {
+    "id": "408607",
+    "path": "/games/guns-of-eschaton/",
+    "title": "Guns of Eschaton",
+    "rating": null,
+    "played": true,
+    "year": 2026,
+    "releaseDate": 1798675200,
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocrqy.jpg",
+    "metadataVersion": 1,
+    "metadataFetchedAt": 1791451445782,
+    "gameType": "Main Game",
+    "publishers": [
+      "4Divinity"
+    ],
+    "publisherLogos": {
+      "4Divinity": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl9iy.png"
+    },
+    "gameModes": [
+      "Single player",
+      "Multiplayer",
+      "Co-operative"
+    ],
+    "playerPerspectives": [
+      "First person"
+    ],
+    "themes": [
+      "Action"
+    ],
+    "franchises": [],
+    "gameEngines": [
+      "Unreal Engine 5"
+    ],
+    "igdbId": 408607,
+    "developers": [
+      "Eschatology Entertainment"
+    ],
+    "developerLogos": {
+      "Eschatology Entertainment": "https://images.igdb.com/igdb/image/upload/t_logo_med/cljnn.png"
+    },
+    "genres": [
+      "Shooter"
+    ],
+    "checked": true
+  },
+  {
+    "id": "225582",
+    "path": "/games/control-resonant--1/",
+    "title": "Control Resonant",
+    "rating": 4,
+    "played": true,
+    "year": 2026,
+    "releaseDate": 1790208000,
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc64f.jpg",
+    "metadataVersion": 1,
+    "metadataFetchedAt": 1791451445782,
+    "gameType": "Main Game",
+    "publishers": [
+      "Remedy Entertainment"
+    ],
+    "publisherLogos": {
+      "Remedy Entertainment": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl7m5.png"
+    },
+    "gameModes": [
+      "Single player"
+    ],
+    "playerPerspectives": [
+      "Third person"
+    ],
+    "themes": [
+      "Action",
+      "Science fiction"
+    ],
+    "franchises": [],
+    "gameEngines": [
+      "Northlight Engine"
+    ],
+    "igdbId": 225582,
+    "developers": [
+      "Remedy Entertainment"
+    ],
+    "developerLogos": {
+      "Remedy Entertainment": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl7m5.png"
+    },
+    "genres": [
+      "Role-playing (RPG)",
+      "Hack and slash/Beat 'em up",
+      "Adventure"
+    ],
+    "checked": true
+  },
+  {
+    "id": "94829",
+    "path": "/games/the-incredible-hulk--1/",
+    "title": "The Incredible Hulk",
+    "rating": null,
+    "played": true,
+    "year": 1993,
+    "releaseDate": 757296000,
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2xei.jpg",
+    "metadataVersion": 1,
+    "metadataFetchedAt": 1791451445782,
+    "gameType": "Main Game",
+    "publishers": [
+      "Tec Toy"
+    ],
+    "publisherLogos": {
+      "Tec Toy": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl5wp.png"
+    },
+    "gameModes": [
+      "Single player"
+    ],
+    "playerPerspectives": [
+      "Side view"
+    ],
+    "themes": [
+      "Action"
+    ],
+    "franchises": [
+      "Hulk",
+      "Marvel"
+    ],
+    "gameEngines": [],
+    "igdbId": 94829,
+    "developers": [
+      "Probe Entertainment"
+    ],
+    "developerLogos": {
+      "Probe Entertainment": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl8c1.png"
+    },
+    "genres": [
+      "Platform"
+    ],
+    "checked": true
+  },
+  {
+    "id": "24979",
+    "path": "/games/disneys-pocahontas/",
+    "title": "Disney's Pocahontas",
+    "rating": null,
+    "played": true,
+    "year": 1996,
+    "releaseDate": 825638400,
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1w8i.jpg",
+    "metadataVersion": 1,
+    "metadataFetchedAt": 1791451445782,
+    "gameType": "Main Game",
+    "publishers": [
+      "Disney",
+      "Tec Toy"
+    ],
+    "publisherLogos": {
+      "Tec Toy": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl5wp.png"
+    },
+    "gameModes": [
+      "Single player"
+    ],
+    "playerPerspectives": [
+      "Side view"
+    ],
+    "themes": [
+      "Action"
+    ],
+    "franchises": [
+      "Disney",
+      "Disney's Pocahontas"
+    ],
+    "gameEngines": [],
+    "igdbId": 24979,
+    "developers": [
+      "Funcom"
+    ],
+    "developerLogos": {
+      "Funcom": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl9eg.png"
+    },
+    "genres": [
+      "Platform",
+      "Adventure"
+    ],
+    "checked": true
+  },
+  {
+    "id": "4531",
+    "path": "/games/x-men/",
+    "title": "X-Men",
+    "rating": null,
+    "played": true,
+    "year": 1993,
+    "releaseDate": 731548800,
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4tus.jpg",
+    "metadataVersion": 1,
+    "metadataFetchedAt": 1791451445782,
+    "gameType": "Main Game",
+    "publishers": [
+      "Sega of America",
+      "Tec Toy"
+    ],
+    "publisherLogos": {
+      "Sega of America": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl2lp.png",
+      "Tec Toy": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl5wp.png"
+    },
+    "gameModes": [
+      "Single player",
+      "Co-operative",
+      "Split screen"
+    ],
+    "playerPerspectives": [
+      "Side view"
+    ],
+    "themes": [
+      "Action"
+    ],
+    "franchises": [
+      "X-Men",
+      "Marvel"
+    ],
+    "gameEngines": [],
+    "igdbId": 4531,
+    "developers": [
+      "Western Technologies Inc."
+    ],
+    "developerLogos": {},
+    "genres": [
+      "Fighting",
+      "Platform",
+      "Hack and slash/Beat 'em up"
+    ],
+    "checked": true
+  },
+  {
+    "id": "18139",
+    "path": "/games/michael-jacksons-moonwalker/",
+    "title": "Michael Jackson's Moonwalker",
+    "rating": null,
+    "played": true,
+    "year": 1990,
+    "releaseDate": 648777600,
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20fl.jpg",
+    "metadataVersion": 1,
+    "metadataFetchedAt": 1791451445782,
+    "gameType": "Main Game",
+    "publishers": [
+      "U.S. Gold",
+      "Tec Toy",
+      "Sega Enterprises, Ltd."
+    ],
+    "publisherLogos": {
+      "U.S. Gold": "https://images.igdb.com/igdb/image/upload/t_logo_med/nt4tvmwdmplzk81sd1cm.png",
+      "Tec Toy": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl5wp.png",
+      "Sega Enterprises, Ltd.": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl2mk.png"
+    },
+    "gameModes": [
+      "Single player",
+      "Multiplayer",
+      "Co-operative"
+    ],
+    "playerPerspectives": [
+      "Side view"
+    ],
+    "themes": [
+      "Action",
+      "Science fiction"
+    ],
+    "franchises": [
+      "Michael Jackson"
+    ],
+    "gameEngines": [],
+    "igdbId": 18139,
+    "developers": [
+      "Emerald Software",
+      "Sega Enterprises, Ltd."
+    ],
+    "developerLogos": {
+      "Sega Enterprises, Ltd.": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl2mk.png"
+    },
+    "genres": [
+      "Platform",
+      "Hack and slash/Beat 'em up"
+    ],
+    "checked": true
+  },
+  {
+    "id": "8118",
+    "path": "/games/disneys-aladdin/",
+    "title": "Disney's Aladdin",
+    "rating": null,
+    "played": true,
+    "year": 1993,
+    "releaseDate": 750988800,
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaf2o.jpg",
+    "metadataVersion": 1,
+    "metadataFetchedAt": 1791451445782,
+    "gameType": "Main Game",
+    "publishers": [
+      "Sega",
+      "Tec Toy",
+      "Disney Interactive Studios",
+      "Virgin Interactive Entertainment (Europe) Ltd."
+    ],
+    "publisherLogos": {
+      "Sega": "https://images.igdb.com/igdb/image/upload/t_logo_med/hbil3xrhnp8fdust2juk.png",
+      "Tec Toy": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl5wp.png",
+      "Disney Interactive Studios": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl2e8.png",
+      "Virgin Interactive Entertainment (Europe) Ltd.": "https://images.igdb.com/igdb/image/upload/t_logo_med/bjbq0xkgecruufukppw3.png"
+    },
+    "gameModes": [
+      "Single player"
+    ],
+    "playerPerspectives": [
+      "Side view"
+    ],
+    "themes": [
+      "Action",
+      "Fantasy",
+      "Comedy"
+    ],
+    "franchises": [
+      "Disney",
+      "Disney's Aladdin"
+    ],
+    "gameEngines": [],
+    "igdbId": 8118,
+    "developers": [
+      "Virgin Games USA",
+      "Virgin Interactive Entertainment (Europe) Ltd."
+    ],
+    "developerLogos": {
+      "Virgin Games USA": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl885.png",
+      "Virgin Interactive Entertainment (Europe) Ltd.": "https://images.igdb.com/igdb/image/upload/t_logo_med/bjbq0xkgecruufukppw3.png"
+    },
+    "genres": [
+      "Platform"
+    ],
+    "checked": true
+  },
+  {
+    "id": "5378",
+    "path": "/games/ecco-the-dolphin/",
+    "title": "Ecco the Dolphin",
+    "rating": null,
+    "played": true,
+    "year": 1992,
+    "releaseDate": 725068800,
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co23oy.jpg",
+    "metadataVersion": 1,
+    "metadataFetchedAt": 1791451445783,
+    "gameType": "Main Game",
+    "publishers": [
+      "Tec Toy",
+      "Sega"
+    ],
+    "publisherLogos": {
+      "Tec Toy": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl5wp.png",
+      "Sega": "https://images.igdb.com/igdb/image/upload/t_logo_med/hbil3xrhnp8fdust2juk.png"
+    },
+    "gameModes": [
+      "Single player"
+    ],
+    "playerPerspectives": [
+      "Side view"
+    ],
+    "themes": [
+      "Action",
+      "Science fiction"
+    ],
+    "franchises": [
+      "Ecco the dolphin"
+    ],
+    "gameEngines": [],
+    "igdbId": 5378,
+    "developers": [
+      "Novotrade"
+    ],
+    "developerLogos": {
+      "Novotrade": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl98g.png"
+    },
+    "genres": [
+      "Adventure"
+    ],
+    "checked": true
+  },
+  {
+    "id": "3166",
+    "path": "/games/the-lion-king/",
+    "title": "The Lion King",
+    "rating": null,
+    "played": true,
+    "year": 1994,
+    "releaseDate": 783907200,
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co63ny.jpg",
+    "metadataVersion": 1,
+    "metadataFetchedAt": 1791451445783,
+    "gameType": "Main Game",
+    "publishers": [
+      "Gradiente",
+      "Tec Toy Indústria de Brinquedos",
+      "Disney Interactive Studios",
+      "Virgin Interactive Entertainment (Europe) Ltd.",
+      "Playtronic"
+    ],
+    "publisherLogos": {
+      "Gradiente": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl7l4.png",
+      "Disney Interactive Studios": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl2e8.png",
+      "Virgin Interactive Entertainment (Europe) Ltd.": "https://images.igdb.com/igdb/image/upload/t_logo_med/bjbq0xkgecruufukppw3.png",
+      "Playtronic": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl7fn.png"
+    },
+    "gameModes": [
+      "Single player"
+    ],
+    "playerPerspectives": [
+      "Side view"
+    ],
+    "themes": [
+      "Action",
+      "Kids"
+    ],
+    "franchises": [
+      "Disney's The Lion King",
+      "Disney"
+    ],
+    "gameEngines": [],
+    "igdbId": 3166,
+    "developers": [
+      "Westwood Studios"
+    ],
+    "developerLogos": {
+      "Westwood Studios": "https://images.igdb.com/igdb/image/upload/t_logo_med/ipmapbk4w62shfswq8ns.png"
+    },
+    "genres": [
+      "Platform",
+      "Puzzle"
+    ],
+    "checked": true
+  },
+  {
+    "id": "1619",
+    "path": "/games/mortal-kombat-ii/",
+    "title": "Mortal Kombat II",
+    "rating": null,
+    "played": true,
+    "year": 1994,
+    "releaseDate": 757382400,
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6bxu.jpg",
+    "metadataVersion": 1,
+    "metadataFetchedAt": 1791451445783,
+    "gameType": "Main Game",
+    "publishers": [
+      "Midway",
+      "Tec Toy",
+      "Acclaim Entertainment",
+      "Playtronic"
+    ],
+    "publisherLogos": {
+      "Midway": "https://images.igdb.com/igdb/image/upload/t_logo_med/wyg1fb6879bopjyypkhh.png",
+      "Tec Toy": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl5wp.png",
+      "Acclaim Entertainment": "https://images.igdb.com/igdb/image/upload/t_logo_med/qfyuxpskaackdzgnneal.png",
+      "Playtronic": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl7fn.png"
+    },
+    "gameModes": [
+      "Single player",
+      "Multiplayer"
+    ],
+    "playerPerspectives": [
+      "Side view"
+    ],
+    "themes": [
+      "Action",
+      "Fantasy",
+      "Horror"
+    ],
+    "franchises": [
+      "Mortal Kombat"
+    ],
+    "gameEngines": [],
+    "igdbId": 1619,
+    "developers": [
+      "Midway"
+    ],
+    "developerLogos": {
+      "Midway": "https://images.igdb.com/igdb/image/upload/t_logo_med/wyg1fb6879bopjyypkhh.png"
+    },
+    "genres": [
+      "Fighting",
+      "Arcade"
+    ],
+    "checked": true
+  },
+  {
+    "id": "6798",
+    "path": "/games/desert-strike-return-to-the-gulf/",
+    "title": "Desert Strike: Return to the Gulf",
+    "rating": null,
+    "played": true,
+    "year": 1992,
+    "releaseDate": 696902400,
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2jmx.jpg",
+    "metadataVersion": 1,
+    "metadataFetchedAt": 1791451445783,
+    "gameType": "Main Game",
+    "publishers": [
+      "Gremlin Interactive",
+      "Tec Toy",
+      "Ocean Software",
+      "Electronic Arts",
+      "Amiga"
+    ],
+    "publisherLogos": {
+      "Gremlin Interactive": "https://images.igdb.com/igdb/image/upload/t_logo_med/e5ax296h5opot84esgor.png",
+      "Tec Toy": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl5wp.png",
+      "Ocean Software": "https://images.igdb.com/igdb/image/upload/t_logo_med/jehaxbvrtgmmo5ktasra.png",
+      "Electronic Arts": "https://images.igdb.com/igdb/image/upload/t_logo_med/clg2a.png"
+    },
+    "gameModes": [
+      "Single player"
+    ],
+    "playerPerspectives": [
+      "Bird view / Isometric"
+    ],
+    "themes": [
+      "Action",
+      "Warfare"
+    ],
+    "franchises": [],
+    "gameEngines": [],
+    "igdbId": 6798,
+    "developers": [
+      "Electronic Arts"
+    ],
+    "developerLogos": {
+      "Electronic Arts": "https://images.igdb.com/igdb/image/upload/t_logo_med/clg2a.png"
+    },
+    "genres": [
+      "Shooter",
+      "Strategy"
+    ],
+    "checked": true
+  },
+  {
+    "id": "119388",
+    "path": "/games/the-legend-of-zelda-tears-of-the-kingdom/",
+    "title": "The Legend of Zelda: Tears of the Kingdom",
+    "rating": null,
+    "played": true,
+    "year": 2023,
+    "releaseDate": 1683849600,
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5vmg.jpg",
+    "metadataVersion": 1,
+    "metadataFetchedAt": 1791451445783,
+    "gameType": "Main Game",
+    "publishers": [
+      "Nintendo"
+    ],
+    "publisherLogos": {
+      "Nintendo": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl8bi.png"
+    },
+    "gameModes": [
+      "Single player"
+    ],
+    "playerPerspectives": [
+      "Third person"
+    ],
+    "themes": [
+      "Action",
+      "Fantasy",
+      "Science fiction",
+      "Sandbox",
+      "Open world"
+    ],
+    "franchises": [
+      "The Legend of Zelda"
+    ],
+    "gameEngines": [],
+    "igdbId": 119388,
+    "developers": [
+      "Nintendo EPD Production Group No. 3"
+    ],
+    "developerLogos": {
+      "Nintendo EPD Production Group No. 3": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl8cp.png"
+    },
+    "genres": [
+      "Puzzle",
+      "Adventure"
+    ],
+    "checked": true
+  },
+  {
+    "id": "7346",
+    "path": "/games/the-legend-of-zelda-breath-of-the-wild/",
+    "title": "The Legend of Zelda: Breath of the Wild",
+    "rating": null,
+    "played": true,
+    "year": 2017,
+    "releaseDate": 1488499200,
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3p2d.jpg",
+    "metadataVersion": 1,
+    "metadataFetchedAt": 1791451445783,
+    "gameType": "Main Game",
+    "publishers": [
+      "Nintendo"
+    ],
+    "publisherLogos": {
+      "Nintendo": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl8bi.png"
+    },
+    "gameModes": [
+      "Single player"
+    ],
+    "playerPerspectives": [
+      "Third person"
+    ],
+    "themes": [
+      "Action",
+      "Fantasy",
+      "Science fiction",
+      "Sandbox",
+      "Open world"
+    ],
+    "franchises": [
+      "The Legend of Zelda"
+    ],
+    "gameEngines": [
+      "In-house engine",
+      "Havok Physics"
+    ],
+    "igdbId": 7346,
+    "developers": [
+      "Nintendo EPD Production Group No. 3"
+    ],
+    "developerLogos": {
+      "Nintendo EPD Production Group No. 3": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl8cp.png"
+    },
+    "genres": [
+      "Puzzle",
+      "Adventure"
+    ],
+    "checked": true
+  },
+  {
     "id": "403310",
     "path": "/games/call-of-duty-modern-warfare-4/",
     "title": "Call of Duty: Modern Warfare 4",
@@ -786,7 +1422,7 @@
     "id": "325602",
     "path": "/games/onimusha-way-of-the-sword/",
     "title": "Onimusha: Way of the Sword",
-    "rating": null,
+    "rating": 4,
     "year": 2026,
     "companies": [
       "Capcom"

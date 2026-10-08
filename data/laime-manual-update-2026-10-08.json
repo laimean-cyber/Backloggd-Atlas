@@ -1,0 +1,127 @@
+{
+  "updatedOn": "2026-10-08",
+  "source": "User-provided Backloggd screenshots; game metadata matched against IGDB. No log dates or completion statuses inferred for unrated entries.",
+  "favourites": [
+    {
+      "path": "/games/portal/",
+      "title": "Portal",
+      "image": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coay61.jpg"
+    },
+    {
+      "path": "/games/half-life-2/",
+      "title": "Half-Life 2",
+      "image": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co1nmw.jpg"
+    },
+    {
+      "path": "/games/the-witcher-3-wild-hunt/",
+      "title": "The Witcher 3: Wild Hunt",
+      "image": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coaarl.jpg"
+    },
+    {
+      "path": "/games/bloodborne/",
+      "title": "Bloodborne",
+      "image": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cob99l.jpg"
+    },
+    {
+      "path": "/games/dragon-age-origins/",
+      "title": "Dragon Age: Origins",
+      "image": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2mvs.jpg"
+    }
+  ],
+  "added": [
+    {
+      "igdbId": 408607,
+      "path": "/games/guns-of-eschaton/",
+      "title": "Guns of Eschaton",
+      "rating": null
+    },
+    {
+      "igdbId": 225582,
+      "path": "/games/control-resonant--1/",
+      "title": "Control Resonant",
+      "rating": 4
+    },
+    {
+      "igdbId": 94829,
+      "path": "/games/the-incredible-hulk--1/",
+      "title": "The Incredible Hulk",
+      "rating": null
+    },
+    {
+      "igdbId": 24979,
+      "path": "/games/disneys-pocahontas/",
+      "title": "Disney's Pocahontas",
+      "rating": null
+    },
+    {
+      "igdbId": 4531,
+      "path": "/games/x-men/",
+      "title": "X-Men",
+      "rating": null
+    },
+    {
+      "igdbId": 18139,
+      "path": "/games/michael-jacksons-moonwalker/",
+      "title": "Michael Jackson's Moonwalker",
+      "rating": null
+    },
+    {
+      "igdbId": 8118,
+      "path": "/games/disneys-aladdin/",
+      "title": "Disney's Aladdin",
+      "rating": null
+    },
+    {
+      "igdbId": 5378,
+      "path": "/games/ecco-the-dolphin/",
+      "title": "Ecco the Dolphin",
+      "rating": null
+    },
+    {
+      "igdbId": 3166,
+      "path": "/games/the-lion-king/",
+      "title": "The Lion King",
+      "rating": null
+    },
+    {
+      "igdbId": 1619,
+      "path": "/games/mortal-kombat-ii/",
+      "title": "Mortal Kombat II",
+      "rating": null
+    },
+    {
+      "igdbId": 6798,
+      "path": "/games/desert-strike-return-to-the-gulf/",
+      "title": "Desert Strike: Return to the Gulf",
+      "rating": null
+    },
+    {
+      "igdbId": 119388,
+      "path": "/games/the-legend-of-zelda-tears-of-the-kingdom/",
+      "title": "The Legend of Zelda: Tears of the Kingdom",
+      "rating": null
+    },
+    {
+      "igdbId": 7346,
+      "path": "/games/the-legend-of-zelda-breath-of-the-wild/",
+      "title": "The Legend of Zelda: Breath of the Wild",
+      "rating": null
+    }
+  ],
+  "alreadyPresent": [
+    "/games/call-of-duty-modern-warfare-4/",
+    "/games/gears-of-war-e-day/"
+  ],
+  "ratingUpdates": [
+    {
+      "path": "/games/control-resonant--1/",
+      "rating": 4,
+      "logDate": "2026-10-05"
+    },
+    {
+      "path": "/games/onimusha-way-of-the-sword/",
+      "rating": 4,
+      "logDate": "2026-09-23"
+    }
+  ]
+}
