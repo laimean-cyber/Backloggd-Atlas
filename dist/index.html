@@ -315,11 +315,16 @@ button.legend-line{width:100%;border:0;background:transparent;color:inherit;padd
 
   const awardWinners=[{"year":2014,"path":"/games/dragon-age-inquisition/","title":"Dragon Age: Inquisition","image":"https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2mvy.jpg"},{"year":2015,"path":"/games/the-witcher-3-wild-hunt/","title":"The Witcher 3: Wild Hunt","image":"https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coaarl.jpg"},{"year":2016,"path":"/games/overwatch/","title":"Overwatch","image":"https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co1rcb.jpg"},{"year":2017,"path":"/games/the-legend-of-zelda-breath-of-the-wild/","title":"The Legend of Zelda: Breath of the Wild","image":"https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co3p2d.jpg"},{"year":2018,"path":"/games/god-of-war--1/","title":"God of War","image":"https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cobkt6.jpg"},{"year":2019,"path":"/games/sekiro-shadows-die-twice/","title":"Sekiro: Shadows Die Twice","image":"https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2a23.jpg"},{"year":2020,"path":"/games/the-last-of-us-part-ii/","title":"The Last of Us Part II","image":"https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5ziw.jpg"},{"year":2021,"path":"/games/it-takes-two/","title":"It Takes Two","image":"https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cob22v.jpg"},{"year":2022,"path":"/games/elden-ring/","title":"Elden Ring","image":"https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co4jni.jpg"},{"year":2023,"path":"/games/baldurs-gate-iii/","title":"Baldur's Gate 3","image":"https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co670h.jpg"},{"year":2024,"path":"/games/astro-bot/","title":"Astro Bot","image":"https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coba3k.jpg"},{"year":2025,"path":"/games/clair-obscur-expedition-33/","title":"Clair Obscur: Expedition 33","image":"https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co9gam.jpg"}];
   const awardTitleKey=title=>String(title||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/\biii\b/g,'3').replace(/[^a-z0-9]/g,'');
+  const awardEditions={
+    '/games/dragon-age-inquisition/':[{path:'/games/dragon-age-inquisition-game-of-the-year-edition/',title:'Dragon Age: Inquisition - Game of the Year Edition'}]
+  };
   function renderAwards(played){
     let count=0;
     $('awardWinners').innerHTML=awardWinners.map(winner=>{
       const userGame=played.find(game=>game.path?game.path===winner.path:awardTitleKey(game.title)===awardTitleKey(winner.title)&&(winner.title!=='God of War'||Number(game.year)===2018));
-      const didPlay=Boolean(userGame),rating=userGame?.rating;
+      const editions=(awardEditions[winner.path]||[]).flatMap(edition=>played.filter(game=>game.path?game.path===edition.path:awardTitleKey(game.title)===awardTitleKey(edition.title)));
+      const ratedGame=[userGame,...editions].find(game=>Number.isFinite(game?.rating)&&game.rating>0);
+      const didPlay=Boolean(userGame||editions.length),rating=ratedGame?.rating;
       const hasRating=Number.isFinite(rating)&&rating>0;
       const ratingLabel=hasRating?"User rating: "+fmt(rating)+" out of 5 stars":"Unrated";
       const ratingMarkup='<span class="award-rating" role="img" aria-label="'+ratingLabel+'" title="'+ratingLabel+'">'+(hasRating?ratingStars(rating):'Unrated')+'</span>';
