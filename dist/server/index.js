@@ -1,4 +1,5 @@
 import { igdbDetails, metadataBatch } from './igdb.js';
+import { franchiseGames } from './franchise.js';
 import { page } from './page.js';
 import { metadataFresh } from './metadata.js';
 import { parseCommunityRating } from './community.js';
@@ -170,6 +171,12 @@ export default {
         }
       }));
       return ratings.length === paths.length && ratings.every(r => !r.failed) ? publicJson({ ratings }, 3600) : json({ ratings });
+    }
+    if (url.pathname === '/api/franchise') {
+      const name = url.searchParams.get('name') || '';
+      if (!name.trim() || name.length > 180 || /[\x00-\x1f]/.test(name)) return json({ error: 'Invalid franchise name.' }, 400);
+      try { return publicJson(await franchiseGames(name, env), 3600); }
+      catch (error) { return json({ error: error.message, status: error.status || null }, 502); }
     }
     if (url.pathname === '/api/metadata') {
       const paths = url.searchParams.getAll('path');

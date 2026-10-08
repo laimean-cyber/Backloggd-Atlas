@@ -42,6 +42,14 @@ export function createBackloggdClient({fetcher = (...args) => fetch(...args), no
         throw error;
       }
       const html = await response.text();
+      // Bot challenges can return HTTP 200 and contain the Backloggd brand.
+      // Never parse or cache them as empty profiles or completed pagination.
+      if (/anubis_challenge|id=["']anubis-challenge["']|<title>\s*(?:Making sure you|Just a moment|Access denied)/i.test(html)) {
+        const error = Object.assign(new Error('Backloggd is showing our server a bot-verification page. Live profile loading is temporarily unavailable; retry later or import a Backloggd CSV export.'), {status: 403, retryAfter: 60});
+        blockedUntil = now() + 60000;
+        lastError = error;
+        throw error;
+      }
       if (requireBrand && !/backloggd/i.test(html)) throw new Error('Backloggd returned an unexpected page.');
       // Bound HTML memory as well as entry count (game pages can be large).
       if (html.length < 750000) {

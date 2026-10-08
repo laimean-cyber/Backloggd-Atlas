@@ -3,6 +3,20 @@ import assert from 'node:assert/strict';
 import {createBackloggdClient} from '../dist/server/backloggd.js';
 import app from '../dist/server/index.js';
 import {page} from '../dist/server/page.js';
+import {metadataComplete} from '../dist/server/metadata.js';
+
+test('HTTP 200 bot challenges are rejected rather than cached as empty libraries',async()=>{
+  let time=1000,calls=0;
+  const client=createBackloggdClient({now:()=>time,sleep:async ms=>{time+=ms},fetcher:async()=>{
+    calls++;return new Response(calls===1?'<title>Making sure you&#39;re not a bot!</title>Backloggd':'<title>Backloggd profile</title>');
+  }});
+  await assert.rejects(client('/u/splinefx/games'),e=>e.status===403&&e.retryAfter===60&&/bot-verification/.test(e.message));
+  await assert.rejects(client('/u/splinefx/games'),e=>e.status===403);
+  assert.equal(calls,1);
+  time+=60001;
+  assert.match(await client('/u/splinefx/games'),/profile/);
+  assert.equal(calls,2);
+});
 
 test('Backloggd shares concurrent HTML fetches and spaces different pages',async()=>{
   let time=1000; const starts=[];
@@ -50,7 +64,7 @@ test('fresh browsers load a profile through the shared API without localStorage'
       assert.match(response.headers.get('vercel-cdn-cache-control'),/s-maxage=300/);
       return response.json();
     };
-    const load=new Function('api','readLibrary','saveLibrary','readMetadata','$',code+';return loadCards;')(api,()=>null,()=>{},()=>null,()=>({textContent:''}));
+    const load=new Function('api','readLibrary','saveLibrary','readMetadata','$','metadataComplete','let profileLoadWarning="";'+code+';return loadCards;')(api,()=>null,()=>{},()=>null,()=>({textContent:''}),metadataComplete);
     const first=await load('FreshDeviceTest');
     const second=await load('FreshDeviceTest');
     assert.equal(first.all[0].title,'Fresh device game');
@@ -70,4 +84,18 @@ test('profile failures preserve upstream status and are never CDN cached',async(
     assert.equal(response.headers.get('cache-control'),'no-store');
     assert.equal(response.headers.get('vercel-cdn-cache-control'),null);
   }finally{globalThis.fetch=original;}
+});
+
+test('expired saved libraries remain available for outage fallback without erasing metadata',async()=>{
+  const snapshot={savedAt:Date.now()-30*86400000,games:[{id:'1',path:'/games/saved/',title:'Saved',checked:true,genres:['Shooter'],rating:4}]};
+  const readCode=page.slice(page.indexOf('function readLibrary(username)'),page.indexOf('function saveLibrary(username'));
+  const read=new Function('localStorage','libraryKey',readCode+';return readLibrary;')({getItem:()=>JSON.stringify(snapshot)},x=>x);
+  assert.deepEqual(read('splinefx'),snapshot);
+  const code=page.slice(page.indexOf('async function loadCards(username)'),page.indexOf('const libraryKey='));
+  let requests=0,saves=0;
+  const load=new Function('api','readLibrary','saveLibrary','readMetadata','metadataComplete','$','let profileLoadWarning="";'+code+';return async name=>({result:await loadCards(name),warning:profileLoadWarning});')(
+    async()=>{requests++;throw Error('Bot verification required')},()=>structuredClone(snapshot),()=>{saves++},()=>null,g=>g.checked,()=>({textContent:''}));
+  const {result,warning}=await load('splinefx');
+  assert.equal(requests,1);assert.equal(saves,0);assert.equal(result.fromCache,true);assert.equal(result.savedAt,snapshot.savedAt);
+  assert.deepEqual(result.all[0].genres,['Shooter']);assert.equal(result.all[0].rating,4);assert.equal(warning,'Bot verification required');
 });

@@ -25,7 +25,13 @@ and open `http://localhost:4174`. Build first after changing the application pag
 The Franchise rating journey panel includes every franchise with five or more
 played entries, excluding DLC. Entries use exact release dates when
 available, then release year and title; undated entries appear last. Unrated
-entries are available through each chart's Show unrated menu, and lines connect rated entries only.
+entries are available through each chart's Show unrated and unplayed menu, and lines connect rated entries only.
+The menu queries IGDB on demand for released franchise games, excluding DLC,
+packs/addons, seasons, bundles, updates, and alternate editions, and separates
+played-but-unrated games from unplayed games.
+IGDB IDs and library paths exclude played entries; unplayed games do not change
+chart counts or averages. Catalog responses are cached for one hour, and failed
+lookups offer a retry. Run `node tests/journey-unplayed.cjs` to check the menu.
 Franchises require at least three rated entries and sort by rated-entry count.
 The panel initially shows two charts; its expand button reveals all qualifying
 franchises. Cover posters appear directly on the chart
