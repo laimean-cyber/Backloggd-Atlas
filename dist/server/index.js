@@ -34,6 +34,16 @@ function parseCards(html) {
   return cards;
 }
 
+export function parseProfileAvatar(html) {
+  const tags=html.match(/<meta\b[^>]*>/gi)||[];
+  for(const tag of tags){
+    if(!/(?:property|itemprop)=["'](?:og:image|image)["']/i.test(tag))continue;
+    const source=decode(tag.match(/content=["']([^"']+)["']/i)?.[1]);
+    try{const url=new URL(source);if(url.protocol==='https:'&&url.hostname==='backloggd-avatars.b-cdn.net')return url.href}catch{}
+  }
+  return null;
+}
+
 export function parseFavourites(html) {
   const start = html.search(/<div\b[^>]*\bid=["']profile-favorites["'][^>]*>/i);
   if (start < 0) return [];
@@ -133,7 +143,7 @@ export default {
     if (url.pathname === '/api/favourites') {
       const username = url.searchParams.get('user') || '';
       if (!/^[A-Za-z0-9_-]{1,40}$/.test(username)) return json({ error: 'Enter a valid Backloggd nickname.' }, 400);
-      try { return publicJson(await cached('favourites:'+username.toLowerCase(), async () => ({ favourites: parseFavourites(await upstream(`/u/${encodeURIComponent(username)}/`)) }), 300000), 300); }
+      try { return publicJson(await cached('favourites:'+username.toLowerCase(), async () => { const html=await upstream(`/u/${encodeURIComponent(username)}/`);return { favourites: parseFavourites(html), avatar: parseProfileAvatar(html) }; }, 300000), 300); }
       catch (error) { return json({ error: error.message, status: error.status || null, retryAfter: error.retryAfter || null }, 502); }
     }
     if (url.pathname === '/api/page') {
