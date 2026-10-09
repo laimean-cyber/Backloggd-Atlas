@@ -22,6 +22,17 @@ Run `npm run test:vercel` to check page output and API routing locally.
 For a local preview, run `node --env-file=.env.local scripts/serve-local.mjs`
 and open `http://localhost:4174`. Build first after changing the application page.
 
+Games through the decades follows the release-year chart, showing the 2020s
+back to the earliest decade in the played library. Each era includes all games
+rated 5 or 4.5 stars in a horizontally scrolling strip (five visible on desktop),
+separate developer leaders by played count and average rating,
+three leading genres, and a comparison against the entire played library.
+Favourite developers require three rated games within that decade; developer
+statistics exclude DLC and expansions. Missing years remain outside the era groups.
+If a decade has no 5- or 4.5-star games, the strip shows every game tied at that
+decade's highest available rating; decades without ratings show an empty state.
+Run `node tests/decades.cjs` against the local server for calculation and responsive checks.
+
 The Franchise rating journey panel includes every franchise with five or more
 played entries, excluding DLC. Entries use exact release dates when
 available, then release year and title; undated entries appear last. Unrated
