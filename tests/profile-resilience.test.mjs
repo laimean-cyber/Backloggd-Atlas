@@ -57,7 +57,7 @@ test('fresh browsers load a profile through the shared API without localStorage'
     return new Response('<html>Backloggd<div class="game-cover" game_id="123"><a class="cover-link" href="/games/fresh-device/"><img alt="Fresh device game"></a><span data-rating="8"></span></div></html>');
   };
   try {
-    const code=page.slice(page.indexOf('async function loadCards(username)'),page.indexOf('const libraryKey='));
+    const code=page.slice(page.indexOf('async function loadCards('),page.indexOf('const libraryKey='));
     const api=async path=>{
       const response=await app.fetch(new Request('https://test'+path));
       assert.equal(response.status,200);
@@ -91,7 +91,7 @@ test('expired saved libraries remain available for outage fallback without erasi
   const readCode=page.slice(page.indexOf('function readLibrary(username)'),page.indexOf('function saveLibrary(username'));
   const read=new Function('localStorage','libraryKey',readCode+';return readLibrary;')({getItem:()=>JSON.stringify(snapshot)},x=>x);
   assert.deepEqual(read('splinefx'),snapshot);
-  const code=page.slice(page.indexOf('async function loadCards(username)'),page.indexOf('const libraryKey='));
+  const code=page.slice(page.indexOf('async function loadCards('),page.indexOf('const libraryKey='));
   let requests=0,saves=0;
   const load=new Function('api','readLibrary','saveLibrary','readMetadata','metadataComplete','$','let profileLoadWarning="";'+code+';return async name=>({result:await loadCards(name),warning:profileLoadWarning});')(
     async()=>{requests++;throw Error('Bot verification required')},()=>structuredClone(snapshot),()=>{saves++},()=>null,g=>g.checked,()=>({textContent:''}));

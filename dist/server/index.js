@@ -39,7 +39,7 @@ export function parseProfileAvatar(html) {
   for(const tag of tags){
     if(!/(?:property|itemprop)=["'](?:og:image|image)["']/i.test(tag))continue;
     const source=decode(tag.match(/content=["']([^"']+)["']/i)?.[1]);
-    try{const url=new URL(source);if(url.protocol==='https:'&&url.hostname==='backloggd-avatars.b-cdn.net')return url.href}catch{}
+    try{const url=new URL(source);if(url.protocol==='https:'&&['backloggd-avatars.b-cdn.net','backloggd-s3.b-cdn.net'].includes(url.hostname))return url.href}catch{}
   }
   return null;
 }
@@ -195,7 +195,7 @@ export default {
       const pending = paths.map(async path => {
         try { return await igdbDetails(path, '', env, batch); }
         catch (error) {
-          if (error.message !== 'No matching IGDB game was found.') throw error;
+          if (error.message !== 'No matching IGDB game was found.' || url.searchParams.get('igdbOnly') === '1') throw error;
           // Use Backloggd's explicit IGDB link only when its own slug does not match.
           const source = await gamePage(path);
           if (!source.igdbLink) throw error;

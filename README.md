@@ -19,6 +19,40 @@ are required for game metadata; they must stay server-side and out of Git.
 
 Run `npm run test:vercel` to check page output and API routing locally.
 
+## Import a saved Backloggd library
+
+The always-visible profile availability notice includes an HTML importer. Sign in
+to Backloggd, open your Played games, sort by **Game rating**, and scroll until
+the entire list has loaded. Save the page as HTML and select that file in Atlas.
+The preview shows the profile, game count, personal ratings and community averages;
+choose **Import and build dashboard** to replace that profile's local snapshot.
+The accompanying assets folder is not needed. HTML is parsed in an inert template
+in the browser; its scripts, frames, account controls and cookies are not imported.
+
+The importer accepts relative and absolute game links and reads each card's
+`data-rating` (out of 10) and its own column's `.avg-rating` (out of 5). It deduplicates
+game IDs and rejects conflicting cards, invalid ratings, verification pages and
+unfinished loading markers. Without an end marker, the preview asks users to check
+the count rather than claiming completeness. Missing community averages stay unknown.
+
+Imported snapshots are restored from browser storage without a live profile fetch.
+Their ratings survive IGDB enrichment and older metadata caches. Imported libraries
+use `/api/metadata?igdbOnly=1`, which does not fall back to Backloggd for unmatched
+slugs, and skip automatic Backloggd statistics/favourites retrieval. Reimport a newly
+saved HTML page to update personal and community ratings. Existing cached playtimes
+or play counts may still be displayed; favourites are not included in Games HTML.
+
+Run `node --test tests/html-import-api.test.mjs` for the IGDB-only contract and
+`node tests/html-import.cjs "path/to/saved.html"` against the local preview for the
+parser, import/reload, malicious/incomplete files, and desktop/mobile checks. The
+optional saved-file argument verifies a real export without copying it into the repo.
+
+The Gaming Passport description combines the top two beloved genres, excluding
+Adventure. Genres qualify with personal ratings and at least 10% of played games;
+they rank by average personal rating, then game count and name. Compact descriptions
+fit beside the avatar and nickname. Imports read the profile-header avatar and
+support both Backloggd image hosts, including saved-page asset filenames.
+
 For a local preview, run `node --env-file=.env.local scripts/serve-local.mjs`
 and open `http://localhost:4174`. Build first after changing the application page.
 
