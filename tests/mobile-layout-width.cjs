@@ -21,6 +21,20 @@ const { chromium } = require('C:/Users/Laimean/.cache/codex-runtimes/codex-prima
       assert.equal(layout.overflow, false);
       assert.equal(layout.facts, 3);
       assert.equal(layout.posters, 4);
+      if (width <= 600) {
+        const charts = await page.evaluate(() => {
+          const donut = document.querySelector('#donut').getBoundingClientRect();
+          const panel = document.querySelector('.modes-panel');
+          const card = panel.getBoundingClientRect();
+          const lastBar = panel.querySelector('.mode-bar:last-child').getBoundingClientRect();
+          return { donutWidth: donut.width, donutHeight: donut.height, lastBottom: lastBar.bottom, cardBottom: card.bottom - parseFloat(getComputedStyle(panel).paddingBottom), scrollHeight: panel.scrollHeight, height: panel.clientHeight };
+        });
+        assert(Math.abs(charts.donutWidth - charts.donutHeight) < 1, 'Rating donut must stay circular');
+        assert(charts.lastBottom <= charts.cardBottom + 1, 'All mode bars must fit within card padding');
+        assert(charts.scrollHeight <= charts.height, 'Mode card must not overflow vertically');
+        await page.locator('#donut').locator('..').locator('..').screenshot({ path: `.impeccable/review/rating-fit-${width}.png` });
+        await page.locator('.modes-panel').first().screenshot({ path: `.impeccable/review/modes-fit-${width}.png` });
+      }
       if (width < 600) assert(Math.abs(layout.scale - width / 600) < 0.01);
       if (width < 600) {
         const fit = await page.evaluate(() => {
