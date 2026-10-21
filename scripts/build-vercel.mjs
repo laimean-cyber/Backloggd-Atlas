@@ -1,4 +1,4 @@
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, writeFile, copyFile } from 'node:fs/promises';
 import { page } from '../dist/server/page.js';
 import { validateLibrary } from './validate-library.mjs';
 
@@ -17,4 +17,6 @@ const publishedPage = page.replace('</head>', analytics + '</head>');
 const output = new URL('../public/', import.meta.url);
 await mkdir(output, { recursive: true });
 await writeFile(new URL('index.html', output), publishedPage, 'utf8');
+await mkdir(new URL('social/', output), { recursive: true });
+await copyFile(new URL('../assets/social/atlas-desktop-v1.png', import.meta.url), new URL('social/atlas-desktop-v1.png', output));
 console.log('Built public/index.html from the application page.');

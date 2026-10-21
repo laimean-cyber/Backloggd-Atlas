@@ -15,7 +15,11 @@ are required for game metadata; they must stay server-side and out of Git.
 
 `npm run build` generates `public/index.html` from `dist/server/page.js`.
 `api/[...path].mjs` forwards API requests to the existing application in
-`dist/server/index.js`. Only the generated page is published as a static asset.
+`dist/server/index.js`. The generated page and the desktop sharing screenshot in
+`assets/social/` are published as static assets. Open Graph tags in the application
+page point to `/social/atlas-desktop-v1.png`. When replacing the screenshot, use a
+new filename, update the tags and build copy, and refresh the URL in LinkedIn Post
+Inspector before re-adding it to a project or post.
 
 Run `npm run test:vercel` to check page output and API routing locally.
 
