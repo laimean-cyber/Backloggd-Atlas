@@ -1,0 +1,50 @@
+{
+  "updatedOn": "2026-10-28",
+  "source": "User-provided Backloggd screenshot; exact game editions matched against IGDB.",
+  "notes": "Unrated entries remain null. No log dates, completion statuses, playtimes, or community ratings inferred. The Battlefield 6 heart is recorded as liked, separately from profile favourites. Original Ghost of Yotei remains a separate existing entry.",
+  "entries": [
+    {
+      "igdbId": 107300,
+      "path": "/games/thronebreaker-the-witcher-tales/",
+      "title": "Thronebreaker: The Witcher Tales",
+      "rating": 3.5,
+      "action": "added"
+    },
+    {
+      "igdbId": 420600,
+      "path": "/games/unharvest/",
+      "title": "Unharvest",
+      "rating": null,
+      "action": "added"
+    },
+    {
+      "igdbId": 412177,
+      "path": "/games/probably-stolen/",
+      "title": "Probably Stolen",
+      "rating": null,
+      "action": "added"
+    },
+    {
+      "igdbId": 411093,
+      "path": "/games/abyssal-lapidary/",
+      "title": "Abyssal Lapidary",
+      "rating": null,
+      "action": "added"
+    },
+    {
+      "igdbId": 317407,
+      "path": "/games/battlefield-6/",
+      "title": "Battlefield 6",
+      "rating": 3.5,
+      "liked": true,
+      "action": "updated"
+    },
+    {
+      "igdbId": 413275,
+      "path": "/games/ghost-of-yotei-complete-edition/",
+      "title": "Ghost of Yotei: Complete Edition",
+      "rating": 3.5,
+      "action": "added"
+    }
+  ]
+}

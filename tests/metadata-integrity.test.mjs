@@ -25,12 +25,12 @@ test('franchise normalization includes primary and multiple franchises without d
 
 test('bundled Witcher membership and expansion exclusions are correct',()=>{
   const witcher=library.filter(g=>g.franchises?.includes('The Witcher'));
-  assert.equal(witcher.length,6);
+  assert.equal(witcher.length,7);
   const core=witcher.filter(g=>!['Expansion','DLC'].includes(g.gameType));
-  assert.deepEqual(core.map(g=>g.path).sort(),['/games/the-witcher/','/games/the-witcher-enhanced-edition/','/games/the-witcher-2-assassins-of-kings/','/games/the-witcher-3-wild-hunt/'].sort());
+  assert.deepEqual(core.map(g=>g.path).sort(),['/games/thronebreaker-the-witcher-tales/','/games/the-witcher/','/games/the-witcher-enhanced-edition/','/games/the-witcher-2-assassins-of-kings/','/games/the-witcher-3-wild-hunt/'].sort());
   const ratings=core.map(g=>g.rating).filter(Number.isFinite);
-  assert.equal(ratings.length,3);
-  assert.equal(ratings.reduce((a,b)=>a+b)/ratings.length,4.5);
+  assert.equal(ratings.length,4);
+  assert.equal(ratings.reduce((a,b)=>a+b)/ratings.length,4.25);
   assert.equal(library.filter(g=>g.franchises?.includes('Total War')&&!['Expansion','DLC'].includes(g.gameType)).length,8);
   assert.equal(library.filter(g=>g.franchises?.includes('Call of Duty')&&!['Expansion','DLC'].includes(g.gameType)).length,15);
 });

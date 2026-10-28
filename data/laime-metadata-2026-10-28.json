@@ -1,0 +1,514 @@
+[
+  {
+    "id": 412177,
+    "cover": {
+      "id": 588585,
+      "image_id": "cocm5l"
+    },
+    "first_release_date": 1793145600,
+    "game_engines": [
+      {
+        "id": 13,
+        "name": "Unity"
+      }
+    ],
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      }
+    ],
+    "genres": [
+      {
+        "id": 12,
+        "name": "Role-playing (RPG)"
+      },
+      {
+        "id": 13,
+        "name": "Simulator"
+      },
+      {
+        "id": 15,
+        "name": "Strategy"
+      },
+      {
+        "id": 32,
+        "name": "Indie"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 407214,
+        "company": {
+          "id": 5040,
+          "logo": {
+            "id": 594,
+            "image_id": "eiil6px7rjzsj3aoq1za"
+          },
+          "name": "tinyBuild"
+        },
+        "developer": false,
+        "publisher": true
+      },
+      {
+        "id": 407215,
+        "company": {
+          "id": 61831,
+          "logo": {
+            "id": 25811,
+            "image_id": "cljwz"
+          },
+          "name": "Questing Goose Studio"
+        },
+        "developer": true,
+        "publisher": false
+      }
+    ],
+    "name": "Probably Stolen",
+    "player_perspectives": [
+      {
+        "id": 1,
+        "name": "First person"
+      },
+      {
+        "id": 5,
+        "name": "Text"
+      }
+    ],
+    "slug": "probably-stolen",
+    "themes": [
+      {
+        "id": 18,
+        "name": "Science fiction"
+      },
+      {
+        "id": 28,
+        "name": "Business"
+      }
+    ],
+    "game_type": {
+      "id": 0,
+      "type": "Main Game"
+    }
+  },
+  {
+    "id": 413275,
+    "cover": {
+      "id": 591526,
+      "image_id": "cocofa"
+    },
+    "first_release_date": 1790812800,
+    "game_engines": [
+      {
+        "id": 149,
+        "name": "Proprietary Engine"
+      }
+    ],
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      }
+    ],
+    "genres": [
+      {
+        "id": 12,
+        "name": "Role-playing (RPG)"
+      },
+      {
+        "id": 31,
+        "name": "Adventure"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 407490,
+        "company": {
+          "id": 403,
+          "logo": {
+            "id": 1414,
+            "image_id": "ocslftmxjx7qzjie63qk"
+          },
+          "name": "Sucker Punch Productions"
+        },
+        "developer": true,
+        "publisher": false
+      },
+      {
+        "id": 407491,
+        "company": {
+          "id": 10100,
+          "logo": {
+            "id": 5618,
+            "image_id": "cl4c2"
+          },
+          "name": "Sony Interactive Entertainment"
+        },
+        "developer": false,
+        "publisher": true
+      }
+    ],
+    "name": "Ghost of Yotei: Complete Edition",
+    "player_perspectives": [
+      {
+        "id": 2,
+        "name": "Third person"
+      }
+    ],
+    "slug": "ghost-of-yotei-complete-edition",
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      },
+      {
+        "id": 22,
+        "name": "Historical"
+      },
+      {
+        "id": 23,
+        "name": "Stealth"
+      },
+      {
+        "id": 38,
+        "name": "Open world"
+      }
+    ],
+    "game_type": {
+      "id": 10,
+      "type": "Expanded Game"
+    }
+  },
+  {
+    "id": 317407,
+    "cover": {
+      "id": 474329,
+      "image_id": "coa5zt"
+    },
+    "first_release_date": 1760054400,
+    "franchises": [
+      {
+        "id": 1036,
+        "name": "Battlefield"
+      }
+    ],
+    "game_engines": [
+      {
+        "id": 2,
+        "name": "Frostbite"
+      }
+    ],
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      },
+      {
+        "id": 2,
+        "name": "Multiplayer"
+      }
+    ],
+    "genres": [
+      {
+        "id": 5,
+        "name": "Shooter"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 288037,
+        "company": {
+          "id": 1,
+          "logo": {
+            "id": 20818,
+            "image_id": "clg2a"
+          },
+          "name": "Electronic Arts"
+        },
+        "developer": false,
+        "publisher": true
+      },
+      {
+        "id": 288040,
+        "company": {
+          "id": 12478,
+          "logo": {
+            "id": 6377,
+            "image_id": "cl4x5"
+          },
+          "name": "Motive Studios"
+        },
+        "developer": false,
+        "publisher": false
+      },
+      {
+        "id": 288041,
+        "company": {
+          "id": 45638,
+          "logo": {
+            "id": 18318,
+            "image_id": "cle4u"
+          },
+          "name": "Ripple Effect"
+        },
+        "developer": false,
+        "publisher": false
+      },
+      {
+        "id": 288039,
+        "company": {
+          "id": 347,
+          "logo": {
+            "id": 6887,
+            "image_id": "cl5bb"
+          },
+          "name": "Criterion Games"
+        },
+        "developer": false,
+        "publisher": false
+      },
+      {
+        "id": 403649,
+        "company": {
+          "id": 94,
+          "logo": {
+            "id": 374,
+            "image_id": "srtuszl5jkb0ykhzyt6l"
+          },
+          "name": "EA Digital Illusions CE"
+        },
+        "developer": true,
+        "publisher": false
+      }
+    ],
+    "name": "Battlefield 6",
+    "player_perspectives": [
+      {
+        "id": 1,
+        "name": "First person"
+      }
+    ],
+    "slug": "battlefield-6",
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      },
+      {
+        "id": 39,
+        "name": "Warfare"
+      }
+    ],
+    "game_type": {
+      "id": 0,
+      "type": "Main Game"
+    }
+  },
+  {
+    "id": 411093,
+    "cover": {
+      "id": 613873,
+      "image_id": "cod5o1"
+    },
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      }
+    ],
+    "genres": [
+      {
+        "id": 12,
+        "name": "Role-playing (RPG)"
+      },
+      {
+        "id": 13,
+        "name": "Simulator"
+      },
+      {
+        "id": 32,
+        "name": "Indie"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 424070,
+        "company": {
+          "id": 83356,
+          "name": "Light Worm"
+        },
+        "developer": true,
+        "publisher": false
+      },
+      {
+        "id": 424071,
+        "company": {
+          "id": 39462,
+          "logo": {
+            "id": 19564,
+            "image_id": "clf3g"
+          },
+          "name": "XD"
+        },
+        "developer": false,
+        "publisher": true
+      }
+    ],
+    "name": "Abyssal Lapidary",
+    "player_perspectives": [
+      {
+        "id": 1,
+        "name": "First person"
+      }
+    ],
+    "slug": "abyssal-lapidary",
+    "themes": [
+      {
+        "id": 17,
+        "name": "Fantasy"
+      }
+    ],
+    "game_type": {
+      "id": 0,
+      "type": "Main Game"
+    }
+  },
+  {
+    "id": 420600,
+    "cover": {
+      "id": 606960,
+      "image_id": "cod0c0"
+    },
+    "first_release_date": 1796601600,
+    "game_engines": [
+      {
+        "id": 13,
+        "name": "Unity"
+      }
+    ],
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      }
+    ],
+    "genres": [
+      {
+        "id": 13,
+        "name": "Simulator"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 417072,
+        "company": {
+          "id": 73674,
+          "logo": {
+            "id": 22345,
+            "image_id": "clh8p"
+          },
+          "name": "SkorpionDev"
+        },
+        "developer": true,
+        "publisher": true
+      }
+    ],
+    "name": "Unharvest",
+    "player_perspectives": [
+      {
+        "id": 1,
+        "name": "First person"
+      }
+    ],
+    "slug": "unharvest",
+    "game_type": {
+      "id": 0,
+      "type": "Main Game"
+    }
+  },
+  {
+    "id": 107300,
+    "cover": {
+      "id": 81380,
+      "image_id": "co1qsk"
+    },
+    "first_release_date": 1540252800,
+    "franchises": [
+      {
+        "id": 452,
+        "name": "The Witcher"
+      }
+    ],
+    "game_engines": [
+      {
+        "id": 13,
+        "name": "Unity"
+      }
+    ],
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      }
+    ],
+    "genres": [
+      {
+        "id": 9,
+        "name": "Puzzle"
+      },
+      {
+        "id": 12,
+        "name": "Role-playing (RPG)"
+      },
+      {
+        "id": 15,
+        "name": "Strategy"
+      },
+      {
+        "id": 16,
+        "name": "Turn-based strategy (TBS)"
+      },
+      {
+        "id": 31,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Card & Board Game"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 91756,
+        "company": {
+          "id": 908,
+          "logo": {
+            "id": 3080,
+            "image_id": "cl2dk"
+          },
+          "name": "CD Projekt RED"
+        },
+        "developer": true,
+        "publisher": true
+      }
+    ],
+    "name": "Thronebreaker: The Witcher Tales",
+    "player_perspectives": [
+      {
+        "id": 3,
+        "name": "Bird view / Isometric"
+      }
+    ],
+    "slug": "thronebreaker-the-witcher-tales",
+    "themes": [
+      {
+        "id": 17,
+        "name": "Fantasy"
+      }
+    ],
+    "game_type": {
+      "id": 4,
+      "type": "Standalone Expansion"
+    }
+  }
+]

@@ -1,0 +1,632 @@
+[
+  {
+    "width": 1440,
+    "panels": [
+      {
+        "title": "Favourite games",
+        "empty": []
+      },
+      {
+        "title": "Games by release year",
+        "empty": []
+      },
+      {
+        "title": "Games through the decades",
+        "empty": []
+      },
+      {
+        "title": "Developers you rate highest",
+        "empty": []
+      },
+      {
+        "title": "Publishers you rate highest",
+        "empty": []
+      },
+      {
+        "title": "Your rating spread",
+        "empty": []
+      },
+      {
+        "title": "Your game mode spread",
+        "empty": []
+      },
+      {
+        "title": "You versus the community",
+        "empty": []
+      },
+      {
+        "title": "The Game Awards winners",
+        "empty": []
+      },
+      {
+        "title": "You versus the critics",
+        "empty": [
+          "No Metacritic scores available yet.",
+          "No Metacritic scores available yet."
+        ]
+      },
+      {
+        "title": "Franchises",
+        "empty": []
+      },
+      {
+        "title": "Game engines",
+        "empty": []
+      },
+      {
+        "title": "Franchise rating journey",
+        "empty": []
+      },
+      {
+        "title": "Your taste vs. popularity",
+        "empty": []
+      },
+      {
+        "title": "Release-year explorer",
+        "empty": []
+      },
+      {
+        "title": "Genres across your games",
+        "empty": []
+      },
+      {
+        "title": "Genre preference map",
+        "empty": []
+      },
+      {
+        "title": "Player perspectives",
+        "empty": []
+      },
+      {
+        "title": "Themes",
+        "empty": []
+      },
+      {
+        "title": "Release year × genre heatmap",
+        "empty": []
+      },
+      {
+        "title": "Beyond the averages",
+        "empty": []
+      }
+    ],
+    "played": 674,
+    "rated": 463,
+    "average": 3.497840172786177,
+    "displayedPlayed": "674",
+    "years": 670,
+    "decades": 670,
+    "journeys": [
+      {
+        "name": "Resident Evil",
+        "count": 15,
+        "rated": 14
+      },
+      {
+        "name": "Call of Duty",
+        "count": 15,
+        "rated": 13
+      },
+      {
+        "name": "Assassin's Creed",
+        "count": 11,
+        "rated": 10
+      },
+      {
+        "name": "Battlefield",
+        "count": 7,
+        "rated": 7
+      },
+      {
+        "name": "The Last of Us",
+        "count": 7,
+        "rated": 7
+      },
+      {
+        "name": "Uncharted",
+        "count": 7,
+        "rated": 7
+      },
+      {
+        "name": "DC Comics",
+        "count": 7,
+        "rated": 6
+      },
+      {
+        "name": "The Witcher",
+        "count": 7,
+        "rated": 6
+      },
+      {
+        "name": "Half-Life",
+        "count": 6,
+        "rated": 6
+      },
+      {
+        "name": "Harry Potter",
+        "count": 6,
+        "rated": 6
+      },
+      {
+        "name": "Marvel",
+        "count": 9,
+        "rated": 5
+      },
+      {
+        "name": "Need for Speed",
+        "count": 9,
+        "rated": 5
+      },
+      {
+        "name": "Batman",
+        "count": 6,
+        "rated": 5
+      },
+      {
+        "name": "Far Cry",
+        "count": 6,
+        "rated": 5
+      },
+      {
+        "name": "Mass Effect",
+        "count": 6,
+        "rated": 5
+      },
+      {
+        "name": "Dark Souls",
+        "count": 8,
+        "rated": 4
+      },
+      {
+        "name": "Dragon Age",
+        "count": 5,
+        "rated": 4
+      },
+      {
+        "name": "Spider-Man",
+        "count": 5,
+        "rated": 4
+      },
+      {
+        "name": "The Elder Scrolls",
+        "count": 5,
+        "rated": 4
+      },
+      {
+        "name": "Bioshock",
+        "count": 8,
+        "rated": 3
+      },
+      {
+        "name": "Colin McRae",
+        "count": 5,
+        "rated": 3
+      }
+    ],
+    "community": "463 of 463 rated games compared · scores out of 5 · charts show rating differences; equal ratings omitted · hidden gems use play counts, not rating gaps.",
+    "critics": "0 of 463 rated games compared · main game Metascore ÷ 20 · scores out of 5 · largest gaps first · equal ratings omitted.",
+    "time": "Estimated from 642 games with average time data",
+    "drillErrors": [],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "panels": [
+      {
+        "title": "Favourite games",
+        "empty": []
+      },
+      {
+        "title": "Games by release year",
+        "empty": []
+      },
+      {
+        "title": "Games through the decades",
+        "empty": []
+      },
+      {
+        "title": "Developers you rate highest",
+        "empty": []
+      },
+      {
+        "title": "Publishers you rate highest",
+        "empty": []
+      },
+      {
+        "title": "Your rating spread",
+        "empty": []
+      },
+      {
+        "title": "Your game mode spread",
+        "empty": []
+      },
+      {
+        "title": "You versus the community",
+        "empty": []
+      },
+      {
+        "title": "The Game Awards winners",
+        "empty": []
+      },
+      {
+        "title": "You versus the critics",
+        "empty": [
+          "No Metacritic scores available yet.",
+          "No Metacritic scores available yet."
+        ]
+      },
+      {
+        "title": "Franchises",
+        "empty": []
+      },
+      {
+        "title": "Game engines",
+        "empty": []
+      },
+      {
+        "title": "Franchise rating journey",
+        "empty": []
+      },
+      {
+        "title": "Your taste vs. popularity",
+        "empty": []
+      },
+      {
+        "title": "Release-year explorer",
+        "empty": []
+      },
+      {
+        "title": "Genres across your games",
+        "empty": []
+      },
+      {
+        "title": "Genre preference map",
+        "empty": []
+      },
+      {
+        "title": "Player perspectives",
+        "empty": []
+      },
+      {
+        "title": "Themes",
+        "empty": []
+      },
+      {
+        "title": "Release year × genre heatmap",
+        "empty": []
+      },
+      {
+        "title": "Beyond the averages",
+        "empty": []
+      }
+    ],
+    "played": 674,
+    "rated": 463,
+    "average": 3.497840172786177,
+    "displayedPlayed": "674",
+    "years": 670,
+    "decades": 670,
+    "journeys": [
+      {
+        "name": "Resident Evil",
+        "count": 15,
+        "rated": 14
+      },
+      {
+        "name": "Call of Duty",
+        "count": 15,
+        "rated": 13
+      },
+      {
+        "name": "Assassin's Creed",
+        "count": 11,
+        "rated": 10
+      },
+      {
+        "name": "Battlefield",
+        "count": 7,
+        "rated": 7
+      },
+      {
+        "name": "The Last of Us",
+        "count": 7,
+        "rated": 7
+      },
+      {
+        "name": "Uncharted",
+        "count": 7,
+        "rated": 7
+      },
+      {
+        "name": "DC Comics",
+        "count": 7,
+        "rated": 6
+      },
+      {
+        "name": "The Witcher",
+        "count": 7,
+        "rated": 6
+      },
+      {
+        "name": "Half-Life",
+        "count": 6,
+        "rated": 6
+      },
+      {
+        "name": "Harry Potter",
+        "count": 6,
+        "rated": 6
+      },
+      {
+        "name": "Marvel",
+        "count": 9,
+        "rated": 5
+      },
+      {
+        "name": "Need for Speed",
+        "count": 9,
+        "rated": 5
+      },
+      {
+        "name": "Batman",
+        "count": 6,
+        "rated": 5
+      },
+      {
+        "name": "Far Cry",
+        "count": 6,
+        "rated": 5
+      },
+      {
+        "name": "Mass Effect",
+        "count": 6,
+        "rated": 5
+      },
+      {
+        "name": "Dark Souls",
+        "count": 8,
+        "rated": 4
+      },
+      {
+        "name": "Dragon Age",
+        "count": 5,
+        "rated": 4
+      },
+      {
+        "name": "Spider-Man",
+        "count": 5,
+        "rated": 4
+      },
+      {
+        "name": "The Elder Scrolls",
+        "count": 5,
+        "rated": 4
+      },
+      {
+        "name": "Bioshock",
+        "count": 8,
+        "rated": 3
+      },
+      {
+        "name": "Colin McRae",
+        "count": 5,
+        "rated": 3
+      }
+    ],
+    "community": "463 of 463 rated games compared · scores out of 5 · charts show rating differences; equal ratings omitted · hidden gems use play counts, not rating gaps.",
+    "critics": "0 of 463 rated games compared · main game Metascore ÷ 20 · scores out of 5 · largest gaps first · equal ratings omitted.",
+    "time": "Estimated from 642 games with average time data",
+    "drillErrors": [],
+    "errors": []
+  },
+  {
+    "width": 320,
+    "panels": [
+      {
+        "title": "Favourite games",
+        "empty": []
+      },
+      {
+        "title": "Games by release year",
+        "empty": []
+      },
+      {
+        "title": "Games through the decades",
+        "empty": []
+      },
+      {
+        "title": "Developers you rate highest",
+        "empty": []
+      },
+      {
+        "title": "Publishers you rate highest",
+        "empty": []
+      },
+      {
+        "title": "Your rating spread",
+        "empty": []
+      },
+      {
+        "title": "Your game mode spread",
+        "empty": []
+      },
+      {
+        "title": "You versus the community",
+        "empty": []
+      },
+      {
+        "title": "The Game Awards winners",
+        "empty": []
+      },
+      {
+        "title": "You versus the critics",
+        "empty": [
+          "No Metacritic scores available yet.",
+          "No Metacritic scores available yet."
+        ]
+      },
+      {
+        "title": "Franchises",
+        "empty": []
+      },
+      {
+        "title": "Game engines",
+        "empty": []
+      },
+      {
+        "title": "Franchise rating journey",
+        "empty": []
+      },
+      {
+        "title": "Your taste vs. popularity",
+        "empty": []
+      },
+      {
+        "title": "Release-year explorer",
+        "empty": []
+      },
+      {
+        "title": "Genres across your games",
+        "empty": []
+      },
+      {
+        "title": "Genre preference map",
+        "empty": []
+      },
+      {
+        "title": "Player perspectives",
+        "empty": []
+      },
+      {
+        "title": "Themes",
+        "empty": []
+      },
+      {
+        "title": "Release year × genre heatmap",
+        "empty": []
+      },
+      {
+        "title": "Beyond the averages",
+        "empty": []
+      }
+    ],
+    "played": 674,
+    "rated": 463,
+    "average": 3.497840172786177,
+    "displayedPlayed": "674",
+    "years": 670,
+    "decades": 670,
+    "journeys": [
+      {
+        "name": "Resident Evil",
+        "count": 15,
+        "rated": 14
+      },
+      {
+        "name": "Call of Duty",
+        "count": 15,
+        "rated": 13
+      },
+      {
+        "name": "Assassin's Creed",
+        "count": 11,
+        "rated": 10
+      },
+      {
+        "name": "Battlefield",
+        "count": 7,
+        "rated": 7
+      },
+      {
+        "name": "The Last of Us",
+        "count": 7,
+        "rated": 7
+      },
+      {
+        "name": "Uncharted",
+        "count": 7,
+        "rated": 7
+      },
+      {
+        "name": "DC Comics",
+        "count": 7,
+        "rated": 6
+      },
+      {
+        "name": "The Witcher",
+        "count": 7,
+        "rated": 6
+      },
+      {
+        "name": "Half-Life",
+        "count": 6,
+        "rated": 6
+      },
+      {
+        "name": "Harry Potter",
+        "count": 6,
+        "rated": 6
+      },
+      {
+        "name": "Marvel",
+        "count": 9,
+        "rated": 5
+      },
+      {
+        "name": "Need for Speed",
+        "count": 9,
+        "rated": 5
+      },
+      {
+        "name": "Batman",
+        "count": 6,
+        "rated": 5
+      },
+      {
+        "name": "Far Cry",
+        "count": 6,
+        "rated": 5
+      },
+      {
+        "name": "Mass Effect",
+        "count": 6,
+        "rated": 5
+      },
+      {
+        "name": "Dark Souls",
+        "count": 8,
+        "rated": 4
+      },
+      {
+        "name": "Dragon Age",
+        "count": 5,
+        "rated": 4
+      },
+      {
+        "name": "Spider-Man",
+        "count": 5,
+        "rated": 4
+      },
+      {
+        "name": "The Elder Scrolls",
+        "count": 5,
+        "rated": 4
+      },
+      {
+        "name": "Bioshock",
+        "count": 8,
+        "rated": 3
+      },
+      {
+        "name": "Colin McRae",
+        "count": 5,
+        "rated": 3
+      }
+    ],
+    "community": "463 of 463 rated games compared · scores out of 5 · charts show rating differences; equal ratings omitted · hidden gems use play counts, not rating gaps.",
+    "critics": "0 of 463 rated games compared · main game Metascore ÷ 20 · scores out of 5 · largest gaps first · equal ratings omitted.",
+    "time": "Estimated from 642 games with average time data",
+    "drillErrors": [],
+    "errors": []
+  }
+]

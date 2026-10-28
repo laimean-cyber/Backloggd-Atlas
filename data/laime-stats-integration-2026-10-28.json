@@ -1,0 +1,193 @@
+{
+  "updatedOn": "2026-10-28",
+  "source": "User-supplied averages and play counts; saved Backloggd Played list sorted by average playtime. HTML parsed as inert data.",
+  "communityAverages": {
+    "thronebreaker-the-witcher-tales": 3.8,
+    "ghost-of-yotei-complete-edition": 4.2,
+    "control-resonant--1": 4.3,
+    "onimusha-way-of-the-sword": 4.2,
+    "the-witcher": 3.3,
+    "team-fortress-2": 3.9,
+    "need-for-speed-carbon": 3.7,
+    "need-for-speed-most-wanted": 4.2,
+    "need-for-speed-most-wanted-53b9fef3-adb4-41a0-8ca0-ffcbb0060467": 3.1,
+    "heroes-of-might-and-magic-iii-complete": 4.4
+  },
+  "playCounts": {
+    "thronebreaker-the-witcher-tales": 3600,
+    "ghost-of-yotei-complete-edition": 270,
+    "control-resonant--1": 6100
+  },
+  "htmlGames": 673,
+  "numericHtmlTimes": 642,
+  "unknownHtmlTimes": [
+    {
+      "path": "/games/unharvest/",
+      "title": "Unharvest",
+      "timeText": "- hrs"
+    },
+    {
+      "path": "/games/probably-stolen/",
+      "title": "Probably Stolen",
+      "timeText": "- hrs"
+    },
+    {
+      "path": "/games/abyssal-lapidary/",
+      "title": "Abyssal Lapidary",
+      "timeText": "- hrs"
+    },
+    {
+      "path": "/games/guns-of-eschaton/",
+      "title": "Guns of Eschaton",
+      "timeText": "- hrs"
+    },
+    {
+      "path": "/games/stronghold-4/",
+      "title": "Stronghold 4",
+      "timeText": "- hrs"
+    },
+    {
+      "path": "/games/1666-amsterdam/",
+      "title": "1666: Amsterdam",
+      "timeText": "- hrs"
+    },
+    {
+      "path": "/games/resident-evil-revelations-2-extra-episode-2-little-miss/",
+      "title": "Resident Evil: Revelations 2 - Extra Episode 2: Little Miss",
+      "timeText": "- hrs"
+    },
+    {
+      "path": "/games/resident-evil-revelations-2-extra-episode-1-the-struggle/",
+      "title": "Resident Evil: Revelations 2 - Extra Episode 1: The Struggle",
+      "timeText": "- hrs"
+    },
+    {
+      "path": "/games/the-expanse-osiris-reborn/",
+      "title": "The Expanse: Osiris Reborn",
+      "timeText": "- hrs"
+    },
+    {
+      "path": "/games/resident-evil-5-desperate-escape/",
+      "title": "Resident Evil 5: Desperate Escape",
+      "timeText": "- hrs"
+    },
+    {
+      "path": "/games/the-eternal-life-of-goldman/",
+      "title": "The Eternal Life of Goldman",
+      "timeText": "- hrs"
+    },
+    {
+      "path": "/games/the-sims-3-supernatural/",
+      "title": "The Sims 3: Supernatural",
+      "timeText": "- hrs"
+    },
+    {
+      "path": "/games/the-sims-3-seasons/",
+      "title": "The Sims 3: Seasons",
+      "timeText": "- hrs"
+    },
+    {
+      "path": "/games/kingdom-come-deliverance-ii-the-lions-crest/",
+      "title": "Kingdom Come: Deliverance II - The Lion’s Crest",
+      "timeText": "- hrs"
+    },
+    {
+      "path": "/games/mass-effect-3-reckoning/",
+      "title": "Mass Effect 3: Reckoning",
+      "timeText": "- hrs"
+    },
+    {
+      "path": "/games/mass-effect-3-retaliation/",
+      "title": "Mass Effect 3: Retaliation",
+      "timeText": "- hrs"
+    },
+    {
+      "path": "/games/mass-effect-3-earth/",
+      "title": "Mass Effect 3: Earth",
+      "timeText": "- hrs"
+    },
+    {
+      "path": "/games/mass-effect-3-extended-cut/",
+      "title": "Mass Effect 3: Extended Cut",
+      "timeText": "- hrs"
+    },
+    {
+      "path": "/games/gothic-1-remake-nyras-prologue/",
+      "title": "Gothic 1 Remake: Nyras Prologue",
+      "timeText": "- hrs"
+    },
+    {
+      "path": "/games/pine-harbor/",
+      "title": "Pine Harbor",
+      "timeText": "- hrs"
+    },
+    {
+      "path": "/games/tea-garden-simulator/",
+      "title": "Tea Garden Simulator",
+      "timeText": "- hrs"
+    },
+    {
+      "path": "/games/empire-earth-ii/",
+      "title": "Empire Earth II",
+      "timeText": "- hrs"
+    },
+    {
+      "path": "/games/alexander/",
+      "title": "Alexander",
+      "timeText": "- hrs"
+    },
+    {
+      "path": "/games/sea-dogs/",
+      "title": "Sea Dogs",
+      "timeText": "- hrs"
+    },
+    {
+      "path": "/games/the-sims-3-university-life-9a9e27ab-4a50-4e3b-87fa-140a2c8542c9/",
+      "title": "The Sims 3: University Life",
+      "timeText": "- hrs"
+    },
+    {
+      "path": "/games/the-sims-3-world-adventures/",
+      "title": "The Sims 3: World Adventures",
+      "timeText": "- hrs"
+    },
+    {
+      "path": "/games/the-sims-2-university/",
+      "title": "The Sims 2: University",
+      "timeText": "- hrs"
+    },
+    {
+      "path": "/games/the-sims-2-nightlife/",
+      "title": "The Sims 2: Nightlife",
+      "timeText": "- hrs"
+    },
+    {
+      "path": "/games/the-sims-2-seasons/",
+      "title": "The Sims 2: Seasons",
+      "timeText": "- hrs"
+    },
+    {
+      "path": "/games/pariah/",
+      "title": "Pariah",
+      "timeText": "- hrs"
+    },
+    {
+      "path": "/games/conan/",
+      "title": "Conan",
+      "timeText": "- hrs"
+    }
+  ],
+  "absentFromHtml": [
+    {
+      "title": "Dark Souls: Prepare to Die Edition",
+      "path": "/games/dark-souls-prepare-to-die-edition/",
+      "retainedAverageTimeHours": null
+    }
+  ],
+  "timedGames": 642,
+  "totalEstimatedHours": 24413,
+  "ratedGames": 463,
+  "communityCompared": 463,
+  "popularityCompared": 463,
+  "changes": []
+}

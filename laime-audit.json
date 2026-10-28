@@ -1,5 +1,245 @@
 [
   {
+    "id": "107300",
+    "path": "/games/thronebreaker-the-witcher-tales/",
+    "title": "Thronebreaker: The Witcher Tales",
+    "played": true,
+    "year": 2018,
+    "releaseDate": 1540252800,
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1qsk.jpg",
+    "metadataVersion": 1,
+    "metadataFetchedAt": 1793201246094,
+    "gameType": "Standalone Expansion",
+    "publishers": [
+      "CD Projekt RED"
+    ],
+    "publisherLogos": {
+      "CD Projekt RED": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl2dk.png"
+    },
+    "gameModes": [
+      "Single player"
+    ],
+    "playerPerspectives": [
+      "Bird view / Isometric"
+    ],
+    "themes": [
+      "Fantasy"
+    ],
+    "franchises": [
+      "The Witcher"
+    ],
+    "gameEngines": [
+      "Unity"
+    ],
+    "igdbId": 107300,
+    "developers": [
+      "CD Projekt RED"
+    ],
+    "developerLogos": {
+      "CD Projekt RED": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl2dk.png"
+    },
+    "genres": [
+      "Puzzle",
+      "Role-playing (RPG)",
+      "Strategy",
+      "Turn-based strategy (TBS)",
+      "Adventure",
+      "Card & Board Game"
+    ],
+    "rating": 3.5,
+    "checked": true,
+    "communityRating": 3.8,
+    "communityFetchedAt": 1793203519441,
+    "plays": 3600,
+    "playText": "3600",
+    "averageTimeHours": 30
+  },
+  {
+    "id": "420600",
+    "path": "/games/unharvest/",
+    "title": "Unharvest",
+    "played": true,
+    "year": 2026,
+    "releaseDate": 1796601600,
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cod0c0.jpg",
+    "metadataVersion": 1,
+    "metadataFetchedAt": 1793201246095,
+    "gameType": "Main Game",
+    "publishers": [
+      "SkorpionDev"
+    ],
+    "publisherLogos": {
+      "SkorpionDev": "https://images.igdb.com/igdb/image/upload/t_logo_med/clh8p.png"
+    },
+    "gameModes": [
+      "Single player"
+    ],
+    "playerPerspectives": [
+      "First person"
+    ],
+    "themes": [],
+    "franchises": [],
+    "gameEngines": [
+      "Unity"
+    ],
+    "igdbId": 420600,
+    "developers": [
+      "SkorpionDev"
+    ],
+    "developerLogos": {
+      "SkorpionDev": "https://images.igdb.com/igdb/image/upload/t_logo_med/clh8p.png"
+    },
+    "genres": [
+      "Simulator"
+    ],
+    "rating": null,
+    "checked": true,
+    "averageTimeHours": null
+  },
+  {
+    "id": "412177",
+    "path": "/games/probably-stolen/",
+    "title": "Probably Stolen",
+    "played": true,
+    "year": 2026,
+    "releaseDate": 1793145600,
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocm5l.jpg",
+    "metadataVersion": 1,
+    "metadataFetchedAt": 1793201246095,
+    "gameType": "Main Game",
+    "publishers": [
+      "tinyBuild"
+    ],
+    "publisherLogos": {
+      "tinyBuild": "https://images.igdb.com/igdb/image/upload/t_logo_med/eiil6px7rjzsj3aoq1za.png"
+    },
+    "gameModes": [
+      "Single player"
+    ],
+    "playerPerspectives": [
+      "First person",
+      "Text"
+    ],
+    "themes": [
+      "Science fiction",
+      "Business"
+    ],
+    "franchises": [],
+    "gameEngines": [
+      "Unity"
+    ],
+    "igdbId": 412177,
+    "developers": [
+      "Questing Goose Studio"
+    ],
+    "developerLogos": {
+      "Questing Goose Studio": "https://images.igdb.com/igdb/image/upload/t_logo_med/cljwz.png"
+    },
+    "genres": [
+      "Role-playing (RPG)",
+      "Simulator",
+      "Strategy",
+      "Indie"
+    ],
+    "rating": null,
+    "checked": true,
+    "averageTimeHours": null
+  },
+  {
+    "id": "411093",
+    "path": "/games/abyssal-lapidary/",
+    "title": "Abyssal Lapidary",
+    "played": true,
+    "year": null,
+    "releaseDate": null,
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cod5o1.jpg",
+    "metadataVersion": 1,
+    "metadataFetchedAt": 1793201246095,
+    "gameType": "Main Game",
+    "publishers": [
+      "XD"
+    ],
+    "publisherLogos": {
+      "XD": "https://images.igdb.com/igdb/image/upload/t_logo_med/clf3g.png"
+    },
+    "gameModes": [
+      "Single player"
+    ],
+    "playerPerspectives": [
+      "First person"
+    ],
+    "themes": [
+      "Fantasy"
+    ],
+    "franchises": [],
+    "gameEngines": [],
+    "igdbId": 411093,
+    "developers": [
+      "Light Worm"
+    ],
+    "developerLogos": {},
+    "genres": [
+      "Role-playing (RPG)",
+      "Simulator",
+      "Indie"
+    ],
+    "rating": null,
+    "checked": true,
+    "averageTimeHours": null
+  },
+  {
+    "id": "413275",
+    "path": "/games/ghost-of-yotei-complete-edition/",
+    "title": "Ghost of Yotei: Complete Edition",
+    "played": true,
+    "year": 2026,
+    "releaseDate": 1790812800,
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocofa.jpg",
+    "metadataVersion": 1,
+    "metadataFetchedAt": 1793201246095,
+    "gameType": "Expanded Game",
+    "publishers": [
+      "Sony Interactive Entertainment"
+    ],
+    "publisherLogos": {
+      "Sony Interactive Entertainment": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl4c2.png"
+    },
+    "gameModes": [
+      "Single player"
+    ],
+    "playerPerspectives": [
+      "Third person"
+    ],
+    "themes": [
+      "Action",
+      "Historical",
+      "Stealth",
+      "Open world"
+    ],
+    "franchises": [],
+    "gameEngines": [
+      "Proprietary Engine"
+    ],
+    "igdbId": 413275,
+    "developers": [
+      "Sucker Punch Productions"
+    ],
+    "developerLogos": {
+      "Sucker Punch Productions": "https://images.igdb.com/igdb/image/upload/t_logo_med/ocslftmxjx7qzjie63qk.png"
+    },
+    "genres": [
+      "Role-playing (RPG)",
+      "Adventure"
+    ],
+    "rating": 3.5,
+    "checked": true,
+    "communityRating": 4.2,
+    "communityFetchedAt": 1793203519441,
+    "plays": 270,
+    "playText": "270",
+    "averageTimeHours": 26
+  },
+  {
     "id": "408607",
     "path": "/games/guns-of-eschaton/",
     "title": "Guns of Eschaton",
@@ -42,7 +282,8 @@
     "genres": [
       "Shooter"
     ],
-    "checked": true
+    "checked": true,
+    "averageTimeHours": null
   },
   {
     "id": "225582",
@@ -88,7 +329,12 @@
       "Hack and slash/Beat 'em up",
       "Adventure"
     ],
-    "checked": true
+    "checked": true,
+    "communityRating": 4.3,
+    "communityFetchedAt": 1793203519441,
+    "plays": 6100,
+    "playText": "6100",
+    "averageTimeHours": 33
   },
   {
     "id": "94829",
@@ -132,7 +378,8 @@
     "genres": [
       "Platform"
     ],
-    "checked": true
+    "checked": true,
+    "averageTimeHours": 6
   },
   {
     "id": "24979",
@@ -178,7 +425,8 @@
       "Platform",
       "Adventure"
     ],
-    "checked": true
+    "checked": true,
+    "averageTimeHours": 3
   },
   {
     "id": "4531",
@@ -226,7 +474,8 @@
       "Platform",
       "Hack and slash/Beat 'em up"
     ],
-    "checked": true
+    "checked": true,
+    "averageTimeHours": 3
   },
   {
     "id": "18139",
@@ -278,7 +527,8 @@
       "Platform",
       "Hack and slash/Beat 'em up"
     ],
-    "checked": true
+    "checked": true,
+    "averageTimeHours": 2
   },
   {
     "id": "8118",
@@ -332,7 +582,8 @@
     "genres": [
       "Platform"
     ],
-    "checked": true
+    "checked": true,
+    "averageTimeHours": 3
   },
   {
     "id": "5378",
@@ -378,7 +629,8 @@
     "genres": [
       "Adventure"
     ],
-    "checked": true
+    "checked": true,
+    "averageTimeHours": 3
   },
   {
     "id": "3166",
@@ -431,7 +683,8 @@
       "Platform",
       "Puzzle"
     ],
-    "checked": true
+    "checked": true,
+    "averageTimeHours": 3
   },
   {
     "id": "1619",
@@ -484,7 +737,8 @@
       "Fighting",
       "Arcade"
     ],
-    "checked": true
+    "checked": true,
+    "averageTimeHours": 3
   },
   {
     "id": "6798",
@@ -534,7 +788,8 @@
       "Shooter",
       "Strategy"
     ],
-    "checked": true
+    "checked": true,
+    "averageTimeHours": 16
   },
   {
     "id": "119388",
@@ -582,7 +837,8 @@
       "Puzzle",
       "Adventure"
     ],
-    "checked": true
+    "checked": true,
+    "averageTimeHours": 111
   },
   {
     "id": "7346",
@@ -633,7 +889,8 @@
       "Puzzle",
       "Adventure"
     ],
-    "checked": true
+    "checked": true,
+    "averageTimeHours": 122
   },
   {
     "id": "403310",
@@ -683,7 +940,7 @@
     "franchises": [
       "Call of Duty"
     ],
-    "averageTimeHours": null,
+    "averageTimeHours": 8,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253905043,
     "gameType": "Main Game",
@@ -739,7 +996,7 @@
     "franchises": [
       "Gears of War"
     ],
-    "averageTimeHours": null,
+    "averageTimeHours": 15,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253905043,
     "gameType": "Main Game",
@@ -798,7 +1055,7 @@
       "Orteil": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl8be.png"
     },
     "franchises": [],
-    "averageTimeHours": 273,
+    "averageTimeHours": 269,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253905043,
     "gameType": "Main Game",
@@ -906,7 +1163,7 @@
       "Rockstar Games": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl8g0.png"
     },
     "franchises": [],
-    "averageTimeHours": 28,
+    "averageTimeHours": 29,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253905043,
     "gameType": "Bundle",
@@ -1065,7 +1322,7 @@
       "11 bit studios": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl4f3.png"
     },
     "franchises": [],
-    "averageTimeHours": 16,
+    "averageTimeHours": 17,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253905043,
     "gameType": "Expansion",
@@ -1362,7 +1619,7 @@
       "Cold Symmetry": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl2mz.png"
     },
     "franchises": [],
-    "averageTimeHours": 26,
+    "averageTimeHours": 28,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253905043,
     "gameType": "Main Game",
@@ -1514,12 +1771,14 @@
     "franchises": [
       "Onimusha"
     ],
-    "averageTimeHours": 25,
+    "averageTimeHours": 29,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253905043,
     "gameType": "Main Game",
     "releaseDate": 1788480000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocdt3.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocdt3.jpg",
+    "communityRating": 4.2,
+    "communityFetchedAt": 1793203519441
   },
   {
     "id": "141114",
@@ -1621,7 +1880,7 @@
       "Paradox Development Studio": "https://images.igdb.com/igdb/image/upload/t_logo_med/tmgoxhnyjjmlvxvqyadt.png"
     },
     "franchises": [],
-    "averageTimeHours": 104,
+    "averageTimeHours": 105,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253905043,
     "gameType": "Main Game",
@@ -2088,7 +2347,7 @@
     "franchises": [
       "Resident Evil"
     ],
-    "averageTimeHours": 1,
+    "averageTimeHours": null,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253905043,
     "gameType": "DLC",
@@ -2703,7 +2962,7 @@
       "Bungie": "https://images.igdb.com/igdb/image/upload/t_logo_med/clin6.png"
     },
     "franchises": [],
-    "averageTimeHours": 43,
+    "averageTimeHours": 47,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253905043,
     "gameType": "Main Game",
@@ -2921,7 +3180,7 @@
     "franchises": [
       "Nioh"
     ],
-    "averageTimeHours": 49,
+    "averageTimeHours": 48,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253905043,
     "gameType": "Main Game",
@@ -4103,7 +4362,7 @@
     "franchises": [
       "Call of Duty"
     ],
-    "averageTimeHours": 157,
+    "averageTimeHours": 154,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253905044,
     "gameType": "Standalone Expansion",
@@ -4220,7 +4479,7 @@
       "Drinkbox Studios": "https://images.igdb.com/igdb/image/upload/t_logo_med/w7c9ee9nh1yujfn6frqh.png"
     },
     "franchises": [],
-    "averageTimeHours": 9,
+    "averageTimeHours": 10,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253905044,
     "gameType": "Expanded Game",
@@ -4331,7 +4590,7 @@
     "franchises": [
       "Assassin's Creed"
     ],
-    "averageTimeHours": 34,
+    "averageTimeHours": 33,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253905044,
     "gameType": "Main Game",
@@ -4496,7 +4755,7 @@
     "franchises": [
       "The Last of Us"
     ],
-    "averageTimeHours": 24,
+    "averageTimeHours": 25,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253905044,
     "gameType": "Main Game",
@@ -5680,7 +5939,8 @@
     "metadataFetchedAt": 1792253905826,
     "gameType": "DLC",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coagpv.jpg",
-    "releaseDate": 1342483200
+    "releaseDate": 1342483200,
+    "averageTimeHours": null
   },
   {
     "id": "782",
@@ -5730,7 +5990,8 @@
     "metadataFetchedAt": 1792253905826,
     "gameType": "DLC",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2k9f.jpg",
-    "releaseDate": 1283817600
+    "releaseDate": 1283817600,
+    "averageTimeHours": 3
   },
   {
     "id": "78460",
@@ -5782,7 +6043,8 @@
     "metadataFetchedAt": 1792253905826,
     "gameType": "DLC",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5rwr.jpg",
-    "releaseDate": 1341360000
+    "releaseDate": 1341360000,
+    "averageTimeHours": null
   },
   {
     "id": "13910",
@@ -5830,7 +6092,8 @@
     "metadataFetchedAt": 1792253905826,
     "gameType": "DLC",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5w9p.jpg",
-    "releaseDate": 1330992000
+    "releaseDate": 1330992000,
+    "averageTimeHours": 1
   },
   {
     "id": "13911",
@@ -5878,7 +6141,8 @@
     "metadataFetchedAt": 1792253905826,
     "gameType": "DLC",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coadf4.jpg",
-    "releaseDate": 1346112000
+    "releaseDate": 1346112000,
+    "averageTimeHours": 3
   },
   {
     "id": "13912",
@@ -5926,7 +6190,8 @@
     "metadataFetchedAt": 1792253905826,
     "gameType": "DLC",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5tqj.jpg",
-    "releaseDate": 1353974400
+    "releaseDate": 1353974400,
+    "averageTimeHours": 3
   },
   {
     "id": "13690",
@@ -5974,7 +6239,8 @@
     "metadataFetchedAt": 1792253905826,
     "gameType": "DLC",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5716.jpg",
-    "releaseDate": 1362441600
+    "releaseDate": 1362441600,
+    "averageTimeHours": 6
   },
   {
     "id": "262537",
@@ -6026,7 +6292,8 @@
     "communityRating": 2.4,
     "communityFetchedAt": 1789924958286,
     "releaseDate": 1742256000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co97ce.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co97ce.jpg",
+    "averageTimeHours": 2
   },
   {
     "id": "333955",
@@ -6077,7 +6344,8 @@
     "communityRating": 3.2,
     "communityFetchedAt": 1789975474865,
     "releaseDate": 1740355200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocd31.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocd31.jpg",
+    "averageTimeHours": null
   },
   {
     "id": "305246",
@@ -6132,7 +6400,8 @@
     "metadataFetchedAt": 1792253905826,
     "gameType": "Main Game",
     "releaseDate": 1762992000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaufz.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaufz.jpg",
+    "averageTimeHours": 17
   },
   {
     "id": "185258",
@@ -6184,7 +6453,8 @@
     "communityRating": 3.7,
     "communityFetchedAt": 1789924958801,
     "releaseDate": 1761782400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9rk1.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9rk1.jpg",
+    "averageTimeHours": 55
   },
   {
     "id": "142688",
@@ -6236,7 +6506,8 @@
     "communityRating": 3.4,
     "communityFetchedAt": 1789975475527,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaqr2.jpg",
-    "releaseDate": 1761177600
+    "releaseDate": 1761177600,
+    "averageTimeHours": 15
   },
   {
     "id": "325609",
@@ -6291,7 +6562,8 @@
     "communityRating": 4.1,
     "communityFetchedAt": 1789975476794,
     "releaseDate": 1761091200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob5ql.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob5ql.jpg",
+    "averageTimeHours": 9
   },
   {
     "id": "116530",
@@ -6349,7 +6621,8 @@
     "communityRating": 2.4,
     "communityFetchedAt": 1789924959189,
     "releaseDate": 1761004800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coab6r.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coab6r.jpg",
+    "averageTimeHours": 16
   },
   {
     "id": "317627",
@@ -6404,7 +6677,8 @@
     "communityRating": 4.1,
     "communityFetchedAt": 1789975477383,
     "releaseDate": 1759363200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9coo.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9coo.jpg",
+    "averageTimeHours": 48
   },
   {
     "id": "317407",
@@ -6454,12 +6728,14 @@
       "Battlefield"
     ],
     "metadataVersion": 1,
-    "metadataFetchedAt": 1792253905827,
+    "metadataFetchedAt": 1793201246095,
     "gameType": "Main Game",
     "communityRating": 3.5,
     "communityFetchedAt": 1789975478171,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coa5zt.jpg",
-    "releaseDate": 1760054400
+    "releaseDate": 1760054400,
+    "liked": true,
+    "averageTimeHours": 38
   },
   {
     "id": "222343",
@@ -6514,7 +6790,8 @@
     "communityRating": 3.8,
     "communityFetchedAt": 1789975478918,
     "releaseDate": 1758758400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9wy4.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9wy4.jpg",
+    "averageTimeHours": 16
   },
   {
     "id": "329138",
@@ -6569,7 +6846,8 @@
     "communityRating": 3.4,
     "communityFetchedAt": 1789975479505,
     "releaseDate": 1789603200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobtqi.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobtqi.jpg",
+    "averageTimeHours": 13
   },
   {
     "id": "314252",
@@ -6626,7 +6904,8 @@
     "communityRating": 3.7,
     "communityFetchedAt": 1789975480448,
     "releaseDate": 1758153600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocmja.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocmja.jpg",
+    "averageTimeHours": 27
   },
   {
     "id": "316987",
@@ -6678,7 +6957,8 @@
     "communityRating": 3.6,
     "communityFetchedAt": 1789975481044,
     "releaseDate": 1757894400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coajvh.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coajvh.jpg",
+    "averageTimeHours": 4
   },
   {
     "id": "320137",
@@ -6732,7 +7012,8 @@
     "communityRating": 3.7,
     "communityFetchedAt": 1789975481727,
     "releaseDate": 1757030400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobqq9.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobqq9.jpg",
+    "averageTimeHours": 15
   },
   {
     "id": "196954",
@@ -6791,7 +7072,8 @@
     "communityRating": 3.5,
     "communityFetchedAt": 1789975482946,
     "releaseDate": 1756944000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9vum.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9vum.jpg",
+    "averageTimeHours": 21
   },
   {
     "id": "137703",
@@ -6842,7 +7124,8 @@
     "communityRating": 3.1,
     "communityFetchedAt": 1789975484016,
     "releaseDate": 1753315200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9rvy.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9rvy.jpg",
+    "averageTimeHours": 13
   },
   {
     "id": "305107",
@@ -6895,7 +7178,8 @@
     "communityRating": 3.7,
     "communityFetchedAt": 1789975484638,
     "releaseDate": 1752537600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coa5u5.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coa5u5.jpg",
+    "averageTimeHours": 8
   },
   {
     "id": "228530",
@@ -6955,7 +7239,8 @@
     "communityRating": 4.4,
     "communityFetchedAt": 1789975485278,
     "releaseDate": 1750896000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9ipx.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9ipx.jpg",
+    "averageTimeHours": 65
   },
   {
     "id": "204634",
@@ -7008,7 +7293,8 @@
     "communityRating": 4,
     "communityFetchedAt": 1789975485872,
     "releaseDate": 1749772800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaaju.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaaju.jpg",
+    "averageTimeHours": 20
   },
   {
     "id": "117170",
@@ -7062,7 +7348,8 @@
     "communityRating": 3.9,
     "communityFetchedAt": 1789975486518,
     "releaseDate": 1714089600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9s0t.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9s0t.jpg",
+    "averageTimeHours": 36
   },
   {
     "id": "127697",
@@ -7117,7 +7404,8 @@
     "communityRating": 3.5,
     "communityFetchedAt": 1789975487215,
     "releaseDate": 1747958400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co65pk.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co65pk.jpg",
+    "averageTimeHours": 34
   },
   {
     "id": "302704",
@@ -7172,7 +7460,8 @@
     "communityRating": 3.8,
     "communityFetchedAt": 1789924961004,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9b3o.jpg",
-    "releaseDate": 1747267200
+    "releaseDate": 1747267200,
+    "averageTimeHours": 17
   },
   {
     "id": "381336",
@@ -7213,7 +7502,8 @@
     "communityRating": 4.2,
     "communityFetchedAt": 1789975488254,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob0vd.jpg",
-    "releaseDate": 1765497600
+    "releaseDate": 1765497600,
+    "averageTimeHours": 7
   },
   {
     "id": "305152",
@@ -7268,7 +7558,8 @@
     "communityRating": 4.6,
     "communityFetchedAt": 1789975488893,
     "releaseDate": 1745452800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9gam.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9gam.jpg",
+    "averageTimeHours": 47
   },
   {
     "id": "267306",
@@ -7326,7 +7617,8 @@
     "communityRating": 3.7,
     "communityFetchedAt": 1789975489480,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9pul.jpg",
-    "releaseDate": 1745280000
+    "releaseDate": 1745280000,
+    "averageTimeHours": 40
   },
   {
     "id": "275792",
@@ -7382,7 +7674,8 @@
     "communityRating": 3.4,
     "communityFetchedAt": 1789975490228,
     "releaseDate": 1744243200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7cdj.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7cdj.jpg",
+    "averageTimeHours": 28
   },
   {
     "id": "149657",
@@ -7436,7 +7729,8 @@
     "communityRating": 4,
     "communityFetchedAt": 1789975491294,
     "releaseDate": 1744243200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9mzd.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9mzd.jpg",
+    "averageTimeHours": 29
   },
   {
     "id": "228918",
@@ -7493,7 +7787,8 @@
     "communityRating": 3.5,
     "communityFetchedAt": 1789975492249,
     "releaseDate": 1743465600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9gpd.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9gpd.jpg",
+    "averageTimeHours": 8
   },
   {
     "id": "308349",
@@ -7545,7 +7840,8 @@
     "communityRating": 3.1,
     "communityFetchedAt": 1789975492877,
     "releaseDate": 1742860800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co99yr.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co99yr.jpg",
+    "averageTimeHours": 7
   },
   {
     "id": "325594",
@@ -7602,7 +7898,8 @@
     "communityRating": 4.2,
     "communityFetchedAt": 1789924962607,
     "releaseDate": 1741219200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co95gf.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co95gf.jpg",
+    "averageTimeHours": 14
   },
   {
     "id": "298526",
@@ -7657,7 +7954,8 @@
     "communityRating": 4.5,
     "communityFetchedAt": 1789975493512,
     "releaseDate": 1738627200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8qmv.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8qmv.jpg",
+    "averageTimeHours": 95
   },
   {
     "id": "88392",
@@ -7711,7 +8009,8 @@
       "Polymorph Games": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl3h7.png"
     },
     "releaseDate": 1738281600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coawhe.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coawhe.jpg",
+    "averageTimeHours": 21
   },
   {
     "id": "292876",
@@ -7764,7 +8063,8 @@
     "communityRating": 2.8,
     "communityFetchedAt": 1789975494121,
     "releaseDate": 1747872000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7xz4.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7xz4.jpg",
+    "averageTimeHours": 5
   },
   {
     "id": "310904",
@@ -7819,7 +8119,8 @@
     "communityRating": 3.6,
     "communityFetchedAt": 1789975494745,
     "releaseDate": 1738800000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8yiy.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8yiy.jpg",
+    "averageTimeHours": 7
   },
   {
     "id": "10299",
@@ -7870,7 +8171,8 @@
     "metadataFetchedAt": 1792253905827,
     "gameType": "DLC",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coax55.jpg",
-    "releaseDate": 1241481600
+    "releaseDate": 1241481600,
+    "averageTimeHours": 4
   },
   {
     "id": "10302",
@@ -7920,7 +8222,8 @@
     "metadataFetchedAt": 1792253905827,
     "gameType": "DLC",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2x84.jpg",
-    "releaseDate": 1245715200
+    "releaseDate": 1245715200,
+    "averageTimeHours": 4
   },
   {
     "id": "10303",
@@ -7970,7 +8273,8 @@
     "metadataFetchedAt": 1792253905827,
     "gameType": "DLC",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7ktf.jpg",
-    "releaseDate": 1237852800
+    "releaseDate": 1237852800,
+    "averageTimeHours": 4
   },
   {
     "id": "10300",
@@ -8020,7 +8324,8 @@
     "metadataFetchedAt": 1792253905827,
     "gameType": "DLC",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7ktg.jpg",
-    "releaseDate": 1249257600
+    "releaseDate": 1249257600,
+    "averageTimeHours": 3
   },
   {
     "id": "10301",
@@ -8070,7 +8375,8 @@
     "metadataFetchedAt": 1792253905827,
     "gameType": "DLC",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2x85.jpg",
-    "releaseDate": 1233014400
+    "releaseDate": 1233014400,
+    "averageTimeHours": 3
   },
   {
     "id": "21892",
@@ -8130,7 +8436,8 @@
     "communityRating": 3.7,
     "communityFetchedAt": 1789975495314,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1yc1.jpg",
-    "releaseDate": 1255392000
+    "releaseDate": 1255392000,
+    "averageTimeHours": 41
   },
   {
     "id": "284925",
@@ -8182,7 +8489,8 @@
     "communityRating": 3.5,
     "communityFetchedAt": 1789924962945,
     "releaseDate": 1712620800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8glt.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8glt.jpg",
+    "averageTimeHours": 3
   },
   {
     "id": "204647",
@@ -8236,7 +8544,8 @@
     "communityRating": 3.1,
     "communityFetchedAt": 1789975496153,
     "releaseDate": 1744761600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9s55.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9s55.jpg",
+    "averageTimeHours": 8
   },
   {
     "id": "255777",
@@ -8292,7 +8601,8 @@
     "communityRating": 3.6,
     "communityFetchedAt": 1789924963256,
     "releaseDate": 1733788800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7e6i.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7e6i.jpg",
+    "averageTimeHours": 5
   },
   {
     "id": "142415",
@@ -8350,7 +8660,8 @@
     "communityRating": 4,
     "communityFetchedAt": 1789924963388,
     "releaseDate": 1733702400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7nbc.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7nbc.jpg",
+    "averageTimeHours": 24
   },
   {
     "id": "101440",
@@ -8407,7 +8718,8 @@
     "communityRating": 3.4,
     "communityFetchedAt": 1789975496751,
     "releaseDate": 1732060800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocqoz.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocqoz.jpg",
+    "averageTimeHours": 48
   },
   {
     "id": "30208",
@@ -8463,7 +8775,8 @@
     "communityRating": 3,
     "communityFetchedAt": 1789975683163,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8gj5.jpg",
-    "releaseDate": 1730332800
+    "releaseDate": 1730332800,
+    "averageTimeHours": 60
   },
   {
     "id": "302156",
@@ -8521,7 +8834,8 @@
     "communityRating": 3.1,
     "communityFetchedAt": 1789924964136,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8zis.jpg",
-    "releaseDate": 1729814400
+    "releaseDate": 1729814400,
+    "averageTimeHours": 41
   },
   {
     "id": "26602",
@@ -8575,7 +8889,8 @@
     "communityRating": 4.3,
     "communityFetchedAt": 1789975683859,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8d9t.jpg",
-    "releaseDate": 1728604800
+    "releaseDate": 1728604800,
+    "averageTimeHours": 80
   },
   {
     "id": "222341",
@@ -8633,7 +8948,8 @@
     "communityRating": 4.4,
     "communityFetchedAt": 1789975684611,
     "releaseDate": 1728345600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coavaf.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coavaf.jpg",
+    "averageTimeHours": 19
   },
   {
     "id": "164290",
@@ -8685,7 +9001,8 @@
     "communityRating": 3.6,
     "communityFetchedAt": 1789975685197,
     "releaseDate": 1726790400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8yrc.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8yrc.jpg",
+    "averageTimeHours": 14
   },
   {
     "id": "136879",
@@ -8738,7 +9055,8 @@
     "communityRating": 3.9,
     "communityFetchedAt": 1789975685894,
     "releaseDate": 1724112000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8h3y.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8h3y.jpg",
+    "averageTimeHours": 45
   },
   {
     "id": "127342",
@@ -8791,7 +9109,8 @@
     "communityRating": 3.5,
     "communityFetchedAt": 1789975686468,
     "releaseDate": 1716249600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co81i4.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co81i4.jpg",
+    "averageTimeHours": 7
   },
   {
     "id": "166824",
@@ -8846,7 +9165,8 @@
     "communityRating": 3.4,
     "communityFetchedAt": 1789924965446,
     "releaseDate": 1714608000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co85mc.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co85mc.jpg",
+    "averageTimeHours": 4
   },
   {
     "id": "257929",
@@ -8890,7 +9210,8 @@
     "metadataFetchedAt": 1792253905828,
     "gameType": "Main Game",
     "releaseDate": 1714003200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co71qj.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co71qj.jpg",
+    "averageTimeHours": null
   },
   {
     "id": "267837",
@@ -8943,7 +9264,8 @@
     "communityRating": 3,
     "communityFetchedAt": 1789975687287,
     "releaseDate": 1711411200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7x0b.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7x0b.jpg",
+    "averageTimeHours": 27
   },
   {
     "id": "115060",
@@ -8999,7 +9321,8 @@
     "communityRating": 3.5,
     "communityFetchedAt": 1789975501081,
     "releaseDate": 1711065600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co833w.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co833w.jpg",
+    "averageTimeHours": 56
   },
   {
     "id": "16300",
@@ -9055,7 +9378,8 @@
     "communityRating": 3.7,
     "communityFetchedAt": 1789975501867,
     "releaseDate": 1366675200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2a1v.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2a1v.jpg",
+    "averageTimeHours": 48
   },
   {
     "id": "217592",
@@ -9111,7 +9435,8 @@
     "communityRating": 3.4,
     "communityFetchedAt": 1789975502492,
     "releaseDate": 1708560000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7t2e.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7t2e.jpg",
+    "averageTimeHours": 18
   },
   {
     "id": "251833",
@@ -9163,7 +9488,8 @@
     "communityRating": 4.2,
     "communityFetchedAt": 1789975503252,
     "releaseDate": 1708387200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9f4g.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9f4g.jpg",
+    "averageTimeHours": 45
   },
   {
     "id": "275072",
@@ -9219,7 +9545,8 @@
     "communityRating": 3.5,
     "communityFetchedAt": 1789975504004,
     "releaseDate": 1708300800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7qf1.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7qf1.jpg",
+    "averageTimeHours": 1
   },
   {
     "id": "196851",
@@ -9274,7 +9601,8 @@
     "communityRating": 3.4,
     "communityFetchedAt": 1789975504572,
     "releaseDate": 1763424000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7eby.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7eby.jpg",
+    "averageTimeHours": 10
   },
   {
     "id": "250616",
@@ -9330,7 +9658,8 @@
     "communityRating": 3.8,
     "communityFetchedAt": 1789975505268,
     "releaseDate": 1707350400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coabbf.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coabbf.jpg",
+    "averageTimeHours": 62
   },
   {
     "id": "218744",
@@ -9386,7 +9715,8 @@
     "communityRating": 2.3,
     "communityFetchedAt": 1789924966523,
     "releaseDate": 1706659200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7p8y.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7p8y.jpg",
+    "averageTimeHours": 2
   },
   {
     "id": "136627",
@@ -9448,7 +9778,8 @@
     "communityRating": 2.2,
     "communityFetchedAt": 1789975505941,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co40fu.jpg",
-    "releaseDate": 1706832000
+    "releaseDate": 1706832000,
+    "averageTimeHours": 17
   },
   {
     "id": "279658",
@@ -9498,7 +9829,8 @@
     "metadataFetchedAt": 1792253905828,
     "gameType": "DLC",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7h8t.jpg",
-    "releaseDate": 1713398400
+    "releaseDate": 1713398400,
+    "averageTimeHours": 6
   },
   {
     "id": "279657",
@@ -9550,7 +9882,8 @@
     "metadataFetchedAt": 1792253905828,
     "gameType": "DLC",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7hhs.jpg",
-    "releaseDate": 1701993600
+    "releaseDate": 1701993600,
+    "averageTimeHours": 3
   },
   {
     "id": "31551",
@@ -9605,7 +9938,8 @@
     "communityRating": 3.8,
     "communityFetchedAt": 1789975506636,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobd9i.jpg",
-    "releaseDate": 1687392000
+    "releaseDate": 1687392000,
+    "averageTimeHours": 57
   },
   {
     "id": "213237",
@@ -9662,7 +9996,8 @@
     "communityRating": 3,
     "communityFetchedAt": 1789975507361,
     "releaseDate": 1710892800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coa1g8.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coa1g8.jpg",
+    "averageTimeHours": 9
   },
   {
     "id": "260780",
@@ -9718,7 +10053,8 @@
     "communityRating": 2.4,
     "communityFetchedAt": 1789975507940,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7ctx.jpg",
-    "releaseDate": 1699574400
+    "releaseDate": 1699574400,
+    "averageTimeHours": 29
   },
   {
     "id": "138906",
@@ -9774,7 +10110,8 @@
     "communityRating": 3.5,
     "communityFetchedAt": 1789924967323,
     "releaseDate": 1699228800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co61ol.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co61ol.jpg",
+    "averageTimeHours": 7
   },
   {
     "id": "79864",
@@ -9829,7 +10166,8 @@
     "communityRating": 4.1,
     "communityFetchedAt": 1789975508591,
     "releaseDate": 1698883200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6jbl.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6jbl.jpg",
+    "averageTimeHours": 30
   },
   {
     "id": "252836",
@@ -9882,7 +10220,8 @@
     "communityRating": 3.6,
     "communityFetchedAt": 1789975509178,
     "releaseDate": 1698710400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coa2kv.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coa2kv.jpg",
+    "averageTimeHours": 5
   },
   {
     "id": "185246",
@@ -9936,7 +10275,8 @@
     "communityRating": 4.4,
     "communityFetchedAt": 1789975509788,
     "releaseDate": 1698364800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6jar.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6jar.jpg",
+    "averageTimeHours": 26
   },
   {
     "id": "250617",
@@ -9991,7 +10331,8 @@
     "communityRating": 3.5,
     "communityFetchedAt": 1789975510540,
     "releaseDate": 1698278400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co97mh.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co97mh.jpg",
+    "averageTimeHours": 9
   },
   {
     "id": "240902",
@@ -10044,7 +10385,8 @@
     "communityRating": 3,
     "communityFetchedAt": 1789975511193,
     "releaseDate": 1698105600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaasz.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaasz.jpg",
+    "averageTimeHours": 34
   },
   {
     "id": "127044",
@@ -10104,7 +10446,8 @@
     "communityRating": 3.9,
     "communityFetchedAt": 1789975511879,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobg1k.jpg",
-    "releaseDate": 1697760000
+    "releaseDate": 1697760000,
+    "averageTimeHours": 28
   },
   {
     "id": "204627",
@@ -10157,7 +10500,8 @@
     "communityRating": 3.9,
     "communityFetchedAt": 1789975512551,
     "releaseDate": 1695945600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4v2z.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4v2z.jpg",
+    "averageTimeHours": 4
   },
   {
     "id": "331204",
@@ -10211,7 +10555,8 @@
     "communityRating": 4.5,
     "communityFetchedAt": 1789975513255,
     "releaseDate": 1749168000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9e24.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9e24.jpg",
+    "averageTimeHours": 18
   },
   {
     "id": "148241",
@@ -10265,7 +10610,8 @@
     "communityRating": 4.1,
     "communityFetchedAt": 1789975514361,
     "releaseDate": 1694995200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6lxr.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6lxr.jpg",
+    "averageTimeHours": 37
   },
   {
     "id": "96437",
@@ -10322,7 +10668,8 @@
     "communityRating": 2.7,
     "communityFetchedAt": 1789975515554,
     "releaseDate": 1693958400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co39vv.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co39vv.jpg",
+    "averageTimeHours": 56
   },
   {
     "id": "134589",
@@ -10373,7 +10720,8 @@
     "communityRating": 3.4,
     "communityFetchedAt": 1789975516248,
     "releaseDate": 1693267200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co29m3.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co29m3.jpg",
+    "averageTimeHours": 7
   },
   {
     "id": "119171",
@@ -10433,7 +10781,8 @@
     "communityRating": 4.6,
     "communityFetchedAt": 1789975516869,
     "releaseDate": 1691020800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co670h.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co670h.jpg",
+    "averageTimeHours": 143
   },
   {
     "id": "126212",
@@ -10485,7 +10834,8 @@
     "communityRating": 3.6,
     "communityFetchedAt": 1789924969517,
     "releaseDate": 1687305600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coar0k.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coar0k.jpg",
+    "averageTimeHours": 6
   },
   {
     "id": "228258",
@@ -10542,7 +10892,8 @@
     "communityRating": 3.9,
     "communityFetchedAt": 1789924968996,
     "releaseDate": 1686009600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5us3.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5us3.jpg",
+    "averageTimeHours": 7
   },
   {
     "id": "125165",
@@ -10599,7 +10950,8 @@
     "communityRating": 3.3,
     "communityFetchedAt": 1789924969401,
     "releaseDate": 1686009600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co69sm.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co69sm.jpg",
+    "averageTimeHours": 59
   },
   {
     "id": "18375",
@@ -10656,7 +11008,8 @@
     "communityRating": 3.8,
     "communityFetchedAt": 1789975517623,
     "releaseDate": 1685404800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ik8.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ik8.jpg",
+    "averageTimeHours": 18
   },
   {
     "id": "204524",
@@ -10713,7 +11066,8 @@
     "communityRating": 3.2,
     "communityFetchedAt": 1789975518204,
     "releaseDate": 1684800000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co88n4.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co88n4.jpg",
+    "averageTimeHours": 3
   },
   {
     "id": "201156",
@@ -10768,7 +11122,8 @@
     "communityRating": 3.9,
     "communityFetchedAt": 1789975518887,
     "releaseDate": 1682640000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5uzk.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5uzk.jpg",
+    "averageTimeHours": 35
   },
   {
     "id": "144022",
@@ -10822,7 +11177,8 @@
     "communityRating": 3.9,
     "communityFetchedAt": 1789975519570,
     "releaseDate": 1644278400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4h5s.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4h5s.jpg",
+    "averageTimeHours": 12
   },
   {
     "id": "266717",
@@ -10877,7 +11233,8 @@
     "communityRating": 4.1,
     "communityFetchedAt": 1789924970491,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7lar.jpg",
-    "releaseDate": 1695254400
+    "releaseDate": 1695254400,
+    "averageTimeHours": 5
   },
   {
     "id": "132181",
@@ -10934,7 +11291,8 @@
     "communityRating": 4.5,
     "communityFetchedAt": 1789924970287,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6bo0.jpg",
-    "releaseDate": 1679616000
+    "releaseDate": 1679616000,
+    "averageTimeHours": 30
   },
   {
     "id": "204628",
@@ -10987,7 +11345,8 @@
     "metadataFetchedAt": 1792253906100,
     "gameType": "Main Game",
     "releaseDate": 1677801600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocjk6.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocjk6.jpg",
+    "averageTimeHours": 26
   },
   {
     "id": "76747",
@@ -11045,7 +11404,8 @@
     "communityRating": 3,
     "communityFetchedAt": 1789975520212,
     "releaseDate": 1676937600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co68ag.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co68ag.jpg",
+    "averageTimeHours": 18
   },
   {
     "id": "136625",
@@ -11101,7 +11461,8 @@
     "communityRating": 3.3,
     "communityFetchedAt": 1789975520824,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaav6.jpg",
-    "releaseDate": 1675987200
+    "releaseDate": 1675987200,
+    "averageTimeHours": 45
   },
   {
     "id": "159119",
@@ -11159,7 +11520,8 @@
     "communityRating": 4.1,
     "communityFetchedAt": 1789924970857,
     "releaseDate": 1674777600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobkv5.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobkv5.jpg",
+    "averageTimeHours": 15
   },
   {
     "id": "233585",
@@ -11216,7 +11578,8 @@
     "communityRating": 4.1,
     "communityFetchedAt": 1789975521451,
     "releaseDate": 1674604800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6219.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6219.jpg",
+    "averageTimeHours": 12
   },
   {
     "id": "152258",
@@ -11269,7 +11632,8 @@
     "communityRating": 3.7,
     "communityFetchedAt": 1789975522396,
     "releaseDate": 1670371200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co39ra.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co39ra.jpg",
+    "averageTimeHours": 21
   },
   {
     "id": "141538",
@@ -11326,7 +11690,8 @@
     "communityRating": 2.8,
     "communityFetchedAt": 1789975523341,
     "releaseDate": 1669939200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4ymo.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4ymo.jpg",
+    "averageTimeHours": 10
   },
   {
     "id": "41025",
@@ -11378,7 +11743,8 @@
     "communityRating": 2.8,
     "communityFetchedAt": 1789975523974,
     "releaseDate": 1668470400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6qox.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6qox.jpg",
+    "averageTimeHours": 3
   },
   {
     "id": "112875",
@@ -11433,7 +11799,8 @@
     "communityRating": 4.3,
     "communityFetchedAt": 1789975524658,
     "releaseDate": 1667952000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coba3d.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coba3d.jpg",
+    "averageTimeHours": 46
   },
   {
     "id": "200165",
@@ -11491,7 +11858,8 @@
     "communityRating": 2.9,
     "communityFetchedAt": 1789975525396,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4sbw.jpg",
-    "releaseDate": 1666915200
+    "releaseDate": 1666915200,
+    "averageTimeHours": 49
   },
   {
     "id": "186725",
@@ -11551,7 +11919,8 @@
     "communityRating": 3.7,
     "communityFetchedAt": 1789975526219,
     "releaseDate": 1643673600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4bzv.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4bzv.jpg",
+    "averageTimeHours": 34
   },
   {
     "id": "103244",
@@ -11610,7 +11979,8 @@
     "communityRating": 4.3,
     "communityFetchedAt": 1789975527258,
     "releaseDate": 1666828800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co62ig.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co62ig.jpg",
+    "averageTimeHours": 10
   },
   {
     "id": "152242",
@@ -11666,7 +12036,8 @@
     "communityRating": 4,
     "communityFetchedAt": 1789975527985,
     "releaseDate": 1666051200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5pwb.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5pwb.jpg",
+    "averageTimeHours": 18
   },
   {
     "id": "134588",
@@ -11719,7 +12090,8 @@
     "communityRating": 3.6,
     "communityFetchedAt": 1789975528614,
     "releaseDate": 1632182400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9hwy.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9hwy.jpg",
+    "averageTimeHours": 14
   },
   {
     "id": "134560",
@@ -11776,7 +12148,8 @@
     "communityRating": 3.6,
     "communityFetchedAt": 1789975529319,
     "releaseDate": 1663200000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coan1t.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coan1t.jpg",
+    "averageTimeHours": 5
   },
   {
     "id": "152288",
@@ -11828,7 +12201,8 @@
     "communityRating": 3.9,
     "communityFetchedAt": 1789975529911,
     "releaseDate": 1661817600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co55cl.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co55cl.jpg",
+    "averageTimeHours": 9
   },
   {
     "id": "110248",
@@ -11883,7 +12257,8 @@
     "communityRating": 3.7,
     "communityFetchedAt": 1789975530537,
     "releaseDate": 1658188800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4tt2.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4tt2.jpg",
+    "averageTimeHours": 7
   },
   {
     "id": "113119",
@@ -11935,7 +12310,8 @@
     "communityRating": 4,
     "communityFetchedAt": 1789975531130,
     "releaseDate": 1651017600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4p71.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4p71.jpg",
+    "averageTimeHours": 6
   },
   {
     "id": "119308",
@@ -11989,7 +12365,8 @@
     "communityRating": 3.1,
     "communityFetchedAt": 1789975531777,
     "releaseDate": 1648080000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co55xn.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co55xn.jpg",
+    "averageTimeHours": 20
   },
   {
     "id": "240009",
@@ -12043,7 +12420,8 @@
     "communityRating": 4.4,
     "communityFetchedAt": 1789975532411,
     "releaseDate": 1718928000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7sly.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7sly.jpg",
+    "averageTimeHours": 49
   },
   {
     "id": "119133",
@@ -12103,7 +12481,8 @@
     "communityRating": 4.5,
     "communityFetchedAt": 1789975533062,
     "releaseDate": 1645747200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4jni.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4jni.jpg",
+    "averageTimeHours": 149
   },
   {
     "id": "228533",
@@ -12159,7 +12538,8 @@
     "communityRating": 3.9,
     "communityFetchedAt": 1789975533681,
     "releaseDate": 1681862400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6a9w.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6a9w.jpg",
+    "averageTimeHours": 11
   },
   {
     "id": "112874",
@@ -12215,7 +12595,8 @@
     "communityRating": 3.7,
     "communityFetchedAt": 1789975534440,
     "releaseDate": 1645142400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2gvu.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2gvu.jpg",
+    "averageTimeHours": 59
   },
   {
     "id": "102584",
@@ -12276,7 +12657,8 @@
     "communityRating": 3.2,
     "communityFetchedAt": 1789975535221,
     "releaseDate": 1643846400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co65yk.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co65yk.jpg",
+    "averageTimeHours": 45
   },
   {
     "id": "125166",
@@ -12332,7 +12714,8 @@
     "communityRating": 2.3,
     "communityFetchedAt": 1789975535827,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7dfn.jpg",
-    "releaseDate": 1637280000
+    "releaseDate": 1637280000,
+    "averageTimeHours": 36
   },
   {
     "id": "165067",
@@ -12389,7 +12772,8 @@
     "communityRating": 2.2,
     "communityFetchedAt": 1789975536485,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3kq8.jpg",
-    "releaseDate": 1636070400
+    "releaseDate": 1636070400,
+    "averageTimeHours": 20
   },
   {
     "id": "152249",
@@ -12448,7 +12832,8 @@
     "communityRating": 3.8,
     "communityFetchedAt": 1789924973841,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co39pu.jpg",
-    "releaseDate": 1635206400
+    "releaseDate": 1635206400,
+    "averageTimeHours": 19
   },
   {
     "id": "139090",
@@ -12507,7 +12892,8 @@
     "communityRating": 4.2,
     "communityFetchedAt": 1789924973766,
     "releaseDate": 1634601600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co401c.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co401c.jpg",
+    "averageTimeHours": 16
   },
   {
     "id": "113598",
@@ -12562,7 +12948,8 @@
     "communityRating": 3.3,
     "communityFetchedAt": 1789975537060,
     "releaseDate": 1631577600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4nzt.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4nzt.jpg",
+    "averageTimeHours": 18
   },
   {
     "id": "135789",
@@ -12610,7 +12997,8 @@
     "metadataFetchedAt": 1792253906101,
     "gameType": "Main Game",
     "releaseDate": 1593475200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co50bc.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co50bc.jpg",
+    "averageTimeHours": 1
   },
   {
     "id": "14741",
@@ -12665,7 +13053,8 @@
     "communityRating": 4.2,
     "communityFetchedAt": 1789924974214,
     "releaseDate": 1629763200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob7mx.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob7mx.jpg",
+    "averageTimeHours": 20
   },
   {
     "id": "16612",
@@ -12721,7 +13110,8 @@
     "communityRating": 2.7,
     "communityFetchedAt": 1789975537864,
     "releaseDate": 1629331200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co77xc.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co77xc.jpg",
+    "averageTimeHours": 5
   },
   {
     "id": "121731",
@@ -12777,7 +13167,8 @@
     "communityRating": 3,
     "communityFetchedAt": 1789975538490,
     "releaseDate": 1629158400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1xs1.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1xs1.jpg",
+    "averageTimeHours": 24
   },
   {
     "id": "145099",
@@ -12835,7 +13226,8 @@
     "communityRating": 3.7,
     "communityFetchedAt": 1789975539588,
     "releaseDate": 1626739200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co45xc.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co45xc.jpg",
+    "averageTimeHours": 12
   },
   {
     "id": "122559",
@@ -12886,7 +13278,8 @@
     "communityRating": 3.6,
     "communityFetchedAt": 1789924974876,
     "releaseDate": 1568851200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2p9v.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2p9v.jpg",
+    "averageTimeHours": 13
   },
   {
     "id": "230951",
@@ -12942,7 +13335,8 @@
     "communityRating": 3.3,
     "communityFetchedAt": 1789924975284,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocl9w.jpg",
-    "releaseDate": 1666915200
+    "releaseDate": 1666915200,
+    "averageTimeHours": 3
   },
   {
     "id": "55163",
@@ -13000,7 +13394,8 @@
     "communityRating": 3.9,
     "communityFetchedAt": 1789924975212,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coab9q.jpg",
-    "releaseDate": 1620259200
+    "releaseDate": 1620259200,
+    "averageTimeHours": 16
   },
   {
     "id": "148207",
@@ -13055,7 +13450,8 @@
     "communityRating": 3.1,
     "communityFetchedAt": 1789975540215,
     "releaseDate": 1613001600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3zrv.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3zrv.jpg",
+    "averageTimeHours": 13
   },
   {
     "id": "139647",
@@ -13099,7 +13495,8 @@
     "metadataFetchedAt": 1792253906101,
     "gameType": "Main Game",
     "releaseDate": 1692057600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co745y.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co745y.jpg",
+    "averageTimeHours": null
   },
   {
     "id": "135243",
@@ -13154,7 +13551,8 @@
     "communityRating": 4.2,
     "communityFetchedAt": 1789975540780,
     "releaseDate": 1616630400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob22v.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob22v.jpg",
+    "averageTimeHours": 14
   },
   {
     "id": "121760",
@@ -13211,7 +13609,8 @@
     "communityRating": 4.1,
     "communityFetchedAt": 1789975541449,
     "releaseDate": 1612915200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coa17l.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coa17l.jpg",
+    "averageTimeHours": 6
   },
   {
     "id": "215769",
@@ -13270,7 +13669,8 @@
     "communityRating": 4.6,
     "communityFetchedAt": 1789975542181,
     "releaseDate": 1695686400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7566.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7566.jpg",
+    "averageTimeHours": 35
   },
   {
     "id": "1877",
@@ -13329,7 +13729,8 @@
     "communityRating": 4.2,
     "communityFetchedAt": 1789975542789,
     "releaseDate": 1607558400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaih8.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaih8.jpg",
+    "averageTimeHours": 90
   },
   {
     "id": "134606",
@@ -13387,7 +13788,8 @@
     "communityRating": 3.7,
     "communityFetchedAt": 1789975687904,
     "releaseDate": 1605139200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2kj9.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2kj9.jpg",
+    "averageTimeHours": 30
   },
   {
     "id": "137001",
@@ -13445,7 +13847,8 @@
     "communityRating": 3.2,
     "communityFetchedAt": 1789975688744,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2n6j.jpg",
-    "releaseDate": 1605225600
+    "releaseDate": 1605225600,
+    "averageTimeHours": 60
   },
   {
     "id": "134581",
@@ -13502,7 +13905,8 @@
     "communityRating": 3.7,
     "communityFetchedAt": 1789975689471,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobg1j.jpg",
-    "releaseDate": 1605139200
+    "releaseDate": 1605139200,
+    "averageTimeHours": 17
   },
   {
     "id": "133004",
@@ -13559,7 +13963,8 @@
     "communityRating": 2.8,
     "communityFetchedAt": 1789975690298,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2ed3.jpg",
-    "releaseDate": 1604966400
+    "releaseDate": 1604966400,
+    "averageTimeHours": 88
   },
   {
     "id": "133301",
@@ -13615,7 +14020,8 @@
     "metadataFetchedAt": 1792253906101,
     "gameType": "Main Game",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2e5b.jpg",
-    "releaseDate": 1604534400
+    "releaseDate": 1604534400,
+    "averageTimeHours": 11
   },
   {
     "id": "100413",
@@ -13673,7 +14079,8 @@
     "metadataFetchedAt": 1792253906101,
     "gameType": "Main Game",
     "releaseDate": 1603929600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocsvn.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocsvn.jpg",
+    "averageTimeHours": 29
   },
   {
     "id": "134070",
@@ -13727,7 +14134,8 @@
     "communityRating": 3.8,
     "communityFetchedAt": 1789975690885,
     "releaseDate": 1600992000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co26vl.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co26vl.jpg",
+    "averageTimeHours": 13
   },
   {
     "id": "124954",
@@ -13784,7 +14192,8 @@
     "communityRating": 3.9,
     "communityFetchedAt": 1789924976573,
     "releaseDate": 1598918400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocleh.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocleh.jpg",
+    "averageTimeHours": 133
   },
   {
     "id": "7046",
@@ -13838,7 +14247,8 @@
     "metadataFetchedAt": 1792253906101,
     "gameType": "Main Game",
     "releaseDate": 1597363200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1tfy.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1tfy.jpg",
+    "averageTimeHours": 108
   },
   {
     "id": "122649",
@@ -13893,7 +14303,8 @@
     "metadataFetchedAt": 1792253906101,
     "gameType": "Main Game",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2fzc.jpg",
-    "releaseDate": 1597276800
+    "releaseDate": 1597276800,
+    "averageTimeHours": 17
   },
   {
     "id": "119313",
@@ -13950,7 +14361,8 @@
     "metadataFetchedAt": 1792253906101,
     "gameType": "Main Game",
     "releaseDate": 1596499200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coa7cs.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coa7cs.jpg",
+    "averageTimeHours": 29
   },
   {
     "id": "154772",
@@ -13970,7 +14382,8 @@
     "playText": "6.5K",
     "checked": false,
     "communityRating": 3.9,
-    "communityFetchedAt": 1789975691648
+    "communityFetchedAt": 1789975691648,
+    "averageTimeHours": 9
   },
   {
     "id": "75235",
@@ -14025,7 +14438,8 @@
     "communityRating": 4.2,
     "communityFetchedAt": 1789924977069,
     "releaseDate": 1594944000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2crj.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2crj.jpg",
+    "averageTimeHours": 52
   },
   {
     "id": "26192",
@@ -14082,7 +14496,8 @@
     "communityRating": 4.3,
     "communityFetchedAt": 1789975692242,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5ziw.jpg",
-    "releaseDate": 1592524800
+    "releaseDate": 1592524800,
+    "averageTimeHours": 38
   },
   {
     "id": "146761",
@@ -14140,7 +14555,8 @@
     "communityRating": 4.6,
     "communityFetchedAt": 1789975692858,
     "releaseDate": 1632787200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3wbp.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3wbp.jpg",
+    "averageTimeHours": 13
   },
   {
     "id": "11737",
@@ -14199,7 +14615,8 @@
     "communityRating": 4.6,
     "communityFetchedAt": 1789975693754,
     "releaseDate": 1559001600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co65ac.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co65ac.jpg",
+    "averageTimeHours": 22
   },
   {
     "id": "132002",
@@ -14250,7 +14667,8 @@
     "metadataFetchedAt": 1792253906101,
     "gameType": "Main Game",
     "releaseDate": 1590624000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co258j.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co258j.jpg",
+    "averageTimeHours": 13
   },
   {
     "id": "115115",
@@ -14307,7 +14725,8 @@
     "communityRating": 3.2,
     "communityFetchedAt": 1789924977527,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocw1u.jpg",
-    "releaseDate": 1585872000
+    "releaseDate": 1585872000,
+    "averageTimeHours": 9
   },
   {
     "id": "126098",
@@ -14362,7 +14781,8 @@
     "communityRating": 4.5,
     "communityFetchedAt": 1789975694393,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co87vg.jpg",
-    "releaseDate": 1584921600
+    "releaseDate": 1584921600,
+    "averageTimeHours": 14
   },
   {
     "id": "144731",
@@ -14874,7 +15294,7 @@
     "franchises": [
       "Call of Duty"
     ],
-    "averageTimeHours": 92,
+    "averageTimeHours": 89,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253906101,
     "gameType": "Main Game",
@@ -15663,7 +16083,7 @@
     "franchises": [
       "Metro"
     ],
-    "averageTimeHours": 23,
+    "averageTimeHours": 24,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253906101,
     "gameType": "Main Game",
@@ -15719,7 +16139,7 @@
       "Respawn Entertainment": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl8hw.png"
     },
     "franchises": [],
-    "averageTimeHours": 223,
+    "averageTimeHours": 224,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253906101,
     "gameType": "Main Game",
@@ -15952,7 +16372,7 @@
     "franchises": [
       "Call of Duty"
     ],
-    "averageTimeHours": 108,
+    "averageTimeHours": 107,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253906101,
     "gameType": "Main Game",
@@ -16010,7 +16430,7 @@
     "developerLogos": {
       "Ubisoft Québec": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl4mf.png"
     },
-    "averageTimeHours": 94,
+    "averageTimeHours": 93,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253906101,
     "gameType": "Main Game",
@@ -16193,7 +16613,7 @@
     "developerLogos": {
       "Insomniac Games": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl3w6.png"
     },
-    "averageTimeHours": 34,
+    "averageTimeHours": 33,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253906101,
     "gameType": "Remaster",
@@ -16310,7 +16730,7 @@
     "developerLogos": {
       "EA Digital Illusions CE": "https://images.igdb.com/igdb/image/upload/t_logo_med/srtuszl5jkb0ykhzyt6l.png"
     },
-    "averageTimeHours": 33,
+    "averageTimeHours": 34,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253906101,
     "gameType": "Main Game",
@@ -16967,7 +17387,7 @@
     "franchises": [
       "God of War"
     ],
-    "averageTimeHours": 38,
+    "averageTimeHours": 37,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253906904,
     "gameType": "Main Game",
@@ -17080,7 +17500,7 @@
       "Hazelight Studios": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl8dq.png"
     },
     "franchises": [],
-    "averageTimeHours": 6,
+    "averageTimeHours": 7,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253906904,
     "gameType": "Main Game",
@@ -17134,7 +17554,7 @@
       "Haemimont Games": "https://images.igdb.com/igdb/image/upload/t_logo_med/r0sc8aaqfvzdpvgsyzfj.png"
     },
     "franchises": [],
-    "averageTimeHours": 15,
+    "averageTimeHours": 14,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253906904,
     "gameType": "Main Game",
@@ -17196,7 +17616,7 @@
       "Shiro Games": "https://images.igdb.com/igdb/image/upload/t_logo_med/fdu69dwqsn03hrcwter4.png"
     },
     "franchises": [],
-    "averageTimeHours": 20,
+    "averageTimeHours": 21,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253906904,
     "gameType": "Main Game",
@@ -17379,7 +17799,7 @@
       "Warhorse Studios": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl4z6.png"
     },
     "franchises": [],
-    "averageTimeHours": 57,
+    "averageTimeHours": 58,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253906904,
     "gameType": "Main Game",
@@ -17499,7 +17919,7 @@
     "franchises": [
       "Star Wars"
     ],
-    "averageTimeHours": 56,
+    "averageTimeHours": 57,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253906904,
     "gameType": "Main Game",
@@ -17912,7 +18332,8 @@
     "communityRating": 3.6,
     "communityFetchedAt": 1789975568368,
     "releaseDate": 1504137600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1twj.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1twj.jpg",
+    "averageTimeHours": 12
   },
   {
     "id": "26193",
@@ -17969,7 +18390,8 @@
     "communityRating": 3.7,
     "communityFetchedAt": 1789924984948,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1tp9.jpg",
-    "releaseDate": 1503360000
+    "releaseDate": 1503360000,
+    "averageTimeHours": 10
   },
   {
     "id": "7603",
@@ -18027,7 +18449,8 @@
     "communityRating": 3.6,
     "communityFetchedAt": 1789975568961,
     "releaseDate": 1502064000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2l7l.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2l7l.jpg",
+    "averageTimeHours": 8
   },
   {
     "id": "19531",
@@ -18085,7 +18508,8 @@
     "communityRating": 4,
     "communityFetchedAt": 1789975569768,
     "releaseDate": 1493856000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9aoh.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9aoh.jpg",
+    "averageTimeHours": 23
   },
   {
     "id": "9174",
@@ -18144,7 +18568,8 @@
     "communityRating": 3.8,
     "communityFetchedAt": 1789975570526,
     "releaseDate": 1493337600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rdi.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rdi.jpg",
+    "averageTimeHours": 5
   },
   {
     "id": "11233",
@@ -18199,7 +18624,8 @@
     "communityRating": 4,
     "communityFetchedAt": 1789975571154,
     "releaseDate": 1492992000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rbj.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rbj.jpg",
+    "averageTimeHours": 2
   },
   {
     "id": "7349",
@@ -18257,7 +18683,8 @@
     "communityRating": 2.7,
     "communityFetchedAt": 1789924986448,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co39vk.jpg",
-    "releaseDate": 1490054400
+    "releaseDate": 1490054400,
+    "averageTimeHours": 55
   },
   {
     "id": "37083",
@@ -18313,7 +18740,8 @@
     "communityRating": 3.8,
     "communityFetchedAt": 1789975571736,
     "releaseDate": 1510012800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4hjg.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4hjg.jpg",
+    "averageTimeHours": 10
   },
   {
     "id": "11156",
@@ -18372,7 +18800,8 @@
     "communityRating": 3.6,
     "communityFetchedAt": 1789975573075,
     "releaseDate": 1488240000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2una.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2una.jpg",
+    "averageTimeHours": 43
   },
   {
     "id": "11208",
@@ -18434,7 +18863,8 @@
     "communityRating": 4.3,
     "communityFetchedAt": 1789924986349,
     "releaseDate": 1487808000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5pcj.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5pcj.jpg",
+    "averageTimeHours": 37
   },
   {
     "id": "11162",
@@ -18489,7 +18919,8 @@
     "communityRating": 2.9,
     "communityFetchedAt": 1789975574310,
     "releaseDate": 1486944000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coclez.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coclez.jpg",
+    "averageTimeHours": 108
   },
   {
     "id": "75236",
@@ -18543,7 +18974,8 @@
     "metadataFetchedAt": 1792253906905,
     "gameType": "DLC",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5yf7.jpg",
-    "releaseDate": 1513036800
+    "releaseDate": 1513036800,
+    "averageTimeHours": 1
   },
   {
     "id": "27395",
@@ -18599,7 +19031,8 @@
     "metadataFetchedAt": 1792253906905,
     "gameType": "DLC",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5yf8.jpg",
-    "releaseDate": 1512950400
+    "releaseDate": 1512950400,
+    "averageTimeHours": 1
   },
   {
     "id": "19562",
@@ -18657,7 +19090,8 @@
     "communityRating": 4.1,
     "communityFetchedAt": 1789924986994,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobtwh.jpg",
-    "releaseDate": 1485216000
+    "releaseDate": 1485216000,
+    "averageTimeHours": 13
   },
   {
     "id": "19000",
@@ -18715,7 +19149,8 @@
     "communityRating": 3.2,
     "communityFetchedAt": 1789975575053,
     "releaseDate": 1482192000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co27bk.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co27bk.jpg",
+    "averageTimeHours": 8
   },
   {
     "id": "117",
@@ -18770,7 +19205,8 @@
     "communityRating": 3.8,
     "communityFetchedAt": 1789975576080,
     "releaseDate": 1480982400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co271e.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co271e.jpg",
+    "averageTimeHours": 11
   },
   {
     "id": "11118",
@@ -18824,7 +19260,8 @@
     "communityRating": 4,
     "communityFetchedAt": 1789924987631,
     "releaseDate": 1478822400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9e29.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9e29.jpg",
+    "averageTimeHours": 23
   },
   {
     "id": "17447",
@@ -18881,7 +19318,8 @@
     "communityRating": 4.2,
     "communityFetchedAt": 1789975576703,
     "releaseDate": 1477612800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/fhbeilnghyhhmjqhinqa.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/fhbeilnghyhhmjqhinqa.jpg",
+    "averageTimeHours": 17
   },
   {
     "id": "18320",
@@ -18938,7 +19376,8 @@
     "communityRating": 3.7,
     "communityFetchedAt": 1789975577325,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2n9d.jpg",
-    "releaseDate": 1477008000
+    "releaseDate": 1477008000,
+    "averageTimeHours": 39
   },
   {
     "id": "19130",
@@ -18998,7 +19437,8 @@
     "communityRating": 3.7,
     "communityFetchedAt": 1789975577920,
     "releaseDate": 1476921600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaaqr.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaaqr.jpg",
+    "averageTimeHours": 92
   },
   {
     "id": "18968",
@@ -19057,7 +19497,8 @@
     "communityRating": 2.8,
     "communityFetchedAt": 1789975578561,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1wkp.jpg",
-    "releaseDate": 1478217600
+    "releaseDate": 1478217600,
+    "averageTimeHours": 32
   },
   {
     "id": "10960",
@@ -19113,7 +19554,8 @@
     "communityRating": 3.6,
     "communityFetchedAt": 1789924988208,
     "releaseDate": 1476057600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1z4e.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1z4e.jpg",
+    "averageTimeHours": 7
   },
   {
     "id": "18853",
@@ -19170,7 +19612,8 @@
     "communityRating": 3.1,
     "communityFetchedAt": 1789975579169,
     "releaseDate": 1475539200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ph6.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ph6.jpg",
+    "averageTimeHours": 7
   },
   {
     "id": "18311",
@@ -19224,7 +19667,8 @@
     "communityRating": 3.1,
     "communityFetchedAt": 1789975579910,
     "releaseDate": 1472515200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1uya.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1uya.jpg",
+    "averageTimeHours": 6
   },
   {
     "id": "9498",
@@ -19285,7 +19729,8 @@
     "communityRating": 3.6,
     "communityFetchedAt": 1789975580537,
     "releaseDate": 1471910400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25jt.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25jt.jpg",
+    "averageTimeHours": 28
   },
   {
     "id": "3225",
@@ -19352,7 +19797,8 @@
     "communityRating": 3.4,
     "communityFetchedAt": 1789975581190,
     "releaseDate": 1470700800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocnm2.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocnm2.jpg",
+    "averageTimeHours": 49
   },
   {
     "id": "18433",
@@ -19409,7 +19855,8 @@
     "communityRating": 3.5,
     "communityFetchedAt": 1789924989016,
     "releaseDate": 1470182400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co262g.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co262g.jpg",
+    "averageTimeHours": 7
   },
   {
     "id": "7352",
@@ -19462,7 +19909,8 @@
       "Giant Squid": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl7up.png"
     },
     "releaseDate": 1470096000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co28sy.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co28sy.jpg",
+    "averageTimeHours": 2
   },
   {
     "id": "11423",
@@ -19519,7 +19967,8 @@
     "communityRating": 3.2,
     "communityFetchedAt": 1789975581781,
     "releaseDate": 1469577600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1uu1.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1uu1.jpg",
+    "averageTimeHours": 11
   },
   {
     "id": "7342",
@@ -19576,7 +20025,8 @@
     "communityRating": 3.9,
     "communityFetchedAt": 1789975582437,
     "releaseDate": 1467158400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2fca.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2fca.jpg",
+    "averageTimeHours": 4
   },
   {
     "id": "2112",
@@ -19629,7 +20079,8 @@
       "EA Digital Illusions CE": "https://images.igdb.com/igdb/image/upload/t_logo_med/srtuszl5jkb0ykhzyt6l.png"
     },
     "releaseDate": 1465257600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co28r2.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co28r2.jpg",
+    "averageTimeHours": 13
   },
   {
     "id": "8173",
@@ -19687,7 +20138,8 @@
     "communityRating": 3.3,
     "communityFetchedAt": 1789975583360,
     "releaseDate": 1464048000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rcb.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rcb.jpg",
+    "averageTimeHours": 447
   },
   {
     "id": "7351",
@@ -19744,7 +20196,8 @@
     "communityRating": 3.9,
     "communityFetchedAt": 1789975584019,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1nc7.jpg",
-    "releaseDate": 1463011200
+    "releaseDate": 1463011200,
+    "averageTimeHours": 15
   },
   {
     "id": "7331",
@@ -19802,7 +20255,8 @@
     "communityRating": 4.3,
     "communityFetchedAt": 1789975584695,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1r7h.jpg",
-    "releaseDate": 1462838400
+    "releaseDate": 1462838400,
+    "averageTimeHours": 25
   },
   {
     "id": "11582",
@@ -19859,7 +20313,8 @@
     "communityRating": 3.7,
     "communityFetchedAt": 1789924990074,
     "releaseDate": 1462752000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaaru.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaaru.jpg",
+    "averageTimeHours": 129
   },
   {
     "id": "11065",
@@ -19914,7 +20369,8 @@
     "communityRating": 3.4,
     "communityFetchedAt": 1789975585344,
     "releaseDate": 1460419200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co230k.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co230k.jpg",
+    "averageTimeHours": 16
   },
   {
     "id": "26916",
@@ -19967,7 +20423,8 @@
     "metadataFetchedAt": 1792253906905,
     "gameType": "Expansion",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co28fq.jpg",
-    "releaseDate": 1490572800
+    "releaseDate": 1490572800,
+    "averageTimeHours": 10
   },
   {
     "id": "23158",
@@ -20020,7 +20477,8 @@
     "metadataFetchedAt": 1792253906905,
     "gameType": "Expansion",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vwd.jpg",
-    "releaseDate": 1477267200
+    "releaseDate": 1477267200,
+    "averageTimeHours": 6
   },
   {
     "id": "11133",
@@ -20077,7 +20535,8 @@
     "communityRating": 4.3,
     "communityFetchedAt": 1789975585949,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob9ed.jpg",
-    "releaseDate": 1458777600
+    "releaseDate": 1458777600,
+    "averageTimeHours": 88
   },
   {
     "id": "3750",
@@ -20130,7 +20589,8 @@
     "communityRating": 3.4,
     "communityFetchedAt": 1789975586534,
     "releaseDate": 1459814400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8gsr.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8gsr.jpg",
+    "averageTimeHours": 11
   },
   {
     "id": "10965",
@@ -20189,7 +20649,8 @@
     "communityRating": 3.1,
     "communityFetchedAt": 1789975587147,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20a2.jpg",
-    "releaseDate": 1446508800
+    "releaseDate": 1446508800,
+    "averageTimeHours": 23
   },
   {
     "id": "11157",
@@ -20248,7 +20709,8 @@
     "communityRating": 3.8,
     "communityFetchedAt": 1789975587742,
     "releaseDate": 1457654400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2fgr.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2fgr.jpg",
+    "averageTimeHours": 20
   },
   {
     "id": "2114",
@@ -20313,7 +20775,8 @@
     "communityRating": 3,
     "communityFetchedAt": 1789975588329,
     "releaseDate": 1457395200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1yvf.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1yvf.jpg",
+    "averageTimeHours": 41
   },
   {
     "id": "493",
@@ -20370,7 +20833,8 @@
     "communityRating": 3.4,
     "communityFetchedAt": 1789975589025,
     "releaseDate": 1266451200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaajv.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaajv.jpg",
+    "averageTimeHours": 11
   },
   {
     "id": "7205",
@@ -20425,7 +20889,8 @@
     "communityRating": 3.6,
     "communityFetchedAt": 1789975589668,
     "releaseDate": 1456358400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7ybp.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7ybp.jpg",
+    "averageTimeHours": 5
   },
   {
     "id": "11170",
@@ -20480,7 +20945,8 @@
     "communityRating": 3.4,
     "communityFetchedAt": 1789975590300,
     "releaseDate": 1454976000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co95jp.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co95jp.jpg",
+    "averageTimeHours": 7
   },
   {
     "id": "9730",
@@ -20534,7 +21000,8 @@
     "communityRating": 3.8,
     "communityFetchedAt": 1789975590922,
     "releaseDate": 1454976000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob1ts.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob1ts.jpg",
+    "averageTimeHours": 4
   },
   {
     "id": "10919",
@@ -20592,7 +21059,8 @@
     "metadataFetchedAt": 1792253906905,
     "gameType": "Main Game",
     "releaseDate": 1454544000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1mvj.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1mvj.jpg",
+    "averageTimeHours": 56
   },
   {
     "id": "7323",
@@ -20654,7 +21122,8 @@
     "communityRating": 3.7,
     "communityFetchedAt": 1789924991286,
     "releaseDate": 1447113600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rqa.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rqa.jpg",
+    "averageTimeHours": 20
   },
   {
     "id": "5601",
@@ -20708,7 +21177,8 @@
     "communityRating": 3.6,
     "communityFetchedAt": 1789924991406,
     "releaseDate": 1453766400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3hih.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3hih.jpg",
+    "averageTimeHours": 16
   },
   {
     "id": "9928",
@@ -20768,7 +21238,8 @@
     "communityRating": 3.4,
     "communityFetchedAt": 1789975591894,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1srp.jpg",
-    "releaseDate": 1449446400
+    "releaseDate": 1449446400,
+    "averageTimeHours": 15
   },
   {
     "id": "1342",
@@ -20822,7 +21293,8 @@
     "communityRating": 3.2,
     "communityFetchedAt": 1789924992014,
     "releaseDate": 1381190400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8r4w.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8r4w.jpg",
+    "averageTimeHours": 11
   },
   {
     "id": "2113",
@@ -20880,7 +21352,8 @@
     "communityRating": 3,
     "communityFetchedAt": 1789924991835,
     "releaseDate": 1447718400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2res.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2res.jpg",
+    "averageTimeHours": 44
   },
   {
     "id": "9630",
@@ -20940,7 +21413,8 @@
     "communityRating": 3.4,
     "communityFetchedAt": 1789975592611,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1yc6.jpg",
-    "releaseDate": 1447027200
+    "releaseDate": 1447027200,
+    "averageTimeHours": 112
   },
   {
     "id": "7767",
@@ -21005,7 +21479,8 @@
     "communityRating": 3.4,
     "communityFetchedAt": 1789975593279,
     "releaseDate": 1445472000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2561.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2561.jpg",
+    "averageTimeHours": 8
   },
   {
     "id": "1338",
@@ -21063,7 +21538,8 @@
     "communityRating": 3.2,
     "communityFetchedAt": 1789975594158,
     "releaseDate": 1444089600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co62ch.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co62ch.jpg",
+    "averageTimeHours": 31
   },
   {
     "id": "13212",
@@ -21118,7 +21594,8 @@
     "communityRating": 4.1,
     "communityFetchedAt": 1789924992530,
     "releaseDate": 1443657600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2rz1.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2rz1.jpg",
+    "averageTimeHours": 1
   },
   {
     "id": "14148",
@@ -21174,7 +21651,8 @@
     "communityRating": 3,
     "communityFetchedAt": 1789924992580,
     "releaseDate": 1442966400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3nhz.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3nhz.jpg",
+    "averageTimeHours": 3
   },
   {
     "id": "9727",
@@ -21230,7 +21708,8 @@
     "communityRating": 4.1,
     "communityFetchedAt": 1789975594770,
     "releaseDate": 1442793600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2a20.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2a20.jpg",
+    "averageTimeHours": 9
   },
   {
     "id": "2552",
@@ -21289,7 +21768,8 @@
     "communityRating": 3.4,
     "communityFetchedAt": 1789924992902,
     "releaseDate": 1441065600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1uuh.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1uuh.jpg",
+    "averageTimeHours": 33
   },
   {
     "id": "1985",
@@ -21348,7 +21828,8 @@
     "metadataFetchedAt": 1792253906905,
     "gameType": "Main Game",
     "releaseDate": 1441065600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1v85.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1v85.jpg",
+    "averageTimeHours": 79
   },
   {
     "id": "47107",
@@ -21397,7 +21878,8 @@
     "metadataFetchedAt": 1792253906905,
     "gameType": "Mod",
     "releaseDate": 1437782400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6p3t.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6p3t.jpg",
+    "averageTimeHours": 8
   },
   {
     "id": "5503",
@@ -21454,7 +21936,8 @@
     "communityRating": 4.1,
     "communityFetchedAt": 1789975595846,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coagib.jpg",
-    "releaseDate": 1435017600
+    "releaseDate": 1435017600,
+    "averageTimeHours": 43
   },
   {
     "id": "9707",
@@ -21507,7 +21990,8 @@
     "metadataFetchedAt": 1792253906905,
     "gameType": "Main Game",
     "releaseDate": 1432598400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ud4.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ud4.jpg",
+    "averageTimeHours": 11
   },
   {
     "id": "12503",
@@ -21562,7 +22046,8 @@
     "communityRating": 4.5,
     "communityFetchedAt": 1789975596490,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1t7q.jpg",
-    "releaseDate": 1444608000
+    "releaseDate": 1444608000,
+    "averageTimeHours": 15
   },
   {
     "id": "13166",
@@ -21618,7 +22103,8 @@
     "communityRating": 4.7,
     "communityFetchedAt": 1789975597121,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2lgo.jpg",
-    "releaseDate": 1464566400
+    "releaseDate": 1464566400,
+    "averageTimeHours": 32
   },
   {
     "id": "1942",
@@ -21680,7 +22166,8 @@
     "communityRating": 4.4,
     "communityFetchedAt": 1789975597789,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaarl.jpg",
-    "releaseDate": 1431993600
+    "releaseDate": 1431993600,
+    "averageTimeHours": 116
   },
   {
     "id": "9192",
@@ -21739,7 +22226,8 @@
     "communityRating": 3.5,
     "communityFetchedAt": 1789975598391,
     "releaseDate": 1430697600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co21et.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co21et.jpg",
+    "averageTimeHours": 7
   },
   {
     "id": "3102",
@@ -21794,7 +22282,8 @@
     "metadataFetchedAt": 1792253906905,
     "gameType": "Main Game",
     "releaseDate": 1430092800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co26n5.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co26n5.jpg",
+    "averageTimeHours": 79
   },
   {
     "id": "1020",
@@ -21857,7 +22346,8 @@
     "communityRating": 4,
     "communityFetchedAt": 1789924993633,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2lbd.jpg",
-    "releaseDate": 1379376000
+    "releaseDate": 1379376000,
+    "averageTimeHours": 216
   },
   {
     "id": "42931",
@@ -21910,7 +22400,8 @@
     "communityRating": 4.7,
     "communityFetchedAt": 1789924993667,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4vui.jpg",
-    "releaseDate": 1448582400
+    "releaseDate": 1448582400,
+    "averageTimeHours": 65
   },
   {
     "id": "14647",
@@ -21965,7 +22456,8 @@
     "communityRating": 4.7,
     "communityFetchedAt": 1789975599234,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob99k.jpg",
-    "releaseDate": 1448323200
+    "releaseDate": 1448323200,
+    "averageTimeHours": 16
   },
   {
     "id": "7334",
@@ -22021,7 +22513,8 @@
     "communityRating": 4.5,
     "communityFetchedAt": 1789975599898,
     "releaseDate": 1427155200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob99l.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob99l.jpg",
+    "averageTimeHours": 65
   },
   {
     "id": "7344",
@@ -22076,7 +22569,8 @@
     "communityRating": 3.9,
     "communityFetchedAt": 1789975600899,
     "releaseDate": 1426032000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1y41.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1y41.jpg",
+    "averageTimeHours": 11
   },
   {
     "id": "9066",
@@ -22129,7 +22623,8 @@
     "communityRating": 3.5,
     "communityFetchedAt": 1789975601707,
     "releaseDate": 1425945600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaas0.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaas0.jpg",
+    "averageTimeHours": 49
   },
   {
     "id": "3048",
@@ -22187,7 +22682,8 @@
     "communityRating": 3,
     "communityFetchedAt": 1789975602322,
     "releaseDate": 1424390400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2rn6.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2rn6.jpg",
+    "averageTimeHours": 9
   },
   {
     "id": "3770",
@@ -22241,7 +22737,8 @@
     "metadataFetchedAt": 1792253907687,
     "gameType": "Main Game",
     "releaseDate": 1423440000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coa2ha.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coa2ha.jpg",
+    "averageTimeHours": 16
   },
   {
     "id": "7599",
@@ -22302,7 +22799,8 @@
     "communityRating": 3.9,
     "communityFetchedAt": 1789975603120,
     "releaseDate": 1422489600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1r8e.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1r8e.jpg",
+    "averageTimeHours": 17
   },
   {
     "id": "9047",
@@ -22364,7 +22862,8 @@
     "communityRating": 3.1,
     "communityFetchedAt": 1789975720421,
     "releaseDate": 1581984000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9cnc.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9cnc.jpg",
+    "averageTimeHours": 8
   },
   {
     "id": "3042",
@@ -22427,7 +22926,8 @@
     "communityRating": 3.8,
     "communityFetchedAt": 1789975721070,
     "releaseDate": 1422230400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co65yq.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co65yq.jpg",
+    "averageTimeHours": 38
   },
   {
     "id": "5328",
@@ -22487,7 +22987,8 @@
     "communityRating": 3.5,
     "communityFetchedAt": 1789975721748,
     "releaseDate": 1395100800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1v88.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1v88.jpg",
+    "averageTimeHours": 6
   },
   {
     "id": "7386",
@@ -22542,7 +23043,8 @@
     "communityRating": 4,
     "communityFetchedAt": 1789975722340,
     "releaseDate": 1418256000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rb5.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rb5.jpg",
+    "averageTimeHours": 19
   },
   {
     "id": "6801",
@@ -22604,7 +23106,8 @@
     "communityRating": 3.5,
     "communityFetchedAt": 1789975723029,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2npa.jpg",
-    "releaseDate": 1416268800
+    "releaseDate": 1416268800,
+    "averageTimeHours": 34
   },
   {
     "id": "19135",
@@ -22656,7 +23159,8 @@
     "metadataFetchedAt": 1792253907687,
     "gameType": "DLC",
     "releaseDate": 1432598400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobow2.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobow2.jpg",
+    "averageTimeHours": 7
   },
   {
     "id": "20188",
@@ -22709,7 +23213,8 @@
     "metadataFetchedAt": 1792253907687,
     "gameType": "DLC",
     "releaseDate": 1439251200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5rwn.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5rwn.jpg",
+    "averageTimeHours": 5
   },
   {
     "id": "20189",
@@ -22762,7 +23267,8 @@
     "metadataFetchedAt": 1792253907687,
     "gameType": "DLC",
     "releaseDate": 1441670400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coazwz.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coazwz.jpg",
+    "averageTimeHours": 7
   },
   {
     "id": "44545",
@@ -22821,7 +23327,8 @@
     "communityRating": 3.7,
     "communityFetchedAt": 1789924995431,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2mw0.jpg",
-    "releaseDate": 1444089600
+    "releaseDate": 1444089600,
+    "averageTimeHours": 105
   },
   {
     "id": "1887",
@@ -22881,7 +23388,8 @@
     "metadataFetchedAt": 1792253907687,
     "gameType": "Main Game",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2mvy.jpg",
-    "releaseDate": 1416268800
+    "releaseDate": 1416268800,
+    "averageTimeHours": 98
   },
   {
     "id": "7706",
@@ -22939,7 +23447,8 @@
     "communityRating": 3.6,
     "communityFetchedAt": 1789975723650,
     "releaseDate": 1415923200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3ans.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3ans.jpg",
+    "averageTimeHours": 13
   },
   {
     "id": "5606",
@@ -22999,7 +23508,8 @@
     "communityRating": 3.4,
     "communityFetchedAt": 1789975724272,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1xiq.jpg",
-    "releaseDate": 1415664000
+    "releaseDate": 1415664000,
+    "averageTimeHours": 37
   },
   {
     "id": "6632",
@@ -23057,7 +23567,8 @@
     "metadataFetchedAt": 1792253907687,
     "gameType": "Main Game",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1wky.jpg",
-    "releaseDate": 1414972800
+    "releaseDate": 1414972800,
+    "averageTimeHours": 38
   },
   {
     "id": "6038",
@@ -23116,7 +23627,8 @@
     "communityRating": 2.7,
     "communityFetchedAt": 1789975922618,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1sr0.jpg",
-    "releaseDate": 1414108800
+    "releaseDate": 1414108800,
+    "averageTimeHours": 25
   },
   {
     "id": "8456",
@@ -23171,7 +23683,8 @@
     "communityRating": 3.9,
     "communityFetchedAt": 1789924995771,
     "releaseDate": 1413331200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co49em.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co49em.jpg",
+    "averageTimeHours": 20
   },
   {
     "id": "4786",
@@ -23227,7 +23740,8 @@
     "communityRating": 3.6,
     "communityFetchedAt": 1789924996191,
     "releaseDate": 1413244800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5wgs.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5wgs.jpg",
+    "averageTimeHours": 18
   },
   {
     "id": "3812",
@@ -23288,7 +23802,8 @@
     "communityRating": 3.1,
     "communityFetchedAt": 1789975922886,
     "releaseDate": 1385078400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2r7y.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2r7y.jpg",
+    "averageTimeHours": 7
   },
   {
     "id": "389",
@@ -23344,7 +23859,8 @@
     "communityRating": 3.3,
     "communityFetchedAt": 1789924996514,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coboys.jpg",
-    "releaseDate": 1261008000
+    "releaseDate": 1261008000,
+    "averageTimeHours": 46
   },
   {
     "id": "6072",
@@ -23399,7 +23915,8 @@
     "communityRating": 2.9,
     "communityFetchedAt": 1789975923196,
     "releaseDate": 1412640000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2h1n.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2h1n.jpg",
+    "averageTimeHours": 13
   },
   {
     "id": "3025",
@@ -23457,7 +23974,8 @@
     "communityRating": 3.6,
     "communityFetchedAt": 1789975923598,
     "releaseDate": 1412035200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20pd.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20pd.jpg",
+    "averageTimeHours": 24
   },
   {
     "id": "2939",
@@ -23514,7 +24032,8 @@
     "communityRating": 3.2,
     "communityFetchedAt": 1789975925690,
     "releaseDate": 1411603200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1r7q.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1r7q.jpg",
+    "averageTimeHours": 3
   },
   {
     "id": "25647",
@@ -23564,7 +24083,8 @@
     "gameType": "Main Game",
     "franchises": [],
     "releaseDate": 1366070400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8udh.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8udh.jpg",
+    "averageTimeHours": 4
   },
   {
     "id": "6036",
@@ -23622,7 +24142,8 @@
     "communityRating": 4.4,
     "communityFetchedAt": 1789924997366,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5zks.jpg",
-    "releaseDate": 1406332800
+    "releaseDate": 1406332800,
+    "averageTimeHours": 30
   },
   {
     "id": "7327",
@@ -23677,7 +24198,8 @@
     "communityRating": 3.8,
     "communityFetchedAt": 1789975926689,
     "releaseDate": 1403568000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25zo.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25zo.jpg",
+    "averageTimeHours": 7
   },
   {
     "id": "3188",
@@ -23734,7 +24256,8 @@
     "communityRating": 2.9,
     "communityFetchedAt": 1789975927342,
     "releaseDate": 1401753600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1r7a.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1r7a.jpg",
+    "averageTimeHours": 8
   },
   {
     "id": "1121",
@@ -23794,7 +24317,8 @@
     "communityRating": 3.2,
     "communityFetchedAt": 1789975927643,
     "releaseDate": 1401062400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2p5w.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2p5w.jpg",
+    "averageTimeHours": 30
   },
   {
     "id": "3022",
@@ -23847,7 +24371,8 @@
       "Supergiant Games": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl8d0.png"
     },
     "releaseDate": 1400544000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob23o.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob23o.jpg",
+    "averageTimeHours": 8
   },
   {
     "id": "2031",
@@ -23906,7 +24431,8 @@
     "communityRating": 3.7,
     "communityFetchedAt": 1789975930091,
     "releaseDate": 1400544000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co21c0.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co21c0.jpg",
+    "averageTimeHours": 13
   },
   {
     "id": "5335",
@@ -23966,7 +24492,8 @@
       "Coffee Stain Studios": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl4zc.png"
     },
     "releaseDate": 1396310400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2dhr.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2dhr.jpg",
+    "averageTimeHours": 8
   },
   {
     "id": "2115",
@@ -24021,7 +24548,8 @@
     "communityRating": 3.5,
     "communityFetchedAt": 1789975930358,
     "releaseDate": 1394496000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3wo1.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3wo1.jpg",
+    "averageTimeHours": 27
   },
   {
     "id": "1279",
@@ -24077,7 +24605,8 @@
     "communityRating": 3.1,
     "communityFetchedAt": 1789975930631,
     "releaseDate": 1394496000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1sh2.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1sh2.jpg",
+    "averageTimeHours": 335
   },
   {
     "id": "22502",
@@ -24132,7 +24661,8 @@
       "FromSoftware": "https://images.igdb.com/igdb/image/upload/t_logo_med/irwmnrvf0hny5wr0ap0d.png"
     },
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vv1.jpg",
-    "releaseDate": 1408924800
+    "releaseDate": 1408924800,
+    "averageTimeHours": 6
   },
   {
     "id": "19924",
@@ -24187,7 +24717,8 @@
       "FromSoftware": "https://images.igdb.com/igdb/image/upload/t_logo_med/irwmnrvf0hny5wr0ap0d.png"
     },
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vuz.jpg",
-    "releaseDate": 1405987200
+    "releaseDate": 1405987200,
+    "averageTimeHours": 5
   },
   {
     "id": "20341",
@@ -24242,7 +24773,8 @@
       "FromSoftware": "https://images.igdb.com/igdb/image/upload/t_logo_med/irwmnrvf0hny5wr0ap0d.png"
     },
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vv0.jpg",
-    "releaseDate": 1412035200
+    "releaseDate": 1412035200,
+    "averageTimeHours": 6
   },
   {
     "id": "8222",
@@ -24297,7 +24829,8 @@
     "communityRating": 3.6,
     "communityFetchedAt": 1789975930922,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobb02.jpg",
-    "releaseDate": 1427932800
+    "releaseDate": 1427932800,
+    "averageTimeHours": 70
   },
   {
     "id": "2368",
@@ -24354,7 +24887,8 @@
     "metadataFetchedAt": 1792253907687,
     "gameType": "Main Game",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobysr.jpg",
-    "releaseDate": 1394496000
+    "releaseDate": 1394496000,
+    "averageTimeHours": 76
   },
   {
     "id": "2002",
@@ -24402,7 +24936,8 @@
     "communityRating": 3.3,
     "communityFetchedAt": 1789924998078,
     "releaseDate": 1392681600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1li9.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1li9.jpg",
+    "averageTimeHours": 25
   },
   {
     "id": "7579",
@@ -24455,7 +24990,8 @@
     "metadataFetchedAt": 1792253907687,
     "gameType": "Main Game",
     "releaseDate": 1390348800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co43mw.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co43mw.jpg",
+    "averageTimeHours": 18
   },
   {
     "id": "5508",
@@ -24512,7 +25048,8 @@
     "communityRating": 3.7,
     "communityFetchedAt": 1789975933277,
     "releaseDate": 1389657600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co27ah.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co27ah.jpg",
+    "averageTimeHours": 12
   },
   {
     "id": "3097",
@@ -24570,7 +25107,8 @@
     "communityRating": 3.9,
     "communityFetchedAt": 1789975933586,
     "releaseDate": 1387238400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2k36.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2k36.jpg",
+    "averageTimeHours": 10
   },
   {
     "id": "1970",
@@ -24631,7 +25169,8 @@
     "communityRating": 4,
     "communityFetchedAt": 1789975934659,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4qfn.jpg",
-    "releaseDate": 1383004800
+    "releaseDate": 1383004800,
+    "averageTimeHours": 43
   },
   {
     "id": "1979",
@@ -24689,7 +25228,8 @@
     "communityRating": 3.7,
     "communityFetchedAt": 1789975934977,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1nmf.jpg",
-    "releaseDate": 1383004800
+    "releaseDate": 1383004800,
+    "averageTimeHours": 65
   },
   {
     "id": "2538",
@@ -24741,7 +25281,8 @@
     "metadataFetchedAt": 1792253907688,
     "gameType": "Main Game",
     "releaseDate": 1286236800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coczfb.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coczfb.jpg",
+    "averageTimeHours": 9
   },
   {
     "id": "2003",
@@ -24800,7 +25341,8 @@
     "communityRating": 3.6,
     "communityFetchedAt": 1789975936840,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1nmd.jpg",
-    "releaseDate": 1382572800
+    "releaseDate": 1382572800,
+    "averageTimeHours": 20
   },
   {
     "id": "3035",
@@ -24854,7 +25396,8 @@
     "communityRating": 3.9,
     "communityFetchedAt": 1789975937401,
     "releaseDate": 1381968000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rc9.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rc9.jpg",
+    "averageTimeHours": 4
   },
   {
     "id": "2993",
@@ -24912,7 +25455,8 @@
     "communityRating": 4.1,
     "communityFetchedAt": 1789975937751,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rcy.jpg",
-    "releaseDate": 1381449600
+    "releaseDate": 1381449600,
+    "averageTimeHours": 10
   },
   {
     "id": "1910",
@@ -24967,7 +25511,8 @@
     "communityRating": 3.6,
     "communityFetchedAt": 1789975938072,
     "releaseDate": 1378252800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1yat.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1yat.jpg",
+    "averageTimeHours": 7
   },
   {
     "id": "193359",
@@ -25024,7 +25569,8 @@
     "communityRating": 4,
     "communityFetchedAt": 1789975939949,
     "releaseDate": 1377734400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4jot.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4jot.jpg",
+    "averageTimeHours": 21
   },
   {
     "id": "2599",
@@ -25077,7 +25623,8 @@
     "communityRating": 3.3,
     "communityFetchedAt": 1789924999356,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaug7.jpg",
-    "releaseDate": 1355097600
+    "releaseDate": 1355097600,
+    "averageTimeHours": 17
   },
   {
     "id": "1981",
@@ -25137,7 +25684,8 @@
     "communityRating": 3.2,
     "communityFetchedAt": 1789975940492,
     "releaseDate": 1376956800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1nrn.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1nrn.jpg",
+    "averageTimeHours": 26
   },
   {
     "id": "1904",
@@ -25194,7 +25742,8 @@
     "metadataFetchedAt": 1792253907688,
     "gameType": "Main Game",
     "releaseDate": 1376352000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaarv.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaarv.jpg",
+    "averageTimeHours": 450
   },
   {
     "id": "2935",
@@ -25247,7 +25796,8 @@
     "communityRating": 3.9,
     "communityFetchedAt": 1789975941008,
     "releaseDate": 1375920000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vep.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vep.jpg",
+    "averageTimeHours": 8
   },
   {
     "id": "1827",
@@ -25301,7 +25851,8 @@
     "communityRating": 3.1,
     "communityFetchedAt": 1789924999661,
     "releaseDate": 1370217600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2h9u.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2h9u.jpg",
+    "averageTimeHours": 10
   },
   {
     "id": "1976",
@@ -25359,7 +25910,8 @@
     "communityRating": 3.6,
     "communityFetchedAt": 1789975941336,
     "releaseDate": 1369180800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coag64.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coag64.jpg",
+    "averageTimeHours": 6
   },
   {
     "id": "539",
@@ -25415,7 +25967,8 @@
     "communityRating": 3.8,
     "communityFetchedAt": 1789975943927,
     "releaseDate": 1368489600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2h9d.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2h9d.jpg",
+    "averageTimeHours": 13
   },
   {
     "id": "3152",
@@ -25468,7 +26021,8 @@
     "metadataFetchedAt": 1792253907688,
     "gameType": "Main Game",
     "releaseDate": 1366675200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1qqw.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1qqw.jpg",
+    "averageTimeHours": 25
   },
   {
     "id": "1918",
@@ -25523,7 +26077,8 @@
     "communityRating": 3.1,
     "communityFetchedAt": 1789975944221,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8616.jpg",
-    "releaseDate": 1366070400
+    "releaseDate": 1366070400,
+    "averageTimeHours": 11
   },
   {
     "id": "1274",
@@ -25581,7 +26136,8 @@
     "communityRating": 2.8,
     "communityFetchedAt": 1789975945017,
     "releaseDate": 1362441600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1y6x.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1y6x.jpg",
+    "averageTimeHours": 51
   },
   {
     "id": "1164",
@@ -25644,7 +26200,8 @@
     "communityRating": 3.7,
     "communityFetchedAt": 1789975945347,
     "releaseDate": 1362441600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rbu.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rbu.jpg",
+    "averageTimeHours": 15
   },
   {
     "id": "1268",
@@ -25700,7 +26257,8 @@
     "communityRating": 3.3,
     "communityFetchedAt": 1789925000384,
     "releaseDate": 1361232000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2on3.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2on3.jpg",
+    "averageTimeHours": 9
   },
   {
     "id": "1254",
@@ -25756,7 +26314,8 @@
     "communityRating": 3.3,
     "communityFetchedAt": 1789925001022,
     "releaseDate": 1358208000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1u77.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1u77.jpg",
+    "averageTimeHours": 12
   },
   {
     "id": "1266",
@@ -25816,7 +26375,8 @@
     "communityRating": 3.3,
     "communityFetchedAt": 1789975947265,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1xii.jpg",
-    "releaseDate": 1351555200
+    "releaseDate": 1351555200,
+    "averageTimeHours": 31
   },
   {
     "id": "530",
@@ -25874,7 +26434,8 @@
     "communityRating": 3.3,
     "communityFetchedAt": 1789975947566,
     "releaseDate": 1353283200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1qrc.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1qrc.jpg",
+    "averageTimeHours": 15
   },
   {
     "id": "1267",
@@ -25931,7 +26492,8 @@
     "metadataFetchedAt": 1792253907688,
     "gameType": "Main Game",
     "releaseDate": 1344816000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2e3z.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2e3z.jpg",
+    "averageTimeHours": 24
   },
   {
     "id": "1384",
@@ -25984,7 +26546,8 @@
     "communityRating": 4,
     "communityFetchedAt": 1789925001073,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vqp.jpg",
-    "releaseDate": 1350950400
+    "releaseDate": 1350950400,
+    "averageTimeHours": 8
   },
   {
     "id": "1318",
@@ -26046,7 +26609,8 @@
     "communityRating": 3.8,
     "communityFetchedAt": 1789975947858,
     "releaseDate": 1349740800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co29i2.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co29i2.jpg",
+    "averageTimeHours": 34
   },
   {
     "id": "533",
@@ -26100,7 +26664,8 @@
     "communityRating": 4.1,
     "communityFetchedAt": 1789975948138,
     "releaseDate": 1349740800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coabgu.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coabgu.jpg",
+    "averageTimeHours": 20
   },
   {
     "id": "1011",
@@ -26165,7 +26730,8 @@
     "communityRating": 3.7,
     "communityFetchedAt": 1789975950162,
     "releaseDate": 1347926400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9ba3.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9ba3.jpg",
+    "averageTimeHours": 75
   },
   {
     "id": "1183",
@@ -26218,7 +26784,8 @@
     "metadataFetchedAt": 1792253907688,
     "gameType": "Main Game",
     "releaseDate": 1345852800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coct0w.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coct0w.jpg",
+    "averageTimeHours": 588
   },
   {
     "id": "21040",
@@ -26329,7 +26896,8 @@
     "communityRating": 3.8,
     "communityFetchedAt": 1789975950452,
     "releaseDate": 1340668800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2acb.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2acb.jpg",
+    "averageTimeHours": 7
   },
   {
     "id": "120",
@@ -26388,7 +26956,8 @@
     "metadataFetchedAt": 1792253907688,
     "gameType": "Main Game",
     "releaseDate": 1337040000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2l1u.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2l1u.jpg",
+    "averageTimeHours": 103
   },
   {
     "id": "960",
@@ -26453,7 +27022,8 @@
     "communityRating": 3.9,
     "communityFetchedAt": 1789975950814,
     "releaseDate": 1337040000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2mjo.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2mjo.jpg",
+    "averageTimeHours": 12
   },
   {
     "id": "3968",
@@ -26511,7 +27081,8 @@
     "communityRating": 3.7,
     "communityFetchedAt": 1789975951097,
     "releaseDate": 1337644800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8zm7.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8zm7.jpg",
+    "averageTimeHours": 43
   },
   {
     "id": "3802",
@@ -26565,7 +27136,8 @@
     "metadataFetchedAt": 1792253907688,
     "gameType": "Main Game",
     "releaseDate": 1335225600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rje.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rje.jpg",
+    "averageTimeHours": 29
   },
   {
     "id": "3082",
@@ -26616,7 +27188,8 @@
     "metadataFetchedAt": 1792253907688,
     "gameType": "Remake",
     "releaseDate": 1329177600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2eez.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2eez.jpg",
+    "averageTimeHours": 1
   },
   {
     "id": "1871",
@@ -26677,7 +27250,8 @@
     "communityRating": 4.2,
     "communityFetchedAt": 1789925002087,
     "releaseDate": 1335225600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2j1g.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2j1g.jpg",
+    "averageTimeHours": 14
   },
   {
     "id": "140839",
@@ -26737,7 +27311,8 @@
     "communityRating": 4.6,
     "communityFetchedAt": 1789975952850,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2k5h.jpg",
-    "releaseDate": 1620950400
+    "releaseDate": 1620950400,
+    "averageTimeHours": 97
   },
   {
     "id": "245478",
@@ -26792,7 +27367,8 @@
     "metadataFetchedAt": 1792253907688,
     "gameType": "Remaster",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6dqb.jpg",
-    "releaseDate": 1620950400
+    "releaseDate": 1620950400,
+    "averageTimeHours": 38
   },
   {
     "id": "75",
@@ -26853,7 +27429,8 @@
     "communityRating": 3.9,
     "communityFetchedAt": 1789975953130,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1x7q.jpg",
-    "releaseDate": 1330992000
+    "releaseDate": 1330992000,
+    "averageTimeHours": 47
   },
   {
     "id": "1062",
@@ -26917,7 +27494,8 @@
     "communityRating": 3.6,
     "communityFetchedAt": 1789975953412,
     "releaseDate": 1273795200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2dft.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2dft.jpg",
+    "averageTimeHours": 12
   },
   {
     "id": "121",
@@ -26981,7 +27559,8 @@
     "communityRating": 4.4,
     "communityFetchedAt": 1789975953832,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coa77e.jpg",
-    "releaseDate": 1321574400
+    "releaseDate": 1321574400,
+    "averageTimeHours": 1416
   },
   {
     "id": "501",
@@ -27038,7 +27617,8 @@
     "communityRating": 4.3,
     "communityFetchedAt": 1789975956114,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1voh.jpg",
-    "releaseDate": 1318896000
+    "releaseDate": 1318896000,
+    "averageTimeHours": 25
   },
   {
     "id": "537",
@@ -27097,7 +27677,8 @@
     "communityRating": 3.6,
     "communityFetchedAt": 1789975621071,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1xih.jpg",
-    "releaseDate": 1321228800
+    "releaseDate": 1321228800,
+    "averageTimeHours": 20
   },
   {
     "id": "109",
@@ -27156,7 +27737,8 @@
     "metadataFetchedAt": 1792253907688,
     "gameType": "Main Game",
     "releaseDate": 1305590400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2ldn.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2ldn.jpg",
+    "averageTimeHours": 24
   },
   {
     "id": "472",
@@ -27215,7 +27797,8 @@
     "communityRating": 4,
     "communityFetchedAt": 1789975621713,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocs1l.jpg",
-    "releaseDate": 1320883200
+    "releaseDate": 1320883200,
+    "averageTimeHours": 182
   },
   {
     "id": "979",
@@ -27276,7 +27859,8 @@
     "communityRating": 3.6,
     "communityFetchedAt": 1789975622418,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1wkn.jpg",
-    "releaseDate": 1320710400
+    "releaseDate": 1320710400,
+    "averageTimeHours": 36
   },
   {
     "id": "512",
@@ -27335,7 +27919,8 @@
     "communityRating": 3.9,
     "communityFetchedAt": 1789975623430,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1tp8.jpg",
-    "releaseDate": 1320105600
+    "releaseDate": 1320105600,
+    "averageTimeHours": 14
   },
   {
     "id": "5025",
@@ -27393,7 +27978,8 @@
     "communityRating": 4,
     "communityFetchedAt": 1789975624065,
     "releaseDate": 1320105600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25yv.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25yv.jpg",
+    "averageTimeHours": 4
   },
   {
     "id": "343",
@@ -27452,7 +28038,8 @@
     "communityRating": 3.8,
     "communityFetchedAt": 1789975624692,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1xbu.jpg",
-    "releaseDate": 1319500800
+    "releaseDate": 1319500800,
+    "averageTimeHours": 43
   },
   {
     "id": "509",
@@ -27511,7 +28098,8 @@
     "communityRating": 2.8,
     "communityFetchedAt": 1789975625309,
     "releaseDate": 1317600000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ybv.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ybv.jpg",
+    "averageTimeHours": 11
   },
   {
     "id": "21988",
@@ -27566,7 +28154,8 @@
     "metadataFetchedAt": 1792253907688,
     "gameType": "DLC",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co95nf.jpg",
-    "releaseDate": 1345766400
+    "releaseDate": 1345766400,
+    "averageTimeHours": 7
   },
   {
     "id": "2155",
@@ -27625,7 +28214,8 @@
     "communityRating": 4.3,
     "communityFetchedAt": 1789975625975,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1x78.jpg",
-    "releaseDate": 1316649600
+    "releaseDate": 1316649600,
+    "averageTimeHours": 80
   },
   {
     "id": "532",
@@ -27679,7 +28269,8 @@
     "communityRating": 2.8,
     "communityFetchedAt": 1789975626556,
     "releaseDate": 1315872000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2h2b.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2h2b.jpg",
+    "averageTimeHours": 5
   },
   {
     "id": "578",
@@ -27736,7 +28327,8 @@
       "Warhammer 40,000"
     ],
     "releaseDate": 1315267200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1tx9.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1tx9.jpg",
+    "averageTimeHours": 8
   },
   {
     "id": "536",
@@ -27792,7 +28384,8 @@
     "communityRating": 2.9,
     "communityFetchedAt": 1789975627186,
     "releaseDate": 1315267200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3lym.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3lym.jpg",
+    "averageTimeHours": 21
   },
   {
     "id": "43",
@@ -27849,7 +28442,8 @@
     "communityRating": 3.8,
     "communityFetchedAt": 1789925004385,
     "releaseDate": 1314057600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rd2.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rd2.jpg",
+    "averageTimeHours": 26
   },
   {
     "id": "15124",
@@ -27894,7 +28488,8 @@
     "communityRating": 2.6,
     "communityFetchedAt": 1789975627820,
     "releaseDate": 1312761600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2k38.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2k38.jpg",
+    "averageTimeHours": 1
   },
   {
     "id": "1331",
@@ -27951,7 +28546,8 @@
     "communityRating": 3.5,
     "communityFetchedAt": 1789975628448,
     "releaseDate": 1279670400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1qrs.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1qrs.jpg",
+    "averageTimeHours": 4
   },
   {
     "id": "528",
@@ -28009,7 +28605,8 @@
     "communityRating": 2.6,
     "communityFetchedAt": 1789975629063,
     "releaseDate": 1307318400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2jjv.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2jjv.jpg",
+    "averageTimeHours": 8
   },
   {
     "id": "2248",
@@ -28062,7 +28659,8 @@
     "metadataFetchedAt": 1792253908458,
     "gameType": "Main Game",
     "releaseDate": 1306368000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3wiu.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3wiu.jpg",
+    "averageTimeHours": 5
   },
   {
     "id": "524",
@@ -28116,7 +28714,8 @@
     "communityRating": 3.4,
     "communityFetchedAt": 1789975629662,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc25q.jpg",
-    "releaseDate": 1306195200
+    "releaseDate": 1306195200,
+    "averageTimeHours": 18
   },
   {
     "id": "504",
@@ -28172,7 +28771,8 @@
     "metadataFetchedAt": 1792253908458,
     "gameType": "Main Game",
     "releaseDate": 1288051200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co231s.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co231s.jpg",
+    "averageTimeHours": 24
   },
   {
     "id": "478",
@@ -28239,7 +28839,8 @@
     "communityRating": 3.6,
     "communityFetchedAt": 1789975630306,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1wy4.jpg",
-    "releaseDate": 1305590400
+    "releaseDate": 1305590400,
+    "averageTimeHours": 29
   },
   {
     "id": "1879",
@@ -28308,7 +28909,8 @@
     "communityRating": 4.1,
     "communityFetchedAt": 1789975630969,
     "releaseDate": 1305504000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaamg.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaamg.jpg",
+    "averageTimeHours": 235
   },
   {
     "id": "502",
@@ -28361,7 +28963,8 @@
     "metadataFetchedAt": 1792253908458,
     "gameType": "Main Game",
     "releaseDate": 1304985600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1pxk.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1pxk.jpg",
+    "averageTimeHours": 9
   },
   {
     "id": "72",
@@ -28423,7 +29026,8 @@
     "communityRating": 4.5,
     "communityFetchedAt": 1789975631614,
     "releaseDate": 1303084800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rs4.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rs4.jpg",
+    "averageTimeHours": 16
   },
   {
     "id": "8758",
@@ -28476,7 +29080,8 @@
     "metadataFetchedAt": 1792253908458,
     "gameType": "Main Game",
     "releaseDate": 1302220800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coctnc.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coctnc.jpg",
+    "averageTimeHours": 3
   },
   {
     "id": "471",
@@ -28531,7 +29136,8 @@
     "communityRating": 3.3,
     "communityFetchedAt": 1789975632363,
     "releaseDate": 1300752000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2on2.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2on2.jpg",
+    "averageTimeHours": 11
   },
   {
     "id": "113",
@@ -28592,7 +29198,8 @@
     "communityRating": 3.9,
     "communityFetchedAt": 1789975633018,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocdky.jpg",
-    "releaseDate": 1289865600
+    "releaseDate": 1289865600,
+    "averageTimeHours": 25
   },
   {
     "id": "78",
@@ -28648,7 +29255,8 @@
     "communityRating": 3.4,
     "communityFetchedAt": 1789975633660,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2mw1.jpg",
-    "releaseDate": 1299542400
+    "releaseDate": 1299542400,
+    "averageTimeHours": 45
   },
   {
     "id": "494",
@@ -28704,7 +29312,8 @@
     "communityRating": 3.4,
     "communityFetchedAt": 1789975634298,
     "releaseDate": 1298332800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7abq.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7abq.jpg",
+    "averageTimeHours": 8
   },
   {
     "id": "2042",
@@ -28763,7 +29372,8 @@
     "communityRating": 3.3,
     "communityFetchedAt": 1789975635323,
     "releaseDate": 1295913600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1qru.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1qru.jpg",
+    "averageTimeHours": 11
   },
   {
     "id": "38",
@@ -28822,7 +29432,8 @@
     "communityRating": 4.2,
     "communityFetchedAt": 1789975635928,
     "releaseDate": 1295913600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20xq.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20xq.jpg",
+    "averageTimeHours": 11
   },
   {
     "id": "885",
@@ -28878,7 +29489,8 @@
     "communityRating": 3.6,
     "communityFetchedAt": 1789975636566,
     "releaseDate": 1287532800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co276m.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co276m.jpg",
+    "averageTimeHours": 10
   },
   {
     "id": "2150",
@@ -28929,7 +29541,8 @@
     "communityRating": 3.6,
     "communityFetchedAt": 1789975637419,
     "releaseDate": 1274140800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2bw4.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2bw4.jpg",
+    "averageTimeHours": 11
   },
   {
     "id": "545",
@@ -28994,7 +29607,8 @@
     "communityRating": 3.9,
     "communityFetchedAt": 1789975638034,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1wkl.jpg",
-    "releaseDate": 1289260800
+    "releaseDate": 1289260800,
+    "averageTimeHours": 42
   },
   {
     "id": "16",
@@ -29055,7 +29669,8 @@
     "metadataFetchedAt": 1792253908459,
     "gameType": "Main Game",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1u60.jpg",
-    "releaseDate": 1287446400
+    "releaseDate": 1287446400,
+    "averageTimeHours": 79
   },
   {
     "id": "556",
@@ -29112,7 +29727,8 @@
     "communityRating": 2.8,
     "communityFetchedAt": 1789975638655,
     "releaseDate": 1286841600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3jhe.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3jhe.jpg",
+    "averageTimeHours": 5
   },
   {
     "id": "866",
@@ -29176,7 +29792,8 @@
     "communityRating": 4,
     "communityFetchedAt": 1789975639365,
     "releaseDate": 1285027200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20up.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20up.jpg",
+    "averageTimeHours": 137
   },
   {
     "id": "40",
@@ -29237,7 +29854,8 @@
     "communityRating": 4,
     "communityFetchedAt": 1789975639951,
     "releaseDate": 1282608000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2n13.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2n13.jpg",
+    "averageTimeHours": 19
   },
   {
     "id": "2539",
@@ -29291,7 +29909,8 @@
     "metadataFetchedAt": 1792253908459,
     "gameType": "Main Game",
     "releaseDate": 1274918400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25mo.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25mo.jpg",
+    "averageTimeHours": 15
   },
   {
     "id": "7404",
@@ -29335,7 +29954,7 @@
     ],
     "developerLogos": {},
     "franchises": [],
-    "averageTimeHours": 7,
+    "averageTimeHours": 8,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253908459,
     "gameType": "Main Game",
@@ -29569,7 +30188,7 @@
     "franchises": [
       "Battlefield"
     ],
-    "averageTimeHours": 20,
+    "averageTimeHours": 21,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253908459,
     "gameType": "Main Game",
@@ -29630,7 +30249,7 @@
     "franchises": [
       "Assassin's Creed"
     ],
-    "averageTimeHours": 27,
+    "averageTimeHours": 26,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253908459,
     "gameType": "Main Game",
@@ -30177,7 +30796,7 @@
     "franchises": [
       "Borderlands"
     ],
-    "averageTimeHours": 32,
+    "averageTimeHours": 33,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253908459,
     "gameType": "Main Game",
@@ -30654,7 +31273,7 @@
     "franchises": [
       "Fallout"
     ],
-    "averageTimeHours": 42,
+    "averageTimeHours": 43,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253908459,
     "gameType": "Main Game",
@@ -30713,7 +31332,7 @@
     "franchises": [
       "Far Cry"
     ],
-    "averageTimeHours": 15,
+    "averageTimeHours": 14,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253908459,
     "gameType": "Main Game",
@@ -31521,7 +32140,7 @@
     "developerLogos": {
       "CD Projekt RED": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl2dk.png"
     },
-    "averageTimeHours": 36,
+    "averageTimeHours": 35,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253908459,
     "gameType": "Expanded Game",
@@ -31578,7 +32197,7 @@
     "developerLogos": {
       "CD Projekt RED": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl2dk.png"
     },
-    "averageTimeHours": 33,
+    "averageTimeHours": 34,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253908459,
     "gameType": "Main Game",
@@ -31586,7 +32205,9 @@
       "The Witcher"
     ],
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1xrx.jpg",
-    "releaseDate": 1193356800
+    "releaseDate": 1193356800,
+    "communityRating": 3.3,
+    "communityFetchedAt": 1793203519441
   },
   {
     "id": "891",
@@ -31634,7 +32255,7 @@
     "developerLogos": {
       "Valve": "https://images.igdb.com/igdb/image/upload/t_logo_med/cl2he.png"
     },
-    "averageTimeHours": 433,
+    "averageTimeHours": 435,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253908459,
     "gameType": "Main Game",
@@ -31642,7 +32263,9 @@
       "Team Fortress"
     ],
     "releaseDate": 1191974400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6rzl.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6rzl.jpg",
+    "communityRating": 3.9,
+    "communityFetchedAt": 1793203519441
   },
   {
     "id": "218277",
@@ -32270,7 +32893,7 @@
     "franchises": [
       "S.T.A.L.K.E.R."
     ],
-    "averageTimeHours": 20,
+    "averageTimeHours": 19,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253908459,
     "gameType": "Main Game",
@@ -32382,7 +33005,7 @@
     "franchises": [
       "Hitman"
     ],
-    "averageTimeHours": 15,
+    "averageTimeHours": 14,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253908459,
     "gameType": "Main Game",
@@ -32435,7 +33058,7 @@
     "franchises": [
       "Might and Magic"
     ],
-    "averageTimeHours": 34,
+    "averageTimeHours": 32,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253908459,
     "gameType": "Main Game",
@@ -32766,7 +33389,7 @@
       "Romance Of The Three Kingdoms (Koei)",
       "Dynasty Warriors"
     ],
-    "averageTimeHours": 50,
+    "averageTimeHours": 47,
     "metadataVersion": 1,
     "metadataFetchedAt": 1792253908459,
     "gameType": "Main Game",
@@ -32823,7 +33446,8 @@
     "metadataFetchedAt": 1792253908459,
     "gameType": "Main Game",
     "releaseDate": 1101168000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ywx.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ywx.jpg",
+    "averageTimeHours": null
   },
   {
     "id": "4065",
@@ -32878,7 +33502,8 @@
     "communityRating": 3.4,
     "communityFetchedAt": 1789975744620,
     "releaseDate": 1132185600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1owf.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1owf.jpg",
+    "averageTimeHours": 8
   },
   {
     "id": "3782",
@@ -32933,7 +33558,8 @@
     "metadataFetchedAt": 1792253908459,
     "gameType": "Main Game",
     "releaseDate": 1098748800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co99k1.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co99k1.jpg",
+    "averageTimeHours": 6
   },
   {
     "id": "242408",
@@ -32986,7 +33612,8 @@
     "communityRating": 3.1,
     "communityFetchedAt": 1789975745297,
     "releaseDate": 1695772800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaczd.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaczd.jpg",
+    "averageTimeHours": 370
   },
   {
     "id": "1372",
@@ -33040,7 +33667,8 @@
     "communityRating": 3.5,
     "communityFetchedAt": 1789975746175,
     "releaseDate": 1345507200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc32n.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc32n.jpg",
+    "averageTimeHours": 499
   },
   {
     "id": "307",
@@ -33093,7 +33721,8 @@
     "metadataFetchedAt": 1792253908459,
     "gameType": "Remake",
     "releaseDate": 1097107200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1txv.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1txv.jpg",
+    "averageTimeHours": 68
   },
   {
     "id": "121919",
@@ -33144,7 +33773,8 @@
     "metadataFetchedAt": 1792253908459,
     "gameType": "Main Game",
     "releaseDate": 1670284800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1xtc.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1xtc.jpg",
+    "averageTimeHours": 34
   },
   {
     "id": "2040",
@@ -33199,7 +33829,8 @@
     "communityRating": 3.8,
     "communityFetchedAt": 1789925011270,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9wf7.jpg",
-    "releaseDate": 1128124800
+    "releaseDate": 1128124800,
+    "averageTimeHours": 25
   },
   {
     "id": "7969",
@@ -33250,7 +33881,8 @@
     "metadataFetchedAt": 1792253908459,
     "gameType": "Main Game",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7jbj.jpg",
-    "releaseDate": 1095811200
+    "releaseDate": 1095811200,
+    "averageTimeHours": 16
   },
   {
     "id": "3158",
@@ -33306,7 +33938,8 @@
     "metadataFetchedAt": 1792253908459,
     "gameType": "Expansion",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1zpn.jpg",
-    "releaseDate": 1362441600
+    "releaseDate": 1362441600,
+    "averageTimeHours": null
   },
   {
     "id": "898",
@@ -33368,7 +34001,8 @@
     "metadataFetchedAt": 1792253908459,
     "gameType": "Expansion",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1zpg.jpg",
-    "releaseDate": 1258329600
+    "releaseDate": 1258329600,
+    "averageTimeHours": null
   },
   {
     "id": "13126",
@@ -33426,7 +34060,8 @@
     "metadataFetchedAt": 1792253908459,
     "gameType": "Expansion",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8lob.jpg",
-    "releaseDate": 1109548800
+    "releaseDate": 1109548800,
+    "averageTimeHours": null
   },
   {
     "id": "5534",
@@ -33484,7 +34119,8 @@
     "metadataFetchedAt": 1792253908459,
     "gameType": "Expansion",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1zoq.jpg",
-    "releaseDate": 1126569600
+    "releaseDate": 1126569600,
+    "averageTimeHours": null
   },
   {
     "id": "226",
@@ -33542,7 +34178,8 @@
     "metadataFetchedAt": 1792253908459,
     "gameType": "Expansion",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1zox.jpg",
-    "releaseDate": 1172707200
+    "releaseDate": 1172707200,
+    "averageTimeHours": null
   },
   {
     "id": "13113",
@@ -33600,7 +34237,8 @@
     "metadataFetchedAt": 1792253908459,
     "gameType": "Expansion",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1zpj.jpg",
-    "releaseDate": 1318896000
+    "releaseDate": 1318896000,
+    "averageTimeHours": 12
   },
   {
     "id": "225",
@@ -33658,7 +34296,8 @@
     "metadataFetchedAt": 1792253909051,
     "gameType": "Expansion",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1zov.jpg",
-    "releaseDate": 1161129600
+    "releaseDate": 1161129600,
+    "averageTimeHours": 44
   },
   {
     "id": "260",
@@ -33716,7 +34355,8 @@
     "communityRating": 3.7,
     "communityFetchedAt": 1789975746810,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coavu6.jpg",
-    "releaseDate": 1243900800
+    "releaseDate": 1243900800,
+    "averageTimeHours": 190
   },
   {
     "id": "224",
@@ -33776,7 +34416,8 @@
     "communityRating": 3.9,
     "communityFetchedAt": 1789975747390,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3dm5.jpg",
-    "releaseDate": 1095120000
+    "releaseDate": 1095120000,
+    "averageTimeHours": 265
   },
   {
     "id": "3851",
@@ -33829,7 +34470,8 @@
     "metadataFetchedAt": 1792253909052,
     "gameType": "Main Game",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2d3t.jpg",
-    "releaseDate": 1090281600
+    "releaseDate": 1090281600,
+    "averageTimeHours": 4
   },
   {
     "id": "3668",
@@ -33880,7 +34522,8 @@
     "metadataFetchedAt": 1792253909052,
     "gameType": "Main Game",
     "releaseDate": 1083542400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1pee.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1pee.jpg",
+    "averageTimeHours": 7
   },
   {
     "id": "149275",
@@ -33932,7 +34575,8 @@
     "metadataFetchedAt": 1792253909052,
     "gameType": "Main Game",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4es6.jpg",
-    "releaseDate": 1088380800
+    "releaseDate": 1088380800,
+    "averageTimeHours": 6
   },
   {
     "id": "5979",
@@ -33989,7 +34633,8 @@
     "metadataFetchedAt": 1792253909052,
     "gameType": "Main Game",
     "releaseDate": 1115078400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8qu3.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8qu3.jpg",
+    "averageTimeHours": null
   },
   {
     "id": "1608",
@@ -34044,7 +34689,8 @@
     "communityRating": 3.5,
     "communityFetchedAt": 1789975747994,
     "releaseDate": 1114473600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co22ul.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co22ul.jpg",
+    "averageTimeHours": null
   },
   {
     "id": "828",
@@ -34101,7 +34747,8 @@
     "communityRating": 3.4,
     "communityFetchedAt": 1789975748585,
     "releaseDate": 1081728000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2b98.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2b98.jpg",
+    "averageTimeHours": 9
   },
   {
     "id": "3862",
@@ -34155,7 +34802,8 @@
     "metadataFetchedAt": 1792253909052,
     "gameType": "Main Game",
     "releaseDate": 1081382400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1yaq.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1yaq.jpg",
+    "averageTimeHours": null
   },
   {
     "id": "2001",
@@ -34214,7 +34862,8 @@
     "communityRating": 3.5,
     "communityFetchedAt": 1789975749372,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vpp.jpg",
-    "releaseDate": 1367280000
+    "releaseDate": 1367280000,
+    "averageTimeHours": 6
   },
   {
     "id": "529",
@@ -34274,7 +34923,8 @@
     "communityRating": 3.9,
     "communityFetchedAt": 1789975749991,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vpd.jpg",
-    "releaseDate": 1354060800
+    "releaseDate": 1354060800,
+    "averageTimeHours": 25
   },
   {
     "id": "306",
@@ -34331,7 +34981,8 @@
     "communityRating": 3,
     "communityFetchedAt": 1789975750766,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vpf.jpg",
-    "releaseDate": 1080000000
+    "releaseDate": 1080000000,
+    "averageTimeHours": 10
   },
   {
     "id": "2438",
@@ -34387,7 +35038,8 @@
     "communityRating": 3.2,
     "communityFetchedAt": 1789975751417,
     "releaseDate": 1228176000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2bva.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2bva.jpg",
+    "averageTimeHours": 11
   },
   {
     "id": "2437",
@@ -34446,7 +35098,8 @@
     "communityRating": 3.7,
     "communityFetchedAt": 1789925012217,
     "releaseDate": 1133395200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4ta0.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4ta0.jpg",
+    "averageTimeHours": 11
   },
   {
     "id": "837",
@@ -34499,7 +35152,8 @@
     "metadataFetchedAt": 1792253909052,
     "gameType": "Main Game",
     "releaseDate": 1101772800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9x1a.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9x1a.jpg",
+    "averageTimeHours": 12
   },
   {
     "id": "836",
@@ -34555,7 +35209,8 @@
     "communityRating": 3.7,
     "communityFetchedAt": 1789975752042,
     "releaseDate": 1068508800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4t8l.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4t8l.jpg",
+    "averageTimeHours": 9
   },
   {
     "id": "2973",
@@ -34610,7 +35265,8 @@
     "metadataFetchedAt": 1792253909052,
     "gameType": "Main Game",
     "releaseDate": 1067558400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20of.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20of.jpg",
+    "averageTimeHours": 15
   },
   {
     "id": "2971",
@@ -34662,7 +35318,8 @@
     "metadataFetchedAt": 1792253909052,
     "gameType": "Main Game",
     "releaseDate": 1064966400,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1nhg.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1nhg.jpg",
+    "averageTimeHours": 2819
   },
   {
     "id": "27912",
@@ -34718,7 +35375,8 @@
     "metadataFetchedAt": 1792253909052,
     "gameType": "Bundle",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1twe.jpg",
-    "releaseDate": 1288051200
+    "releaseDate": 1288051200,
+    "averageTimeHours": 48
   },
   {
     "id": "3265",
@@ -34778,7 +35436,8 @@
     "metadataFetchedAt": 1792253909052,
     "gameType": "Expansion",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1th2.jpg",
-    "releaseDate": 1234828800
+    "releaseDate": 1234828800,
+    "averageTimeHours": 8
   },
   {
     "id": "3174",
@@ -34835,7 +35494,8 @@
     "metadataFetchedAt": 1792253909052,
     "gameType": "Expansion",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co28od.jpg",
-    "releaseDate": 1256774400
+    "releaseDate": 1256774400,
+    "averageTimeHours": 11
   },
   {
     "id": "731",
@@ -34894,7 +35554,8 @@
     "communityRating": 4,
     "communityFetchedAt": 1789975752737,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2lbv.jpg",
-    "releaseDate": 1209427200
+    "releaseDate": 1209427200,
+    "averageTimeHours": 39
   },
   {
     "id": "732",
@@ -34953,7 +35614,8 @@
     "metadataFetchedAt": 1792253909052,
     "gameType": "Main Game",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2lb9.jpg",
-    "releaseDate": 1098748800
+    "releaseDate": 1098748800,
+    "averageTimeHours": 70
   },
   {
     "id": "733",
@@ -35012,7 +35674,8 @@
     "metadataFetchedAt": 1792253909052,
     "gameType": "Main Game",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2lbb.jpg",
-    "releaseDate": 1035676800
+    "releaseDate": 1035676800,
+    "averageTimeHours": 24
   },
   {
     "id": "1805",
@@ -35069,7 +35732,8 @@
     "metadataFetchedAt": 1792253909052,
     "gameType": "Main Game",
     "releaseDate": 918777600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7jt6.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7jt6.jpg",
+    "averageTimeHours": 4
   },
   {
     "id": "964",
@@ -35124,7 +35788,8 @@
     "communityRating": 4,
     "communityFetchedAt": 1789975753312,
     "releaseDate": 1028073600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7nlx.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7nlx.jpg",
+    "averageTimeHours": 111
   },
   {
     "id": "437",
@@ -35183,7 +35848,8 @@
     "metadataFetchedAt": 1792253909052,
     "gameType": "Main Game",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2il9.jpg",
-    "releaseDate": 1029715200
+    "releaseDate": 1029715200,
+    "averageTimeHours": 72
   },
   {
     "id": "8200",
@@ -35241,7 +35907,8 @@
     "metadataFetchedAt": 1792253909052,
     "gameType": "Main Game",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2rpx.jpg",
-    "releaseDate": 1424131200
+    "releaseDate": 1424131200,
+    "averageTimeHours": 76
   },
   {
     "id": "441",
@@ -35303,7 +35970,8 @@
     "communityRating": 3.4,
     "communityFetchedAt": 1789975753933,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co214k.jpg",
-    "releaseDate": 1236038400
+    "releaseDate": 1236038400,
+    "averageTimeHours": 93
   },
   {
     "id": "440",
@@ -35363,7 +36031,8 @@
       "The Creative Assembly": "https://images.igdb.com/igdb/image/upload/t_logo_med/o6o5mgw8vmtojqi510du.png"
     },
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8xje.jpg",
-    "releaseDate": 1163116800
+    "releaseDate": 1163116800,
+    "averageTimeHours": 112
   },
   {
     "id": "2359",
@@ -35419,7 +36088,8 @@
       "The Creative Assembly": "https://images.igdb.com/igdb/image/upload/t_logo_med/o6o5mgw8vmtojqi510du.png"
     },
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1qs5.jpg",
-    "releaseDate": 1378166400
+    "releaseDate": 1378166400,
+    "averageTimeHours": 98
   },
   {
     "id": "438",
@@ -35480,7 +36150,8 @@
       "The Creative Assembly": "https://images.igdb.com/igdb/image/upload/t_logo_med/o6o5mgw8vmtojqi510du.png"
     },
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1zt9.jpg",
-    "releaseDate": 1095811200
+    "releaseDate": 1095811200,
+    "averageTimeHours": 78
   },
   {
     "id": "432",
@@ -35540,7 +36211,8 @@
       "Total War"
     ],
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2rpy.jpg",
-    "releaseDate": 1300147200
+    "releaseDate": 1300147200,
+    "averageTimeHours": 51
   },
   {
     "id": "7959",
@@ -35597,7 +36269,8 @@
     "gameType": "Expansion",
     "franchises": [],
     "releaseDate": 1164067200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8oqu.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8oqu.jpg",
+    "averageTimeHours": 6
   },
   {
     "id": "894",
@@ -35659,7 +36332,8 @@
     "communityRating": 4.3,
     "communityFetchedAt": 1789975754515,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8j90.jpg",
-    "releaseDate": 1174867200
+    "releaseDate": 1174867200,
+    "averageTimeHours": 17
   },
   {
     "id": "6068",
@@ -35711,7 +36385,8 @@
     "gameType": "DLC",
     "franchises": [],
     "releaseDate": 1346716800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co21lx.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co21lx.jpg",
+    "averageTimeHours": 6
   },
   {
     "id": "56",
@@ -35769,7 +36444,8 @@
       "The Elder Scrolls"
     ],
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2knd.jpg",
-    "releaseDate": 1020211200
+    "releaseDate": 1020211200,
+    "averageTimeHours": 63
   },
   {
     "id": "59",
@@ -35832,7 +36508,8 @@
     "communityRating": 3.9,
     "communityFetchedAt": 1789975755341,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8fpz.jpg",
-    "releaseDate": 1142812800
+    "releaseDate": 1142812800,
+    "averageTimeHours": 64
   },
   {
     "id": "2992",
@@ -35884,7 +36561,8 @@
     "gameType": "DLC",
     "franchises": [],
     "releaseDate": 1340668800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co21lv.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co21lv.jpg",
+    "averageTimeHours": 14
   },
   {
     "id": "6069",
@@ -35936,7 +36614,8 @@
     "gameType": "Expansion",
     "franchises": [],
     "releaseDate": 1354579200,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co21lw.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co21lw.jpg",
+    "averageTimeHours": 17
   },
   {
     "id": "127875",
@@ -35953,7 +36632,8 @@
     ],
     "plays": 45,
     "playText": "45",
-    "checked": false
+    "checked": false,
+    "averageTimeHours": 2
   },
   {
     "id": "3234",
@@ -36012,7 +36692,8 @@
     "communityRating": 1.9,
     "communityFetchedAt": 1789975756823,
     "releaseDate": 1286841600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20kx.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20kx.jpg",
+    "averageTimeHours": 14
   },
   {
     "id": "2481",
@@ -36070,7 +36751,8 @@
     "communityRating": 4.5,
     "communityFetchedAt": 1789975757458,
     "releaseDate": 1061424000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20yd.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20yd.jpg",
+    "averageTimeHours": 79
   },
   {
     "id": "2263",
@@ -36136,7 +36818,8 @@
     "communityRating": 3.1,
     "communityFetchedAt": 1789975758076,
     "releaseDate": 1160697600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25oe.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25oe.jpg",
+    "averageTimeHours": 48
   },
   {
     "id": "2262",
@@ -36198,7 +36881,8 @@
     "communityRating": 4.3,
     "communityFetchedAt": 1789925013523,
     "releaseDate": 1038528000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25ag.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25ag.jpg",
+    "averageTimeHours": 59
   },
   {
     "id": "2261",
@@ -36258,7 +36942,8 @@
     "communityRating": 4,
     "communityFetchedAt": 1789975758681,
     "releaseDate": 1004400000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25r2.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25r2.jpg",
+    "averageTimeHours": 28
   },
   {
     "id": "3944",
@@ -36309,7 +36994,8 @@
     "communityRating": 2.9,
     "communityFetchedAt": 1789925014009,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20dn.jpg",
-    "releaseDate": 1067299200
+    "releaseDate": 1067299200,
+    "averageTimeHours": 7
   },
   {
     "id": "3943",
@@ -36363,7 +37049,8 @@
     "communityRating": 3.4,
     "communityFetchedAt": 1789975759378,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20dp.jpg",
-    "releaseDate": 1085443200
+    "releaseDate": 1085443200,
+    "averageTimeHours": 9
   },
   {
     "id": "3942",
@@ -36418,7 +37105,8 @@
     "communityRating": 2.2,
     "communityFetchedAt": 1789975760208,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20dq.jpg",
-    "releaseDate": 1131408000
+    "releaseDate": 1131408000,
+    "averageTimeHours": 6
   },
   {
     "id": "3941",
@@ -36476,7 +37164,8 @@
     "communityRating": 3.4,
     "communityFetchedAt": 1789975761006,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20dl.jpg",
-    "releaseDate": 1036713600
+    "releaseDate": 1036713600,
+    "averageTimeHours": 12
   },
   {
     "id": "341",
@@ -36533,7 +37222,8 @@
     "communityRating": 3.1,
     "communityFetchedAt": 1789975762279,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3jh0.jpg",
-    "releaseDate": 1005868800
+    "releaseDate": 1005868800,
+    "averageTimeHours": 7
   },
   {
     "id": "255",
@@ -36586,7 +37276,8 @@
     "metadataFetchedAt": 1792253909052,
     "gameType": "Main Game",
     "releaseDate": 998352000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co26ed.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co26ed.jpg",
+    "averageTimeHours": 27
   },
   {
     "id": "2361",
@@ -36639,7 +37330,8 @@
     "metadataFetchedAt": 1792253909052,
     "gameType": "Main Game",
     "releaseDate": 974073600,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co86yp.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co86yp.jpg",
+    "averageTimeHours": 8
   },
   {
     "id": "95",
@@ -36694,7 +37386,8 @@
     "metadataFetchedAt": 1792253909052,
     "gameType": "Main Game",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2098.jpg",
-    "releaseDate": 1033344000
+    "releaseDate": 1033344000,
+    "averageTimeHours": 16
   },
   {
     "id": "100",
@@ -36749,7 +37442,8 @@
     "metadataFetchedAt": 1792253909052,
     "gameType": "Main Game",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co209l.jpg",
-    "releaseDate": 1194912000
+    "releaseDate": 1194912000,
+    "averageTimeHours": 15
   },
   {
     "id": "105",
@@ -36806,7 +37500,8 @@
     "communityRating": 3.5,
     "communityFetchedAt": 1789925014568,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2h9s.jpg",
-    "releaseDate": 1289865600
+    "releaseDate": 1289865600,
+    "averageTimeHours": 16
   },
   {
     "id": "96",
@@ -36858,7 +37553,8 @@
     "metadataFetchedAt": 1792253909052,
     "gameType": "Main Game",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co209g.jpg",
-    "releaseDate": 1069027200
+    "releaseDate": 1069027200,
+    "averageTimeHours": 17
   },
   {
     "id": "3193",
@@ -36913,7 +37609,10 @@
     "metadataFetchedAt": 1792253909052,
     "gameType": "Main Game",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20a5.jpg",
-    "releaseDate": 1351555200
+    "releaseDate": 1351555200,
+    "averageTimeHours": 16,
+    "communityRating": 3.1,
+    "communityFetchedAt": 1793203519441
   },
   {
     "id": "99",
@@ -36972,7 +37671,10 @@
     "metadataFetchedAt": 1792253909052,
     "gameType": "Main Game",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co209k.jpg",
-    "releaseDate": 1162252800
+    "releaseDate": 1162252800,
+    "communityRating": 3.7,
+    "communityFetchedAt": 1793203519441,
+    "averageTimeHours": 18
   },
   {
     "id": "98",
@@ -37030,7 +37732,8 @@
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co209j.jpg",
     "releaseDate": 1132012800,
     "communityRating": 4.2,
-    "communityFetchedAt": 1792256062801
+    "communityFetchedAt": 1793203519441,
+    "averageTimeHours": 30
   },
   {
     "id": "94",
@@ -37083,7 +37786,8 @@
     "metadataFetchedAt": 1792253909052,
     "gameType": "Main Game",
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9bt7.jpg",
-    "releaseDate": 954288000
+    "releaseDate": 954288000,
+    "averageTimeHours": 11
   },
   {
     "id": "2932",
@@ -37134,7 +37838,8 @@
     "metadataFetchedAt": 1792253909052,
     "gameType": "Main Game",
     "releaseDate": 975024000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5x92.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5x92.jpg",
+    "averageTimeHours": null
   },
   {
     "id": "948",
@@ -37206,7 +37911,8 @@
     "metadataFetchedAt": 1792253909052,
     "gameType": "Main Game",
     "releaseDate": 917568000,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rkc.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rkc.jpg",
+    "averageTimeHours": 13
   },
   {
     "id": "51820",
@@ -37258,7 +37964,10 @@
     "metadataFetchedAt": 1792253909052,
     "gameType": "Bundle",
     "releaseDate": 970444800,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co218t.jpg"
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co218t.jpg",
+    "communityRating": 4.4,
+    "communityFetchedAt": 1793203519441,
+    "averageTimeHours": 95
   },
   {
     "id": "247",
@@ -37314,7 +38023,8 @@
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2mw2.jpg",
     "releaseDate": 1191888000,
     "communityRating": 4.3,
-    "communityFetchedAt": 1792256062801
+    "communityFetchedAt": 1792256062801,
+    "averageTimeHours": 6
   },
   {
     "id": "338",
@@ -37370,7 +38080,8 @@
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9c5r.jpg",
     "releaseDate": 1149120000,
     "communityRating": 3.9,
-    "communityFetchedAt": 1792256062801
+    "communityFetchedAt": 1792256062801,
+    "averageTimeHours": 4
   },
   {
     "id": "233",
@@ -37431,7 +38142,8 @@
     "communityRating": 4.4,
     "communityFetchedAt": 1789975980914,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1nmw.jpg",
-    "releaseDate": 1100563200
+    "releaseDate": 1100563200,
+    "averageTimeHours": 17
   },
   {
     "id": "231",
@@ -37493,6 +38205,7 @@
     "communityRating": 4.1,
     "communityFetchedAt": 1789975981600,
     "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc2ea.jpg",
-    "releaseDate": 911433600
+    "releaseDate": 911433600,
+    "averageTimeHours": 12
   }
 ]
